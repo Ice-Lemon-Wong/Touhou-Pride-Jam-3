@@ -2,7 +2,7 @@
 This is the unity repository for touhou pride jam 3
 
 Team members:
-Anex
-Iced_Lemon
-Chowrisotto
+Anex,
+Iced_Lemon,
+Chowrisotto,
 InSuccesion
