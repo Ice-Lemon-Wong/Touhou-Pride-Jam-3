@@ -1,0 +1,13 @@
+#Speaker Marisa
+hello
+this is to test the file loading system
+#Speaker Alice
+if you can read this that means the file is loading alright
+
+
+-Start
+#Speaker Alice
+this is to test if dialouge can start here
+if it does then it is working
+the writer can write stuff in the txt file that controls the while dialogue flow
+-
