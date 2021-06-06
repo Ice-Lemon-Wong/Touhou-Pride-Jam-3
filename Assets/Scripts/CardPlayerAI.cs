@@ -12,13 +12,18 @@ public class CardPlayerAI : MonoBehaviour
     public string desiredCard;
     [SerializeField] Vector2 thinkingTime;
     [SerializeField] CardsManager cm;
+    [SerializeField] int minimumNormalAmount = 4;
+    [SerializeField] int minimumCheatAmount = 4;
+    [SerializeField] int minimumStuburnCount = 1;
     [SerializeField] TextMeshProUGUI debugAIDecision;
-    
+    [SerializeField] TextMeshProUGUI seedText;
 
-    private enum Decisions { normal = 0, intentionalMiss, stuborn, cheat, random }
+    private enum Decisions { normal = 0, cheat, stuborn, random }
     private Decisions AIDecision;
 
     private int stubornCount = 0;
+    private int[] decisionSeed;
+    private int currentTurn;
 
 
 
@@ -34,7 +39,7 @@ public class CardPlayerAI : MonoBehaviour
         debugAIDecision.text = AIDecision.ToString();
     }
 
-    public void InitKnowledgeBase(int size)
+    public void InitKnowledgeBase(int size, int turnCount)
     {
         knowledgeBase = new string[size];
 
@@ -42,6 +47,85 @@ public class CardPlayerAI : MonoBehaviour
         {
             knowledgeBase[i] = unknownLable;
         }
+
+        //generate seed
+        GenerateDecisionSeed(turnCount);
+
+    }
+
+    private void GenerateDecisionSeed(int turnCount)
+    {
+        decisionSeed = new int[turnCount];
+        currentTurn = 0;
+        seedText.text = "";
+
+        //randomise seed
+        for (int i = 0; i < decisionSeed.Length; i++)
+        {
+            decisionSeed[i] = Random.Range(0, 8);
+        }
+
+        int countedNumber = 0;
+        countedNumber = countInSeed((int)Decisions.normal);
+
+        //refine normal
+        if (countedNumber < minimumNormalAmount)
+        {
+            for (int i = 0; i < decisionSeed.Length; i++)
+            {
+                if (decisionSeed[i] % 4 != (int)Decisions.normal && decisionSeed[i] % 4 != (int)Decisions.cheat && countedNumber < minimumNormalAmount)
+                {
+                    decisionSeed[i] = (int)Decisions.normal * Random.Range(1, 3);
+                    countedNumber++;
+                }
+            }
+        }
+
+        //refine cheat 
+        countedNumber = countInSeed((int)Decisions.cheat);
+        if (countedNumber < minimumNormalAmount)
+        {
+            for (int i = decisionSeed.Length - 1; i > 0; i--)
+            {
+                if (decisionSeed[i] % 4 != (int)Decisions.normal && decisionSeed[i] % 4 != (int)Decisions.cheat && countedNumber < minimumNormalAmount)
+                {
+                    decisionSeed[i] = (int)Decisions.cheat * Random.Range(1, 3);
+                    countedNumber++;
+                }
+            }
+        }
+
+        for (int i = 0; i < decisionSeed.Length; i++)
+        {
+            if (decisionSeed[i] % 4 == (int)Decisions.stuborn) {
+                decisionSeed[i] = (int)Decisions.random;
+            }
+        }
+
+
+
+        //hard coded
+        for (int i = 0; i < minimumStuburnCount; i++)
+        {
+            decisionSeed[Random.Range(decisionSeed.Length - 4, decisionSeed.Length)] = (int)Decisions.stuborn;
+        }
+
+        for (int i = 0; i < decisionSeed.Length; i++)
+        {
+            seedText.text += decisionSeed[i];
+        }
+        
+    }
+
+    int countInSeed(int findThisNumber) {
+        int count = 0;
+        foreach (var number in decisionSeed)
+        {
+            if (number % 4 == findThisNumber) {
+                count++;
+            }
+        }
+        return count;
     }
 
     public void SetDesiredCard(string cardName)
@@ -65,8 +149,13 @@ public class CardPlayerAI : MonoBehaviour
         if (stubornCount <= 0)
         {
             Debug.Log("changing desire");
+            int decidedIndex = 0;
+            do
+            {
+                decidedIndex = Random.Range(0, knowledgeBase.Length);
+            } while (!cm.isCardValidToplay(decidedIndex));
+            desiredCard = cm.getCardName(decidedIndex);
 
-            desiredCard = cm.getCardName(Random.Range(0, knowledgeBase.Length));
             stubornCount = 3;
         }
 
@@ -101,8 +190,13 @@ public class CardPlayerAI : MonoBehaviour
             BeStuborn();
             return;
         }
+        else {
+            AIDecision = (Decisions) (decisionSeed[currentTurn]% 4);
+            Debug.Log(decisionSeed[currentTurn] %4);
+            currentTurn++;
+        }
 
-        AIDecision = (Decisions)Random.Range(0, 5);
+        //AIDecision = (Decisions)Random.Range(0, 5);
         //AIDecision = Decisions.stuborn;
 
         if (AIDecision == Decisions.normal)
@@ -120,6 +214,7 @@ public class CardPlayerAI : MonoBehaviour
         else
         {
             //random
+            AIDecision = Decisions.random;
             ChooseRandomCard();
         }
 
@@ -148,7 +243,7 @@ public class CardPlayerAI : MonoBehaviour
     private void ChooseRandomCard()
     {
         Debug.Log("random");
-        AIDecision = Decisions.random;
+        
         int decidedIndex = 0;
         do
         {

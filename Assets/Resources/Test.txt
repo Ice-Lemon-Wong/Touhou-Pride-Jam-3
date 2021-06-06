@@ -7,7 +7,10 @@ if you can read this that means the file is loading alright
 
 -Start
 #Speaker Alice
+#portrait 0 alice happy
+#portrait 1 marisa happy
 this is to test if dialouge can start here
+#portrait 0 alice smug
 if it does then it is working
 the writer can write stuff in the txt file that controls the while dialogue flow
 -

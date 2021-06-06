@@ -3,42 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class SpeakerFieldManager : MonoBehaviour
+public class SpeakerFieldManager : DialogueSystemCommandParser
 {
-    [SerializeField] private TextMeshProUGUI speakerTextFeild;
-    [SerializeField] private bool isComponentInSameObject = false;
-    [SerializeField] private DialogueSystem ds;
-    [SerializeField] private string command;
+    [Space]
+    [Header("speaker command config")]
+    [SerializeField] private TextMeshProUGUI speakerTextFeild;  
+    [SerializeField] private string speakerCommand;
     
-
-    private string[] currentTextStrings;
-    
-
 
     // Start is called before the first frame update
     void Start()
     {
-        if (isComponentInSameObject) {
-            ds=  GetComponent<DialogueSystem>();
-        }
 
-        if (ds != null) {
-            ds.dialougeLineEvents += CheckSpeaker;
-        }
+        AddComand(speakerCommand, SetSpeaker);
+        InitCommands();
 
         //speakerTextFeild.text = "";
         
     }
 
-    public void CheckSpeaker(string textCommand) {
-        currentTextStrings = textCommand.Split(' ');
+    //public void CheckSpeaker(string textCommand) {
+    //    currentTextStrings = textCommand.Split(' ');
 
-        if (currentTextStrings[0].Substring(1, currentTextStrings[0].Length-1).ToUpper().Equals(command.ToUpper())) {
+    //    if (currentTextStrings[0].Substring(1, currentTextStrings[0].Length-1).ToUpper().Equals(command.ToUpper())) {
 
-            Debug.Log("switching speaker");
-            speakerTextFeild.text = currentTextStrings[1];
+    //        Debug.Log("switching speaker");
+    //        speakerTextFeild.text = currentTextStrings[1];
+    //    }
+    //}
+
+    public void SetSpeaker(string[] textCommand)
+    {
+        speakerTextFeild.text = "";
+        for (int i = 1; i < textCommand.Length; i++)
+        {
+            speakerTextFeild.text += textCommand[i];
+
         }
+
     }
+
 
 
 }

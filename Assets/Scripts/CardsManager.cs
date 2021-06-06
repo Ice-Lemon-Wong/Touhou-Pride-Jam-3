@@ -34,6 +34,7 @@ public class CardsManager : MonoBehaviour
     [SerializeField] private float cardFlipDelay = 0.75f;
     [SerializeField] private Vector2 cardHidingOffset;
     [SerializeField] private float transitionTime = 0.75f;
+    [SerializeField] private int turnAmmount = 8;
 
     [Space]
     [Header("card distribution config")]
@@ -43,14 +44,15 @@ public class CardsManager : MonoBehaviour
     [Space]
     [Header("debug text stuff")]
     [SerializeField] TextMeshProUGUI debugStateText;
-    
-    
+    [SerializeField] TextMeshProUGUI turnText;
+
 
     private int[] matchedCardsID;
     private int currentMatchIndex = 0;
     private float currentTransitionTime = 0;
     private bool isPlayerTurn = true;
     private CardPlayerAI playerAI;
+    private int currentTurn;
     
 
     public enum BoardState { playerTurn, enemyTurn, boardProcess};
@@ -155,7 +157,8 @@ public class CardsManager : MonoBehaviour
         }
 
         playerAI = FindObjectOfType<CardPlayerAI>();
-        playerAI.InitKnowledgeBase(cardLayout.x * cardLayout.y);
+        playerAI.InitKnowledgeBase(cardLayout.x * cardLayout.y, turnAmmount);
+        currentTurn = turnAmmount;
 
         if (InitAfterCreate) InitBoardCards(true);
     }
@@ -216,6 +219,7 @@ public class CardsManager : MonoBehaviour
             yield return new WaitForSeconds(transitionTime);
         }
         else {
+
             for (int i = 0; i < BoadCards.Length; i++)
             {
                 BoadCards[i].cardObject.GetComponent<CardScript>().UnflipCard();
@@ -223,14 +227,50 @@ public class CardsManager : MonoBehaviour
             }
             yield return new WaitForSeconds(cardFlipDelay);
         }
+        currentTurn--;
 
-        InitBoardCards(isMatched);
+
+        if (currentTurn > 0 && GetUnmatchedCardsCount() > 0)
+        {
+            InitBoardCards(isMatched);
+        }
+        else {
+           
+            yield return new WaitForSeconds(transitionTime);
+            for (int i = 0; i < BoadCards.Length; i++)
+            {
+                if (!BoadCards[i].isMatched)
+                {
+                    BoadCards[i].isFlipped = false;
+                    BoadCards[i].cardObject.GetComponent<CardScript>().UnflipCard();
+                    BoadCards[i].cardObject.GetComponent<CardScript>().FadeCard(true, false);
+                }
+            }
+            yield return new WaitForSeconds(transitionTime);
+
+            //fire event here;
+            Debug.Log("game is over");
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         debugStateText.text = currentBoardState.ToString();
+        turnText.text = "turns left: " + currentTurn;
+    }
+
+    int GetUnmatchedCardsCount() {
+        int cardCount = 0;
+        for (int i = 0; i < BoadCards.Length; i++)
+        {
+            if (!BoadCards[i].isMatched) {
+                cardCount++;
+            }
+        }
+
+        return cardCount;
     }
 
     public string getCardName(int ID)
@@ -278,6 +318,7 @@ public class CardsManager : MonoBehaviour
         {
             
             BoadCards[matchedCardsID[i]].Matched();
+
         }
         playerAI.ResetStuborn();
         CleanBoardCards(true);
