@@ -126,7 +126,7 @@ public class CardScript : MonoBehaviour
 
             if (isHiding)
             {
-                Debug.Log("set hiding here");
+                //Debug.Log("set hiding here");
                 targetPosition = hidingPosition;
                 iconSpriteRenderer.color = new Color(1, 1, 1, 1);
                 cardSpriteRenderer.color = new Color(1, 1, 1, 1);
@@ -184,7 +184,7 @@ public class CardScript : MonoBehaviour
 
     public void HideCard(bool isHiding = true, bool invertHidingPosition = false) {
         this.isHiding = isHiding;
-        Debug.Log("hiding: " + isHiding);
+        //Debug.Log("hiding: " + isHiding);
         if (invertHidingPosition) hidingPosition = -hidingPosition;
 
         checkCardState();
