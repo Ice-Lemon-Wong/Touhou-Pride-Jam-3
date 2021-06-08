@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class DialougeFilesManager : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class DialougeFilesManager : MonoBehaviour
 
             //testing only 
             //ds.endDialougeEvents += TestEndingEvent;
+
+
         }
     }
 
@@ -79,6 +82,7 @@ public class DialougeFilesManager : MonoBehaviour
                 //Debug.Log($"{txtContent[i].Substring(1).GetType()} and { startingLine.ToUpper().GetType()} is the same? : {txtContent[i].Substring(1).ToUpper().GetType() == startingLine.ToUpper().GetType()}");
                 
                 if (isStartingPointFound == false && txtContent[i].Substring(1,txtContent[i].Length - 2).ToUpper()  ==  startingLine.ToUpper() )
+
                 {
                     Debug.Log("made it");
                     isStartingPointFound = true;
@@ -145,6 +149,14 @@ public class DialougeFilesManager : MonoBehaviour
 
     public void TestEndingEvent() {
         LoadDialogueFromFile("Test");
-        ds.endDialougeEvents -= TestEndingEvent; 
+        ds.endDialougeEvents -= TestEndingEvent;
+        BackgroundManager.insatnceBGM.SetActiveBG(2);
+    }
+
+    public void TestEndingEvent2()
+    {
+        LoadDialogueFromFile("Test");
+        ds.endDialougeEvents -= TestEndingEvent2;
+        BackgroundManager.insatnceBGM.SetActiveBG(2);
     }
 }

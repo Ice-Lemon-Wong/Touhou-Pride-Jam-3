@@ -15,6 +15,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private float typingSpeed;
     [SerializeField] Optional<string> interuptInput;
     [SerializeField] Optional<string> advancingInput;
+    [SerializeField] private bool canUseExternalControls = true;
 
     [Space]
     [Header("timing configs")]
@@ -45,8 +46,8 @@ public class DialogueSystem : MonoBehaviour
     private int currentDialougeIndex = 0;
     private bool isInterupt = false;
     private bool isTyping = false;
-
     
+
 
     // Start is called before the first frame update
     IEnumerator Start()
@@ -68,9 +69,19 @@ public class DialogueSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (interuptInput.Enabled) {
-            if (Input.GetButtonDown(interuptInput.Value)) {
-                if (!isInterupt) {
+        if (!canUseExternalControls) return;
+
+        HandleInputs();
+    }
+
+    private void HandleInputs()
+    {
+        if (interuptInput.Enabled)
+        {
+            if (Input.GetButtonDown(interuptInput.Value))
+            {
+                if (!isInterupt)
+                {
                     isInterupt = true;
                 }
             }
@@ -114,6 +125,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     public void AdvanceDialogue() {
+        if (!canUseExternalControls) return;
         StopCoroutine("TypeDialougeRoutine");
         if (dialougeTexts == null) return;
 
@@ -164,10 +176,10 @@ public class DialogueSystem : MonoBehaviour
         isInterupt = true;
     }
 
-    public void SetStartEvents(Action[] events) 
-    {
-		dialogueStartEvents = null;
-		foreach (var item in events)
+
+    public void SetStartEvents(Action[] events) {
+        dialogueStartEvents = null;
+        foreach (var item in events)
         {
             dialogueStartEvents += item;
         }
@@ -176,8 +188,9 @@ public class DialogueSystem : MonoBehaviour
 
     public void SetEndEvents(Action[] events)
     {
-		endDialougeEvents = null;
-		foreach (var item in events)
+
+        endDialougeEvents = null;
+        foreach (var item in events)
         {
             endDialougeEvents += item;
         }
@@ -258,6 +271,8 @@ public class DialogueSystem : MonoBehaviour
             continueButton.Value.SetActive(true);
         }
         isTyping = false;
+
+
 
     }
 
