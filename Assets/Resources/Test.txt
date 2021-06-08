@@ -38,3 +38,15 @@ this is to test if the third protrait is working peroperly
 #portrait 2 alice2 eat
 if I am eating, that means it is working
 -
+
+-Alice
+#Speaker Alice
+
+#portrait 0 alice happy
+#animate 0 neutral
+#animate 0 enter
+#portrait 0 enable
+#portrait 1 enable
+FISH 
+fisssh
+-
