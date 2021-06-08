@@ -25,14 +25,14 @@ public class DialougeFilesManager : MonoBehaviour
         yield return null;
         if (loadImmediantly)
         {
-            LoadDialogueFromFile();
+            LoadDialogueFromFile(true);
 
             //testing only 
             ds.endDialougeEvents += TestEndingEvent;
         }
     }
 
-    public void LoadDialogueFromFile(bool loadImmediantly = true)
+    public void LoadDialogueFromFile(bool loadImmediantly  = true)
     {
 
         TextAsset txtAsset = (TextAsset)Resources.Load(txtFileName);
@@ -41,6 +41,18 @@ public class DialougeFilesManager : MonoBehaviour
 
         ds.LoadDialouge(SearchDesiredText(), loadImmediantly);
     }
+
+    public void LoadDialogueFromFile()
+    {
+
+        TextAsset txtAsset = (TextAsset)Resources.Load(txtFileName);
+        txtContent = txtAsset.text.Split('\n');
+
+
+        ds.LoadDialouge(SearchDesiredText(), true);
+    }
+
+
 
     public void LoadDialogueFromFile(string fileNameToLoad, string startingLineToUse = "", bool loadImmediantly = true) {
         txtFileName = fileNameToLoad;
