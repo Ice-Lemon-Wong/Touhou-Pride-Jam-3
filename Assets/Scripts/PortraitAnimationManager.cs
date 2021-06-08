@@ -8,7 +8,9 @@ public class PortraitAnimationManager : DialogueSystemCommandParser
 {
     [Header("animator configs")]
     [SerializeField] string animationCommandSyntax = "animate";
+    [SerializeField] string neutralAnimationName = "neutral";
     [SerializeField] PortraitsManager pm;
+
 
     [Header("shaking effect configs")]
     [SerializeField] string shakeAnimationName = "shake";
@@ -18,8 +20,6 @@ public class PortraitAnimationManager : DialogueSystemCommandParser
     int portraitNumber = 0;
     Image portraitsToAnimate;
      
-    
-
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +27,19 @@ public class PortraitAnimationManager : DialogueSystemCommandParser
         
         AddComand(animationCommandSyntax, PlayAnimation);
         InitCommands();
-        
+        ds.initDialogue += ResetAnimations;
+        ds.requiredEndEvent += ResetAnimations;
     }
 
-  
+    void ResetAnimations() { 
+        Image[] allPortraits = pm.GetAllPortrait();
+
+        foreach (var item in allPortraits)
+        {
+            item.GetComponent<Animator>().StopPlayback();
+            item.GetComponent<Animator>().Play(neutralAnimationName);
+        }
+    }
 
     public void PlayAnimation(string[] commandLine) {
         portraitNumber = -1;
@@ -46,7 +55,7 @@ public class PortraitAnimationManager : DialogueSystemCommandParser
             return;
         }
 
-        portraitsToAnimate = pm.GetPortraits(portraitNumber);
+        portraitsToAnimate = pm.GetPortrait(portraitNumber);
 
         if (portraitsToAnimate == null) return;
 
@@ -93,25 +102,5 @@ public class PortraitAnimationManager : DialogueSystemCommandParser
 
     }
 
-    IEnumerator ShakeEffect(float duration, float magnitude, Image portrait)
-    {
-        portrait.GetComponent<Animator>().enabled = false;
-        Vector3 originalPos = portrait.transform.localPosition;
-        
-
-        float elapsed = 0.0f;
-
-        while (elapsed < duration)
-        {
-            portrait.transform.localPosition = originalPos + new Vector3(UnityEngine. Random.Range(-1f, 1f) * magnitude, UnityEngine.Random.Range(-1f, 1f) * magnitude);
-
-            elapsed += Time.deltaTime;
-            Debug.Log("shaking: " + portrait.transform.localPosition);
-
-            yield return null;
-        }
-
-        portrait.transform.localPosition = originalPos;
-        portrait.GetComponent<Animator>().enabled = true;
-    }
+   
 }

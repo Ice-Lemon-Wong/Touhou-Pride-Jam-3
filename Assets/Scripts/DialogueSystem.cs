@@ -9,22 +9,38 @@ using System;
 
 public class DialogueSystem : MonoBehaviour
 {
+    [Header("dialogue configs")]
     [SerializeField] private string[] dialougeTexts;
     [SerializeField] private TextMeshProUGUI dialogueTextFeild;
     [SerializeField] private float typingSpeed;
     [SerializeField] Optional<string> interuptInput;
     [SerializeField] Optional<string> advancingInput;
+
+    [Space]
+    [Header("timing configs")]
     [SerializeField] private bool startImmediantly;
-    [SerializeField] private float startDelay;
+    [SerializeField] public float startDelay;
+    [SerializeField] public float endDelay;
+
+    [Space]
+    [Header("command parsing configs")]
     [SerializeField] private char commandPrefix;
     [SerializeField] private bool skipEmpty;
+    [SerializeField] private char[] ignorePrefix;
+
+    [Space]
+    [Header("extra config ")]
     [SerializeField] Optional<GameObject> continueButton;
     
 
-    
+
 
     public Action<string> dialougeLineEvents;
     public Action endDialougeEvents;
+    public Action dialogueStartEvents;
+
+    public Action initDialogue;
+    public Action requiredEndEvent;
 
     private int currentDialougeIndex = 0;
     private bool isInterupt = false;
@@ -44,8 +60,7 @@ public class DialogueSystem : MonoBehaviour
 
         if (startImmediantly) {
             yield return null;
-            yield return new WaitForSecondsRealtime(startDelay);
-            StartDialogue();
+            StartCoroutine(StartDialogueRoutine());
         }
         
     }
@@ -75,6 +90,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void LoadDialouge(string[] dialoguesToLoad, bool startImmediantly = true)
     {
+
         dialougeTexts = dialoguesToLoad;
         if (startImmediantly) {
             StartDialogue();
@@ -83,6 +99,16 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue() {
         if (dialougeTexts == null) return;
+
+        StartCoroutine(StartDialogueRoutine());
+    }
+
+    IEnumerator StartDialogueRoutine() {
+        initDialogue?.Invoke();
+
+        yield return new WaitForSeconds(startDelay);
+        dialogueStartEvents?.Invoke();
+       
         currentDialougeIndex = 0;
         TypeDialouge();
     }
@@ -102,20 +128,26 @@ public class DialogueSystem : MonoBehaviour
             {
                 continueButton.Value.SetActive(false);
             }
-            dialogueTextFeild.text = "";
 
-            //fire events
-            endDialougeEvents?.Invoke();
+            StartCoroutine(EndDialogueRoutine());            
         }
     }
 
+    IEnumerator EndDialogueRoutine() {
+        requiredEndEvent?.Invoke();
+        dialogueTextFeild.text = "";
+        yield return new WaitForSeconds(endDelay);
+        
+        //fire events
+        endDialougeEvents?.Invoke();
+        
+    }
 
     public void SkipDialougeTyping() {
         StopCoroutine("TypeDialougeRoutine");
         dialogueTextFeild.text = "";
         AdvanceDialogue();
     }
-
 
     public void TypeDialouge()
     {
@@ -132,6 +164,23 @@ public class DialogueSystem : MonoBehaviour
         isInterupt = true;
     }
 
+    public void SetStartEvents(Action[] events) {
+        foreach (var item in events)
+        {
+            dialogueStartEvents += item;
+        }
+        
+    }
+
+    public void SetEndEvents(Action[] events)
+    {
+        foreach (var item in events)
+        {
+            endDialougeEvents += item;
+        }
+
+    }
+
 
     IEnumerator  TypeDialougeRoutine(string dialougeToType) {
 
@@ -139,31 +188,46 @@ public class DialogueSystem : MonoBehaviour
         float t = 0;
         int charIndex = 0;
         isInterupt = false;
-        dialogueTextFeild.text = "";
+        
         isTyping = true;
 
         Debug.Log(dialougeToType);
-        if (skipEmpty && string.IsNullOrWhiteSpace(dialougeToType) ) {
+        if (skipEmpty && (string.IsNullOrWhiteSpace(dialougeToType)  )) {
             SkipDialougeTyping();
         }else {
 
             Debug.Log("made it to comands");
             dialougeLineEvents?.Invoke(dialougeToType);
 
-            
-            if (dialougeToType[0].Equals(commandPrefix))
+            bool isSkipPrefix = false;
+
+            for (int i = 0; i < ignorePrefix.Length; i++)
+            {
+                if (dialougeToType[0].Equals(ignorePrefix[i])){
+                    isSkipPrefix = true;
+                }
+            }
+
+            Debug.Log($"shoud skip?: { dialougeToType[0] } {isSkipPrefix} ");
+            if (dialougeToType[0].Equals(commandPrefix) || isSkipPrefix)
             {
                 SkipDialougeTyping();
-            }
+            } 
             else
             {
-                if (continueButton.Enabled)
-                {
-                    continueButton.Value.SetActive(false);
-                }
+
+                dialogueTextFeild.text = "";
+
 
                 while (charIndex < dialougeToType.Length)
                 {
+
+                    //for whatever reason this needs to be in the loop to not show
+                    if (continueButton.Enabled)
+                    {
+                        continueButton.Value.SetActive(false);
+                    }
+
                     if (isInterupt)
                     {
                         charIndex = dialougeToType.Length;
@@ -175,13 +239,13 @@ public class DialogueSystem : MonoBehaviour
                         charIndex = Mathf.Clamp(charIndex, 0, dialougeToType.Length);
                     }
 
-                    
+
                     dialogueTextFeild.text = dialougeToType.Substring(0, charIndex);
 
                     yield return null;
                 }
 
-                
+
                 dialogueTextFeild.text = dialougeToType;
             }
         }
@@ -195,6 +259,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     public void TestEvent(string testString) {
+        
         Debug.Log(testString);
         Debug.Log("Event is working as intended");
     }
