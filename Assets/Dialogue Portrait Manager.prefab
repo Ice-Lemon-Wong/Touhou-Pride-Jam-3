@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1849018984474160154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1849018984474160152}
+  - component: {fileID: 1849018984474160153}
+  m_Layer: 0
+  m_Name: Dialogue Portrait Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1849018984474160152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849018984474160154}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 994.41284, y: 517.6551, z: -113.528244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1849018984474160153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849018984474160154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f5e39223559a74aba91511aaa86011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ds: {fileID: 0}
+  isComponentInObject: 0
+  portraitCommandText: portrait
+  portraitDisableText: disable
+  portraitEnableText: enable
+  numberOfPortraits: 2
+  portraitEffectSpeed: 5
+  portraits:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  portraitParent: {fileID: 0}
+  characterData:
+  - characterName: Alice
+    allSpritePortraitData:
+    - portraitName: happy
+      portraitSprite: {fileID: 21300000, guid: a8f2221c1a309c34c9bdeff33e77b087, type: 3}
+    - portraitName: smug
+      portraitSprite: {fileID: 21300000, guid: 98827a0d1dabe214faa985a960a4e15a, type: 3}
+    - portraitName: angry
+      portraitSprite: {fileID: 21300000, guid: 43998763629dc1b44a943927e50c73c2, type: 3}
+    - portraitName: annoyedpout
+      portraitSprite: {fileID: 21300000, guid: 399da58ae56d6bc4bb5c992e7427bf2d, type: 3}
+    - portraitName: annoyedtalk
+      portraitSprite: {fileID: 21300000, guid: 23bfc52ed3aea9b4286ad010a5d58617, type: 3}
+    - portraitName: cry
+      portraitSprite: {fileID: 21300000, guid: 2254beba26d13e94f9507c06326a09aa, type: 3}
+    - portraitName: cryhappy
+      portraitSprite: {fileID: 21300000, guid: 2d6f8c8ea60069f40a33402a39334080, type: 3}
+    - portraitName: neutral
+      portraitSprite: {fileID: 21300000, guid: cc95c8fa042347d4e8f8726f5f488e2e, type: 3}
+    - portraitName: oh
+      portraitSprite: {fileID: 21300000, guid: 28a0642ad610a5f4b90b4a8ab0d295c4, type: 3}
+    - portraitName: sad
+      portraitSprite: {fileID: 21300000, guid: 10a71235c2555794283730fbf686012a, type: 3}
+    - portraitName: wtf
+      portraitSprite: {fileID: 21300000, guid: a93f9812d24965043ba207378d587d65, type: 3}
+    allSpriteBase:
+    - portraitName: baseNormal
+      portraitSprite: {fileID: 21300000, guid: b32a64528b44e7242adc72cd08760ae6, type: 3}
+  - characterName: Marisa
+    allSpritePortraitData:
+    - portraitName: angry
+      portraitSprite: {fileID: 21300000, guid: eb1ec00da8b4c644fbb5c033b903eec4, type: 3}
+    - portraitName: annoyedPout
+      portraitSprite: {fileID: 21300000, guid: c5405c287e7d80e47b447747f8dff394, type: 3}
+    - portraitName: annoyedTalk
+      portraitSprite: {fileID: 21300000, guid: 79555f3697d83ff4d8edcc65540be634, type: 3}
+    - portraitName: cry
+      portraitSprite: {fileID: 21300000, guid: f5e0479a19772254e982932c6cd3782f, type: 3}
+    - portraitName: cryhappy
+      portraitSprite: {fileID: 21300000, guid: 14644ebac60cc0a42b2b652ac634bb58, type: 3}
+    - portraitName: happy
+      portraitSprite: {fileID: 21300000, guid: 98bb616ad0cd80c4e9c6d8f2f84064f8, type: 3}
+    - portraitName: neutral
+      portraitSprite: {fileID: 21300000, guid: e824d7019fe524f45acc2ec5fdedb2ef, type: 3}
+    - portraitName: oh
+      portraitSprite: {fileID: 21300000, guid: 0d37d887464b76a4abd429fbaa7eb791, type: 3}
+    - portraitName: smug
+      portraitSprite: {fileID: 21300000, guid: 58f2ca9aa64e76e40aa53d03f6a4cffd, type: 3}
+    - portraitName: sad
+      portraitSprite: {fileID: 21300000, guid: 57ff3d2996f1b144ea6b51a4e3b4c8b5, type: 3}
+    - portraitName: wtf
+      portraitSprite: {fileID: 21300000, guid: c5eb879879452cd43b72820e19d27563, type: 3}
+    allSpriteBase:
+    - portraitName: baseNormal
+      portraitSprite: {fileID: 21300000, guid: 9a5dd6c4c7ed1d8489b85a5b49eec952, type: 3}

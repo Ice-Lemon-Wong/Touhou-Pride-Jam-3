@@ -7,10 +7,32 @@ if you can read this that means the file is loading alright
 
 -Start
 #Speaker Alice
+#portrait 2 disable
+#portrait 0 disable
 #portrait 0 alice happy
-#portrait 1 marisa happy
+#animate 0 neutral
+#animate 0 enter
+#portrait 0 enable
+#portrait 1 enable
+
+
 this is to test if dialouge can start here
 #portrait 0 alice smug
+#animate 0 jump
 if it does then it is working
+#animate 1 shake
+#portrait 1 marisa cry
+if I am shaking it also means that my animation is working
+#animate 1 shake
 the writer can write stuff in the txt file that controls the while dialogue flow
+
+#portrait 1 disable
+#portrait 0 disable
+#portrait 2 enable
+#portrait 2 alice2 baseNormal
+#portrait 2 alice2 happy
+this is to test if the third protrait is working peroperly
+#portrait 2 alice2 baseEat
+#portrait 2 alice2 eat
+if I am eating, that means it is working
 -

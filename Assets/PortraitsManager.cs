@@ -7,6 +7,8 @@ using System;
 public class PortraitsManager : DialogueSystemCommandParser
 {
     [SerializeField] private string portraitCommandText = "portrait";
+    [SerializeField] private string portraitDisableText = "disable";
+    [SerializeField] private string portraitEnableText = "enable";
     [SerializeField] int numberOfPortraits = 2;
     [SerializeField] float portraitEffectSpeed = 10;
     [SerializeField] Image[] portraits;
@@ -26,6 +28,7 @@ public class PortraitsManager : DialogueSystemCommandParser
         for (int i = 0; i < portraits.Length; i++)
         {
             portraitDisplays[i] = new PortraitDisplayFeild(portraits[i], portraitParent);
+            //StartCoroutine(portraitDisplays[i].EnableAnimator());
         }
 
         AddComand(portraitCommandText, PortraitCommandFunction);
@@ -44,6 +47,7 @@ public class PortraitsManager : DialogueSystemCommandParser
     public void PortraitCommandFunction(string[] commandLine) {
 
         portraitNumber = -1;
+        bool isExpression = true;
         if (! Int32.TryParse(commandLine[1], out portraitNumber))
         {
             Debug.LogError($"argument '{commandLine[1]}' at index 1 is not a number for protraits");
@@ -55,24 +59,36 @@ public class PortraitsManager : DialogueSystemCommandParser
             return;
         }
 
+        if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals(portraitDisableText.ToUpper()))
+        {
+            portraitDisplays[portraitNumber].Enable(false);
+            return;
+        }
+        else if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals(portraitEnableText.ToUpper()))
+        {
+            portraitDisplays[portraitNumber].Enable(true);
+            return;
+        }
+
         if (!CheckCharacterExist(commandLine[2])) {
             Debug.LogError($"argument '{commandLine[2]}' at index 2 is not a valid character name");
             return;
         }
 
-        if (!CheckCharacterExist(commandLine[2]))
-        {
-            Debug.LogError($"argument '{commandLine[2]}' at index 2 is not a valid character name");
-            return;
-        }
+
 
         if (!CheckPortraitExist(commandLine[2], commandLine[3]))
         {
-            Debug.LogError($"argument '{commandLine[3]}' at index 3 is not a valid expression name");
-            return;
+
+            isExpression = false;
+            if (!CheckPortraitExist(commandLine[2], commandLine[3],isExpression))
+            {
+                Debug.LogError($"argument '{commandLine[3]}' at index 3 is not a valid portrait name");
+                return;
+            }
         }
 
-        portraitDisplays[portraitNumber].ChangePortrait( GetPortratSprite(commandLine[2], commandLine[3]));
+        portraitDisplays[portraitNumber].ChangePortrait( GetPortratSprite(commandLine[2], commandLine[3],isExpression));
 
     }
 
@@ -86,110 +102,295 @@ public class PortraitsManager : DialogueSystemCommandParser
         return false;
     }
 
-    public bool CheckPortraitExist(string characterName, string expressionName)
+    public bool CheckPortraitExist(string characterName, string expressionName, bool isExpression = true)
     {
         for (int i = 0; i < characterData.Length; i++)
         {
             if (characterData[i].characterName.ToUpper().Equals(characterName.ToUpper())) {
 
-
-                for (int j = 0; j < characterData[i].allSpriteData.Length; j++)
+                if (isExpression)
                 {
-                    
-                    //Debug.Log((characterData[i].allSpriteData[j].expressionName.ToUpper()) + "" );
-                    //Debug.Log(expressionName.Substring(0, expressionName.Length - 1).ToUpper());
-                    if (characterData[i].allSpriteData[j].expressionName.ToUpper() == expressionName.Substring(0, expressionName.Length - 1).ToUpper()) { 
-                        return true;
+                    for (int j = 0; j < characterData[i].allSpritePortraitData.Length; j++)
+                    {
+
+                        //Debug.Log((characterData[i].allSpriteData[j].expressionName.ToUpper()) + "" );
+                        //Debug.Log(expressionName.Substring(0, expressionName.Length - 1).ToUpper());
+                        if (characterData[i].allSpritePortraitData[j].portraitName.ToUpper() == expressionName.Substring(0, expressionName.Length - 1).ToUpper())
+                        {
+                            return true;
+                        }
                     }
                 }
+                else {
+                    for (int j = 0; j < characterData[i].allSpriteBase.Length; j++)
+                    {
+
+                        //Debug.Log((characterData[i].allSpriteData[j].expressionName.ToUpper()) + "" );
+                        //Debug.Log(expressionName.Substring(0, expressionName.Length - 1).ToUpper());
+                        if (characterData[i].allSpriteBase[j].portraitName.ToUpper() == expressionName.Substring(0, expressionName.Length - 1).ToUpper())
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+                
             }
         }
 
         return false;
     }
 
-    public Sprite GetPortratSprite(string characterName, string expressionName) {
+    public Sprite GetPortratSprite(string characterName, string expressionName, bool isExpression = true) {
         for (int i = 0; i < characterData.Length; i++)
         {
             if (characterData[i].characterName.ToUpper().Equals(characterName.ToUpper()))
             {
 
-                for (int j = 0; j < characterData[i].allSpriteData.Length; j++)
+                if (isExpression)
                 {
-                    //Debug.Log(characterData[i].allSpriteData[j].portraitSprite.name);
-                    //Debug.Log(expressionName.Substring(0, expressionName.Length - 1).ToUpper());
-                    if (characterData[i].allSpriteData[j].expressionName.ToUpper() == expressionName.Substring(0, expressionName.Length - 1).ToUpper())
+                    for (int j = 0; j < characterData[i].allSpritePortraitData.Length; j++)
                     {
-                        return characterData[i].allSpriteData[j].portraitSprite;
+                        if (characterData[i].allSpritePortraitData[j].portraitName.ToUpper() == expressionName.Substring(0, expressionName.Length - 1).ToUpper())
+                        {
+                            return characterData[i].allSpritePortraitData[j].portraitSprite;
+                        }
                     }
-                   
                 }
+                else
+                {
+                    for (int j = 0; j < characterData[i].allSpriteBase.Length; j++)
+                    { 
+                        if (characterData[i].allSpriteBase[j].portraitName.ToUpper() == expressionName.Substring(0, expressionName.Length - 1).ToUpper())
+                        {
+                            return characterData[i].allSpriteBase[j].portraitSprite;
+                        }
+                    }
+                }
+
+                
             }
         }
 
         return null;
     }
 
+    public Image GetPortraits(int index) {
+        if (index >= 0 && index < portraitDisplays.Length)
+        {
+            return portraitDisplays[index].GetPortraitImages();
+        }
+        else {
+            Debug.LogError($"index of {index} is not a valid portrait display index to get");
+            return null;
+        }
+    }
+
+    
+    
     [Serializable]
     struct PortraitCharacter {
         public string characterName;
-        public ProtraitSpriteData[] allSpriteData;
+        public ProtraitSpriteData[] allSpritePortraitData;
+        public ProtraitSpriteData[] allSpriteBase;
     }
 
     [Serializable]
     struct ProtraitSpriteData {
-        public string expressionName;
+        public string portraitName;
         public Sprite portraitSprite;
     }
 
+    
+
     struct PortraitDisplayFeild
     {
-        public Image portraitImage;
-        public Image backUpPortraitImage;
-        public bool isUsingFront;
+        public Image expressionImage;
+        public Image expressionImageBackup;
+        public Image baseImage;
+        public Image baseImageeBackup;
+        public bool isUsingFrontExpression;
+        public bool isUsingFrontBase;
         private Color colourVar;
+        public bool isEnable;
 
-        public PortraitDisplayFeild(Image newPortraitImage, Transform parentObject) {
-            portraitImage = newPortraitImage;
-            backUpPortraitImage = Instantiate(portraitImage, portraitImage.transform.position, portraitImage.transform.rotation);
-            backUpPortraitImage.transform.parent = parentObject;
-            backUpPortraitImage.transform.position = portraitImage.transform.position;
-            backUpPortraitImage.transform.localScale = portraitImage.transform.localScale;
-            backUpPortraitImage.transform.rotation = portraitImage.transform.rotation;
-            isUsingFront = true;
-            backUpPortraitImage.color = new Color(0, 0, 0, 0);
+        public PortraitDisplayFeild(Image newPortraitImage, Transform parentObject, bool isEnable = true) {
+
+            baseImage = newPortraitImage;
+            expressionImage = newPortraitImage.transform.GetChild(0).GetComponent<Image>();
+
+            baseImageeBackup = Instantiate(baseImage, expressionImage.transform.position, expressionImage.transform.rotation);
+            //expressionImageBackup = Instantiate(expressionImage, expressionImage.transform.position, expressionImage.transform.rotation);
+            baseImageeBackup.transform.parent = parentObject;
+            baseImageeBackup.transform.position = baseImage.transform.position;
+            baseImageeBackup.transform.localScale = baseImage.transform.localScale;
+            baseImageeBackup.transform.rotation = baseImage.transform.rotation;
+            expressionImageBackup = baseImageeBackup.transform.GetChild(0).GetComponent<Image>();
+
+            isUsingFrontExpression = true;
+            isUsingFrontBase = true;
+
+            
+
+            expressionImageBackup.color = new Color(0, 0, 0, 0);
             colourVar = new Color(1, 1, 1, 1);
+            this.isEnable = isEnable;
+            Enable(isEnable);
+
+            if (baseImageeBackup.GetComponent<Animator>() != null) baseImageeBackup.GetComponent<Animator>().enabled = false;
+            //for some reason, animator needs to be desabled first
+
+            //if (baseImage.GetComponent<Animator>() != null) baseImage.GetComponent<Animator>().enabled = true;
+            //if (baseImageeBackup.GetComponent<Animator>() != null) baseImageeBackup.GetComponent<Animator>().enabled = true;
+
+        }
+
+        public IEnumerator EnableAnimator() {
+            if (baseImage.GetComponent<Animator>() != null) baseImage.GetComponent<Animator>().enabled = true;
+            if (baseImageeBackup.GetComponent<Animator>() != null) baseImageeBackup.GetComponent<Animator>().enabled = false ;
+
+            yield return new WaitForSeconds(1f);
+            
+
+            baseImageeBackup.transform.parent = baseImage.transform.parent;
+            baseImageeBackup.transform.position = baseImage.transform.position;
+            baseImageeBackup.transform.localScale = baseImage.transform.localScale;
+            baseImageeBackup.transform.rotation = baseImage.transform.rotation;
+
+            
         }
 
         public void UpdateProtraitDisplay(float effectSpeed) {
-            if (isUsingFront)
+
+            baseImageeBackup.transform.position = baseImage.transform.position;
+            baseImageeBackup.transform.localScale = baseImage.transform.localScale;
+            baseImageeBackup.transform.rotation = baseImage.transform.rotation;
+
+            if (!isEnable) {
+                colourVar.a = Mathf.Lerp(expressionImage.color.a, 0, effectSpeed * Time.deltaTime);
+                expressionImage.color = colourVar;
+                colourVar.a = Mathf.Lerp(baseImage.color.a, 0, effectSpeed * Time.deltaTime);
+                baseImage.color = colourVar;
+                colourVar.a = Mathf.Lerp(expressionImageBackup.color.a, 0, effectSpeed * Time.deltaTime);
+                expressionImageBackup.color = colourVar;
+                colourVar.a = Mathf.Lerp(baseImageeBackup.color.a, 0, effectSpeed * Time.deltaTime);
+                baseImageeBackup.color = colourVar;
+                return;
+            }
+
+            
+
+            if (isUsingFrontExpression)
             {
-                colourVar.a = Mathf.Lerp(portraitImage.color.a, 1, effectSpeed * Time.deltaTime);
-                portraitImage.color = colourVar;
-                colourVar.a = Mathf.Lerp(backUpPortraitImage.color.a, 0, effectSpeed * Time.deltaTime);
-                backUpPortraitImage.color = colourVar;
+                colourVar.a = Mathf.Lerp(expressionImage.color.a, 1, effectSpeed * Time.deltaTime);
+                expressionImage.color = colourVar;
+                colourVar.a = Mathf.Lerp(baseImage.color.a, 1, effectSpeed * Time.deltaTime);
+                baseImage.color = colourVar;
+
+                colourVar.a = Mathf.Lerp(expressionImageBackup.color.a, 0, effectSpeed * Time.deltaTime);
+                expressionImageBackup.color = colourVar;
+                colourVar.a = Mathf.Lerp(baseImageeBackup.color.a, 0, effectSpeed * Time.deltaTime);
+                baseImageeBackup.color = colourVar;
             }
             else {
-                colourVar.a = Mathf.Lerp(portraitImage.color.a, 0, effectSpeed * Time.deltaTime);
-                portraitImage.color = colourVar;
-                colourVar.a = Mathf.Lerp(backUpPortraitImage.color.a, 1, effectSpeed * Time.deltaTime);
-                backUpPortraitImage.color = colourVar;
+                colourVar.a = Mathf.Lerp(expressionImage.color.a, 0, effectSpeed * Time.deltaTime);
+                expressionImage.color = colourVar;
+                colourVar.a = Mathf.Lerp(baseImage.color.a, 0, effectSpeed * Time.deltaTime);
+                baseImage.color = colourVar;
+
+                colourVar.a = Mathf.Lerp(expressionImageBackup.color.a, 1, effectSpeed * Time.deltaTime);
+                expressionImageBackup.color = colourVar;
+                colourVar.a = Mathf.Lerp(baseImageeBackup.color.a, 1, effectSpeed * Time.deltaTime);
+                baseImageeBackup.color = colourVar;
+            }
+
+            if (isUsingFrontBase)
+            {
+                colourVar.a = Mathf.Lerp(baseImage.color.a, 1, effectSpeed * Time.deltaTime);
+                baseImage.color = colourVar;
+               
+                colourVar.a = Mathf.Lerp(baseImageeBackup.color.a, 0, effectSpeed * Time.deltaTime);
+                baseImageeBackup.color = colourVar;
+            }
+            else {
+                colourVar.a = Mathf.Lerp(baseImage.color.a, 0, effectSpeed * Time.deltaTime);
+                baseImage.color = colourVar;
+
+                colourVar.a = Mathf.Lerp(baseImageeBackup.color.a, 1, effectSpeed * Time.deltaTime);
+                baseImageeBackup.color = colourVar;
             }
         }
 
-        public void ChangePortrait(Sprite portraitSprite)
+        public void Enable(bool shouldEnable = true) {
+            isEnable = shouldEnable;
+
+            //if (isEnable)
+            //{
+            //    if (isUsingFrontExpression)
+            //    {
+            //        colourVar.a = 1;
+            //        expressionImage.color = colourVar;
+            //        baseImage.color = colourVar;
+
+            //        colourVar.a = 0;
+            //        expressionImageBackup.color = colourVar;
+            //        baseImageeBackup.color = colourVar;
+            //    }
+            //    else
+            //    {
+            //        colourVar.a = 0;
+            //        expressionImage.color = colourVar;
+            //        baseImage.color = colourVar;
+
+            //        colourVar.a = 1;
+            //        expressionImageBackup.color = colourVar;
+            //        baseImageeBackup.color = colourVar;
+            //    }
+            //}
+            //else {
+            //    colourVar.a = 0;
+            //    expressionImage.color = colourVar;
+            //    baseImage.color = colourVar;
+            //    expressionImageBackup.color = colourVar;
+            //    baseImageeBackup.color = colourVar;
+            //}
+        }
+
+        public void ChangePortrait(Sprite portraitSprite, bool isExpression = true)
         {
-            if (isUsingFront)
+            if (isExpression)
             {
-                backUpPortraitImage.sprite = portraitSprite;
+                if (isUsingFrontExpression)
+                {
+                    expressionImageBackup.sprite = portraitSprite;
+                }
+                else
+                {
+                    expressionImage.sprite = portraitSprite;
+                }
+                isUsingFrontExpression = !isUsingFrontExpression;
             }
-            else
-            {
-                portraitImage.sprite = portraitSprite;
+            else {
+
+                if (isUsingFrontBase)
+                {
+                    baseImageeBackup.sprite = portraitSprite;
+                }
+                else
+                {
+                    baseImage.sprite = portraitSprite;
+                }
+                isUsingFrontBase = !isUsingFrontBase;
             }
-            isUsingFront = !isUsingFront;
+            
 
         }
 
+
+        public Image GetPortraitImages() {
+            return baseImage ;
+        }
+
+        
     }
 }
