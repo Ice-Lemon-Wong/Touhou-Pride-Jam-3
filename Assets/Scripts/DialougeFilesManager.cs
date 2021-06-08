@@ -145,6 +145,7 @@ public class DialougeFilesManager : MonoBehaviour
 
     public void TestEndingEvent() {
         LoadDialogueFromFile("Test");
-        ds.endDialougeEvents -= TestEndingEvent; 
+        ds.endDialougeEvents -= TestEndingEvent;
+        BackgroundManager.insatnceBGM.SetActiveBG(2);
     }
 }
