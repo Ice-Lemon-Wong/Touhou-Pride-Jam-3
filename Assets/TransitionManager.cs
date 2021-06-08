@@ -13,8 +13,10 @@ public class TransitionManager : DialogueSystemCommandParser
 
 	private Action[] actions;
 
-	private void Start() 
+	private IEnumerator Start() 
     {
+        yield return null;
+		dialogueManager.LoadDialogueFromFile("Test", "Start");
 		ds.SetEndEvents(new Action[] {CardGameEvent});
 	}
 
@@ -22,7 +24,11 @@ public class TransitionManager : DialogueSystemCommandParser
         Debug.LogWarning("Starting card game");
 		dialogueUIEnabler.DisableUI();
 		cardManager.InitBoardCards(true);
-		cardManager.action = () => dialogueManager.LoadDialogueFromFile("Test", "Test");
+		cardManager.action = () =>
+		{
+			dialogueManager.LoadDialogueFromFile("Test", "Test");
+			ds.endDialougeEvents -= cardManager.endGame;
+		};
 	}
 
     public void cardsFoundTransition() {
@@ -42,7 +48,8 @@ public class TransitionManager : DialogueSystemCommandParser
     public void cardGameEndTransition() {
         dialogueUIEnabler.EnableUI();
         dialogueManager.LoadDialogueFromFile("Test", "CardGameEnd");
-        //calls the end game function
+		//calls the end game function
 		ds.SetEndEvents(new Action[] { cardManager.endGame });
+		//ds.endDialougeEvents -= cardManager.endGame;
 	}
 }
