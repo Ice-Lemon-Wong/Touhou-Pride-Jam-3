@@ -38,3 +38,34 @@ this is to test if the third protrait is working peroperly
 #portrait 2 alice2 eat
 if I am eating, that means it is working
 -
+
+-Test
+//the dialogues to load after the last interaction dialogue
+#Speaker Magee
+What is Magee? FUCKFUCKFUCKFUCKFUCK
+
+-
+
+-CardMatched_1
+#Speaker Bruh
+Card Dialogues.
+-
+
+-CardMatched_2
+#Speaker Gay
+Card Dialogues. 2
+-
+
+-CardGameEnd
+//the last interaction dialogue
+#Speaker Nigger
+#portrait 0 enable
+#portrait 1 enable
+#animate 0 neutral
+#animate 1 neutral
+
+Hmph. REEEEEEEEEEEEEEE
+
+#Speaker No U
+No U nigga
+-
