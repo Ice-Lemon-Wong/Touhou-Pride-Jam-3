@@ -8,7 +8,7 @@ public class DialougeFilesManager : MonoBehaviour
     [SerializeField] bool isComponentInSameObject;
     [SerializeField] char lineStartPrefix = '-';
     [SerializeField] private bool loadImmediantly;
-    
+    [SerializeField] private DialogueUIEnabler UiEnabler;
 
     public string txtFileName;
     public string startingLine;
@@ -40,17 +40,10 @@ public class DialougeFilesManager : MonoBehaviour
 
 
         ds.LoadDialouge(SearchDesiredText(), loadImmediantly);
+        UiEnabler.EnableUI(true);
     }
 
-    public void LoadDialogueFromFile()
-    {
 
-        TextAsset txtAsset = (TextAsset)Resources.Load(txtFileName);
-        txtContent = txtAsset.text.Split('\n');
-
-
-        ds.LoadDialouge(SearchDesiredText(), true);
-    }
 
 
     //call this to load dialogue 
@@ -61,8 +54,8 @@ public class DialougeFilesManager : MonoBehaviour
         TextAsset txtAsset = (TextAsset)Resources.Load(txtFileName);
         txtContent = txtAsset.text.Split('\n');
 
-        
         ds.LoadDialouge(SearchDesiredText(), loadImmediantly);
+        UiEnabler.EnableUI(true);
     }
 
 

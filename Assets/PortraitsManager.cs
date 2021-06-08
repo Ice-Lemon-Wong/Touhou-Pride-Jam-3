@@ -11,6 +11,7 @@ public class PortraitsManager : DialogueSystemCommandParser
     [SerializeField] private string portraitEnableText = "enable";
     [SerializeField] int numberOfPortraits = 2;
     [SerializeField] float portraitEffectSpeed = 10;
+    [SerializeField] float fadingOffSpeed = 10;
     [SerializeField] Image[] portraits;
     [SerializeField] Transform portraitParent;
 
@@ -27,12 +28,14 @@ public class PortraitsManager : DialogueSystemCommandParser
         portraitDisplays = new PortraitDisplayFeild[portraits.Length];
         for (int i = 0; i < portraits.Length; i++)
         {
-            portraitDisplays[i] = new PortraitDisplayFeild(portraits[i], portraitParent);
+            portraitDisplays[i] = new PortraitDisplayFeild(portraits[i], portraitParent, false);
             //StartCoroutine(portraitDisplays[i].EnableAnimator());
         }
 
         AddComand(portraitCommandText, PortraitCommandFunction);
         InitCommands();
+        ds.initDialogue += DisablePortraits;
+        
     }
 
     // Update is called once per frame
@@ -40,7 +43,7 @@ public class PortraitsManager : DialogueSystemCommandParser
     {
         for (int i = 0; i < portraitDisplays.Length; i++)
         {
-            portraitDisplays[i].UpdateProtraitDisplay(portraitEffectSpeed);
+            portraitDisplays[i].UpdateProtraitDisplay(portraitEffectSpeed, fadingOffSpeed);
         }
     }
 
@@ -175,7 +178,7 @@ public class PortraitsManager : DialogueSystemCommandParser
         return null;
     }
 
-    public Image GetPortraits(int index) {
+    public Image GetPortrait(int index) {
         if (index >= 0 && index < portraitDisplays.Length)
         {
             return portraitDisplays[index].GetPortraitImages();
@@ -186,8 +189,32 @@ public class PortraitsManager : DialogueSystemCommandParser
         }
     }
 
-    
-    
+    public Image[] GetAllPortrait()
+    {
+         Image[] returningImage = new Image[portraitDisplays.Length];
+        for (int i = 0; i < portraitDisplays.Length; i++)
+        {
+            returningImage[i] = portraitDisplays[i].GetPortraitImages();
+        }
+
+        return returningImage;
+    }
+
+    public void EnablePortraits(bool enablePortraits = true) {
+        for (int i = 0; i < portraitDisplays.Length; i++)
+        {
+            portraitDisplays[i].Enable(enablePortraits);
+        }
+    }
+    public void DisablePortraits()
+    {
+        for (int i = 0; i < portraitDisplays.Length; i++)
+        {
+            portraitDisplays[i].Enable(false);
+        }
+    }
+
+
     [Serializable]
     struct PortraitCharacter {
         public string characterName;
@@ -211,6 +238,7 @@ public class PortraitsManager : DialogueSystemCommandParser
         public Image baseImageeBackup;
         public bool isUsingFrontExpression;
         public bool isUsingFrontBase;
+        public bool isPortraitTransitioning;
         private Color colourVar;
         public bool isEnable;
 
@@ -221,7 +249,7 @@ public class PortraitsManager : DialogueSystemCommandParser
 
             baseImageeBackup = Instantiate(baseImage, expressionImage.transform.position, expressionImage.transform.rotation);
             //expressionImageBackup = Instantiate(expressionImage, expressionImage.transform.position, expressionImage.transform.rotation);
-            baseImageeBackup.transform.parent = parentObject;
+            baseImageeBackup.transform.SetParent(parentObject);
             baseImageeBackup.transform.position = baseImage.transform.position;
             baseImageeBackup.transform.localScale = baseImage.transform.localScale;
             baseImageeBackup.transform.rotation = baseImage.transform.rotation;
@@ -229,51 +257,44 @@ public class PortraitsManager : DialogueSystemCommandParser
 
             isUsingFrontExpression = true;
             isUsingFrontBase = true;
+            isPortraitTransitioning = true;
 
             
 
             expressionImageBackup.color = new Color(0, 0, 0, 0);
             colourVar = new Color(1, 1, 1, 1);
+
             this.isEnable = isEnable;
-            Enable(isEnable);
+            if (!isEnable) {
+                colourVar.a = 0;
+                expressionImage.color = colourVar;
+                baseImage.color = colourVar;
+                expressionImageBackup.color = colourVar;
+                baseImageeBackup.color = colourVar;
+            }
 
+            //back up image Ui does not use animator, instead follow the main image UI every frame
             if (baseImageeBackup.GetComponent<Animator>() != null) baseImageeBackup.GetComponent<Animator>().enabled = false;
-            //for some reason, animator needs to be desabled first
-
-            //if (baseImage.GetComponent<Animator>() != null) baseImage.GetComponent<Animator>().enabled = true;
-            //if (baseImageeBackup.GetComponent<Animator>() != null) baseImageeBackup.GetComponent<Animator>().enabled = true;
-
+            
+           
         }
 
-        public IEnumerator EnableAnimator() {
-            if (baseImage.GetComponent<Animator>() != null) baseImage.GetComponent<Animator>().enabled = true;
-            if (baseImageeBackup.GetComponent<Animator>() != null) baseImageeBackup.GetComponent<Animator>().enabled = false ;
+        
 
-            yield return new WaitForSeconds(1f);
-            
-
-            baseImageeBackup.transform.parent = baseImage.transform.parent;
-            baseImageeBackup.transform.position = baseImage.transform.position;
-            baseImageeBackup.transform.localScale = baseImage.transform.localScale;
-            baseImageeBackup.transform.rotation = baseImage.transform.rotation;
-
-            
-        }
-
-        public void UpdateProtraitDisplay(float effectSpeed) {
+        public void UpdateProtraitDisplay(float effectSpeed, float fadingOffSpeed) {
 
             baseImageeBackup.transform.position = baseImage.transform.position;
             baseImageeBackup.transform.localScale = baseImage.transform.localScale;
             baseImageeBackup.transform.rotation = baseImage.transform.rotation;
 
             if (!isEnable) {
-                colourVar.a = Mathf.Lerp(expressionImage.color.a, 0, effectSpeed * Time.deltaTime);
+                colourVar.a = Mathf.Lerp(expressionImage.color.a, 0, fadingOffSpeed * Time.deltaTime);
                 expressionImage.color = colourVar;
-                colourVar.a = Mathf.Lerp(baseImage.color.a, 0, effectSpeed * Time.deltaTime);
+                colourVar.a = Mathf.Lerp(baseImage.color.a, 0, fadingOffSpeed * Time.deltaTime);
                 baseImage.color = colourVar;
-                colourVar.a = Mathf.Lerp(expressionImageBackup.color.a, 0, effectSpeed * Time.deltaTime);
+                colourVar.a = Mathf.Lerp(expressionImageBackup.color.a, 0, fadingOffSpeed * Time.deltaTime);
                 expressionImageBackup.color = colourVar;
-                colourVar.a = Mathf.Lerp(baseImageeBackup.color.a, 0, effectSpeed * Time.deltaTime);
+                colourVar.a = Mathf.Lerp(baseImageeBackup.color.a, 0, fadingOffSpeed * Time.deltaTime);
                 baseImageeBackup.color = colourVar;
                 return;
             }
@@ -320,6 +341,8 @@ public class PortraitsManager : DialogueSystemCommandParser
                 baseImageeBackup.color = colourVar;
             }
         }
+
+        
 
         public void Enable(bool shouldEnable = true) {
             isEnable = shouldEnable;
