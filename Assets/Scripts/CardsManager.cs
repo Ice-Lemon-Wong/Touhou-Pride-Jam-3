@@ -99,8 +99,6 @@ public class CardsManager : MonoBehaviour
         //create cards
         CreatBoard();
 
-        
-        
 
     }
 
@@ -163,6 +161,7 @@ public class CardsManager : MonoBehaviour
         if (InitAfterCreate) InitBoardCards(true);
     }
 
+    //start the card game
     private void InitBoardCards(bool refreshBoard = false)
     {
         StartCoroutine(InitBoardCardsRoutine(refreshBoard));

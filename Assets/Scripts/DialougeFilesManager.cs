@@ -53,7 +53,7 @@ public class DialougeFilesManager : MonoBehaviour
     }
 
 
-
+    //call this to load dialogue 
     public void LoadDialogueFromFile(string fileNameToLoad, string startingLineToUse = "", bool loadImmediantly = true) {
         txtFileName = fileNameToLoad;
         startingLine = startingLineToUse;

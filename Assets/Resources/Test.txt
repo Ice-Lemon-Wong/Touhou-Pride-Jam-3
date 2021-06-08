@@ -20,6 +20,7 @@ this is to test if dialouge can start here
 #portrait 0 alice smug
 #animate 0 jump
 if it does then it is working
+
 #animate 1 shake
 #portrait 1 marisa cry
 if I am shaking it also means that my animation is working

@@ -18,13 +18,19 @@ public class PortraitAnimationManager : DialogueSystemCommandParser
     int portraitNumber = 0;
     Image portraitsToAnimate;
      
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
+        
         AddComand(animationCommandSyntax, PlayAnimation);
         InitCommands();
+        
     }
+
+  
 
     public void PlayAnimation(string[] commandLine) {
         portraitNumber = -1;
