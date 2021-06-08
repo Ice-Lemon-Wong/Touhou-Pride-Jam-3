@@ -3092,7 +3092,7 @@ MonoBehaviour:
   yBounds: {x: -3, y: 3}
   cardLayout: {x: 6, y: 3}
   cardobject: {fileID: 1553080101492957523, guid: d2508234494341e419bdf55501d9ddf1, type: 3}
-  InitAfterCreate: 0
+  InitAfterCreate: 1
   cardsRequiredPerMatch: 2
   cardFlipDelay: 0.5
   cardHidingOffset: {x: 0, y: 15}
@@ -3497,7 +3497,7 @@ MonoBehaviour:
   ds: {fileID: 2082998902}
   isComponentInSameObject: 0
   lineStartPrefix: 45
-  loadImmediantly: 1
+  loadImmediantly: 0
   UiEnabler: {fileID: 2069822446}
   txtFileName: Test
   startingLine: Start
@@ -3600,6 +3600,7 @@ MonoBehaviour:
   advancingInput:
     enabled: 0
     value: 
+  canUseExternalControls: 1
   startImmediantly: 0
   startDelay: 1
   endDelay: 1
