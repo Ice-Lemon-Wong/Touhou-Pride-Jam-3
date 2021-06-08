@@ -27,7 +27,7 @@ public class TransitionManager : DialogueSystemCommandParser
 		cardManager.action = () =>
 		{
 			dialogueManager.LoadDialogueFromFile("Test", "Test");
-			ds.endDialougeEvents -= cardManager.endGame;
+			//ds.endDialougeEvents -= cardManager.endGame;
 		};
 	}
 
@@ -37,6 +37,7 @@ public class TransitionManager : DialogueSystemCommandParser
 		dialogueUIEnabler.EnableUI();
         
         dialogueManager.LoadDialogueFromFile("Test", dialoguesToLoad += rounds.ToString());
+		ds.SetEndEvents(new Action[] { CardGameEvent });
 		rounds++;
 	}
 

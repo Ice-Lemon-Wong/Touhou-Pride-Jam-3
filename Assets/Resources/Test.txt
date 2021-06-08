@@ -43,7 +43,6 @@ if I am eating, that means it is working
 //the dialogues to load after the last interaction dialogue
 #Speaker Magee
 What is Magee? FUCKFUCKFUCKFUCKFUCK
-
 -
 
 -CardMatched_1
@@ -68,5 +67,4 @@ Hmph. REEEEEEEEEEEEEEE
 
 #Speaker No U
 No U nigga
-
 -

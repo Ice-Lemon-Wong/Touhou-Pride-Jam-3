@@ -103,6 +103,8 @@ public class DialogueSystem : MonoBehaviour
     {
 
         dialougeTexts = dialoguesToLoad;
+        dialogueStartEvents = null;
+        endDialougeEvents = null;
         if (startImmediantly) {
             StartDialogue();
         }
@@ -128,6 +130,12 @@ public class DialogueSystem : MonoBehaviour
         if (!canUseExternalControls) return;
         StopCoroutine("TypeDialougeRoutine");
         if (dialougeTexts == null) return;
+
+        if (continueButton.Enabled)
+        {
+            continueButton.Value.SetActive(false);
+        }
+
 
         currentDialougeIndex++;
         if (currentDialougeIndex < dialougeTexts.Length)
@@ -207,6 +215,11 @@ public class DialogueSystem : MonoBehaviour
         
         isTyping = true;
 
+        if (continueButton.Enabled)
+        {
+            continueButton.Value.SetActive(false);
+        }
+
         Debug.Log(dialougeToType);
         if (skipEmpty && (string.IsNullOrWhiteSpace(dialougeToType)  )) {
             SkipDialougeTyping();
@@ -261,15 +274,18 @@ public class DialogueSystem : MonoBehaviour
                     yield return null;
                 }
 
+                
 
                 dialogueTextFeild.text = dialougeToType;
+
+                if (continueButton.Enabled)
+                {
+                    continueButton.Value.SetActive(true);
+                }
             }
         }
 
-        if (continueButton.Enabled)
-        {
-            continueButton.Value.SetActive(true);
-        }
+        
         isTyping = false;
 
 
