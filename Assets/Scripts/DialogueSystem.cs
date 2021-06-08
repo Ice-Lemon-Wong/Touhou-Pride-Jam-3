@@ -176,6 +176,7 @@ public class DialogueSystem : MonoBehaviour
         isInterupt = true;
     }
 
+
     public void SetStartEvents(Action[] events) {
         dialogueStartEvents = null;
         foreach (var item in events)
@@ -187,6 +188,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void SetEndEvents(Action[] events)
     {
+
         endDialougeEvents = null;
         foreach (var item in events)
         {

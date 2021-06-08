@@ -49,15 +49,24 @@ public class CardPlayerAI : MonoBehaviour
         }
 
         //generate seed
-        GenerateDecisionSeed(turnCount);
+        GenerateDecisionSeed(turnCount, true);
 
     }
 
-    private void GenerateDecisionSeed(int turnCount)
+    private void GenerateDecisionSeed(int turnCount, bool cheat = false)
     {
         decisionSeed = new int[turnCount];
         currentTurn = 0;
         seedText.text = "";
+
+        if (cheat) {
+			for (int i = 0; i < decisionSeed.Length; i++)
+            {
+				decisionSeed[i] = 1;
+				seedText.text += 1;
+			}
+			return;
+		} 
 
         //randomise seed
         for (int i = 0; i < decisionSeed.Length; i++)

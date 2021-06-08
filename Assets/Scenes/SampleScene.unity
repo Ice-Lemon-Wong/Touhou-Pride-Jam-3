@@ -408,7 +408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &218298118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -698,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!320 &296912008
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -2355,7 +2355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1321495837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2885,7 +2885,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593805520}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1662020033
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2893,17 +2895,20 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+
   - component: {fileID: 1662020034}
   - component: {fileID: 1662020035}
   - component: {fileID: 1662020037}
   - component: {fileID: 1662020036}
   m_Layer: 5
   m_Name: Backgrounds
+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!224 &1662020034
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2927,11 +2932,13 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662020035
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 1662020033}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2946,10 +2953,12 @@ MonoBehaviour:
   effectSpeed: 4
 --- !u!114 &1662020036
 MonoBehaviour:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 1662020033}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2982,6 +2991,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662020033}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1706277347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,9 +3098,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0080f42479787c4bbfdcb3da890ec1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionManager: {fileID: 1622825741}
   xBounds: {x: -5, y: 5}
   yBounds: {x: -3, y: 3}
-  cardLayout: {x: 6, y: 3}
+  cardLayout: {x: 2, y: 3}
   cardobject: {fileID: 1553080101492957523, guid: d2508234494341e419bdf55501d9ddf1, type: 3}
   InitAfterCreate: 1
   cardsRequiredPerMatch: 2

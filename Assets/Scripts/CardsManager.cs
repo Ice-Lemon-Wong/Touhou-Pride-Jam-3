@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class CardsManager : MonoBehaviour
 {
-    public static CardsManager instanceCM;
+	public TransitionManager transitionManager;
+	public static CardsManager instanceCM;
     //singleton pattern
     private void Awake()
     {
@@ -53,9 +55,10 @@ public class CardsManager : MonoBehaviour
     private bool isPlayerTurn = true;
     private CardPlayerAI playerAI;
     private int currentTurn;
-    
+	public Action action;
 
-    public enum BoardState { playerTurn, enemyTurn, boardProcess};
+
+	public enum BoardState { playerTurn, enemyTurn, boardProcess};
     public BoardState currentBoardState;
 
     public struct CardOnBoard{
@@ -121,7 +124,7 @@ public class CardsManager : MonoBehaviour
         {
             if (i % cardsRequiredPerMatch == 0)
             {
-                selectedIndex = Random.Range(0, decidedCards.Count);
+                selectedIndex = UnityEngine.Random.Range(0, decidedCards.Count);
                 selectedCardData = decidedCards[selectedIndex];
                 decidedCards.RemoveAt(selectedIndex);
 
@@ -134,7 +137,7 @@ public class CardsManager : MonoBehaviour
         {
 
             //randomize cards
-            selectedIndex = Random.Range(0, boardCards.Count);
+            selectedIndex = UnityEngine.Random.Range(0, boardCards.Count);
             selectedCardData = boardCards[selectedIndex];
             boardCards.RemoveAt(selectedIndex);
 
@@ -162,7 +165,7 @@ public class CardsManager : MonoBehaviour
     }
 
     //start the card game
-    private void InitBoardCards(bool refreshBoard = false)
+    public void InitBoardCards(bool refreshBoard = false)
     {
         StartCoroutine(InitBoardCardsRoutine(refreshBoard));
     }
@@ -215,8 +218,18 @@ public class CardsManager : MonoBehaviour
                 }
             }
             Debug.Log("closing");
-            yield return new WaitForSeconds(transitionTime);
-        }
+            if (GetUnmatchedCardsCount() != 0) 
+            {
+                transitionManager.cardsFoundTransition();
+                yield return new WaitUntil(() => transitionManager.cardGameDialogueFinished == true);
+            }
+            else 
+            {
+                transitionManager.cardGameEndTransition();
+                //yield return new WaitUntil(() => transitionManager.cardGameDialogueFinished == true);
+            }
+			//yield return new WaitForSeconds(transitionTime);
+		}
         else {
 
             for (int i = 0; i < BoadCards.Length; i++)
@@ -228,8 +241,7 @@ public class CardsManager : MonoBehaviour
         }
         currentTurn--;
 
-
-        if (currentTurn > 0 && GetUnmatchedCardsCount() > 0)
+		if (currentTurn > 0 && GetUnmatchedCardsCount() > 0)
         {
             InitBoardCards(isMatched);
         }
@@ -250,7 +262,39 @@ public class CardsManager : MonoBehaviour
             //fire event here;
             Debug.Log("game is over");
         }
-        
+
+
+	}
+
+    public void endGame() {
+		StartCoroutine(CheckTurnAmount(true));
+	}
+
+    IEnumerator CheckTurnAmount(bool isMatched = false)
+    {
+        if (currentTurn > 0 && GetUnmatchedCardsCount() > 0)
+        {
+            InitBoardCards(isMatched);
+        }
+        else {
+           
+            yield return new WaitForSeconds(transitionTime);
+            for (int i = 0; i < BoadCards.Length; i++)
+            {
+                if (!BoadCards[i].isMatched)
+                {
+                    BoadCards[i].isFlipped = false;
+                    BoadCards[i].cardObject.GetComponent<CardScript>().UnflipCard();
+                    BoadCards[i].cardObject.GetComponent<CardScript>().FadeCard(true, false);
+                }
+            }
+            yield return new WaitForSeconds(transitionTime);
+
+			//fire event here;
+			action?.Invoke();
+
+			Debug.Log("game is over (action)");
+        }
     }
 
     // Update is called once per frame
