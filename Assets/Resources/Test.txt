@@ -21,7 +21,7 @@ if you can read this that means the file is loading alright
 #animate 0 jump
 //skip this part
 
-this is the typing effect, it is basically the characters appear one by one
+<color=red>this</color> <color=orange><b>is</b></color> <color=yellow><i>the</i></color> typing effect, it is basically the characters appear one by one
 
 <color=blue><s>if it does</s></color> then it is working
 #colour white

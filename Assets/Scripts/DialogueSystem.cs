@@ -248,7 +248,7 @@ public class DialogueSystem : MonoBehaviour
             else
             {
 
-                dialogueTextFeild.text = "";
+                dialogueTextFeild.text = dialougeToType;
 
                 //typing effect
                 while (charIndex < dialougeToType.Length)
@@ -271,16 +271,17 @@ public class DialogueSystem : MonoBehaviour
                         charIndex = Mathf.Clamp(charIndex, 0, dialougeToType.Length);
                     }
 
-                    //process here
+					//process here
 
-                    dialogueTextFeild.text = dialougeToType.Substring(0, charIndex);
+					dialogueTextFeild.maxVisibleCharacters = charIndex;
+					//dialogueTextFeild.text = dialougeToType.Substring(0, charIndex);
 
-                    yield return null;
+					yield return null;
                 }
 
                 
 
-                dialogueTextFeild.text = dialougeToType;
+                //dialogueTextFeild.text = dialougeToType;
 
                 if (continueButton.Enabled)
                 {
