@@ -16,4 +16,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 2fd902420c818b8458ee1e9d13b40aa9, type: 3}
   type: 0
   minActApperance: 1
-  appearTimes: 1
+  appearTimes: 3

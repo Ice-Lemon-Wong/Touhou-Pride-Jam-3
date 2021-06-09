@@ -17,27 +17,53 @@ public class TransitionManager : DialogueSystemCommandParser
     {
         yield return null;
 		dialogueManager.LoadDialogueFromFile("Test", "Start");
-		ds.SetEndEvents(new Action[] {CardGameEvent});
+		ds.SetEndEvents(new Action[] {startCardGameEvent});
 	}
 
-    public void CardGameEvent() {
+    public void startCardGameEvent() {
         Debug.LogWarning("Starting card game");
 		dialogueUIEnabler.DisableUI();
 		cardManager.InitBoardCards(true);
-		cardManager.action = () =>
+		cardManager.cardGameEndEvent = () =>
 		{
 			dialogueManager.LoadDialogueFromFile("Test", "Test");
+			ds.SetEndEvents(new Action[] { CardGameEvent2 });
+			cardManager.destroyBoard();
 			//ds.endDialougeEvents -= cardManager.endGame;
 		};
 	}
 
-    public void cardsFoundTransition() {
+	public void ContinueCardGameEvent() {
+		dialogueUIEnabler.DisableUI();
+		cardManager.InitBoardCards(true);
+	}
+
+	public void CardGameEvent2() {
+		
+		Debug.LogWarning("creating card game 2");
+		dialogueUIEnabler.DisableUI();
+		cardManager.CreatBoard(new Vector2(-4, 4), new Vector2(-4, 4), new Vector2Int(2, 2), true);
+		cardManager.cardGameEndEvent = () =>
+		{
+			dialogueManager.LoadDialogueFromFile("Test", "Test2");
+
+			
+			cardManager.destroyBoard();
+			//ds.endDialougeEvents -= cardManager.endGame;
+		};
+		ds.endDialougeEvents -= CardGameEvent2;
+		rounds = 1;
+	}
+
+
+	public void cardsFoundTransition() {
 		string dialoguesToLoad = "CardMatched_";
 		cardGameDialogueFinished = false;
 		dialogueUIEnabler.EnableUI();
         
         dialogueManager.LoadDialogueFromFile("Test", dialoguesToLoad += rounds.ToString());
-		ds.SetEndEvents(new Action[] { CardGameEvent });
+		//ds.SetEndEvents(new Action[] { CardGameEvent });
+		ds.SetEndEvents(new Action[] { ContinueCardGameEvent } );
 		rounds++;
 	}
 

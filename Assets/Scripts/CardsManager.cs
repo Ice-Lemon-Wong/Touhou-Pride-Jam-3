@@ -55,7 +55,8 @@ public class CardsManager : MonoBehaviour
     private bool isPlayerTurn = true;
     private CardPlayerAI playerAI;
     private int currentTurn;
-	public Action action;
+	public Action cardGameEndEvent;
+    private bool isGameReady = false;
 
 
 	public enum BoardState { playerTurn, enemyTurn, boardProcess};
@@ -85,7 +86,12 @@ public class CardsManager : MonoBehaviour
             cardObject.GetComponent<CardScript>().HideCard();
         }
 
-       
+        public void DestroyCard()
+        {
+            isMatched = true;
+            Destroy(cardObject);
+            
+        }
 
     }
     public CardOnBoard[] BoadCards;
@@ -105,7 +111,7 @@ public class CardsManager : MonoBehaviour
 
     }
 
-    private void CreatBoard()
+    public void CreatBoard()
     {
         float cardX = 0;
         float cardY = 0;
@@ -160,13 +166,94 @@ public class CardsManager : MonoBehaviour
         playerAI = FindObjectOfType<CardPlayerAI>();
         playerAI.InitKnowledgeBase(cardLayout.x * cardLayout.y, turnAmmount);
         currentTurn = turnAmmount;
+        isGameReady = true;
 
         if (InitAfterCreate) InitBoardCards(true);
+    }
+
+    public void CreatBoard(Vector2 newXBounds, Vector2 newYBounds, Vector2Int newCardlayout, bool initImmedaintly = false, bool isEnd = false, bool isFinal = false )
+    {
+        xBounds = newXBounds;
+        yBounds = newYBounds;
+        cardLayout = newCardlayout;
+
+        float cardX = 0;
+        float cardY = 0;
+        float width = xBounds.y - xBounds.x;
+        float height = yBounds.y - yBounds.x;
+        GameObject cardObject;
+
+        //grab different cards later
+        List<CardSO> decidedCards = new List<CardSO>();
+        decidedCards = cardDistributor.DistributeCards((cardLayout.x * cardLayout.y) / cardsRequiredPerMatch);
+        
+        CardSO selectedCardData = new CardSO();
+        List<CardSO> boardCards = new List<CardSO>();
+        int selectedIndex = 0;
+
+        //create the appropriate ammount of cards
+        for (int i = 0; i < cardLayout.x * cardLayout.y; i++)
+        {
+            if (i % cardsRequiredPerMatch == 0)
+            {
+                selectedIndex = UnityEngine.Random.Range(0, decidedCards.Count);
+                selectedCardData = decidedCards[selectedIndex];
+                decidedCards.RemoveAt(selectedIndex);
+
+            }
+            boardCards.Add(selectedCardData);
+
+        }
+
+        for (int i = 0; i < cardLayout.x * cardLayout.y; i++)
+        {
+
+            //randomize cards
+            selectedIndex = UnityEngine.Random.Range(0, boardCards.Count);
+            selectedCardData = boardCards[selectedIndex];
+            boardCards.RemoveAt(selectedIndex);
+
+
+            //selectedCardData = cardSOPool[Random.Range(0, cardSOPool.Length)];
+
+            //figure out where to spawn card object
+            cardX = ((i % cardLayout.x) * (width / (cardLayout.x - 1))) + xBounds.x;
+            cardY = ((i / cardLayout.x) * (height / (cardLayout.y - 1))) + yBounds.x;
+
+            //spawn card object
+            cardObject = Instantiate(cardobject, new Vector2(cardX, cardY) + cardHidingOffset, Quaternion.identity);
+            cardObject.GetComponent<CardScript>().InitCard(i, selectedCardData.icon, new Vector2(cardX, cardY), new Vector2(cardX, cardY) + cardHidingOffset);
+            cardObject.name = selectedCardData.name + "-" + (i % cardsRequiredPerMatch);
+            BoadCards[i] = new CardOnBoard(i, new Vector2(cardX, cardY), cardObject, selectedCardData);
+            BoadCards[i].cardObject.GetComponent<CardScript>().SetPosition();
+
+        }
+
+        Debug.Log("created card");
+
+        playerAI = FindObjectOfType<CardPlayerAI>();
+        playerAI.InitKnowledgeBase(cardLayout.x * cardLayout.y, turnAmmount);
+        currentTurn = turnAmmount;
+        isGameReady = true;
+
+        if (initImmedaintly) InitBoardCards(true);
+    }
+
+    public void destroyBoard() {
+        currentBoardState = BoardState.boardProcess;
+
+        for (int i = 0; i < BoadCards.Length; i++)
+        {
+            BoadCards[i].DestroyCard();
+        }
+        cardGameEndEvent = null;
+        isGameReady = false;
     }
 
     //start the card game
     public void InitBoardCards(bool refreshBoard = false)
     {
+        if (!isGameReady) return;
         StartCoroutine(InitBoardCardsRoutine(refreshBoard));
     }
 
@@ -291,7 +378,7 @@ public class CardsManager : MonoBehaviour
             yield return new WaitForSeconds(transitionTime);
 
 			//fire event here;
-			action?.Invoke();
+			cardGameEndEvent?.Invoke();
 
 			Debug.Log("game is over (action)");
         }
