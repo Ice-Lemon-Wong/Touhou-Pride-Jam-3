@@ -16,6 +16,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] Optional<string> interuptInput;
     [SerializeField] Optional<string> advancingInput;
     [SerializeField] private bool canUseExternalControls = true;
+    [SerializeField] public Color defaulrColour;
 
     [Space]
     [Header("timing configs")]
@@ -36,7 +37,8 @@ public class DialogueSystem : MonoBehaviour
 
 
 
-    public Action<string> dialougeLineEvents;
+    public Action<string> dialogueCommandEvents;
+    public Action dialogueLineEvent;
     public Action endDialougeEvents;
     public Action dialogueStartEvents;
 
@@ -118,7 +120,7 @@ public class DialogueSystem : MonoBehaviour
 
     IEnumerator StartDialogueRoutine() {
         initDialogue?.Invoke();
-
+        dialogueTextFeild.color = defaulrColour;
         yield return new WaitForSeconds(startDelay);
         dialogueStartEvents?.Invoke();
        
@@ -225,8 +227,9 @@ public class DialogueSystem : MonoBehaviour
             SkipDialougeTyping();
         }else {
 
+           
             Debug.Log("made it to comands");
-            dialougeLineEvents?.Invoke(dialougeToType);
+            dialogueCommandEvents?.Invoke(dialougeToType);
 
             bool isSkipPrefix = false;
 
@@ -247,7 +250,7 @@ public class DialogueSystem : MonoBehaviour
 
                 dialogueTextFeild.text = "";
 
-
+                //typing effect
                 while (charIndex < dialougeToType.Length)
                 {
 
@@ -268,6 +271,7 @@ public class DialogueSystem : MonoBehaviour
                         charIndex = Mathf.Clamp(charIndex, 0, dialougeToType.Length);
                     }
 
+                    //process here
 
                     dialogueTextFeild.text = dialougeToType.Substring(0, charIndex);
 

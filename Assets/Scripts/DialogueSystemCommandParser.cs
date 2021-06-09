@@ -20,7 +20,7 @@ public class DialogueSystemCommandParser : MonoBehaviour
 
         foreach (var item in commands)
         {
-            ds.dialougeLineEvents += item.CheckCommand;
+            ds.dialogueCommandEvents += item.CheckCommand;
         }
     }
 

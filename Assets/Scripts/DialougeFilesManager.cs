@@ -72,16 +72,28 @@ public class DialougeFilesManager : MonoBehaviour
 
         bool isStartingPointFound = false;
         List<string> desiredText = new List<string>();
-
+        int stringLength = startingLine.Length;
 
         for (int i = 0; i < txtContent.Length; i++)
         {
             if (txtContent[i][0].Equals(lineStartPrefix))
             {
-                //Debug.Log(txtContent[i].Substring(1));
+                //Debug.Log(txtContent[i] + " " + txtContent[i].Length) ;
                 //Debug.Log($"{txtContent[i].Substring(1).GetType()} and { startingLine.ToUpper().GetType()} is the same? : {txtContent[i].Substring(1).ToUpper().GetType() == startingLine.ToUpper().GetType()}");
-                
-                if (isStartingPointFound == false && txtContent[i].Substring(1,txtContent[i].Length - 2).ToUpper()  ==  startingLine.ToUpper() )
+
+                stringLength = txtContent[i].Length - 2;
+                if (stringLength < 0) stringLength = 0;
+
+                //if (txtContent[i].Length - 1 >= startingLine.Length)
+                //{
+                //    stringLength = startingLine.Length;
+                //}
+                //else {
+                //    stringLength = txtContent[i].Length-1;
+                //}
+                //Debug.Log(stringLength);
+
+                if (isStartingPointFound == false && txtContent[i].Substring(1, stringLength ).ToUpper()  ==  startingLine.ToUpper() )
 
                 {
                     Debug.Log("made it");

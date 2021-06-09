@@ -16,11 +16,15 @@ if you can read this that means the file is loading alright
 #portrait 1 enable
 
 
-this is to test if dialouge can start here
+<color=red>t</color><color=orange>h</color>is is to test if dialouge can start here
 #portrait 0 alice smug
 #animate 0 jump
 //skip this part
-if it does then it is working
+
+this is the typing effect, it is basically the characters appear one by one
+
+<color=blue><s>if it does</s></color> then it is working
+#colour white
 
 #animate 1 shake
 #portrait 1 marisa cry
@@ -43,6 +47,12 @@ if I am eating, that means it is working
 //the dialogues to load after the last interaction dialogue
 #Speaker Magee
 What is Magee? FUCKFUCKFUCKFUCKFUCK
+-
+
+-Test2
+//the dialogues to load after the last interaction dialogue
+#Speaker Magee
+this is stupidly messy now but it works
 -
 
 -CardMatched_1
