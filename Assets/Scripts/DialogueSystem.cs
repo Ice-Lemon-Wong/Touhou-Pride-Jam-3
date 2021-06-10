@@ -48,11 +48,10 @@ public class DialogueSystem : MonoBehaviour
     private int currentDialougeIndex = 0;
     private bool isInterupt = false;
     private bool isTyping = false;
-    
 
 
-    // Start is called before the first frame update
-    IEnumerator Start()
+	// Start is called before the first frame update
+	IEnumerator Start()
     {
         dialogueTextFeild.text = "";
         if (continueButton.Enabled) {
@@ -247,11 +246,12 @@ public class DialogueSystem : MonoBehaviour
             } 
             else
             {
+				//dialougeToType = dialougeTextEffects.UpdateText(dialougeToType);
+				dialogueTextFeild.text = dialougeToType;
+				//dialougeTextEffects.UpdateText(dialougeToType);
 
-                dialogueTextFeild.text = "";
-
-                //typing effect
-                while (charIndex < dialougeToType.Length)
+				//typing effect
+				while (charIndex < dialougeToType.Length)
                 {
 
                     //for whatever reason this needs to be in the loop to not show
@@ -271,16 +271,17 @@ public class DialogueSystem : MonoBehaviour
                         charIndex = Mathf.Clamp(charIndex, 0, dialougeToType.Length);
                     }
 
-                    //process here
+					//process here
 
-                    dialogueTextFeild.text = dialougeToType.Substring(0, charIndex);
+					dialogueTextFeild.maxVisibleCharacters = charIndex;
+					//dialogueTextFeild.text = dialougeToType.Substring(0, charIndex);
 
-                    yield return null;
+					yield return null;
                 }
 
                 
 
-                dialogueTextFeild.text = dialougeToType;
+                //dialogueTextFeild.text = dialougeToType;
 
                 if (continueButton.Enabled)
                 {

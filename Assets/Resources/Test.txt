@@ -15,15 +15,18 @@ if you can read this that means the file is loading alright
 #portrait 0 enable
 #portrait 1 enable
 
-
-<color=red>t</color><color=orange>h</color>is is to test if dialouge can start here
+<color=red>t</color><b>hi</b>s is to test if dialouge can start here
 #portrait 0 alice smug
 #animate 0 jump
 //skip this part
 
-this is the typing effect, it is basically the characters appear one by one
+#txtEffect wavy 0 4 11 29
+#txtEffect shake 2 4 17 34
+<color=red>this</color> <color=orange><b>is</b></color> <color=yellow><i>the</i></color> <color=green><size=150%>typing</size></color> <color=blue>effect</color>, <color=purple><s>it</color> <color=#FE019A>is</color> <color=white>basically</color> the characters</s> appear one by one
 
+#txtEffect reset
 <color=blue><s>if it does</s></color> then it is working
+
 #colour white
 
 #animate 1 shake
