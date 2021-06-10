@@ -70,7 +70,7 @@ public class CardsManager : MonoBehaviour
         public CardSO cardData;
         public bool isFlipped;
         public bool isMatched;
-        
+        //store the current times it appear
 
         public CardOnBoard(int ID, Vector2 boardPosition, GameObject cardObject, CardSO cardData) {
             this.ID = ID;
@@ -125,7 +125,7 @@ public class CardsManager : MonoBehaviour
         List<CardSO> decidedCards = new List<CardSO>();
         decidedCards = cardDistributor.DistributeCards((cardLayout.x * cardLayout.y) / cardsRequiredPerMatch);
         CardSO selectedCardData = new CardSO();
-        List<CardSO> boardCards = new List<CardSO>();
+        List<CardSO> initialCardDeck = new List<CardSO>();
         int selectedIndex = 0;
 
         //create the appropriate ammount of cards
@@ -138,7 +138,7 @@ public class CardsManager : MonoBehaviour
                 decidedCards.RemoveAt(selectedIndex);
 
             }
-            boardCards.Add(selectedCardData);
+            initialCardDeck.Add(selectedCardData);
 
         }
         
@@ -146,9 +146,9 @@ public class CardsManager : MonoBehaviour
         {
 
             //randomize cards
-            selectedIndex = UnityEngine.Random.Range(0, boardCards.Count);
-            selectedCardData = boardCards[selectedIndex];
-            boardCards.RemoveAt(selectedIndex);
+            selectedIndex = UnityEngine.Random.Range(0, initialCardDeck.Count);
+            selectedCardData = initialCardDeck[selectedIndex];
+            initialCardDeck.RemoveAt(selectedIndex);
 
 
             //selectedCardData = cardSOPool[Random.Range(0, cardSOPool.Length)];
@@ -161,6 +161,8 @@ public class CardsManager : MonoBehaviour
             cardObject = Instantiate(cardobject, new Vector2(cardX, cardY) + cardHidingOffset, Quaternion.identity);
             cardObject.GetComponent<CardScript>().InitCard(i, selectedCardData.icon, new Vector2(cardX, cardY), new Vector2(cardX, cardY) + cardHidingOffset);
             cardObject.name = selectedCardData.name + "-" + (i % cardsRequiredPerMatch);
+
+            //add the card data structure ot the board
             BoadCards[i] = new CardOnBoard(i, new Vector2(cardX, cardY), cardObject, selectedCardData);
             BoadCards[i].cardObject.GetComponent<CardScript>().SetPosition();
 
@@ -214,6 +216,7 @@ public class CardsManager : MonoBehaviour
         {
 
             //randomize cards
+            //shuffle the deck
             selectedIndex = UnityEngine.Random.Range(0, boardCards.Count);
             selectedCardData = boardCards[selectedIndex];
             boardCards.RemoveAt(selectedIndex);

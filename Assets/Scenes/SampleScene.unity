@@ -1084,7 +1084,7 @@ MonoBehaviour:
   bgmAudioSource: {fileID: 468391725}
   uiAudioSource: {fileID: 468391724}
   ambientAudioSource: {fileID: 468391723}
-  masterVolume: 0.5
+  masterVolume: 0.2
   changeOtherSources: 0
   fadeAudioEffectSpeed: 7
   audioArray:
@@ -1977,7 +1977,7 @@ MonoBehaviour:
             m_StringArgument: CafeTrack
             m_BoolArgument: 0
           m_CallState: 2
-    FireNextEvent: 0
+    FireNextEvent: 1
   - name: After card game dialogue
     eventDelay: 1
     eventToFire:
@@ -3209,7 +3209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.999756, y: -27.820038}
+  m_AnchoredPosition: {x: -38.999756, y: -27.820068}
   m_SizeDelta: {x: 98.910034, y: 55.640015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321495838
@@ -4488,10 +4488,10 @@ MonoBehaviour:
   ds: {fileID: 2082998902}
   isComponentInObject: 0
   dialogueTextFeild: {fileID: 1933178453}
-  waveSpeed: 10
-  waveWavelength: 5
+  waveSpeed: 5
+  waveWavelength: 0
   waveHeight: 3
-  shakePower: 6
+  shakePower: 2
 --- !u!222 &2069822448
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4578,7 +4578,7 @@ MonoBehaviour:
   - we scapped the old one
   - that is all we have
   dialogueTextFeild: {fileID: 1933178453}
-  typingSpeed: 10
+  typingSpeed: 15
   interuptInput:
     enabled: 1
     value: Advance
@@ -4587,7 +4587,7 @@ MonoBehaviour:
     value: 
   canUseExternalControls: 1
   defaulrColour: {r: 0, g: 0, b: 0, a: 1}
-  startImmediantly: 0
+  startImmediantly: 1
   startDelay: 1
   endDelay: 0
   commandPrefix: 35
@@ -4624,9 +4624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a6b42dca032c8244aa7068a0bd9d94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ds: {fileID: 2082998902}
-  isComponentInObject: 1
-  dialogueTextFeild: {fileID: 1933178453}
 --- !u!1 &2122303275
 GameObject:
   m_ObjectHideFlags: 0

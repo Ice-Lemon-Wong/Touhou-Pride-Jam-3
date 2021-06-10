@@ -16,4 +16,5 @@ public class CardSO : ScriptableObject
     public int minActApperance;
     public int appearTimes;
 
+    public string fileName;
 }

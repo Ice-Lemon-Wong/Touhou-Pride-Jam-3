@@ -32,7 +32,10 @@ public class CardDistributor : MonoBehaviour
         }
     }
 
-    public List<CardSO> DistributeCards(int ammountOfCards)
+
+    //do not know the current times we get this card
+    //get the number of times
+    public List<CardSO> DistributeCards(int pairOfCards)
     {
         cardstoDistribute = new List<CardSO>();
         //cardstoDistribute = new CardSO[ammountOfCards];
@@ -44,7 +47,7 @@ public class CardDistributor : MonoBehaviour
             }
         }
 
-        while (cardstoDistribute.Count >  ammountOfCards)
+        while (cardstoDistribute.Count >  pairOfCards)
         {
             cardstoDistribute.RemoveAt(UnityEngine.Random.Range(0, cardstoDistribute.Count));
         }
