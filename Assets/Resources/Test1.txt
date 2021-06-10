@@ -23,6 +23,30 @@ General Marisa!!!
 
 #speaker Alice
 I am sad now
-#speaker marisa
-me to :*(
+#speaker Marisa
+me too :*(
+#speaker Alice
+wanna play some cards
+#speaker Marisa
+#portrait 1 marisa cryHappy
+sure
+
+#portrait 1 disable
+#portrait 0 disable
+-
+
+-Card
+#portrait 1 enable
+#portrait 1 Marisa happy
+#speaker Marisa
+this is to test out card dialogue
+#portrait 1 disable
+-
+
+-CardEnd
+#portrait 1 enable
+#portrait 1 Marisa happy
+#speaker Marisa
+this is the end of the card game
+#portrait 1 disable
 -

@@ -5,10 +5,12 @@ using System;
 
 public class DialogueSequenceEventManager : MonoBehaviour
 {
-    [SerializeField] TestSequenceManager sm;
+    [SerializeField] SequenceManager sm;
     [SerializeField] DialougeFilesManager dfm;
     [SerializeField] DialogueEvent[] dialogueSequencedEvents;
+    [SerializeField] private bool loopEvents = false;
     private int currentDialogueEventIndex = 0;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +19,12 @@ public class DialogueSequenceEventManager : MonoBehaviour
     }
 
     public void FireDialogueSequencedEvent() {
+        if (currentDialogueEventIndex < 0 || currentDialogueEventIndex >= dialogueSequencedEvents.Length) return;
+
         dialogueSequencedEvents[currentDialogueEventIndex].InitiateDialogue(dfm, sm.FireSequence);
         currentDialogueEventIndex++;
+
+        if (loopEvents) currentDialogueEventIndex %= dialogueSequencedEvents.Length;
     }
    
 

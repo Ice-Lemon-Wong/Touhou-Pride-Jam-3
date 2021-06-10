@@ -28,7 +28,7 @@ public class TransitionManager : DialogueSystemCommandParser
 		{
 			dialogueManager.LoadDialogueFromFile("Test", "Test");
 			ds.SetEndEvents(new Action[] { CardGameEvent2 });
-			cardManager.destroyBoard();
+			cardManager.DestroyBoard();
 			//ds.endDialougeEvents -= cardManager.endGame;
 		};
 	}
@@ -48,7 +48,7 @@ public class TransitionManager : DialogueSystemCommandParser
 			dialogueManager.LoadDialogueFromFile("Test", "Test2");
 
 			
-			cardManager.destroyBoard();
+			cardManager.DestroyBoard();
 			//ds.endDialougeEvents -= cardManager.endGame;
 		};
 		ds.endDialougeEvents -= CardGameEvent2;
@@ -76,7 +76,7 @@ public class TransitionManager : DialogueSystemCommandParser
         dialogueUIEnabler.EnableUI();
         dialogueManager.LoadDialogueFromFile("Test", "CardGameEnd");
 		//calls the end game function
-		ds.SetEndEvents(new Action[] { cardManager.endGame });
+		ds.SetEndEvents(new Action[] { cardManager.endTurn });
 		//ds.endDialougeEvents -= cardManager.endGame;
 	}
 }
