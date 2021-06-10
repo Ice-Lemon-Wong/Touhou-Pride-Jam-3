@@ -42,7 +42,7 @@ public class DialogueSystem : MonoBehaviour
     public Action endDialougeEvents;
     public Action dialogueStartEvents;
 
-    public Action initDialogue;
+    public Action initDialogueEvents;
     public Action requiredEndEvent;
 
     private int currentDialougeIndex = 0;
@@ -118,7 +118,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     IEnumerator StartDialogueRoutine() {
-        initDialogue?.Invoke();
+        initDialogueEvents?.Invoke();
         dialogueTextFeild.color = defaulrColour;
         yield return new WaitForSeconds(startDelay);
         dialogueStartEvents?.Invoke();
