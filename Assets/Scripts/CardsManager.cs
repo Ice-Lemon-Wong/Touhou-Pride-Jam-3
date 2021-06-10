@@ -57,6 +57,7 @@ public class CardsManager : MonoBehaviour
     private int currentTurn;
 	public Action cardGameEndEvent;
     private bool isGameReady = false;
+    public Action matchingEvent;
 
 
 	public enum BoardState { playerTurn, enemyTurn, boardProcess};
@@ -113,6 +114,8 @@ public class CardsManager : MonoBehaviour
 
     public void CreatBoard()
     {
+        DestroyBoard();
+
         float cardX = 0;
         float cardY = 0;
         float width = xBounds.y - xBounds.x;
@@ -173,6 +176,8 @@ public class CardsManager : MonoBehaviour
 
     public void CreatBoard(Vector2 newXBounds, Vector2 newYBounds, Vector2Int newCardlayout, bool initImmedaintly = false, bool isEnd = false, bool isFinal = false )
     {
+        DestroyBoard();
+
         xBounds = newXBounds;
         yBounds = newYBounds;
         cardLayout = newCardlayout;
@@ -239,7 +244,7 @@ public class CardsManager : MonoBehaviour
         if (initImmedaintly) InitBoardCards(true);
     }
 
-    public void destroyBoard() {
+    public void DestroyBoard() {
         currentBoardState = BoardState.boardProcess;
 
         for (int i = 0; i < BoadCards.Length; i++)
@@ -247,6 +252,7 @@ public class CardsManager : MonoBehaviour
             BoadCards[i].DestroyCard();
         }
         cardGameEndEvent = null;
+        matchingEvent = null;
         isGameReady = false;
     }
 
@@ -304,19 +310,22 @@ public class CardsManager : MonoBehaviour
                     BoadCards[i].cardObject.GetComponent<CardScript>().FadeCard(true, false);
                 }
             }
-            Debug.Log("closing");
-            if (GetUnmatchedCardsCount() != 0) 
-            {
-                transitionManager.cardsFoundTransition();
-                yield return new WaitUntil(() => transitionManager.cardGameDialogueFinished == true);
-            }
-            else 
-            {
-                transitionManager.cardGameEndTransition();
-                //yield return new WaitUntil(() => transitionManager.cardGameDialogueFinished == true);
-            }
-			//yield return new WaitForSeconds(transitionTime);
-		}
+            yield return new WaitForSeconds(transitionTime);
+
+            currentTurn--;
+            matchingEvent?.Invoke();
+            //if (GetUnmatchedCardsCount() != 0) 
+            //{
+            //    transitionManager.cardsFoundTransition();
+            //    yield return new WaitUntil(() => transitionManager.cardGameDialogueFinished == true);
+            //}
+            //else 
+            //{
+            //    transitionManager.cardGameEndTransition();
+            //    //yield return new WaitUntil(() => transitionManager.cardGameDialogueFinished == true);
+            //}
+            //yield return new WaitForSeconds(transitionTime);
+        }
         else {
 
             for (int i = 0; i < BoadCards.Length; i++)
@@ -325,37 +334,44 @@ public class CardsManager : MonoBehaviour
                 BoadCards[i].isFlipped = false;
             }
             yield return new WaitForSeconds(cardFlipDelay);
+            currentTurn--;
+            endTurn(isMatched);
         }
-        currentTurn--;
+       
 
-		if (currentTurn > 0 && GetUnmatchedCardsCount() > 0)
-        {
-            InitBoardCards(isMatched);
-        }
-        else {
-           
-            yield return new WaitForSeconds(transitionTime);
-            for (int i = 0; i < BoadCards.Length; i++)
-            {
-                if (!BoadCards[i].isMatched)
-                {
-                    BoadCards[i].isFlipped = false;
-                    BoadCards[i].cardObject.GetComponent<CardScript>().UnflipCard();
-                    BoadCards[i].cardObject.GetComponent<CardScript>().FadeCard(true, false);
-                }
-            }
-            yield return new WaitForSeconds(transitionTime);
+        //if (currentTurn > 0 && GetUnmatchedCardsCount() > 0)
+        //      {
+        //          InitBoardCards(isMatched);
+        //      }
+        //      else {
 
-            //fire event here;
-            Debug.Log("game is over");
-        }
+        //          yield return new WaitForSeconds(transitionTime);
+        //          for (int i = 0; i < BoadCards.Length; i++)
+        //          {
+        //              if (!BoadCards[i].isMatched)
+        //              {
+        //                  BoadCards[i].isFlipped = false;
+        //                  BoadCards[i].cardObject.GetComponent<CardScript>().UnflipCard();
+        //                  BoadCards[i].cardObject.GetComponent<CardScript>().FadeCard(true, false);
+        //              }
+        //          }
+        //          yield return new WaitForSeconds(transitionTime);
+
+        //          //fire event here;
+        //          Debug.Log("game is over");
+        //      }
 
 
-	}
+    }
 
-    public void endGame() {
+    public void endTurn() {
 		StartCoroutine(CheckTurnAmount(true));
 	}
+
+    public void endTurn(bool isMatched = false)
+    {
+        StartCoroutine(CheckTurnAmount(isMatched));
+    }
 
     IEnumerator CheckTurnAmount(bool isMatched = false)
     {
