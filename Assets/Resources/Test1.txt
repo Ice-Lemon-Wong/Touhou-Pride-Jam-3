@@ -22,6 +22,7 @@ General Marisa!!!
 #portrait 0 enable
 
 #speaker Alice
+#audio stop all
 I am sad now
 #speaker Marisa
 me too :*(
@@ -36,6 +37,7 @@ sure
 -
 
 -Card
+#audio play CafeTrack
 #portrait 1 enable
 #portrait 1 Marisa happy
 #speaker Marisa

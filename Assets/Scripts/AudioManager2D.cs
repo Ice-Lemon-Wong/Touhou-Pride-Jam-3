@@ -124,6 +124,8 @@ public class AudioManager2D: MonoBehaviour
     //force all audio to stop
     public void StopAllAudio()
     {
+        //this is the solution to manage fading for now
+        StopCoroutine("FadeAudioEffect");
         soundAudioSrc.Stop();
         bgmAudioSource.Stop();
         uiAudioSource.Stop();
@@ -146,6 +148,30 @@ public class AudioManager2D: MonoBehaviour
         ambientAudioSource.Stop();
     }
 
+    public void Stop(int audioTypeIndex)
+    {
+        if(audioTypeIndex == (int)Audio.AudioType.Sound)
+        {
+            soundAudioSrc.Stop();
+        }
+        else if (audioTypeIndex == (int)Audio.AudioType.BGM)
+        {
+            bgmAudioSource.Stop();
+        }
+        else if (audioTypeIndex == (int)Audio.AudioType.UISounds)
+        {
+            uiAudioSource.Stop();
+        }
+        else if (audioTypeIndex == (int)Audio.AudioType.Ambient)
+        {
+            ambientAudioSource.Stop();
+        }
+        else
+        {
+            Debug.LogError($"the audio index {audioTypeIndex} cis not a valid audio type\nPlease use 1 - 4 ");
+        }
+    }
+
     public void SetFadeEffectSpeed(float newEffectSpeed) {
         fadeAudioEffectSpeed = newEffectSpeed;
     }
@@ -155,27 +181,31 @@ public class AudioManager2D: MonoBehaviour
         for (int i = 0; i < audioArray.Length; i++)
         {
             //Debug.Log(audioName + " " + audioArray[i].audioName);
-            if (audioArray[i].audioName == audioName)
+            if (audioArray[i].audioName.ToUpper() == audioName.ToUpper())
             {
 
                 switch (audioArray[i].audioType)
                 {
                     case Audio.AudioType.Sound:
+                        
                         StartCoroutine(FadeAudioEffect(soundAudioSrc, fadeAudioEffectSpeed, audioArray[i].defaultVolume * masterVolume));
                         audioArray[i].Play(soundAudioSrc, masterVolume);
                         currentSoundIndex = i;
                         break;
                     case Audio.AudioType.BGM:
+                        
                         StartCoroutine(FadeAudioEffect(bgmAudioSource, fadeAudioEffectSpeed, audioArray[i].defaultVolume * masterVolume));
                         audioArray[i].Play(bgmAudioSource, masterVolume);
                         currentBGMIndex = i;
                         break;
                     case Audio.AudioType.UISounds:
+                        
                         StartCoroutine(FadeAudioEffect(uiAudioSource, fadeAudioEffectSpeed, audioArray[i].defaultVolume * masterVolume));
                         audioArray[i].Play(uiAudioSource, masterVolume);
                         currentUISoundIndex = i;
                         break;
                     case Audio.AudioType.Ambient:
+                        
                         StartCoroutine(FadeAudioEffect(ambientAudioSource, fadeAudioEffectSpeed, audioArray[i].defaultVolume * masterVolume));
                         audioArray[i].Play(ambientAudioSource, masterVolume);
                         currentAmbientIndex = i;
@@ -198,27 +228,31 @@ public class AudioManager2D: MonoBehaviour
         for (int i = 0; i < audioArray.Length; i++)
         {
             //Debug.Log(audioName + " " + audioArray[i].audioName);
-            if (audioArray[i].audioName == audioName)
+            if (audioArray[i].audioName.ToUpper() == audioName.ToUpper())
             {
 
                 switch (audioArray[i].audioType)
                 {
                     case Audio.AudioType.Sound:
+                        StopCoroutine("FadeAudioEffect");
                         StartCoroutine(FadeAudioEffect(soundAudioSrc, fadeAudioEffectSpeed, audioArray[i].defaultVolume * masterVolume));
                         audioArray[i].Play(soundAudioSrc, masterVolume);
                         currentSoundIndex = i;
                         break;
                     case Audio.AudioType.BGM:
+                        StopCoroutine("FadeAudioEffect");
                         StartCoroutine(FadeAudioEffect(bgmAudioSource, fadeAudioEffectSpeed, audioArray[i].defaultVolume * masterVolume));
                         audioArray[i].Play(bgmAudioSource, masterVolume);
                         currentBGMIndex = i;
                         break;
                     case Audio.AudioType.UISounds:
+                        StopCoroutine("FadeAudioEffect");
                         StartCoroutine(FadeAudioEffect(uiAudioSource, fadeAudioEffectSpeed, audioArray[i].defaultVolume * masterVolume));
                         audioArray[i].Play(uiAudioSource, masterVolume);
                         currentUISoundIndex = i;
                         break;
                     case Audio.AudioType.Ambient:
+                        StopCoroutine("FadeAudioEffect");
                         StartCoroutine(FadeAudioEffect(ambientAudioSource, fadeAudioEffectSpeed, audioArray[i].defaultVolume * masterVolume));
                         audioArray[i].Play(ambientAudioSource, masterVolume);
                         currentAmbientIndex = i;
@@ -320,24 +354,28 @@ public class AudioManager2D: MonoBehaviour
         for (int i = 0; i < audioArray.Length; i++)
         {
             //Debug.Log(audioName + " " + audioArray[i].audioName);
-            if (audioArray[i].audioName == audioName)
+            if (audioArray[i].audioName.ToUpper() == audioName.ToUpper())
             {
                
                 switch (audioArray[i].audioType)
                 {
                     case Audio.AudioType.Sound:
+                        StopCoroutine("FadeAudioEffect");
                         audioArray[i].Play(soundAudioSrc, masterVolume);
                         currentSoundIndex = i;
                         break;
                     case Audio.AudioType.BGM:
+                        StopCoroutine("FadeAudioEffect");
                         audioArray[i].Play(bgmAudioSource, masterVolume);
                         currentBGMIndex = i;
                         break;
                     case Audio.AudioType.UISounds:
+                        StopCoroutine("FadeAudioEffect");
                         audioArray[i].Play(uiAudioSource, masterVolume);
                         currentUISoundIndex = i;
                         break;
                     case Audio.AudioType.Ambient:
+                        StopCoroutine("FadeAudioEffect");
                         audioArray[i].Play(ambientAudioSource, masterVolume);
                         currentAmbientIndex = i;
                         break;
