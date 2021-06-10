@@ -154,6 +154,11 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
+    public void SkipDialogue() {
+        currentDialougeIndex = dialougeTexts.Length;
+        AdvanceDialogue();
+    }
+
     IEnumerator EndDialogueRoutine() {
         requiredEndEvent?.Invoke();
         dialogueTextFeild.text = "";
@@ -206,6 +211,7 @@ public class DialogueSystem : MonoBehaviour
 
     }
 
+    //create a wait time vaiable that is public
 
     IEnumerator  TypeDialougeRoutine(string dialougeToType) {
 
@@ -229,6 +235,7 @@ public class DialogueSystem : MonoBehaviour
            
             Debug.Log("made it to comands");
             dialogueCommandEvents?.Invoke(dialougeToType);
+            //make sure you can change wait time here woth the command fucntion
 
             bool isSkipPrefix = false;
 
@@ -242,6 +249,8 @@ public class DialogueSystem : MonoBehaviour
             Debug.Log($"shoud skip?: { dialougeToType[0] } {isSkipPrefix} ");
             if (dialougeToType[0].Equals(commandPrefix) || isSkipPrefix)
             {
+               //wait even if wait time is 0
+               //reset wait time after wait
                 SkipDialougeTyping();
             } 
             else
