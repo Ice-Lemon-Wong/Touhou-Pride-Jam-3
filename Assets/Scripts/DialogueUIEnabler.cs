@@ -18,6 +18,7 @@ public class DialogueUIEnabler : MonoBehaviour
     private void Start()
     {
         disableDelayAtEnd = ds.endDelay;
+        ds.initDialogueEvents += EnableUI;
         ds.requiredEndEvent += DisableUI;
         colourVar = new Color(1, 1, 1, 1);
         isEnabled = false;
@@ -58,6 +59,11 @@ public class DialogueUIEnabler : MonoBehaviour
 
     public void EnableUI(bool shouldEnable = true) {
         isEnabled = shouldEnable;
+    }
+
+    public void EnableUI()
+    {
+        isEnabled = true;
     }
 
     public void DisableUI()

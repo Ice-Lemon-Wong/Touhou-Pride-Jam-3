@@ -481,7 +481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &226554250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,7 +815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &340887632
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1047,6 +1047,58 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &488369244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488369246}
+  - component: {fileID: 488369245}
+  m_Layer: 0
+  m_Name: Dialogue Sequence Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &488369245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488369244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97c64304b7c8554d99740de613d226c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sm: {fileID: 782890588}
+  dfm: {fileID: 2069822444}
+  dialogueSequencedEvents:
+  - fileName: Test1
+    startingLine: Start1
+    proceedNextEvent: 1
+  - fileName: Test1
+    startingLine: Start2
+    proceedNextEvent: 1
+--- !u!4 &488369246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488369244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.164977, y: -0.16736782, z: 81.332634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1353,169 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696100323}
   m_CullTransparentMesh: 1
+--- !u!1 &782890587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782890589}
+  - component: {fileID: 782890588}
+  - component: {fileID: 782890590}
+  m_Layer: 0
+  m_Name: TestSequenceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &782890588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782890587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99527b50849e2214286fe95effce27b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSequenceIndex: 0
+  loopEvent: 0
+  bgm: {fileID: 1662020035}
+  bgEvents:
+  - bgIndex: 1
+  - bgIndex: 2
+  events:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782890588}
+        m_TargetAssemblyTypeName: TestSequenceManager, Assembly-CSharp
+        m_MethodName: WaitEvent
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782890588}
+        m_TargetAssemblyTypeName: TestSequenceManager, Assembly-CSharp
+        m_MethodName: FireBGEvent
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 488369245}
+        m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+        m_MethodName: FireDialogueSequencedEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782890588}
+        m_TargetAssemblyTypeName: TestSequenceManager, Assembly-CSharp
+        m_MethodName: WaitEvent
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782890588}
+        m_TargetAssemblyTypeName: TestSequenceManager, Assembly-CSharp
+        m_MethodName: FireBGEvent
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 488369245}
+        m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+        m_MethodName: FireDialogueSequencedEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &782890589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782890587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.164977, y: -0.16736782, z: 81.332634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782890590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782890587}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635734959130ffb42b925ee6844d68b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputKeyName: Advance
+  functionsToTest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782890588}
+        m_TargetAssemblyTypeName: TestSequenceManager, Assembly-CSharp
+        m_MethodName: FireSequence
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &825160365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2990,7 +3205,7 @@ MonoBehaviour:
   - {fileID: 1321495838}
   - {fileID: 825160367}
   - {fileID: 696100325}
-  activeBGIndex: 2
+  activeBGIndex: 0
   effectSpeed: 4
 --- !u!222 &1662020037
 CanvasRenderer:
@@ -3565,6 +3780,7 @@ GameObject:
   - component: {fileID: 2082998901}
   - component: {fileID: 2082998902}
   - component: {fileID: 2082998903}
+  - component: {fileID: 2082998904}
   m_Layer: 5
   m_Name: Dialogue_UI
   m_TagString: Untagged
@@ -3620,6 +3836,7 @@ MonoBehaviour:
     enabled: 0
     value: 
   canUseExternalControls: 1
+  defaulrColour: {r: 0, g: 0, b: 0, a: 1}
   startImmediantly: 0
   startDelay: 1
   endDelay: 1
@@ -3645,6 +3862,21 @@ MonoBehaviour:
   isComponentInObject: 1
   speakerTextFeild: {fileID: 1470353142}
   speakerCommand: Speaker
+--- !u!114 &2082998904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082998900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6b42dca032c8244aa7068a0bd9d94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ds: {fileID: 2082998902}
+  isComponentInObject: 1
+  dialogueTextFeild: {fileID: 1933178453}
 --- !u!1 &2122303275
 GameObject:
   m_ObjectHideFlags: 0

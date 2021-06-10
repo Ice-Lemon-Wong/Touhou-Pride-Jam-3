@@ -1,0 +1,28 @@
+﻿-Start1
+#portrait 1 Marisa happy
+#portrait 0 Alice Happy
+#portrait 1 enable
+#portrait 0 enable
+
+#speaker marisa
+Hello there, alice
+#portrait 0 Alice smug
+#animate 0 shake
+#speaker Alice
+General Marisa!!!
+
+#portrait 1 disable
+#portrait 0 disable
+-
+
+-Start2
+#portrait 1 Marisa sad
+#portrait 0 Alice sad
+#portrait 1 enable
+#portrait 0 enable
+
+#speaker Alice
+I am sad now
+#speaker marisa
+me to :*(
+-

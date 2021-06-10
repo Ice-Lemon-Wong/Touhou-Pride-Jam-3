@@ -43,7 +43,7 @@ public class DialougeFilesManager : MonoBehaviour
 
 
         ds.LoadDialouge(SearchDesiredText(), loadImmediantly);
-        UiEnabler.EnableUI(true);
+        //UiEnabler.EnableUI(true);
     }
 
 
@@ -58,9 +58,22 @@ public class DialougeFilesManager : MonoBehaviour
         txtContent = txtAsset.text.Split('\n');
 
         ds.LoadDialouge(SearchDesiredText(), loadImmediantly);
-        UiEnabler.EnableUI(true);
+        //UiEnabler.EnableUI(true);
     }
 
+
+    public void LoadDialogueFromFile(string fileNameToLoad, string startingLineToUse , Action[] endDialogueEvent)
+    {
+        txtFileName = fileNameToLoad;
+        startingLine = startingLineToUse;
+
+        TextAsset txtAsset = (TextAsset)Resources.Load(txtFileName);
+        txtContent = txtAsset.text.Split('\n');
+
+        ds.LoadDialouge(SearchDesiredText(), true);
+        ds.SetEndEvents(endDialogueEvent);
+        //UiEnabler.EnableUI(true);
+    }
 
 
 

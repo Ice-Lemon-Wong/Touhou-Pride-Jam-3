@@ -27,7 +27,7 @@ public class PortraitAnimationManager : DialogueSystemCommandParser
         
         AddComand(animationCommandSyntax, PlayAnimation);
         InitCommands();
-        ds.initDialogue += ResetAnimations;
+        ds.initDialogueEvents += ResetAnimations;
         ds.requiredEndEvent += ResetAnimations;
     }
 

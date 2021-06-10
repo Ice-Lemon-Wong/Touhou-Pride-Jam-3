@@ -34,7 +34,7 @@ public class PortraitsManager : DialogueSystemCommandParser
 
         AddComand(portraitCommandText, PortraitCommandFunction);
         InitCommands();
-        ds.initDialogue += DisablePortraits;
+        ds.initDialogueEvents += DisablePortraits;
         
     }
 
