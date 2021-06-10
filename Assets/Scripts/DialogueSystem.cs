@@ -48,11 +48,10 @@ public class DialogueSystem : MonoBehaviour
     private int currentDialougeIndex = 0;
     private bool isInterupt = false;
     private bool isTyping = false;
-    
 
 
-    // Start is called before the first frame update
-    IEnumerator Start()
+	// Start is called before the first frame update
+	IEnumerator Start()
     {
         dialogueTextFeild.text = "";
         if (continueButton.Enabled) {
@@ -247,11 +246,12 @@ public class DialogueSystem : MonoBehaviour
             } 
             else
             {
+				//dialougeToType = dialougeTextEffects.UpdateText(dialougeToType);
+				dialogueTextFeild.text = dialougeToType;
+				//dialougeTextEffects.UpdateText(dialougeToType);
 
-                dialogueTextFeild.text = dialougeToType;
-
-                //typing effect
-                while (charIndex < dialougeToType.Length)
+				//typing effect
+				while (charIndex < dialougeToType.Length)
                 {
 
                     //for whatever reason this needs to be in the loop to not show
