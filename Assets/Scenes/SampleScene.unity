@@ -481,7 +481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &226554250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1818,7 +1818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &782890588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4578,7 +4578,6 @@ MonoBehaviour:
   - we scapped the old one
   - that is all we have
   dialogueTextFeild: {fileID: 1933178453}
-  typingSpeed: 15
   interuptInput:
     enabled: 1
     value: Advance
