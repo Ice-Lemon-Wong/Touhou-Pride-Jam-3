@@ -1,0 +1,78 @@
+﻿-Act1-1
+#portrait 0 disable
+#portrait 1 disable
+#portrait 2 disable
+#animate 0 neutral
+#animate 1 neutral
+#animate 2 neutral
+
+#speaker 
+Alice has probably the most bored face on her right now. She cannot believe where this black witch has taken her to.
+
+#portrait 1 marisa happy
+#portrait 1 enable
+#animate 1 enter
+#speaker marisa
+C’monnnnnnnn! It’s gonna be fun!
+
+#portrait 0 alice angry
+#portrait 0 enable
+#animate 0 enter
+#speaker Alice
+
+Right...
+#text shake 0 77
+<b><size= 30><color="red">but why don’t you ask Reimu?!!</color></size></b> 
+#animate 0 shake
+I have dolls to make you know.
+#text reset all
+
+#speaker 
+Marisa looked at her with a frustrated look while her eyes closed. It is a miracle she avoided bumping into people while walking like this.
+
+
+#portrait 1 marisa wtf
+#animate 1 jump
+#speaker Marisa
+I saw this really cool shop while I’m on the way to see Reimu. A modern cafe, in our village, in the Forest of Magic!! 
+#portrait 1 marisa annoyedPout
+#animate 1 shake
+#text wave 87 120
+But Reimu, being a party pooper and all, doesn’t want to come with me. She kept saying <color="blue">“I got a shrine to take care of”</color> despite the fact that I cleaned up her work just yesterday!
+#text reset all
+
+#portrait 0 alice oh
+#speaker Alice
+I see. And you looked for me to go to this place? 
+
+#portrait 1 marisa happy
+#animate 1 jump
+#speaker Marisa
+Yeap! I got really sad on the way home, until I saw your house. You need some fresh air too, so come along and let’s go to this Cafe de Gensokyo!
+
+#speaker Alice
+It’s newly made? Why did I not hear it before? Is it run by the <color="red">Scarlet Devil Mansion?</color>
+
+#portrait 1 marisa neutral
+#speaker Marisa
+Yeah it is, I saw Koakuma working here. And the building is quite recent, it was not here three days ago, and <color="red"><b>BAM!!!</b></color> here it is.  
+It’s probably because of <color=#800080>Patchouli’s</color> magic capabilities and <color="blue">sakuya’s</color> ability to stop time. They can make constructions like this a breeze. 
+
+#portrait 0 alice annoyedPout
+#speaker 
+Marisa looked ahead and continued marching giddy. Alice can only sigh and continue walking with her. 
+
+#speaker Alice
+#animate 0 shift
+#text wave 0 89
+You could’ve asked for Patchouli out you know, if you didn't keep <color="red">stealing her things...</color>
+#text reset all
+
+#speaker 
+They stopped at their destination. It is much closer to their home than Alice expected. The bell on the door rang as they opened the door and walked inside. 
+#animate 0 exit
+#animate 1 exit
+#portrait 0 disable
+#portrait 1 disable
+-
+

@@ -159,19 +159,29 @@ public class DialogueSystem : MonoBehaviour
     }
 
     public void SkipDialogue() {
-		//isInterupt = true;
-		//currentDialougeIndex = dialougeTexts.Length;
-		//currentDialougeIndex++;
-		AdvanceDialogue();
+        //isInterupt = true;
+        //currentDialougeIndex = dialougeTexts.Length;
+        //currentDialougeIndex++;
+        if (continueButton.Enabled)
+        {
+            continueButton.Value.SetActive(false);
+        }
+        AdvanceDialogue();
     }
 
     IEnumerator EndDialogueRoutine() {
+        if (continueButton.Enabled)
+        {
+            continueButton.Value.SetActive(false);
+        }
+
         requiredEndEvent?.Invoke();
         dialogueTextFeild.text = "";
         yield return new WaitForSeconds(endDelay);
         
         //fire events
         endDialougeEvents?.Invoke();
+
         
     }
 
@@ -239,7 +249,7 @@ public class DialogueSystem : MonoBehaviour
         }else {
 
            
-            Debug.Log("made it to comands");
+           
             dialogueCommandEvents?.Invoke(dialougeToType);
             //make sure you can change wait time here woth the command fucntion
 
