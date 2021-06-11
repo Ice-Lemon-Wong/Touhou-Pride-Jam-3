@@ -71,6 +71,7 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 					waveList.AddRange(indexArray);
 				}
 			} 
+			
 
 			int counter = 0;
 			for (int i = 0; i < waveList[waveList.Count - 1]; i++) {

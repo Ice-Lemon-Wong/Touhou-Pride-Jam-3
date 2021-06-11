@@ -9,6 +9,7 @@ public class DialougeFilesManager : MonoBehaviour
     [SerializeField] char lineStartPrefix = '-';
     [SerializeField] private bool loadImmediantly;
     [SerializeField] private DialogueUIEnabler UiEnabler;
+    
 
     public string txtFileName;
     public string startingLine;

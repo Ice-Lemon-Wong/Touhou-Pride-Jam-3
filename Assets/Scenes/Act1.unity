@@ -249,7 +249,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1662020034}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -478,12 +478,12 @@ GameObject:
   m_Component:
   - component: {fileID: 218298118}
   m_Layer: 5
-  m_Name: TransitionScene
+  m_Name: Title and Mis Transitions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &218298118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -750,6 +750,7 @@ RectTransform:
   - {fileID: 1589387003}
   - {fileID: 218298118}
   - {fileID: 2121254939}
+  - {fileID: 1994418219}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -792,8 +793,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.0000076293945, y: -0.0000023842}
+  m_SizeDelta: {x: 220, y: 19.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &288961754
 MonoBehaviour:
@@ -892,27 +893,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288961752}
   m_CullTransparentMesh: 1
---- !u!320 &296912008
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165183305}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: af23b62733a613e4fb547fcbea13910a, type: 2}
-  m_InitialState: 0
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 4427157042485591039, guid: af23b62733a613e4fb547fcbea13910a, type: 2}
-    value: {fileID: 436089079}
-  - key: {fileID: 1671657115490831054, guid: af23b62733a613e4fb547fcbea13910a, type: 2}
-    value: {fileID: 1125490543}
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &340887631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,7 +1015,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436089075}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1044,8 +1024,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: 0}
-  m_SizeDelta: {x: 448.73, y: 50}
+  m_AnchoredPosition: {x: 0, y: 2.325}
+  m_SizeDelta: {x: 448.73, y: 95.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &436089077
 MonoBehaviour:
@@ -1067,7 +1047,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Act 1: something something'
+  m_text: 'Act 1:
+
+    Cards and Cafe'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1076,8 +1058,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1094,15 +1076,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 44
+  m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1154,7 +1136,7 @@ Animator:
   m_GameObject: {fileID: 436089075}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3000950526753c49bb6221332bf4b60, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1206,13 +1188,13 @@ MonoBehaviour:
   sm: {fileID: 782890588}
   dfm: {fileID: 1373600034}
   dialogueSequencedEvents:
+  - fileName: Act1
+    startingLine: Act1-1
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
   - fileName: Test1
     startingLine: monologue
     dialogueSystemIndex: 1
-    proceedNextEvent: 1
-  - fileName: Test1
-    startingLine: Start1
-    dialogueSystemIndex: 0
     proceedNextEvent: 1
   - fileName: Test1
     startingLine: Start2
@@ -1660,43 +1642,25 @@ MonoBehaviour:
   currentSequenceIndex: 0
   loopEvent: 0
   sequecedEvents:
-  - name: After card game dialogue
+  - name: Title
     eventDelay: 1
     eventToFire:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Play Cafe Music
-    eventDelay: 0
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 468391722}
-          m_TargetAssemblyTypeName: AudioManager2D, Assembly-CSharp
-          m_MethodName: PlayFade
+        - m_Target: {fileID: 436089079}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: CafeTrack
+            m_StringArgument: ActTitle
             m_BoolArgument: 0
           m_CallState: 2
     FireNextEvent: 1
-  - name: Starting BG
+  - name: White Bg transition
     eventDelay: 5
     eventToFire:
       m_PersistentCalls:
@@ -1714,152 +1678,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     FireNextEvent: 1
-  - name: Starting BG
-    eventDelay: 2
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: 1st card game
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1548919883}
-          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: 2nd card game
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1548919883}
-          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: 3rd card game
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1548919883}
-          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Starting Dialogue
-    eventDelay: 2
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Cafe BG
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Cafe Dialogue
+  - name: Play Cafe BGM
     eventDelay: 0
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: StopBGM
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 468391722}
-          m_TargetAssemblyTypeName: AudioManager2D, Assembly-CSharp
-          m_MethodName: StopFade
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Play theme again
-    eventDelay: 1
     eventToFire:
       m_PersistentCalls:
         m_Calls:
@@ -1876,7 +1696,115 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     FireNextEvent: 1
-  - name: After card game dialogue
+  - name: cafe exterior BG transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1020431104}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: Stating DIalogue
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 488369245}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Cafe interior Bg transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1020431104}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: Cafe Interior dialogue -1
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 488369245}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Cafe Interior dialogue -2
+    eventDelay: 2
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 488369245}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Card game
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1548919883}
+          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireCardGameSequenceEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: End Card game
     eventDelay: 1
     eventToFire:
       m_PersistentCalls:
@@ -1996,7 +1924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 00d3ef4ab4ac3e84d9882cb75eb22818, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e996e19ee7eef2446b1170c26c975bb5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2389,7 +2317,7 @@ Animator:
   m_GameObject: {fileID: 963039081}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 50b1853e361e4fe48b02ed71182d00a9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8f67a3b08e7779d4f96b0060331e2031, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2578,8 +2506,8 @@ MonoBehaviour:
   bgm: {fileID: 1662020035}
   bgEvents:
   - bgIndex: 1
+  - bgIndex: 2
   - bgIndex: 3
-  - bgIndex: 4
   loopEvents: 0
 --- !u!1 &1021898600
 GameObject:
@@ -2875,7 +2803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1125490540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2883,7 +2811,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125490539}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3027,37 +2955,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159616940}
   m_CullTransparentMesh: 1
---- !u!1 &1165183305
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1165183306}
-  - component: {fileID: 296912008}
-  m_Layer: 0
-  m_Name: Timeline Director
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1165183306
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165183305}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1171277062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3289,7 +3186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -16.75003}
+  m_AnchoredPosition: {x: 0, y: -16.750061}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1233122329
@@ -3322,7 +3219,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1662020034}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3397,7 +3294,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1662020034}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3736,7 +3633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: desds
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3981,40 +3878,13 @@ MonoBehaviour:
   loopEvents: 0
   dialogueSystemIndex: 0
   cardGameSequenceEvents:
-  - xBounds: {x: -5, y: 5}
-    yBounds: {x: -2, y: 2}
+  - xBounds: {x: -3, y: 3}
+    yBounds: {x: -3, y: 3}
     cardLayout: {x: 2, y: 3}
     turnAmount: 6
     isCheat: 0
     isClosing: 0
     isFinal: 0
-    isAct4: 0
-    proceedNextEvent: 1
-  - xBounds: {x: -5, y: 5}
-    yBounds: {x: -2, y: 2}
-    cardLayout: {x: 2, y: 1}
-    turnAmount: 1
-    isCheat: 1
-    isClosing: 1
-    isFinal: 0
-    isAct4: 0
-    proceedNextEvent: 1
-  - xBounds: {x: -5, y: 5}
-    yBounds: {x: -2, y: 2}
-    cardLayout: {x: 2, y: 2}
-    turnAmount: 2
-    isCheat: 1
-    isClosing: 0
-    isFinal: 0
-    isAct4: 1
-    proceedNextEvent: 1
-  - xBounds: {x: -5, y: 5}
-    yBounds: {x: -2, y: 2}
-    cardLayout: {x: 2, y: 2}
-    turnAmount: 2
-    isCheat: 1
-    isClosing: 0
-    isFinal: 1
     isAct4: 0
     proceedNextEvent: 1
 --- !u!4 &1548919884
@@ -4320,11 +4190,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 76333731}
   - {fileID: 1233122330}
-  - {fileID: 1321495837}
   - {fileID: 825160366}
   - {fileID: 696100324}
-  - {fileID: 76333731}
+  - {fileID: 1321495837}
   m_Father: {fileID: 265558253}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4348,10 +4218,10 @@ MonoBehaviour:
   backgrounds:
   - {fileID: 76333732}
   - {fileID: 1233122331}
-  - {fileID: 1321495838}
   - {fileID: 825160367}
   - {fileID: 696100325}
-  activeBGIndex: 2
+  - {fileID: 1321495838}
+  activeBGIndex: 0
   effectSpeed: 4
 --- !u!222 &1662020037
 CanvasRenderer:
@@ -4361,6 +4231,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662020033}
   m_CullTransparentMesh: 1
+--- !u!1001 &1704347190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 265558253}
+    m_Modifications:
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468470243203886388, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+      propertyPath: m_Name
+      value: TransitionPanel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
 --- !u!1 &1706277347
 GameObject:
   m_ObjectHideFlags: 0
@@ -4733,6 +4700,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933178451}
   m_CullTransparentMesh: 1
+--- !u!224 &1994418219 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3468470243203886387, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+  m_PrefabInstance: {fileID: 1704347190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1994964973
 GameObject:
   m_ObjectHideFlags: 0
@@ -5137,10 +5109,10 @@ MonoBehaviour:
   ds: {fileID: 2082998902}
   isComponentInObject: 0
   dialogueTextFeild: {fileID: 1933178453}
-  waveSpeed: 1
+  waveSpeed: 2
   waveWavelength: 0.01
-  waveHeight: 5
-  shakePower: 0.5
+  waveHeight: 3
+  shakePower: 0.8
 --- !u!1 &2121254938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5156,7 +5128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2121254939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5345,6 +5317,10 @@ PrefabInstance:
       propertyPath: portraitParent
       value: 
       objectReference: {fileID: 1179473457}
+    - target: {fileID: 1849018984474160153, guid: 71ceb44785079684dbce2ba7c3a23b5a, type: 3}
+      propertyPath: portraitEffectSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1849018984474160153, guid: 71ceb44785079684dbce2ba7c3a23b5a, type: 3}
       propertyPath: portraits.Array.data[0]
       value: 

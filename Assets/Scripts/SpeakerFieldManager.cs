@@ -37,6 +37,11 @@ public class SpeakerFieldManager : DialogueSystemCommandParser
         speakerTextFeild.text = "";
         for (int i = 1; i < textCommand.Length; i++)
         {
+            if (string.IsNullOrEmpty(textCommand[i])) {
+                speakerTextFeild.text = "";
+                return;
+            }
+            
             speakerTextFeild.text += textCommand[i];
 
         }
