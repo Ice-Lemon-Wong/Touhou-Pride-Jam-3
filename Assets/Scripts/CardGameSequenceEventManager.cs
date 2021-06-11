@@ -11,7 +11,9 @@ public class CardGameSequenceEventManager : MonoBehaviour
     
     [SerializeField] private DialougeFilesManager dfm;
     [SerializeField] private bool loopEvents = false;
+    [SerializeField] private int dialogueSystemIndex = 0;
     [SerializeField] private CardGameSequenceEvent[] cardGameSequenceEvents;
+    
 
     private int cardSequenceIndex = 0;
 
@@ -31,8 +33,16 @@ public class CardGameSequenceEventManager : MonoBehaviour
         if (loopEvents) cardSequenceIndex %= cardGameSequenceEvents.Length;
     }
 
+    //not used
     public void EventForCards() {
-        dfm.LoadDialogueFromFile("Test1", "Card", new Action[] { cm.endTurn });
+        dfm.LoadDialogueFromFile(dialogueSystemIndex,"Test1", "Card", new Action[] { cm.endTurn });
+
+    }
+
+    public void EventForCards(string fileName, int timesIndex)
+    {
+
+        dfm.LoadDialogueFromFile(dialogueSystemIndex,fileName, "card" + "_" + timesIndex, new Action[] { cm.endTurn });
 
     }
 
@@ -46,12 +56,15 @@ public class CardGameSequenceEventManager : MonoBehaviour
         public Vector2 xBounds;
         public Vector2 yBounds;
         public Vector2Int cardLayout;
+        public int turnAmount;
+        public bool isCheat;
         public bool isClosing;
         public bool isFinal;
+        public bool isAct4;
         public bool proceedNextEvent;
 
-        public void FireCardEvent(CardsManager cm, Action cardEvent,Action endEvent) {
-            cm.CreatBoard(xBounds, yBounds, cardLayout, true, isClosing, isFinal);
+        public void FireCardEvent(CardsManager cm, Action<string, int> cardEvent,Action endEvent) {
+            cm.CreatBoard(xBounds, yBounds, cardLayout, turnAmount, true, isCheat , isClosing, isFinal, isAct4);
             cm.matchingEvent = cardEvent;
             if (proceedNextEvent) cm.cardGameEndEvent = endEvent;
 

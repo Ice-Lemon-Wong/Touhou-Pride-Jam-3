@@ -5,8 +5,7 @@ using System;
 
 public class DialougeFilesManager : MonoBehaviour
 {
-    [SerializeField] DialogueSystem ds;
-    [SerializeField] bool isComponentInSameObject;
+    [SerializeField] DialogueSystem[] ds;
     [SerializeField] char lineStartPrefix = '-';
     [SerializeField] private bool loadImmediantly;
     [SerializeField] private DialogueUIEnabler UiEnabler;
@@ -18,15 +17,12 @@ public class DialougeFilesManager : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        if (isComponentInSameObject)
-        {
-            ds = GetComponent<DialogueSystem>();
-        }
+        
 
         yield return null;
         if (loadImmediantly)
         {
-            LoadDialogueFromFile(true);
+            LoadDialogueFromFile();
 
             //testing only 
             //ds.endDialougeEvents += TestEndingEvent;
@@ -35,14 +31,14 @@ public class DialougeFilesManager : MonoBehaviour
         }
     }
 
-    public void LoadDialogueFromFile(bool loadImmediantly  = true)
+    public void LoadDialogueFromFile(int index = 0,bool loadImmediantly  = true)
     {
 
         TextAsset txtAsset = (TextAsset)Resources.Load(txtFileName);
         txtContent = txtAsset.text.Split('\n');
 
 
-        ds.LoadDialouge(SearchDesiredText(), loadImmediantly);
+        ds[index].LoadDialouge(SearchDesiredText(), loadImmediantly);
         //UiEnabler.EnableUI(true);
     }
 
@@ -50,28 +46,29 @@ public class DialougeFilesManager : MonoBehaviour
 
 
     //call this to load dialogue 
-    public void LoadDialogueFromFile(string fileNameToLoad, string startingLineToUse = "", bool loadImmediantly = true) {
+    public void LoadDialogueFromFile(int index,string fileNameToLoad, string startingLineToUse = "", bool loadImmediantly = true) {
         txtFileName = fileNameToLoad;
         startingLine = startingLineToUse;
 
         TextAsset txtAsset = (TextAsset)Resources.Load(txtFileName);
         txtContent = txtAsset.text.Split('\n');
 
-        ds.LoadDialouge(SearchDesiredText(), loadImmediantly);
+        ds[index].LoadDialouge(SearchDesiredText(), loadImmediantly);
         //UiEnabler.EnableUI(true);
     }
 
 
-    public void LoadDialogueFromFile(string fileNameToLoad, string startingLineToUse , Action[] endDialogueEvent)
+    public void LoadDialogueFromFile(int index,string fileNameToLoad, string startingLineToUse , Action[] endDialogueEvent)
     {
         txtFileName = fileNameToLoad;
         startingLine = startingLineToUse;
 
+        
         TextAsset txtAsset = (TextAsset)Resources.Load(txtFileName);
         txtContent = txtAsset.text.Split('\n');
 
-        ds.LoadDialouge(SearchDesiredText(), true);
-        ds.SetEndEvents(endDialogueEvent);
+        ds[index].LoadDialouge(SearchDesiredText(), true);
+        ds[index].SetEndEvents(endDialogueEvent);
         //UiEnabler.EnableUI(true);
     }
 
@@ -172,16 +169,5 @@ public class DialougeFilesManager : MonoBehaviour
 
     }
 
-    public void TestEndingEvent() {
-        LoadDialogueFromFile("Test");
-        ds.endDialougeEvents -= TestEndingEvent;
-        BackgroundManager.insatnceBGM.SetActiveBG(2);
-    }
 
-    public void TestEndingEvent2()
-    {
-        LoadDialogueFromFile("Test");
-        ds.endDialougeEvents -= TestEndingEvent2;
-        BackgroundManager.insatnceBGM.SetActiveBG(2);
-    }
 }

@@ -32,16 +32,18 @@ public class DialogueSequenceEventManager : MonoBehaviour
     struct DialogueEvent {
         public string fileName;
         public string startingLine;
+        public int dialogueSystemIndex;
         public bool proceedNextEvent;
+       
 
         public void InitiateDialogue(DialougeFilesManager dfm, Action loadNextSequencedEventAction) {
 
             if (proceedNextEvent)
             {
-                dfm.LoadDialogueFromFile(fileName, startingLine,new Action[] { loadNextSequencedEventAction});
+                dfm.LoadDialogueFromFile(dialogueSystemIndex, fileName, startingLine,new Action[] { loadNextSequencedEventAction});
             }
             else {
-                dfm.LoadDialogueFromFile(fileName, startingLine);
+                dfm.LoadDialogueFromFile(dialogueSystemIndex,fileName, startingLine);
             }
             
         }

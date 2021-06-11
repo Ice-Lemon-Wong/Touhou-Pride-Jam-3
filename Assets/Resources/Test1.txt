@@ -50,3 +50,9 @@ this is to test out card dialogue
 this is the end of the card game
 #portrait 1 disable
 -
+
+-monologue
+I wonder people will read this
+It sounds bizzare.
+and yet, we are still doing it...
+-
