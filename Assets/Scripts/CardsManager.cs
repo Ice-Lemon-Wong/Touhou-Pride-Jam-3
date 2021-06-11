@@ -6,7 +6,7 @@ using System;
 
 public class CardsManager : MonoBehaviour
 {
-	public TransitionManager transitionManager;
+	
 	public static CardsManager instanceCM;
     //singleton pattern
     private void Awake()
@@ -37,6 +37,7 @@ public class CardsManager : MonoBehaviour
     [SerializeField] private Vector2 cardHidingOffset;
     [SerializeField] private float transitionTime = 0.75f;
     [SerializeField] private int turnAmmount = 8;
+    //[SerializeField] private bool createOnStart = false;
 
     [Space]
     [Header("card distribution config")]
@@ -57,7 +58,8 @@ public class CardsManager : MonoBehaviour
     private int currentTurn;
 	public Action cardGameEndEvent;
     private bool isGameReady = false;
-    public Action matchingEvent;
+    public Action<string, int> matchingEvent;
+    public int matchedCardIndex= 0;
 
 
 	public enum BoardState { playerTurn, enemyTurn, boardProcess};
@@ -71,15 +73,16 @@ public class CardsManager : MonoBehaviour
         public bool isFlipped;
         public bool isMatched;
         //store the current times it appear
+        public int currentTimes;
 
-        public CardOnBoard(int ID, Vector2 boardPosition, GameObject cardObject, CardSO cardData) {
+        public CardOnBoard(int ID, Vector2 boardPosition, GameObject cardObject, CardSO cardData, int currentTimes) {
             this.ID = ID;
             this.boardPosition = boardPosition;
             this.cardObject = cardObject;
             this.isFlipped = false;
             this.isMatched = false;
             this.cardData = cardData;
-            
+            this.currentTimes = currentTimes;
         }
 
         public void Matched(bool matched = true) {
@@ -107,11 +110,16 @@ public class CardsManager : MonoBehaviour
 
         yield return null;
         //create cards
-        CreatBoard();
+
+        //if (createOnStart) {
+        //    CreatBoard();
+        //}
+        
 
 
     }
 
+    //out dated function, do not use
     public void CreatBoard()
     {
         DestroyBoard();
@@ -122,10 +130,10 @@ public class CardsManager : MonoBehaviour
         float height = yBounds.y - yBounds.x;
         GameObject cardObject;
 
-        List<CardSO> decidedCards = new List<CardSO>();
+        List<CardDistributor. DistricutedCard> decidedCards = new List<CardDistributor.DistricutedCard>();
         decidedCards = cardDistributor.DistributeCards((cardLayout.x * cardLayout.y) / cardsRequiredPerMatch);
-        CardSO selectedCardData = new CardSO();
-        List<CardSO> initialCardDeck = new List<CardSO>();
+        CardDistributor.DistricutedCard selectedCardData = new CardDistributor.DistricutedCard();
+        List<CardDistributor.DistricutedCard> initialCardDeck = new List<CardDistributor.DistricutedCard>();
         int selectedIndex = 0;
 
         //create the appropriate ammount of cards
@@ -159,12 +167,13 @@ public class CardsManager : MonoBehaviour
 
             //spawn card object
             cardObject = Instantiate(cardobject, new Vector2(cardX, cardY) + cardHidingOffset, Quaternion.identity);
-            cardObject.GetComponent<CardScript>().InitCard(i, selectedCardData.icon, new Vector2(cardX, cardY), new Vector2(cardX, cardY) + cardHidingOffset);
-            cardObject.name = selectedCardData.name + "-" + (i % cardsRequiredPerMatch);
+            cardObject.GetComponent<CardScript>().InitCard(i, selectedCardData.cardData.icon, new Vector2(cardX, cardY), new Vector2(cardX, cardY) + cardHidingOffset);
+            cardObject.name = selectedCardData.cardData.name + "-" + (i % cardsRequiredPerMatch);
 
             //add the card data structure ot the board
-            BoadCards[i] = new CardOnBoard(i, new Vector2(cardX, cardY), cardObject, selectedCardData);
+            BoadCards[i] = new CardOnBoard(i, new Vector2(cardX, cardY), cardObject, selectedCardData.cardData, selectedCardData.currentTimes);
             BoadCards[i].cardObject.GetComponent<CardScript>().SetPosition();
+            Debug.Log(selectedCardData.currentTimes);
 
         }
 
@@ -176,13 +185,14 @@ public class CardsManager : MonoBehaviour
         if (InitAfterCreate) InitBoardCards(true);
     }
 
-    public void CreatBoard(Vector2 newXBounds, Vector2 newYBounds, Vector2Int newCardlayout, bool initImmedaintly = false, bool isEnd = false, bool isFinal = false )
+    public void CreatBoard(Vector2 newXBounds, Vector2 newYBounds, Vector2Int newCardlayout,int turnAmount, bool initImmedaintly = false, bool isCheat = false, bool isClosing = false, bool isFinal = false, bool isAct4 = false)
     {
         DestroyBoard();
 
         xBounds = newXBounds;
         yBounds = newYBounds;
         cardLayout = newCardlayout;
+        turnAmmount = turnAmount;
 
         float cardX = 0;
         float cardY = 0;
@@ -191,11 +201,23 @@ public class CardsManager : MonoBehaviour
         GameObject cardObject;
 
         //grab different cards later
-        List<CardSO> decidedCards = new List<CardSO>();
-        decidedCards = cardDistributor.DistributeCards((cardLayout.x * cardLayout.y) / cardsRequiredPerMatch);
+        List<CardDistributor.DistricutedCard> decidedCards = new List<CardDistributor.DistricutedCard>();
+
+        if (isClosing)
+        {
+            decidedCards = cardDistributor.DistributeClosingCards();
+        }
+        else if (isFinal)
+        {
+            decidedCards = cardDistributor.DistributeFinalCards();
+        }
+        else {
+            decidedCards = cardDistributor.DistributeCards((cardLayout.x * cardLayout.y) / cardsRequiredPerMatch, isAct4);
+        }
         
-        CardSO selectedCardData = new CardSO();
-        List<CardSO> boardCards = new List<CardSO>();
+
+        CardDistributor.DistricutedCard selectedCardData = new CardDistributor.DistricutedCard();
+        List<CardDistributor.DistricutedCard> initialDeck = new List<CardDistributor.DistricutedCard>();
         int selectedIndex = 0;
 
         //create the appropriate ammount of cards
@@ -208,7 +230,7 @@ public class CardsManager : MonoBehaviour
                 decidedCards.RemoveAt(selectedIndex);
 
             }
-            boardCards.Add(selectedCardData);
+            initialDeck.Add(selectedCardData);
 
         }
 
@@ -217,22 +239,40 @@ public class CardsManager : MonoBehaviour
 
             //randomize cards
             //shuffle the deck
-            selectedIndex = UnityEngine.Random.Range(0, boardCards.Count);
-            selectedCardData = boardCards[selectedIndex];
-            boardCards.RemoveAt(selectedIndex);
+            selectedIndex = UnityEngine.Random.Range(0, initialDeck.Count);
+            selectedCardData = initialDeck[selectedIndex];
+            initialDeck.RemoveAt(selectedIndex);
 
 
             //selectedCardData = cardSOPool[Random.Range(0, cardSOPool.Length)];
 
             //figure out where to spawn card object
-            cardX = ((i % cardLayout.x) * (width / (cardLayout.x - 1))) + xBounds.x;
-            cardY = ((i / cardLayout.x) * (height / (cardLayout.y - 1))) + yBounds.x;
+            if (cardLayout.x == 1)
+            {
+                cardX = ((i % cardLayout.x) * (width / 2)) + xBounds.x;
+            }
+            else {
+                cardX = ((i % cardLayout.x) * (width / (cardLayout.x - 1))) + xBounds.x;
+            }
+
+
+            if (cardLayout.y == 1)
+            {
+                cardY = ((i / cardLayout.x) * (height /2)) + yBounds.x;
+            }
+            else
+            {
+                cardY = ((i / cardLayout.x) * (height / (cardLayout.y - 1))) + yBounds.x;
+            }
+
+
+           
 
             //spawn card object
             cardObject = Instantiate(cardobject, new Vector2(cardX, cardY) + cardHidingOffset, Quaternion.identity);
-            cardObject.GetComponent<CardScript>().InitCard(i, selectedCardData.icon, new Vector2(cardX, cardY), new Vector2(cardX, cardY) + cardHidingOffset);
-            cardObject.name = selectedCardData.name + "-" + (i % cardsRequiredPerMatch);
-            BoadCards[i] = new CardOnBoard(i, new Vector2(cardX, cardY), cardObject, selectedCardData);
+            cardObject.GetComponent<CardScript>().InitCard(i, selectedCardData.cardData.icon, new Vector2(cardX, cardY), new Vector2(cardX, cardY) + cardHidingOffset);
+            cardObject.name = selectedCardData.cardData.name + "-" + (i % cardsRequiredPerMatch);
+            BoadCards[i] = new CardOnBoard(i, new Vector2(cardX, cardY), cardObject, selectedCardData.cardData, selectedCardData.currentTimes);
             BoadCards[i].cardObject.GetComponent<CardScript>().SetPosition();
 
         }
@@ -240,7 +280,7 @@ public class CardsManager : MonoBehaviour
         Debug.Log("created card");
 
         playerAI = FindObjectOfType<CardPlayerAI>();
-        playerAI.InitKnowledgeBase(cardLayout.x * cardLayout.y, turnAmmount);
+        playerAI.InitKnowledgeBase(cardLayout.x * cardLayout.y, turnAmmount, isCheat);
         currentTurn = turnAmmount;
         isGameReady = true;
 
@@ -289,6 +329,7 @@ public class CardsManager : MonoBehaviour
 
         isPlayerTurn = true;
         currentMatchIndex = 0;
+        matchedCardIndex = 0;
         currentBoardState = BoardState.playerTurn;
     }
 
@@ -316,7 +357,7 @@ public class CardsManager : MonoBehaviour
             yield return new WaitForSeconds(transitionTime);
 
             currentTurn--;
-            matchingEvent?.Invoke();
+            matchingEvent?.Invoke(BoadCards[matchedCardIndex].cardData.name, BoadCards[matchedCardIndex].currentTimes);
             //if (GetUnmatchedCardsCount() != 0) 
             //{
             //    transitionManager.cardsFoundTransition();
@@ -456,13 +497,14 @@ public class CardsManager : MonoBehaviour
             //not a match
             if (BoadCards[matchedCardsID[i]].cardData.name != matchedName)
             {
-                
+                matchedCardIndex = 0;
                 CleanBoardCards();
                 return;
             }
         }
 
         //a match
+        matchedCardIndex = matchedCardsID[0];
         for (int i = 0; i < matchedCardsID.Length; i++)
         {
             

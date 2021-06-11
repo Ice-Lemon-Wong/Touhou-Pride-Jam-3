@@ -39,7 +39,7 @@ public class CardPlayerAI : MonoBehaviour
         debugAIDecision.text = AIDecision.ToString();
     }
 
-    public void InitKnowledgeBase(int size, int turnCount)
+    public void InitKnowledgeBase(int size, int turnCount, bool isCheat = false)
     {
         knowledgeBase = new string[size];
 
@@ -49,7 +49,7 @@ public class CardPlayerAI : MonoBehaviour
         }
 
         //generate seed
-        GenerateDecisionSeed(turnCount, true);
+        GenerateDecisionSeed(turnCount, isCheat);
 
     }
 

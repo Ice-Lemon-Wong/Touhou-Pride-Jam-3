@@ -7,6 +7,7 @@ public class BackgroundManager : MonoBehaviour
 {
 
     public static BackgroundManager insatnceBGM;
+
     //singleton pattern
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class BackgroundManager : MonoBehaviour
     [SerializeField] Image[] backgrounds;
     [SerializeField] int activeBGIndex = 0;
     [SerializeField] float effectSpeed = 4;
+    
     private Color colourVar = new Color(1, 1, 1, 1);
     
 
@@ -36,6 +38,7 @@ public class BackgroundManager : MonoBehaviour
 
         for (int i = 0; i < backgrounds.Length; i++)
         {
+            colourVar = backgrounds[i].color;
             if (i == activeBGIndex)
             {
                 colourVar.a = 1;
@@ -57,6 +60,7 @@ public class BackgroundManager : MonoBehaviour
 
         for (int i = 0; i < backgrounds.Length; i++)
         {
+            colourVar = backgrounds[i].color;
             if (i == activeBGIndex)
             {
                 colourVar.a = Mathf.Lerp(backgrounds[i].color.a, 1, effectSpeed * Time.deltaTime);
@@ -69,7 +73,30 @@ public class BackgroundManager : MonoBehaviour
         }
     }
 
-    public void SetActiveBG(int bgIndex) {
+    public void SetActiveBG(int bgIndex, bool instant = false) {
+        if (bgIndex < 0 || bgIndex > backgrounds.Length) {
+            Debug.LogError("background index out of range");
+            return;
+        }
+       
+
         activeBGIndex = bgIndex;
+
+        if (instant) {
+            for (int i = 0; i < backgrounds.Length; i++)
+            {
+                colourVar = backgrounds[i].color;
+                if (i == activeBGIndex)
+                {
+                    colourVar.a = 1;
+                }
+                else
+                {
+                    colourVar.a = 0;
+                }
+
+                backgrounds[i].color = colourVar;
+            }
+        }
     }
 }

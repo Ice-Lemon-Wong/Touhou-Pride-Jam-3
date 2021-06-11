@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1849018984474160152}
   - component: {fileID: 1849018984474160153}
+  - component: {fileID: 870219505}
+  - component: {fileID: 870219504}
   m_Layer: 0
   m_Name: Dialogue Portrait Manager
   m_TagString: Untagged
@@ -49,7 +51,8 @@ MonoBehaviour:
   portraitDisableText: disable
   portraitEnableText: enable
   numberOfPortraits: 2
-  portraitEffectSpeed: 5
+  portraitEffectSpeed: 3
+  fadingOffSpeed: 5
   portraits:
   - {fileID: 0}
   - {fileID: 0}
@@ -110,3 +113,61 @@ MonoBehaviour:
     allSpriteBase:
     - portraitName: baseNormal
       portraitSprite: {fileID: 21300000, guid: 9a5dd6c4c7ed1d8489b85a5b49eec952, type: 3}
+  - characterName: Alice2
+    allSpritePortraitData:
+    - portraitName: angry
+      portraitSprite: {fileID: 21300000, guid: 83ebad6396cfeda4783de869b1fa60f7, type: 3}
+    - portraitName: annoyed
+      portraitSprite: {fileID: 21300000, guid: 30d16621c03c88d4ba56369d391ea279, type: 3}
+    - portraitName: eat
+      portraitSprite: {fileID: 21300000, guid: 8357265c164f7024895864d39f8cc9c9, type: 3}
+    - portraitName: happy
+      portraitSprite: {fileID: 21300000, guid: 2ad77287e40c75f43af8b9017e1844e3, type: 3}
+    - portraitName: oh
+      portraitSprite: {fileID: 21300000, guid: ff5dffbc564436f4db0347b939854400, type: 3}
+    - portraitName: sad
+      portraitSprite: {fileID: 21300000, guid: 87807a1f480a28245aafc446ff749533, type: 3}
+    allSpriteBase:
+    - portraitName: baseNormal
+      portraitSprite: {fileID: 21300000, guid: feccd7f7b83a46343967975e66ead9c7, type: 3}
+    - portraitName: baseEat
+      portraitSprite: {fileID: 21300000, guid: f2635e20016d1264b8da1a15f6304754, type: 3}
+--- !u!95 &870219505
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849018984474160154}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &870219504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849018984474160154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1fc1c658ab2f248b1c4d71a8972330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ds: {fileID: 0}
+  isComponentInObject: 0
+  animationCommandSyntax: animate
+  neutralAnimationName: neutral
+  pm: {fileID: 1849018984474160153}
+  shakeAnimationName: shake
+  shakeMagnitud: 2.5
+  shakeDuration: 0.5
