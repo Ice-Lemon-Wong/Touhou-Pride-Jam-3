@@ -12,8 +12,9 @@ public class DialogueSystem : MonoBehaviour
     [Header("dialogue configs")]
     [SerializeField] private string[] dialougeTexts;
     [SerializeField] private TextMeshProUGUI dialogueTextFeild;
-    [SerializeField] private float typingSpeed;
-    [SerializeField] Optional<string> interuptInput;
+    [SerializeField] private static float typingSpeed = 30f;
+	private static float defaultTypingSpeed;
+	[SerializeField] Optional<string> interuptInput;
     [SerializeField] Optional<string> advancingInput;
     [SerializeField] private bool canUseExternalControls = true;
     [SerializeField] public Color defaulrColour;
@@ -48,6 +49,7 @@ public class DialogueSystem : MonoBehaviour
     private int currentDialougeIndex = 0;
     private bool isInterupt = false;
     private bool isTyping = false;
+	public float waitTime = 0f;
 
 
 	// Start is called before the first frame update
@@ -64,8 +66,9 @@ public class DialogueSystem : MonoBehaviour
             yield return null;
             StartCoroutine(StartDialogueRoutine());
         }
-        
-    }
+
+		defaultTypingSpeed = typingSpeed;
+	}
 
     // Update is called once per frame
     void Update()
@@ -120,7 +123,8 @@ public class DialogueSystem : MonoBehaviour
     IEnumerator StartDialogueRoutine() {
         initDialogueEvents?.Invoke();
         dialogueTextFeild.color = defaulrColour;
-        yield return new WaitForSeconds(startDelay);
+        SkipBar.enableInput = true;
+		yield return new WaitForSeconds(startDelay);
         dialogueStartEvents?.Invoke();
        
         currentDialougeIndex = 0;
@@ -139,6 +143,7 @@ public class DialogueSystem : MonoBehaviour
 
 
         currentDialougeIndex++;
+        Debug.LogWarning(currentDialougeIndex + ", " + dialougeTexts.Length);
         if (currentDialougeIndex < dialougeTexts.Length)
         {
             TypeDialouge(dialougeTexts[currentDialougeIndex]);
@@ -155,13 +160,16 @@ public class DialogueSystem : MonoBehaviour
     }
 
     public void SkipDialogue() {
-        currentDialougeIndex = dialougeTexts.Length;
-        AdvanceDialogue();
+		//isInterupt = true;
+		//currentDialougeIndex = dialougeTexts.Length;
+		//currentDialougeIndex++;
+		AdvanceDialogue();
     }
 
     IEnumerator EndDialogueRoutine() {
         requiredEndEvent?.Invoke();
         dialogueTextFeild.text = "";
+        SkipBar.enableInput = false;
         yield return new WaitForSeconds(endDelay);
         
         //fire events
@@ -237,6 +245,8 @@ public class DialogueSystem : MonoBehaviour
             dialogueCommandEvents?.Invoke(dialougeToType);
             //make sure you can change wait time here woth the command fucntion
 
+
+
             bool isSkipPrefix = false;
 
             for (int i = 0; i < ignorePrefix.Length; i++)
@@ -246,12 +256,18 @@ public class DialogueSystem : MonoBehaviour
                 }
             }
 
-            Debug.Log($"shoud skip?: { dialougeToType[0] } {isSkipPrefix} ");
+            //Honestly have no idea where to put the wait so
+            if (waitTime > 0) {
+                yield return new WaitForSeconds(waitTime);
+            }
+			waitTime = 0;
+
+			Debug.Log($"shoud skip?: { dialougeToType[0] } {isSkipPrefix} ");
             if (dialougeToType[0].Equals(commandPrefix) || isSkipPrefix)
             {
-               //wait even if wait time is 0
-               //reset wait time after wait
-                SkipDialougeTyping();
+				//wait even if wait time is 0
+				//reset wait time after wait
+				SkipDialougeTyping();
             } 
             else
             {
@@ -312,5 +328,12 @@ public class DialogueSystem : MonoBehaviour
         Debug.Log("Event is working as intended");
     }
     
+    public static void setTypingSpeed(int newValue) {
+		typingSpeed = newValue;
+	}
+
+    public static void setDefaultTypingSpeed() {
+        typingSpeed = defaultTypingSpeed;
+    }
 
 }

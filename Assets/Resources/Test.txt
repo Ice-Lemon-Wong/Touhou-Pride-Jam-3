@@ -6,6 +6,7 @@ if you can read this that means the file is loading alright
 
 
 -Start
+#text reset all
 #Speaker Alice
 
 
@@ -20,11 +21,11 @@ if you can read this that means the file is loading alright
 #animate 0 jump
 //skip this part
 
-#txtEffect wavy 0 4 11 29
-#txtEffect shake 2 4 17 34
+#text wave 0 4 11 29
+#text shake 2 4 17 34
+#text typespeed 1 0 10
 <color=red>this</color> <color=orange><b>is</b></color> <color=yellow><i>the</i></color> <color=green><size=150%>typing</size></color> <color=blue>effect</color>, <color=purple><s>it</color> <color=#FE019A>is</color> <color=white>basically</color> the characters</s> appear one by one
-
-#txtEffect reset
+#text reset all
 <color=blue><s>if it does</s></color> then it is working
 
 #colour white

@@ -7,8 +7,9 @@ using System;
 public class DialogueTextEffects : DialogueSystemCommandParser
 {
     public TextMeshProUGUI dialogueTextFeild;
-	private bool shouldWiggleText = false;
+	private bool shouldWaveText = false;
 	private bool shouldShakeText = false;
+	private bool shouldSpeedText = false;
 
 	[Header("Wave Effect Configurations")]
 	[SerializeField] private float waveSpeed = 1f;
@@ -22,11 +23,13 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 	private List<bool> waveLettersList = new List<bool>();
 	private List<int> shakeList = new List<int>();
 	private List<bool> shakeLettersList = new List<bool>();
+	private List<int> speedList = new List<int>();
+	private List<bool> speedLettersList = new List<bool>();
 
 	// Start is called before the first frame update
 	void Start()
     {
-        AddComand("txtEffect", TextEffect);
+        AddComand("text", TextEffect);
 		//ds.dialogueLineEvent += () => { dialogueTextFeild.color = Color.black; };
 		InitCommands();
     }
@@ -35,25 +38,29 @@ public class DialogueTextEffects : DialogueSystemCommandParser
     void LateUpdate()
     {
         dialogueTextFeild.ForceMeshUpdate();
-        if (shouldWiggleText) {
-			wiggleText();
+        if (shouldWaveText) {
+			waveText();
 		}
 
 		if (shouldShakeText) {
 			shakeText();
 		}
+
+		if (shouldSpeedText) {
+			speedText();
+		}
 	}
 
+	//Handles all the text effect parameters for 'text' command
+	//Supported params: wave, shake, typespeed, wait, reset
     void TextEffect(string[] commandLine) {
 		int effectStartIndex = -1;
 		int effectEndIndex = -1;
 
-		if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("WAVY")) {
-			shouldWiggleText = true;
+		if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("WAVE")) {
+			shouldWaveText = true;
 
 			if (commandLine.Length % 2 == 0) {
-				Debug.LogWarning("its pairs");
-
 				for (int i = 2; i < commandLine.Length - 1; i+=2)
 				{
 					Int32.TryParse(commandLine[i], out effectStartIndex);
@@ -84,8 +91,6 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 			shouldShakeText = true;
 
 			if (commandLine.Length % 2 == 0) {
-				Debug.LogWarning("its pairs");
-
 				for (int i = 2; i < commandLine.Length - 1; i+=2)
 				{
 					Int32.TryParse(commandLine[i], out effectStartIndex);
@@ -95,15 +100,7 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 
 					shakeList.AddRange(indexArray);
 				}
-
-			/*if (!Int32.TryParse(commandLine[], out effectStartIndex))
-        	{
-            	Debug.LogError($"argument '{commandLine[2]}' at index 1 is not a number for effects");
-            	return;
-        	}*/
-			} else {
-				Debug.LogWarning("its odd");
-			}
+			} 
 
 			int counter = 0;
 			for (int i = 0; i < shakeList[shakeList.Count - 1]; i++) {
@@ -120,22 +117,80 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 					counter += 2;
 				}
 			}
-		} else if (commandLine[1].Substring(0, commandLine[1].Length - 1).ToUpper().Equals("RESET")) {
-			Debug.LogWarning("Resetting");
-			shouldShakeText = false;
-			shouldWiggleText = false;
+		} else if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("TYPESPEED")) {
+			shouldSpeedText = true;
+			int speedIndex = 0;
 
-			waveList.Clear();
-			waveLettersList.Clear();
-			shakeList.Clear();
-			shakeLettersList.Clear();
+			if (commandLine.Length % 3 == 2) {
+				for (int i = 2; i < commandLine.Length - 1; i += 3)
+				{
+					Int32.TryParse(commandLine[i], out speedIndex);
+					Int32.TryParse(commandLine[i + 1], out effectStartIndex);
+					Int32.TryParse(commandLine[i + 2], out effectEndIndex);
+					
+
+					int[] indexArray = {speedIndex, effectStartIndex, effectEndIndex};
+
+					speedList.AddRange(indexArray);
+				}
+			} 
+
+			int counter = 0;
+			for (int i = 0; i < speedList[speedList.Count - 1]; i++) {
+				int currentBeginningIndex = speedList[counter + 1];
+				int currentEndIndex = speedList[counter + 2];
+
+				if (i >= currentBeginningIndex && i <= currentEndIndex) {
+					speedLettersList.Add(true);
+				} else {
+					speedLettersList.Add(false);
+				}
+			}
+		} else if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("WAIT")) {
+			int waitTimeLocal = 0;
+			Int32.TryParse(commandLine[2], out waitTimeLocal);
+
+			ds.waitTime = waitTimeLocal;
+		} else if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("RESET")) {
+			Debug.LogWarning("Resetting");
+			if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("ALL")) {
+				shouldShakeText = false;
+				shouldWaveText = false;
+				shouldSpeedText = false;
+
+				waveList.Clear();
+				waveLettersList.Clear();
+				shakeList.Clear();
+				shakeLettersList.Clear();
+				speedList.Clear();
+				speedLettersList.Clear();
+
+				DialogueSystem.setDefaultTypingSpeed();
+			} else if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("SHAKE")) {
+				shouldShakeText = false;
+
+				shakeList.Clear();
+				shakeLettersList.Clear();
+			} else if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("WAVE")) {
+				shouldWaveText = false;
+
+				waveList.Clear();
+				waveLettersList.Clear();
+			} else if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("TYPESPEED")) {
+				shouldSpeedText = false;
+
+				speedList.Clear();
+				speedLettersList.Clear();
+
+				DialogueSystem.setDefaultTypingSpeed();
+			}
+			
 		}
 	}
 
-    void wiggleText() {
-        //dialogueTextFeild.ForceMeshUpdate();
+    void waveText() {
 		var textInfo = dialogueTextFeild.textInfo;
-		for (int i = 0; i < waveLettersList.Count - 1 /*textInfo.characterCount*/; ++i)
+		for (int i = 0; i < waveLettersList.Count - 1; ++i)
         {
 			if (waveLettersList[i] == true) {
 				var charInfo = textInfo.characterInfo[i];
@@ -166,7 +221,7 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 	void shakeText() {
 		var textInfo = dialogueTextFeild.textInfo;
 
-		for (int i = 0; i < shakeLettersList.Count - 1 /*textInfo.characterCount*/; ++i)
+		for (int i = 0; i < shakeLettersList.Count - 1; ++i)
         {
 			if (shakeLettersList[i] == true) {
 				var charInfo = textInfo.characterInfo[i];
@@ -193,5 +248,16 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 			meshInfo.mesh.vertices = meshInfo.vertices;
 			dialogueTextFeild.UpdateGeometry(meshInfo.mesh, i);
 		}
+	}
+
+	void speedText() {
+		if (dialogueTextFeild.maxVisibleCharacters < speedLettersList.Count) {
+			if (speedLettersList[dialogueTextFeild.maxVisibleCharacters] == true) {
+				DialogueSystem.setTypingSpeed(speedList[0]);
+			} 
+		} else {
+			DialogueSystem.setDefaultTypingSpeed();
+		}
+		
 	}
 }
