@@ -29,6 +29,19 @@ public class SkipBar : MonoBehaviour
 		tmp = textMeshProUGUI.color;
 		tmp.a = 0;
 		textMeshProUGUI.color = tmp;
+
+		dialogueSystem.initDialogueEvents += EnableSkip;
+		dialogueSystem.requiredEndEvent += DisableSkip;
+
+		DisableSkip();
+	}
+
+    public void EnableSkip() {
+		enableInput = true;
+	}
+
+    public void DisableSkip() {
+		enableInput = false;
 	}
 
     // Update is called once per frame

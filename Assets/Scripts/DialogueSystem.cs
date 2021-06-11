@@ -123,7 +123,6 @@ public class DialogueSystem : MonoBehaviour
     IEnumerator StartDialogueRoutine() {
         initDialogueEvents?.Invoke();
         dialogueTextFeild.color = defaulrColour;
-        SkipBar.enableInput = true;
 		yield return new WaitForSeconds(startDelay);
         dialogueStartEvents?.Invoke();
        
@@ -169,7 +168,6 @@ public class DialogueSystem : MonoBehaviour
     IEnumerator EndDialogueRoutine() {
         requiredEndEvent?.Invoke();
         dialogueTextFeild.text = "";
-        SkipBar.enableInput = false;
         yield return new WaitForSeconds(endDelay);
         
         //fire events
