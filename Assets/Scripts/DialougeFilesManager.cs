@@ -13,9 +13,10 @@ public class DialougeFilesManager : MonoBehaviour
     public string txtFileName;
     public string startingLine;
     string[] txtContent;
+	public static int activeDSIndex;
 
-    // Start is called before the first frame update
-    IEnumerator Start()
+	// Start is called before the first frame update
+	IEnumerator Start()
     {
         
 
@@ -39,8 +40,9 @@ public class DialougeFilesManager : MonoBehaviour
 
 
         ds[index].LoadDialouge(SearchDesiredText(), loadImmediantly);
-        //UiEnabler.EnableUI(true);
-    }
+		activeDSIndex = index;
+		//UiEnabler.EnableUI(true);
+	}
 
 
 
@@ -54,6 +56,7 @@ public class DialougeFilesManager : MonoBehaviour
         txtContent = txtAsset.text.Split('\n');
 
         ds[index].LoadDialouge(SearchDesiredText(), loadImmediantly);
+        activeDSIndex = index;
         //UiEnabler.EnableUI(true);
     }
 
@@ -69,6 +72,7 @@ public class DialougeFilesManager : MonoBehaviour
 
         ds[index].LoadDialouge(SearchDesiredText(), true);
         ds[index].SetEndEvents(endDialogueEvent);
+        activeDSIndex = index;
         //UiEnabler.EnableUI(true);
     }
 

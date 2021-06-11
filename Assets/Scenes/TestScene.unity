@@ -750,6 +750,7 @@ RectTransform:
   - {fileID: 1589387003}
   - {fileID: 218298118}
   - {fileID: 1229595212}
+  - {fileID: 1954109144}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1254,14 +1255,14 @@ MonoBehaviour:
   dialogueSequencedEvents:
   - fileName: Test1
     startingLine: monologue
-    dialogueSystemIndex: 1
-    proceedNextEvent: 1
-  - fileName: Test1
-    startingLine: Start1
     dialogueSystemIndex: 0
     proceedNextEvent: 1
   - fileName: Test1
-    startingLine: Start2
+    startingLine: Start1
+    dialogueSystemIndex: 1
+    proceedNextEvent: 1
+  - fileName: Test1
+    startingLine: monologue
     dialogueSystemIndex: 0
     proceedNextEvent: 1
   - fileName: Test1
@@ -1778,60 +1779,6 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     FireNextEvent: 1
-  - name: 1st card game
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1548919883}
-          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: 2nd card game
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1548919883}
-          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: 3rd card game
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1548919883}
-          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
   - name: Starting Dialogue
     eventDelay: 0
     eventToFire:
@@ -3789,6 +3736,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470353140}
   m_CullTransparentMesh: 1
+--- !u!1001 &1500344622
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 265558253}
+    m_Modifications:
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759525952183, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: m_Name
+      value: Skip Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759848591159, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: skipSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759848591159, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: sliderSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634363759848591159, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 2082998902}
+    - target: {fileID: 8634363759848591159, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+      propertyPath: subDialogueSystem
+      value: 
+      objectReference: {fileID: 1589387004}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
 --- !u!1 &1548919882
 GameObject:
   m_ObjectHideFlags: 0
@@ -4519,6 +4579,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933178451}
   m_CullTransparentMesh: 1
+--- !u!224 &1954109144 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8634363759525952182, guid: 5539e3de2321bff4fbc884560d21be2d, type: 3}
+  m_PrefabInstance: {fileID: 1500344622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1994964973
 GameObject:
   m_ObjectHideFlags: 0

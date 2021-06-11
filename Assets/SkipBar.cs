@@ -7,15 +7,17 @@ using TMPro;
 public class SkipBar : MonoBehaviour
 {
 	public DialogueSystem dialogueSystem;
+	public DialogueSystem subDialogueSystem;
 	public Image[] images;
 	public TextMeshProUGUI textMeshProUGUI;
-	private bool keyHeld = false;
+	public static bool keyHeld = false;
 	public float sliderSpeed;
 	public float skipSpeed = 0.5f;
 	private Color tmp;
 	private bool shouldSkip = false;
 	private bool skipped = false;
-	public static bool enableInput = true;
+	public static bool enableInput = false;
+	private bool canHoldNow = false;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -33,6 +35,9 @@ public class SkipBar : MonoBehaviour
 		dialogueSystem.initDialogueEvents += EnableSkip;
 		dialogueSystem.requiredEndEvent += DisableSkip;
 
+		subDialogueSystem.initDialogueEvents += EnableSkip;
+		subDialogueSystem.requiredEndEvent += DisableSkip;
+
 		DisableSkip();
 	}
 
@@ -42,6 +47,7 @@ public class SkipBar : MonoBehaviour
 
     public void DisableSkip() {
 		enableInput = false;
+		canHoldNow = false;
 	}
 
     // Update is called once per frame
@@ -52,9 +58,14 @@ public class SkipBar : MonoBehaviour
         } else {
             //This is stupid but it works.
 			keyHeld = false;
+			StopCoroutine(skip());
+		}
+
+		if (DialogueSystem.doneSkipping) {
+			canHoldNow = true;
 		}
         
-        if (keyHeld) {
+        if (keyHeld && canHoldNow) {
 			StartCoroutine(expandSliders());
 		} else {
 			StartCoroutine(contractSliders());
@@ -104,10 +115,16 @@ public class SkipBar : MonoBehaviour
 
     IEnumerator skip() {
 		if (shouldSkip && !skipped) {
-			dialogueSystem.SkipDialogue();
+			if (DialougeFilesManager.activeDSIndex == 0) {
+				dialogueSystem.SkipDialogue();
+			} else if (DialougeFilesManager.activeDSIndex == 1) {
+				subDialogueSystem.SkipDialogue();
+			}
 			skipped = true;
 		}
-		yield return new WaitForSeconds(skipSpeed);
+		//yield return new WaitForSeconds(skipSpeed);
+		yield return new WaitUntil(() => DialogueSystem.doneSkipping);
+		DialogueSystem.doneSkipping = false;
 
 		skipped = false;
 	}

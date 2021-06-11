@@ -50,6 +50,7 @@ public class DialogueSystem : MonoBehaviour
     private bool isInterupt = false;
     private bool isTyping = false;
 	public float waitTime = 0f;
+	public static bool doneSkipping = false;
 
 
 	// Start is called before the first frame update
@@ -158,20 +159,18 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    public void SkipDialogue() {
+	public void SkipDialogue() {
 		//isInterupt = true;
-		//currentDialougeIndex = dialougeTexts.Length;
-		//currentDialougeIndex++;
 		AdvanceDialogue();
-    }
+	}
 
     IEnumerator EndDialogueRoutine() {
         requiredEndEvent?.Invoke();
         dialogueTextFeild.text = "";
         yield return new WaitForSeconds(endDelay);
-        
-        //fire events
-        endDialougeEvents?.Invoke();
+
+		//fire events
+		endDialougeEvents?.Invoke();
         
     }
 
@@ -261,6 +260,7 @@ public class DialogueSystem : MonoBehaviour
 			waitTime = 0;
 
 			Debug.Log($"shoud skip?: { dialougeToType[0] } {isSkipPrefix} ");
+            doneSkipping = false;
             if (dialougeToType[0].Equals(commandPrefix) || isSkipPrefix)
             {
 				//wait even if wait time is 0
@@ -301,24 +301,28 @@ public class DialogueSystem : MonoBehaviour
 
 					yield return null;
                 }
+                doneSkipping = true;
 
                 
 
                 //dialogueTextFeild.text = dialougeToType;
 
-                if (continueButton.Enabled)
-                {
-                    continueButton.Value.SetActive(true);
-                }
+                
             }
         }
 
         
         isTyping = false;
 
-
-
-    }
+        //Fixes for continue button appearing when holding down skip
+        if (continueButton.Enabled) {
+            if (doneSkipping == false) {
+                continueButton.Value.SetActive(false);
+            } else {
+				continueButton.Value.SetActive(true);
+			}
+		}
+	}
 
     public void TestEvent(string testString) {
         
