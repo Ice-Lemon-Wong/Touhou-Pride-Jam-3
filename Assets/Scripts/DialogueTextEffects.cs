@@ -7,7 +7,7 @@ using System;
 public class DialogueTextEffects : DialogueSystemCommandParser
 {
     public TextMeshProUGUI dialogueTextFeild;
-	private bool shouldWiggleText = false;
+	private bool shouldWaveText = false;
 	private bool shouldShakeText = false;
 	private bool shouldSpeedText = false;
 
@@ -38,8 +38,8 @@ public class DialogueTextEffects : DialogueSystemCommandParser
     void LateUpdate()
     {
         dialogueTextFeild.ForceMeshUpdate();
-        if (shouldWiggleText) {
-			wiggleText();
+        if (shouldWaveText) {
+			waveText();
 		}
 
 		if (shouldShakeText) {
@@ -51,12 +51,14 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 		}
 	}
 
+	//Handles all the text effect parameters for 'text' command
+	//Supported params: wave, shake, typespeed, wait, reset
     void TextEffect(string[] commandLine) {
 		int effectStartIndex = -1;
 		int effectEndIndex = -1;
 
-		if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("WAVY")) {
-			shouldWiggleText = true;
+		if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("WAVE")) {
+			shouldWaveText = true;
 
 			if (commandLine.Length % 2 == 0) {
 				for (int i = 2; i < commandLine.Length - 1; i+=2)
@@ -143,34 +145,50 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 				} else {
 					speedLettersList.Add(false);
 				}
-
-				/*if (i > currentEndIndex && shakeList.Count > 3) {
-					counter += 3;
-				}*/
 			}
 		} else if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("WAIT")) {
 			int waitTimeLocal = 0;
 			Int32.TryParse(commandLine[2], out waitTimeLocal);
 
 			ds.waitTime = waitTimeLocal;
-
-			//ds.waitTime =
-		} else if (commandLine[1].Substring(0, commandLine[1].Length - 1).ToUpper().Equals("RESET")) {
+		} else if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("RESET")) {
 			Debug.LogWarning("Resetting");
-			shouldShakeText = false;
-			shouldWiggleText = false;
-			shouldSpeedText = false;
+			if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("ALL")) {
+				shouldShakeText = false;
+				shouldWaveText = false;
+				shouldSpeedText = false;
 
-			waveList.Clear();
-			waveLettersList.Clear();
-			shakeList.Clear();
-			shakeLettersList.Clear();
-			speedList.Clear();
-			speedLettersList.Clear();
+				waveList.Clear();
+				waveLettersList.Clear();
+				shakeList.Clear();
+				shakeLettersList.Clear();
+				speedList.Clear();
+				speedLettersList.Clear();
+
+				DialogueSystem.setDefaultTypingSpeed();
+			} else if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("SHAKE")) {
+				shouldShakeText = false;
+
+				shakeList.Clear();
+				shakeLettersList.Clear();
+			} else if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("WAVE")) {
+				shouldWaveText = false;
+
+				waveList.Clear();
+				waveLettersList.Clear();
+			} else if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("TYPESPEED")) {
+				shouldSpeedText = false;
+
+				speedList.Clear();
+				speedLettersList.Clear();
+
+				DialogueSystem.setDefaultTypingSpeed();
+			}
+			
 		}
 	}
 
-    void wiggleText() {
+    void waveText() {
 		var textInfo = dialogueTextFeild.textInfo;
 		for (int i = 0; i < waveLettersList.Count - 1; ++i)
         {

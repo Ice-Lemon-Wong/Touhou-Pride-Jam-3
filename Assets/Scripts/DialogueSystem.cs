@@ -68,7 +68,6 @@ public class DialogueSystem : MonoBehaviour
         }
 
 		defaultTypingSpeed = typingSpeed;
-
 	}
 
     // Update is called once per frame
@@ -124,7 +123,8 @@ public class DialogueSystem : MonoBehaviour
     IEnumerator StartDialogueRoutine() {
         initDialogueEvents?.Invoke();
         dialogueTextFeild.color = defaulrColour;
-        yield return new WaitForSeconds(startDelay);
+        SkipBar.enableInput = true;
+		yield return new WaitForSeconds(startDelay);
         dialogueStartEvents?.Invoke();
        
         currentDialougeIndex = 0;
@@ -143,6 +143,7 @@ public class DialogueSystem : MonoBehaviour
 
 
         currentDialougeIndex++;
+        Debug.LogWarning(currentDialougeIndex + ", " + dialougeTexts.Length);
         if (currentDialougeIndex < dialougeTexts.Length)
         {
             TypeDialouge(dialougeTexts[currentDialougeIndex]);
@@ -159,13 +160,16 @@ public class DialogueSystem : MonoBehaviour
     }
 
     public void SkipDialogue() {
-        currentDialougeIndex = dialougeTexts.Length;
-        AdvanceDialogue();
+		//isInterupt = true;
+		//currentDialougeIndex = dialougeTexts.Length;
+		//currentDialougeIndex++;
+		AdvanceDialogue();
     }
 
     IEnumerator EndDialogueRoutine() {
         requiredEndEvent?.Invoke();
         dialogueTextFeild.text = "";
+        SkipBar.enableInput = false;
         yield return new WaitForSeconds(endDelay);
         
         //fire events

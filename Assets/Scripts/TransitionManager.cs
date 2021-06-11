@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
+//OBSOLETE - damnit Iced_Lemon
+//- from Raian
 public class TransitionManager : DialogueSystemCommandParser
 {
     public DialougeFilesManager dialogueManager;
@@ -24,6 +27,7 @@ public class TransitionManager : DialogueSystemCommandParser
         Debug.LogWarning("Starting card game");
 		dialogueUIEnabler.DisableUI();
 		cardManager.InitBoardCards(true);
+		SkipBar.enableInput = false;
 		cardManager.cardGameEndEvent = () =>
 		{
 			dialogueManager.LoadDialogueFromFile("Test", "Test");
@@ -42,6 +46,7 @@ public class TransitionManager : DialogueSystemCommandParser
 		
 		Debug.LogWarning("creating card game 2");
 		dialogueUIEnabler.DisableUI();
+		SkipBar.enableInput = false;
 		cardManager.CreatBoard(new Vector2(-4, 4), new Vector2(-4, 4), new Vector2Int(2, 2), true);
 		cardManager.cardGameEndEvent = () =>
 		{
