@@ -51,6 +51,7 @@ public class DialogueSystem : MonoBehaviour
     private bool isTyping = false;
 	public float waitTime = 0f;
 	public static bool doneSkipping = false;
+	public DialogueLogger dialogueLogger;
 
 
 	// Start is called before the first frame update
@@ -282,6 +283,7 @@ public class DialogueSystem : MonoBehaviour
             {
 				//dialougeToType = dialougeTextEffects.UpdateText(dialougeToType);
 				dialogueTextFeild.text = dialougeToType;
+
 				//dialougeTextEffects.UpdateText(dialougeToType);
 
 				//typing effect
@@ -314,12 +316,12 @@ public class DialogueSystem : MonoBehaviour
                 }
                 doneSkipping = true;
 
-                
+				dialogueLogger.AddToLog(dialougeToType, false);
 
-                //dialogueTextFeild.text = dialougeToType;
+				//dialogueTextFeild.text = dialougeToType;
 
-                
-            }
+
+			}
         }
 
         

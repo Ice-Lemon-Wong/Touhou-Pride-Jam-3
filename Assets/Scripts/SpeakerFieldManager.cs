@@ -9,10 +9,10 @@ public class SpeakerFieldManager : DialogueSystemCommandParser
     [Header("speaker command config")]
     [SerializeField] private TextMeshProUGUI speakerTextFeild;  
     [SerializeField] private string speakerCommand;
-    
+	public DialogueLogger dialogueLogger;
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
 
         AddComand(speakerCommand, SetSpeaker);
@@ -43,8 +43,9 @@ public class SpeakerFieldManager : DialogueSystemCommandParser
             }
             
             speakerTextFeild.text += textCommand[i];
+			dialogueLogger.AddToLog(textCommand[i], true);
 
-        }
+		}
 
     }
 

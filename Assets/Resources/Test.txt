@@ -32,6 +32,7 @@ if you can read this that means the file is loading alright
 
 #animate 1 shake
 #portrait 1 marisa cry
+#Speaker Marisa
 if I am shaking it also means that my animation is working
 #animate 1 shake
 the writer can write stuff in the txt file that controls the while dialogue flow

@@ -11,7 +11,7 @@ public class DialogueUIEnabler : MonoBehaviour
     [SerializeField] DialogueSystem ds;
     [SerializeField] float effectSpeed = 5;
     float disableDelayAtEnd;
-    private bool isEnabled = false;
+    public bool isEnabled = false;
     private Color colourVar = new Color(1,1,1,1);
     private float targetAlpha = 0;
 
