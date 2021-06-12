@@ -35,6 +35,9 @@ public class ButtonManager : MonoBehaviour
 		subDialogueSystem.requiredEndEvent += canHideFunc;
 
 		buttonCanvasGroup.alpha = 0;
+
+
+
 	}
 
     void HandleInputs() {
