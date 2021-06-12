@@ -28,6 +28,7 @@ public class CardsManager : MonoBehaviour
     [SerializeField] private Vector2 yBounds;
     [SerializeField] private Vector2Int cardLayout;
     [SerializeField] private GameObject cardobject;
+    [SerializeField] private GameObject blockingPanel;
 
     [Space]
     [Header("card game config")]
@@ -107,6 +108,8 @@ public class CardsManager : MonoBehaviour
         matchedCardsID = new int[cardsRequiredPerMatch];
         currentMatchIndex = 0;
         currentBoardState = BoardState.boardProcess;
+
+        blockingPanel.SetActive(false);
 
         yield return null;
         //create cards
@@ -324,6 +327,9 @@ public class CardsManager : MonoBehaviour
     }
 
     IEnumerator InitBoardCardsRoutine(bool refreshBoard = false) {
+
+        blockingPanel.SetActive(true);
+
         //init cards
         for (int i = 0; i < BoadCards.Length; i++)
         {
@@ -357,6 +363,8 @@ public class CardsManager : MonoBehaviour
     }
 
     IEnumerator CleanBoardCardsRoutine(bool isMatched = false) {
+
+        blockingPanel.SetActive(false);
 
         if (isMatched)
         {

@@ -15,8 +15,8 @@ public class ButtonManager : MonoBehaviour
 	private CanvasGroup canvasGroup;
 	public GameObject buttonPanel;
 	public CanvasGroup buttonCanvasGroup;
-	private float targetAlpha = 1;
-	private float targetAlphaButtons = 1;
+	private float targetAlpha = 0;
+	private float targetAlphaButtons = 0;
 	private bool isEnabled = false;
 	public float toggleSpeed = 7f;
 	private bool isHidden = false;
@@ -33,6 +33,10 @@ public class ButtonManager : MonoBehaviour
 
 		subDialogueSystem.initDialogueEvents += showButtonsAndPanelsSub;
 		subDialogueSystem.requiredEndEvent += canHideFunc;
+
+		buttonCanvasGroup.alpha = 0;
+
+
 	}
 
     void HandleInputs() {
