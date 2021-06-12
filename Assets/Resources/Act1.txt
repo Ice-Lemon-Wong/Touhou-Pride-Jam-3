@@ -23,7 +23,9 @@ C’monnnnnnnn! It’s gonna be fun!
 Right...
 #text shake 0 77
 <b><size= 30><color="red">but why don’t you ask Reimu?!!</color></size></b> 
+#text reset all
 #animate 0 shake
+#text shake 0 31
 I have dolls to make you know.
 #text reset all
 

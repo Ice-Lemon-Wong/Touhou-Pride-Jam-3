@@ -7,19 +7,20 @@ public class SpeakerFieldManager : DialogueSystemCommandParser
 {
     [Space]
     [Header("speaker command config")]
-    [SerializeField] private TextMeshProUGUI speakerTextFeild;  
+    [SerializeField] private TextMeshProUGUI speakerTextFeild;
     [SerializeField] private string speakerCommand;
     
 
     // Start is called before the first frame update
     void Start()
     {
-
+        speakerTextFeild.text = "";
+        
         AddComand(speakerCommand, SetSpeaker);
         InitCommands();
-
+        ds.initDialogueEvents += () => { speakerTextFeild.text = ""; };
         //speakerTextFeild.text = "";
-        
+
     }
 
     //public void CheckSpeaker(string textCommand) {
