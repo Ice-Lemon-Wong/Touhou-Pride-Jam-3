@@ -373,7 +373,7 @@ public class CardsManager : MonoBehaviour
             }
             yield return new WaitForSeconds(transitionTime);
 
-            currentTurn--;
+            //currentTurn--;
             matchingEvent?.Invoke(BoadCards[matchedCardIndex].cardData.name, BoadCards[matchedCardIndex].currentTimes);
             //if (GetUnmatchedCardsCount() != 0) 
             //{
@@ -395,7 +395,7 @@ public class CardsManager : MonoBehaviour
                 BoadCards[i].isFlipped = false;
             }
             yield return new WaitForSeconds(cardFlipDelay);
-            currentTurn--;
+            //currentTurn--;
             endTurn(isMatched);
         }
        
@@ -436,7 +436,7 @@ public class CardsManager : MonoBehaviour
 
     IEnumerator CheckTurnAmount(bool isMatched = false)
     {
-        if (currentTurn > 0 && GetUnmatchedCardsCount() > 0)
+        if (GetUnmatchedCardsCount() > 0)
         {
             InitBoardCards(isMatched);
         }
