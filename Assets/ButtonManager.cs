@@ -28,13 +28,14 @@ public class ButtonManager : MonoBehaviour
 		canvasGroup = logPanel.GetComponent<CanvasGroup>();
 		DisableLogger();
 
-        dialogueSystem.initDialogueEvents += showButtonsAndPanels;
+		dialogueSystem.initDialogueEvents += showButtonsAndPanels;
 		dialogueSystem.requiredEndEvent += canHideFunc;
 
 		subDialogueSystem.initDialogueEvents += showButtonsAndPanelsSub;
 		subDialogueSystem.requiredEndEvent += canHideFunc;
 
 		buttonCanvasGroup.alpha = 0;
+
 
 
 	}
