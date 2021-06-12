@@ -41,6 +41,10 @@ public class CardGameSequenceEventManager : MonoBehaviour
 
     public void EventForCards(string fileName, int timesIndex)
     {
+        if (string.IsNullOrEmpty(fileName)) {
+            cm.endTurn();
+            return;
+        }
 
         dfm.LoadDialogueFromFile(dialogueSystemIndex,fileName, "card" + "_" + timesIndex, new Action[] { cm.endTurn });
 

@@ -42,25 +42,30 @@ public class CardDistributor : MonoBehaviour
     //get the number of times
     public List<DistricutedCard> DistributeCards(int pairOfCards, bool isAct4 = false)
     {
+        Debug.Log(pairOfCards);
+
         cardstoDistribute = new List<DistricutedCard>();
         //cardstoDistribute = new CardSO[ammountOfCards];
 
         for (int i = 0; i < cardStorage.Length; i++)
         {
             if (cardStorage[i].IsCardAvailable(currentStage,isAct4)) {
-                cardstoDistribute.Add(cardStorage[i].retriveCard(isAct4));
+                cardstoDistribute.Add(cardStorage[i].retriveCard(currentStage,isAct4));
             }
         }
 
+        Debug.Log(cardstoDistribute.Count);
         while (cardstoDistribute.Count >  pairOfCards)
         {
             cardstoDistribute.RemoveAt(UnityEngine.Random.Range(0, cardstoDistribute.Count));
         }
 
         if (!isAct4) {
-            cardstoDistribute.RemoveAt(UnityEngine.Random.Range(0, cardstoDistribute.Count));
-            cardstoDistribute.Add(new DistricutedCard(rareCards[currentStage - 1], 1));
+            if (cardstoDistribute.Count >= pairOfCards) cardstoDistribute.RemoveAt(UnityEngine.Random.Range(0, cardstoDistribute.Count));
+
+            cardstoDistribute.Add(new DistricutedCard(rareCards[currentStage - 1], currentStage));
         }
+        Debug.Log(cardstoDistribute.Count);
 
         return cardstoDistribute;
     }
@@ -73,7 +78,7 @@ public class CardDistributor : MonoBehaviour
 
         for (int i = 0; i < finalCards.Length; i++)
         {
-            cardstoDistribute.Add(new DistricutedCard(closingCards[currentStage - 1], 1));
+            cardstoDistribute.Add(new DistricutedCard(closingCards[currentStage - 1], currentStage));
         }
 
         return cardstoDistribute;
@@ -117,11 +122,12 @@ public class CardDistributor : MonoBehaviour
             minimumStartingStage = cardData.minActApperance;
         }
 
-        public DistricutedCard retriveCard(bool isAct4 = false) {
+        public DistricutedCard retriveCard(int currentStage,bool isAct4 = false) {
 
-            
-            usedTimes++;
-            DistricutedCard card = new DistricutedCard(cardData, usedTimes);
+            counter += 1;
+            Debug.Log("counter: " + counter);
+            //usedTimes++;
+            DistricutedCard card = new DistricutedCard(cardData, currentStage);
             if (isAct4) card.currentTimes = 4;
 
             return card;
@@ -129,7 +135,7 @@ public class CardDistributor : MonoBehaviour
 
         }
 
-
+        static int counter = 0;
         public bool IsCardAvailable(int currentStage, bool isAct4 = false)
         {
 
@@ -140,9 +146,11 @@ public class CardDistributor : MonoBehaviour
 
             }
             else {
-                if (minimumStartingStage <= currentStage && usedTimes < cardData.appearTimes)
+                Debug.Log(minimumStartingStage +(cardData.appearTimes - 1));
+                Debug.Log(currentStage <= (minimumStartingStage + cardData.appearTimes - 1));
+                if (minimumStartingStage <= currentStage && currentStage <= minimumStartingStage + (cardData.appearTimes-1))
                 {
-
+                   
                     return true;
                 }
                 else

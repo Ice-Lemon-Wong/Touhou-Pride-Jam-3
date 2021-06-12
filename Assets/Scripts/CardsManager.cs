@@ -124,11 +124,18 @@ public class CardsManager : MonoBehaviour
     {
         DestroyBoard();
 
+        
+
         float cardX = 0;
         float cardY = 0;
         float width = xBounds.y - xBounds.x;
         float height = yBounds.y - yBounds.x;
         GameObject cardObject;
+
+        BoadCards = new CardOnBoard[cardLayout.x * cardLayout.y];
+        matchedCardsID = new int[cardsRequiredPerMatch];
+        currentMatchIndex = 0;
+        currentBoardState = BoardState.boardProcess;
 
         List<CardDistributor. DistricutedCard> decidedCards = new List<CardDistributor.DistricutedCard>();
         decidedCards = cardDistributor.DistributeCards((cardLayout.x * cardLayout.y) / cardsRequiredPerMatch);
@@ -189,6 +196,8 @@ public class CardsManager : MonoBehaviour
     {
         DestroyBoard();
 
+        
+
         xBounds = newXBounds;
         yBounds = newYBounds;
         cardLayout = newCardlayout;
@@ -199,6 +208,11 @@ public class CardsManager : MonoBehaviour
         float width = xBounds.y - xBounds.x;
         float height = yBounds.y - yBounds.x;
         GameObject cardObject;
+
+        BoadCards = new CardOnBoard[cardLayout.x * cardLayout.y];
+        matchedCardsID = new int[cardsRequiredPerMatch];
+        //currentMatchIndex = 0;
+        //currentBoardState = BoardState.boardProcess;
 
         //grab different cards later
         List<CardDistributor.DistricutedCard> decidedCards = new List<CardDistributor.DistricutedCard>();
@@ -234,6 +248,8 @@ public class CardsManager : MonoBehaviour
 
         }
 
+
+        Debug.Log(BoadCards.Length);
         for (int i = 0; i < cardLayout.x * cardLayout.y; i++)
         {
 
@@ -284,6 +300,7 @@ public class CardsManager : MonoBehaviour
         currentTurn = turnAmmount;
         isGameReady = true;
 
+        Debug.Log(initImmedaintly);
         if (initImmedaintly) InitBoardCards(true);
     }
 
@@ -356,7 +373,7 @@ public class CardsManager : MonoBehaviour
             }
             yield return new WaitForSeconds(transitionTime);
 
-            currentTurn--;
+            //currentTurn--;
             matchingEvent?.Invoke(BoadCards[matchedCardIndex].cardData.name, BoadCards[matchedCardIndex].currentTimes);
             //if (GetUnmatchedCardsCount() != 0) 
             //{
@@ -378,7 +395,7 @@ public class CardsManager : MonoBehaviour
                 BoadCards[i].isFlipped = false;
             }
             yield return new WaitForSeconds(cardFlipDelay);
-            currentTurn--;
+            //currentTurn--;
             endTurn(isMatched);
         }
        
@@ -419,7 +436,7 @@ public class CardsManager : MonoBehaviour
 
     IEnumerator CheckTurnAmount(bool isMatched = false)
     {
-        if (currentTurn > 0 && GetUnmatchedCardsCount() > 0)
+        if (GetUnmatchedCardsCount() > 0)
         {
             InitBoardCards(isMatched);
         }

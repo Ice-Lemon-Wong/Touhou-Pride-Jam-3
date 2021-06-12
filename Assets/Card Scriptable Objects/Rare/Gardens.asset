@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd2433bd21e85846a4042a0e6a0ccf2, type: 3}
+  m_Name: Gardens
+  m_EditorClassIdentifier: 
+  name: Gardens
+  icon: {fileID: 5975885026584765861, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
+  type: 1
+  minActApperance: 1
+  appearTimes: 0
+  isAppearAct4: 0

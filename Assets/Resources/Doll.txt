@@ -1,0 +1,16 @@
+﻿-card_1
+this is a doll
+-
+
+-card_2
+this is doll 2
+-
+
+-card_3
+this is doll 3
+-
+
+-card_4
+this is doll 4
+-
+
