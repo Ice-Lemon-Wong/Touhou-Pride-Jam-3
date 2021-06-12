@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd2433bd21e85846a4042a0e6a0ccf2, type: 3}
-  m_Name: Koishi
+  m_Name: Doll
   m_EditorClassIdentifier: 
-  name: Koishi
-  icon: {fileID: 21300000, guid: ddd23c4e759c3cb439d6eb19c11b4439, type: 3}
+  name: Doll
+  icon: {fileID: -941549352058409436, guid: 51573543cc16350488940256c18ba394, type: 3}
   type: 0
   minActApperance: 1
   appearTimes: 3
-  isAppearAct4: 0
+  isAppearAct4: 1

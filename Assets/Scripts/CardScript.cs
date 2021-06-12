@@ -5,6 +5,7 @@ using UnityEngine;
 public class CardScript : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer iconSpriteRenderer;
+    [SerializeField] private SpriteRenderer backSpriteRenderer;
     [SerializeField] private SpriteRenderer cardSpriteRenderer;
 
     [SerializeField] private float rotationSpeed = 20f;
@@ -81,11 +82,13 @@ public class CardScript : MonoBehaviour
 
         if (isFliped && transform.rotation.y > 0.5) 
         {
-            iconSpriteRenderer.sortingOrder = 1;
+            iconSpriteRenderer.sortingOrder = 2;
+            backSpriteRenderer.sortingOrder = 1;
         }
         else
         {
-            iconSpriteRenderer.sortingOrder = -1;
+            iconSpriteRenderer.sortingOrder = -2;
+            backSpriteRenderer.sortingOrder = -1;
         }
 
         if (isFading) {
@@ -93,13 +96,18 @@ public class CardScript : MonoBehaviour
 
             if (!isFliped)
             {
-                iconSpriteRenderer.color = new Color(1, 1, 1, 0);   
+                iconSpriteRenderer.color = new Color(1, 1, 1, 0);
+                backSpriteRenderer.color = new Color(1, 1, 1, 0);
             }
             else
             {
                 currentAlphaColour = iconSpriteRenderer.color.a;
                 currentAlphaColour = Mathf.Lerp(currentAlphaColour, 0, fadingSpeed * Time.deltaTime);
                 iconSpriteRenderer.color = new Color(1, 1, 1, currentAlphaColour);
+
+                currentAlphaColour = backSpriteRenderer.color.a;
+                currentAlphaColour = Mathf.Lerp(currentAlphaColour, 0, fadingSpeed * Time.deltaTime);
+                backSpriteRenderer.color = new Color(1, 1, 1, currentAlphaColour);
             }
 
 
@@ -130,12 +138,14 @@ public class CardScript : MonoBehaviour
                 targetPosition = hidingPosition;
                 iconSpriteRenderer.color = new Color(1, 1, 1, 1);
                 cardSpriteRenderer.color = new Color(1, 1, 1, 1);
+                backSpriteRenderer.color = new Color(1, 1, 1, 1);
             }
             else
             {
                 targetPosition = boardPosition;
                 iconSpriteRenderer.color = new Color(1, 1, 1, 1);
                 cardSpriteRenderer.color = new Color(1, 1, 1, 1);
+                backSpriteRenderer.color = new Color(1, 1, 1, 1);
             }
         }
 
@@ -235,6 +245,7 @@ public class CardScript : MonoBehaviour
         targetScale = originalScale;
         iconSpriteRenderer.color = new Color(1, 1, 1, 1);
         cardSpriteRenderer.color = new Color(1, 1, 1, 1);
+        backSpriteRenderer.color = new Color(1, 1, 1, 1);
         checkCardState();
     }
 
@@ -245,6 +256,7 @@ public class CardScript : MonoBehaviour
             targetPosition = hidingPosition;
             iconSpriteRenderer.color = new Color(1, 1, 1, 0);
             cardSpriteRenderer.color = new Color(1, 1, 1, 0);
+            backSpriteRenderer.color = new Color(1, 1, 1, 0);
         }
         
     }
