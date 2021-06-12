@@ -7,6 +7,8 @@ public class ButtonManager : MonoBehaviour
 {
 	public DialogueUIEnabler mainDialogueUIEnabler;
 	public DialogueUIEnabler subDialogueUIEnabler;
+    public DialogueSystem dialogueSystem;
+	public DialogueSystem subDialogueSystem;
 	public GameObject logPanel;
 	private float alphaNew;
 	private float alphaNewButtons;
@@ -18,19 +20,28 @@ public class ButtonManager : MonoBehaviour
 	private bool isEnabled = false;
 	public float toggleSpeed = 7f;
 	private bool isHidden = false;
+	private bool canHide = false;
+	private bool isTransitioning = false;
 	// Start is called before the first frame update
 	void Start()
     {
 		canvasGroup = logPanel.GetComponent<CanvasGroup>();
 		DisableLogger();
+
+        dialogueSystem.initDialogueEvents += showButtonsAndPanels;
+		dialogueSystem.requiredEndEvent += canHideFunc;
+
+		subDialogueSystem.initDialogueEvents += showButtonsAndPanelsSub;
+		subDialogueSystem.requiredEndEvent += canHideFunc;
 	}
 
     void HandleInputs() {
-        if (Input.GetMouseButton(0) && isHidden) {
-            buttonPanel.SetActive(true);
-			mainDialogueUIEnabler.EnableUI();
-			targetAlphaButtons = 1;
-			isHidden = false;
+        if (Input.GetMouseButton(0) && isHidden && !isTransitioning) {
+			if (DialougeFilesManager.activeDSIndex == 0) {
+                showButtonsAndPanels();
+            } else if (DialougeFilesManager.activeDSIndex == 1) {
+				showButtonsAndPanelsSub();
+			}
 		}
     }
 
@@ -44,22 +55,54 @@ public class ButtonManager : MonoBehaviour
 			logPanel.SetActive(false);
 		}
 
-		alphaNewButtons = Mathf.Lerp(buttonCanvasGroup.alpha, targetAlphaButtons, toggleSpeed * Time.deltaTime);
+        alphaNewButtons = Mathf.Lerp(buttonCanvasGroup.alpha, targetAlphaButtons, toggleSpeed * Time.deltaTime);
 		buttonCanvasGroup.alpha = alphaNewButtons;
 
-        if (buttonCanvasGroup.alpha <= 0.001f) {
-			buttonPanel.SetActive(false);
-			isHidden = true;
-		}
+        if (canHide) {
+            hideButtons();
+        }
 
 		HandleInputs();
 	}
 
+    void showButtonsAndPanels() {
+        buttonPanel.SetActive(true);
+        mainDialogueUIEnabler.EnableUI();
+		targetAlphaButtons = 1;
+		isHidden = false;
+		isTransitioning = false;
+		canHide = false;
+	}
+
+    void showButtonsAndPanelsSub() {
+        buttonPanel.SetActive(true);
+		subDialogueUIEnabler.EnableUI();
+		targetAlphaButtons = 1;
+		isHidden = false;
+		isTransitioning = false;
+		canHide = false;
+	}
+
+    void hideButtons() {
+		targetAlphaButtons = 0;
+		if (buttonCanvasGroup.alpha <= 0.001f) {
+			buttonPanel.SetActive(false);
+			isHidden = true;
+		}
+		isTransitioning = true;
+	}
+
+    void canHideFunc() {
+		canHide = true;
+	}
+
     public void toggleUI() {
+        Debug.LogWarning(DialougeFilesManager.activeDSIndex);
         if (DialougeFilesManager.activeDSIndex == 0) {
 			if (mainDialogueUIEnabler.isEnabled) {
 				mainDialogueUIEnabler.DisableUI();
 				targetAlphaButtons = 0;
+				isHidden = true;
 			} else {
 				mainDialogueUIEnabler.EnableUI();
 				targetAlphaButtons = 1;
@@ -68,6 +111,7 @@ public class ButtonManager : MonoBehaviour
             if (subDialogueUIEnabler.isEnabled) {
 				subDialogueUIEnabler.DisableUI();
 				targetAlphaButtons = 0;
+				isHidden = true;
 			} else {
 				subDialogueUIEnabler.EnableUI();
 				targetAlphaButtons = 1;
