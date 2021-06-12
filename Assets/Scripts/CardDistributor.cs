@@ -140,7 +140,7 @@ public class CardDistributor : MonoBehaviour
 
             }
             else {
-                if (minimumStartingStage <= currentStage && usedTimes < cardData.appearTimes)
+                if (minimumStartingStage <= currentStage && usedTimes < cardData.maxActApperance)
                 {
 
                     return true;
