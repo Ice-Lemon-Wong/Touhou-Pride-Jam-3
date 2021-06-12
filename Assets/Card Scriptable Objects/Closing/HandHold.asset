@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: HandHold
   m_EditorClassIdentifier: 
   name: 
-  icon: {fileID: 0}
-  type: 0
-  minActApperance: 0
+  icon: {fileID: 10134639938968578, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
+  type: 2
+  minActApperance: 1
   appearTimes: 0
   isAppearAct4: 0

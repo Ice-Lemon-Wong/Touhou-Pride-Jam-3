@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd2433bd21e85846a4042a0e6a0ccf2, type: 3}
   m_Name: Magic
   m_EditorClassIdentifier: 
-  name: Kleines
+  name: Magic
   icon: {fileID: -5351813836023536213, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
   type: 0
   minActApperance: 1

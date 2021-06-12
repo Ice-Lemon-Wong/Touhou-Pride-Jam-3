@@ -14,7 +14,7 @@ public class CardSO : ScriptableObject
     public CardType type;
 
     public int minActApperance;
-    public int maxActApperance;
+    public int appearTimes;
     public bool isAppearAct4;
 
 }

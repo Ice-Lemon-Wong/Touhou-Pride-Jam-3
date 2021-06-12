@@ -17,4 +17,4 @@ MonoBehaviour:
   type: 0
   minActApperance: 1
   appearTimes: 3
-  isAppearAct4: 0
+  isAppearAct4: 1

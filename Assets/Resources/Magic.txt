@@ -1,0 +1,11 @@
+﻿-card_1
+this is magic 1
+-
+
+-card_2
+this is magic 2
+-
+
+-card_3
+this is magic 3
+-

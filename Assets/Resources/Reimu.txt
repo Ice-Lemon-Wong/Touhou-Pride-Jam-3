@@ -1,4 +1,15 @@
 ﻿-card_1
-this is druma
+this is reimu
 - 
 
+-card_2
+this is reimu 2
+-
+
+-card_3
+this is reimu 3
+-
+
+-card_4
+this is reimu 4
+-

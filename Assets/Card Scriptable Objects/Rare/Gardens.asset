@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd2433bd21e85846a4042a0e6a0ccf2, type: 3}
-  m_Name: TestCard7
+  m_Name: Gardens
   m_EditorClassIdentifier: 
-  name: marisa
-  icon: {fileID: 21300000, guid: 394059bd51e78044f82fa8a52da09c4b, type: 3}
-  type: 0
+  name: Gardens
+  icon: {fileID: 5975885026584765861, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
+  type: 1
   minActApperance: 1
-  appearTimes: 3
+  appearTimes: 0
+  isAppearAct4: 0

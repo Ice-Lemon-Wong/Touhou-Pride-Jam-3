@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd2433bd21e85846a4042a0e6a0ccf2, type: 3}
-  m_Name: Books
+  m_Name: BooksFinal
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
+  name: BooksFinal
+  icon: {fileID: -5115089195137764120, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
   type: 0
-  minActApperance: 0
+  minActApperance: 4
   appearTimes: 0
   isAppearAct4: 0

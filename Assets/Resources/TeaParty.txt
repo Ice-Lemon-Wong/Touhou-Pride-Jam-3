@@ -6,11 +6,8 @@ this is a doll
 this is doll 2
 -
 
--card_3
-this is doll 3
+-card_4
+this is doll 2
 -
 
--card_4
-this is doll 4
--
 

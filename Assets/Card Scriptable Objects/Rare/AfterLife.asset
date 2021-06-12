@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd2433bd21e85846a4042a0e6a0ccf2, type: 3}
   m_Name: AfterLife
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
-  type: 0
-  minActApperance: 0
+  name: AfterLife
+  icon: {fileID: -5353591511390916179, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
+  type: 1
+  minActApperance: 3
   appearTimes: 0
   isAppearAct4: 0

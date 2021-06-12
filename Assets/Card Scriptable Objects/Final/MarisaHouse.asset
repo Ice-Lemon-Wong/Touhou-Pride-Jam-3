@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd2433bd21e85846a4042a0e6a0ccf2, type: 3}
   m_Name: MarisaHouse
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
-  type: 0
-  minActApperance: 0
+  name: MarisaHouse
+  icon: {fileID: 4254746531708911044, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
+  type: 3
+  minActApperance: 4
   appearTimes: 0
   isAppearAct4: 0

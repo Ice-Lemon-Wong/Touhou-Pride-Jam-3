@@ -1,11 +1,17 @@
 ﻿-card_1
-yuwuko is cute
+this is a book
 - 
 
--card_4
-sad yuwuko
+-card_2
+this is book 2
 -
 
--card_5
-yuwuko dies
+-card_3
+this is book 3
 -
+
+
+-card_4
+this is book 4
+-
+
