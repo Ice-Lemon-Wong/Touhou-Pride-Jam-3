@@ -1386,7 +1386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -27.964844, y: 15.72998}
+  m_AnchoredPosition: {x: -27.964828, y: 15.72998}
   m_SizeDelta: {x: 55.930054, y: 31.45996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696100325
@@ -1460,6 +1460,24 @@ MonoBehaviour:
   currentSequenceIndex: 0
   loopEvent: 0
   sequecedEvents:
+  - name: Stating DIalogue
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 488369245}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
   - name: Card game
     eventDelay: 1
     eventToFire:
@@ -1550,24 +1568,6 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     FireNextEvent: 1
-  - name: Stating DIalogue
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
   - name: Cafe interior Bg transition
     eventDelay: 1
     eventToFire:
@@ -3030,7 +3030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.999756, y: -27.820068}
+  m_AnchoredPosition: {x: -38.99974, y: -27.820053}
   m_SizeDelta: {x: 98.910034, y: 55.640015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321495838
@@ -4264,6 +4264,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -16.75
       objectReference: {fileID: 0}
+    - target: {fileID: 2473411596927483648, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: ds
+      value: 
+      objectReference: {fileID: 1557521444}
+    - target: {fileID: 2473411596927483648, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: dialogueLogger
+      value: 
+      objectReference: {fileID: 2075208275}
     - target: {fileID: 2473411596927483649, guid: e8a610864b6300640812ab6abb22311b, type: 3}
       propertyPath: dialogueLogger
       value: 
@@ -4629,6 +4637,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 265558253}
     m_Modifications:
+    - target: {fileID: 3151273509363076083, guid: 0d1dcd2c6cb02084881973bd2a699ca6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151273509363076083, guid: 0d1dcd2c6cb02084881973bd2a699ca6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151273509363076083, guid: 0d1dcd2c6cb02084881973bd2a699ca6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3151273509470655341, guid: 0d1dcd2c6cb02084881973bd2a699ca6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

@@ -44,7 +44,9 @@ public class SpeakerFieldManager : DialogueSystemCommandParser
             }
             
             speakerTextFeild.text += textCommand[i];
-			dialogueLogger.AddToLog(textCommand[i], true);
+            
+            if (textCommand[i] != "\r")
+			    dialogueLogger.AddToLog(textCommand[i], true);
 
 		}
 

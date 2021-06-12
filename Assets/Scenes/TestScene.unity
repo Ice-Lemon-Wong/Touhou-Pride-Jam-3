@@ -1244,7 +1244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -27.964844, y: 15.72998}
+  m_AnchoredPosition: {x: -27.964828, y: 15.72998}
   m_SizeDelta: {x: 55.930054, y: 31.45996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696100325
@@ -1480,6 +1480,24 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     FireNextEvent: 1
+  - name: Card Scene
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1548919883}
+          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireCardGameSequenceEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
   - name: After card game dialogue
     eventDelay: 1
     eventToFire:
@@ -2295,7 +2313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.999756, y: -27.820068}
+  m_AnchoredPosition: {x: -38.99974, y: -27.820053}
   m_SizeDelta: {x: 98.910034, y: 55.640015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321495838
@@ -2750,33 +2768,6 @@ MonoBehaviour:
     isFinal: 0
     isAct4: 0
     proceedNextEvent: 1
-  - xBounds: {x: -5, y: 5}
-    yBounds: {x: -2, y: 2}
-    cardLayout: {x: 2, y: 1}
-    turnAmount: 1
-    isCheat: 1
-    isClosing: 1
-    isFinal: 0
-    isAct4: 0
-    proceedNextEvent: 1
-  - xBounds: {x: -5, y: 5}
-    yBounds: {x: -2, y: 2}
-    cardLayout: {x: 2, y: 2}
-    turnAmount: 2
-    isCheat: 1
-    isClosing: 0
-    isFinal: 0
-    isAct4: 1
-    proceedNextEvent: 1
-  - xBounds: {x: -5, y: 5}
-    yBounds: {x: -2, y: 2}
-    cardLayout: {x: 2, y: 2}
-    turnAmount: 2
-    isCheat: 1
-    isClosing: 0
-    isFinal: 1
-    isAct4: 0
-    proceedNextEvent: 1
 --- !u!4 &1548919884
 Transform:
   m_ObjectHideFlags: 0
@@ -3016,6 +3007,7 @@ MonoBehaviour:
   yBounds: {x: -3, y: 3}
   cardLayout: {x: 2, y: 3}
   cardobject: {fileID: 1553080101492957523, guid: d2508234494341e419bdf55501d9ddf1, type: 3}
+  blockingPanel: {fileID: 0}
   InitAfterCreate: 0
   cardsRequiredPerMatch: 2
   cardFlipDelay: 0.5
