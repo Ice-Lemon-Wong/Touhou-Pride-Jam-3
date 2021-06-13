@@ -202,8 +202,11 @@ public class CardPlayerAI : MonoBehaviour
         else {
             AIDecision = (Decisions) (decisionSeed[currentTurn]% 4);
             Debug.Log(decisionSeed[currentTurn] %4);
-            currentTurn++;
+           
         }
+
+        currentTurn++;
+        currentTurn %= decisionSeed.Length;
 
         //AIDecision = (Decisions)Random.Range(0, 5);
         //AIDecision = Decisions.stuborn;

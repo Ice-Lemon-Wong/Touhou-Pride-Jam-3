@@ -101,6 +101,9 @@ public class DialogueSystem : MonoBehaviour
                 {
                     AdvanceDialogue();
                 }
+                else if (!isInterupt){
+                    isInterupt = true;
+                }
             }
         }
     }

@@ -26,8 +26,9 @@ public class BackgroundManager : MonoBehaviour
 
     [SerializeField] Image[] backgrounds;
     [SerializeField] int activeBGIndex = 0;
-    [SerializeField] float effectSpeed = 4;
-    
+    [SerializeField] float defaultEfffectSpeed = 4;
+
+    private float effectSpeed;
     private Color colourVar = new Color(1, 1, 1, 1);
     
 
@@ -35,7 +36,7 @@ public class BackgroundManager : MonoBehaviour
     void Start()
     {
         colourVar = new Color(1, 1, 1, 1);
-
+        effectSpeed = defaultEfffectSpeed;
         for (int i = 0; i < backgrounds.Length; i++)
         {
             colourVar = backgrounds[i].color;
@@ -78,8 +79,8 @@ public class BackgroundManager : MonoBehaviour
             Debug.LogError("background index out of range");
             return;
         }
-       
 
+        effectSpeed = defaultEfffectSpeed;
         activeBGIndex = bgIndex;
 
         if (instant) {
@@ -98,5 +99,19 @@ public class BackgroundManager : MonoBehaviour
                 backgrounds[i].color = colourVar;
             }
         }
+    }
+
+    public void SetActiveBG(int bgIndex, float newEffectSpeed)
+    {
+        if (bgIndex < 0 || bgIndex > backgrounds.Length)
+        {
+            Debug.LogError("background index out of range");
+            return;
+        }
+
+        effectSpeed = newEffectSpeed;
+        activeBGIndex = bgIndex;
+        Debug.Log(effectSpeed);
+       
     }
 }

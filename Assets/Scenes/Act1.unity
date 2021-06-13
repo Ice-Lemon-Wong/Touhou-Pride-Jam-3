@@ -1058,19 +1058,27 @@ MonoBehaviour:
   dfm: {fileID: 1373600034}
   dialogueSequencedEvents:
   - fileName: Act1
+    startingLine: Act1-4
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-2
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
     startingLine: Act1-1
     dialogueSystemIndex: 0
     proceedNextEvent: 1
-  - fileName: Test1
-    startingLine: monologue
-    dialogueSystemIndex: 1
-    proceedNextEvent: 1
-  - fileName: Test1
-    startingLine: Start2
+  - fileName: Act1
+    startingLine: Act1-3
     dialogueSystemIndex: 0
     proceedNextEvent: 1
-  - fileName: Test1
-    startingLine: CardEnd
+  - fileName: Act1
+    startingLine: Act1-5
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-6
     dialogueSystemIndex: 0
     proceedNextEvent: 1
   loopEvents: 0
@@ -1386,7 +1394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -27.964828, y: 15.72998}
+  m_AnchoredPosition: {x: -27.964844, y: 15.72998}
   m_SizeDelta: {x: 55.930054, y: 31.45996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696100325
@@ -1460,24 +1468,6 @@ MonoBehaviour:
   currentSequenceIndex: 0
   loopEvent: 0
   sequecedEvents:
-  - name: Card game
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1548919883}
-          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
   - name: Title
     eventDelay: 1
     eventToFire:
@@ -1622,8 +1612,170 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     FireNextEvent: 0
-  - name: End Card game
+  - name: Card game
     eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1548919883}
+          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireCardGameSequenceEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: closing game
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1548919883}
+          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireCardGameSequenceEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: hand holding BG transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1020431104}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: hand holding dialogue
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 488369245}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Cafe Interior BG transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1020431104}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: Cafe interior Dialogue- 3
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 488369245}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: cafe exterior BG transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1020431104}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: Cafe exterior dialogue 2
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 488369245}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Black BG transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1020431104}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: final Monologue
+    eventDelay: 2
     eventToFire:
       m_PersistentCalls:
         m_Calls:
@@ -2324,8 +2476,17 @@ MonoBehaviour:
   bgm: {fileID: 1662020035}
   bgEvents:
   - bgIndex: 1
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
   - bgIndex: 2
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
   - bgIndex: 3
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
   loopEvents: 0
 --- !u!1 &1021898600
 GameObject:
@@ -3030,7 +3191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.99974, y: -27.820053}
+  m_AnchoredPosition: {x: -38.999756, y: -27.820068}
   m_SizeDelta: {x: 98.910034, y: 55.640015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321495838
@@ -3619,6 +3780,15 @@ MonoBehaviour:
     isFinal: 0
     isAct4: 0
     proceedNextEvent: 1
+  - xBounds: {x: -2, y: 2}
+    yBounds: {x: 0, y: 0}
+    cardLayout: {x: 2, y: 1}
+    turnAmount: 10
+    isCheat: 1
+    isClosing: 1
+    isFinal: 0
+    isAct4: 0
+    proceedNextEvent: 1
 --- !u!4 &1548919884
 Transform:
   m_ObjectHideFlags: 0
@@ -3855,6 +4025,7 @@ GameObject:
   - component: {fileID: 1662020034}
   - component: {fileID: 1662020037}
   - component: {fileID: 1662020035}
+  - component: {fileID: 1662020036}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -3905,7 +4076,23 @@ MonoBehaviour:
   - {fileID: 696100325}
   - {fileID: 1321495838}
   activeBGIndex: 0
-  effectSpeed: 4
+  defaultEfffectSpeed: 4
+--- !u!114 &1662020036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662020033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267e3637edc3e3c48b1a9bd0a9aa1ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ds: {fileID: 1557521444}
+  isComponentInObject: 0
+  bgm: {fileID: 1662020035}
+  backgroundCommand: background
 --- !u!222 &1662020037
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4260,6 +4447,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 265558253}
     m_Modifications:
+    - target: {fileID: 2473411596368887717, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 468013345572759204, guid: fd148e9601ba63346a7c545a7b91cd65, type: 3}
+    - target: {fileID: 2473411596385698945, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596408988189, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1058621092292970658, guid: fd148e9601ba63346a7c545a7b91cd65, type: 3}
+    - target: {fileID: 2473411596408988189, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596408988189, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596408988189, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596517014401, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596517014401, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596517014401, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596517014401, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4283642674
+      objectReference: {fileID: 0}
     - target: {fileID: 2473411596762014534, guid: e8a610864b6300640812ab6abb22311b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -16.75
@@ -4276,6 +4503,18 @@ PrefabInstance:
       propertyPath: dialogueLogger
       value: 
       objectReference: {fileID: 2075208275}
+    - target: {fileID: 2473411596927483649, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: advancingInput.value
+      value: Advance
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596927483649, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: interuptInput.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596927483649, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: advancingInput.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2473411596927483650, guid: e8a610864b6300640812ab6abb22311b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4362,16 +4601,84 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2473411596927483651, guid: e8a610864b6300640812ab6abb22311b, type: 3}
       propertyPath: m_Name
-      value: Main Dialogue_UI (1)
+      value: 'Main Dialogue_UI '
       objectReference: {fileID: 0}
+    - target: {fileID: 2473411596927483662, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: waveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596927483662, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: shakePower
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596927483662, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: waveHeight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411596927483662, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: waveWavelength
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411597110887202, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411597110887202, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411597110887202, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411597110887202, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4283642674
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411597538404636, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8857509280461108865, guid: fd148e9601ba63346a7c545a7b91cd65, type: 3}
     - target: {fileID: 2473411597538404637, guid: e8a610864b6300640812ab6abb22311b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1297962417}
+    - target: {fileID: 2473411597600046374, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411597600046392, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411598090205722, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8f67a3b08e7779d4f96b0060331e2031, type: 2}
+    - target: {fileID: 2473411598108333779, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8857509280461108865, guid: fd148e9601ba63346a7c545a7b91cd65, type: 3}
+    - target: {fileID: 2473411598195608473, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: characterData.Array.data[2].allSpritePortraitData.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411598195608473, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: characterData.Array.data[2].allSpritePortraitData.Array.data[6].portraitName
+      value: eat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473411598195608473, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: characterData.Array.data[2].allSpritePortraitData.Array.data[6].portraitSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8357265c164f7024895864d39f8cc9c9, type: 3}
     - target: {fileID: 2473411598324721008, guid: e8a610864b6300640812ab6abb22311b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1297962417}
+    - target: {fileID: 2473411598324721023, guid: e8a610864b6300640812ab6abb22311b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8857509280461108865, guid: fd148e9601ba63346a7c545a7b91cd65, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8a610864b6300640812ab6abb22311b, type: 3}
 --- !u!1 &1933178451
@@ -5390,6 +5697,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 265558253}
     m_Modifications:
+    - target: {fileID: 6458296189912124336, guid: fe080ceb3b21c6942938b5e80d6ba54a, type: 3}
+      propertyPath: dialogueLogger
+      value: 
+      objectReference: {fileID: 2075208275}
     - target: {fileID: 6458296189912124342, guid: fe080ceb3b21c6942938b5e80d6ba54a, type: 3}
       propertyPath: m_Name
       value: Sub Dialogue

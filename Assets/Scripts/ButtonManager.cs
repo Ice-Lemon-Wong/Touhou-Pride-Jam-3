@@ -31,11 +31,11 @@ public class ButtonManager : MonoBehaviour
 		dialogueSystem.initDialogueEvents += showButtonsAndPanels;
 		dialogueSystem.requiredEndEvent += canHideFunc;
 
-		subDialogueSystem.initDialogueEvents += showButtonsAndPanelsSub;
-		subDialogueSystem.requiredEndEvent += canHideFunc;
+		//subDialogueSystem.initDialogueEvents += showButtonsAndPanelsSub;
+		//subDialogueSystem.requiredEndEvent += canHideFunc;
 
 		buttonCanvasGroup.alpha = 0;
-
+		buttonCanvasGroup.blocksRaycasts = false;
 
 
 	}
@@ -71,7 +71,8 @@ public class ButtonManager : MonoBehaviour
 	}
 
     void showButtonsAndPanels() {
-        buttonPanel.SetActive(true);
+		buttonCanvasGroup.blocksRaycasts = true;
+		buttonPanel.SetActive(true);
         mainDialogueUIEnabler.EnableUI();
 		targetAlphaButtons = 1;
 		isHidden = false;
@@ -80,7 +81,8 @@ public class ButtonManager : MonoBehaviour
 	}
 
     void showButtonsAndPanelsSub() {
-        buttonPanel.SetActive(true);
+		buttonCanvasGroup.blocksRaycasts = true;
+		buttonPanel.SetActive(true);
 		subDialogueUIEnabler.EnableUI();
 		targetAlphaButtons = 1;
 		isHidden = false;
@@ -89,6 +91,7 @@ public class ButtonManager : MonoBehaviour
 	}
 
     void hideButtons() {
+		buttonCanvasGroup.blocksRaycasts = false;
 		targetAlphaButtons = 0;
 		if (buttonCanvasGroup.alpha <= 0.001f) {
 			buttonPanel.SetActive(false);

@@ -20,7 +20,9 @@ C’monnnnnnnn! It’s gonna be fun!
 #animate 0 enter
 #speaker Alice
 
+#text typespeed 5 0 9
 Right...
+#text reset all
 #text shake 0 77
 <b><size= 30><color="red">but why don’t you ask Reimu?!!</color></size></b> 
 #text reset all
@@ -57,7 +59,9 @@ It’s newly made? Why did I not hear it before? Is it run by the <color="red">S
 
 #portrait 1 marisa neutral
 #speaker Marisa
+#text shake 127 133
 Yeah it is, I saw Koakuma working here. And the building is quite recent, it was not here three days ago, and <color="red"><b>BAM!!!</b></color> here it is.  
+#text reset all
 It’s probably because of <color=#800080>Patchouli’s</color> magic capabilities and <color="blue">sakuya’s</color> ability to stop time. They can make constructions like this a breeze. 
 
 #portrait 0 alice annoyedPout
@@ -78,3 +82,48 @@ They stopped at their destination. It is much closer to their home than Alice ex
 #portrait 1 disable
 -
 
+//after enter cafe
+-Act1-2
+some place holder stuff
+#background 4
+#text wait 1
+we are now holding hands
+
+-
+
+//prompt playing cards
+-Act1-3
+#portrait 2 alice2 happy
+#portrait 2 enable
+
+
+I love this cafe
+-
+
+//prompt hand holding
+-Act1-4
+#portrait 2 disable
+<color=#ae2334>can we hold hands</color>
+<color=#ea4f36>can we hold hands</color>
+<color=#f9c22b>can we hold hands</color>
+<color=#239063>can we hold hands</color>
+<color=#4d65b4>can we hold hands</color>
+<color=#905ea9>can we hold hands</color>
+<color=#f04f78>can we hold hands</color>
+-
+
+//after hand holding
+-Act1-5
+#portrait 2 enable
+#portrait 2 alice2 baseEat
+#portrait 2 alice2 eat
+
+well that was fun
+
+#portrait 2 disable
+-
+
+//outside cafe
+-Act1-6
+bye bye
+-

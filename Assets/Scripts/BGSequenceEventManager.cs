@@ -21,8 +21,24 @@ public class BGSequenceEventManager : MonoBehaviour
     {
         if (currentBGCount < 0 || currentBGCount >= bgEvents.Length) return;
 
+
+        if (bgEvents[currentBGCount].OverideSpeed)
+        {
+            bgm.SetActiveBG(bgEvents[currentBGCount].bgIndex, bgEvents[currentBGCount].transitionSpeed);
+        }
+        else {
+            if (bgEvents[currentBGCount].instantTransition) {
+                bgm.SetActiveBG(bgEvents[currentBGCount].bgIndex,true);
+            }
+            else
+            {
+                bgm.SetActiveBG(bgEvents[currentBGCount].bgIndex, false);
+
+            }
+            
+        }
         Debug.Log("changing BG " + bgEvents[currentBGCount].bgIndex);
-        bgm.SetActiveBG(bgEvents[currentBGCount].bgIndex);
+        
         currentBGCount++;
         if (loopEvents) currentBGCount %= bgEvents.Length;
 
@@ -35,6 +51,8 @@ public class BGSequenceEventManager : MonoBehaviour
     {
 
         public int bgIndex;
-
+        public bool instantTransition;
+        public bool OverideSpeed;
+        public float transitionSpeed;
     }
 }
