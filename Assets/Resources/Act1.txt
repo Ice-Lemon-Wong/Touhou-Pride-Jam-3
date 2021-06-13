@@ -1,4 +1,14 @@
-﻿-Act1-1
+﻿-Intro
+This is a story about 2 magicians,
+with 2 different personalities,
+One who is very outgoing,
+The other who who prefer being alone.
+But it is a matter of someone's gift, that will change her life...
+-
+
+
+
+-Act1-1
 #portrait 0 disable
 #portrait 1 disable
 #portrait 2 disable
@@ -33,7 +43,6 @@ I have dolls to make you know.
 
 #speaker 
 Marisa looked at her with a frustrated look while her eyes closed. It is a miracle she avoided bumping into people while walking like this.
-
 
 #portrait 1 marisa wtf
 #animate 1 jump
@@ -82,48 +91,70 @@ They stopped at their destination. It is much closer to their home than Alice ex
 #portrait 1 disable
 -
 
-//after enter cafe
--Act1-2
-some place holder stuff
-#background 4
-#text wait 1
-we are now holding hands
 
+
+
+//int 1
+-Act1-2
+dialogue about ordering food
 -
 
-//prompt playing cards
+
+
+
+//int2
 -Act1-3
 #portrait 2 alice2 happy
 #portrait 2 enable
-
-
-I love this cafe
+dialogue about wanting to play cards
 -
 
-//prompt hand holding
+
+
+
+//before closing
 -Act1-4
-#portrait 2 disable
-<color=#ae2334>can we hold hands</color>
-<color=#ea4f36>can we hold hands</color>
-<color=#f9c22b>can we hold hands</color>
-<color=#239063>can we hold hands</color>
-<color=#4d65b4>can we hold hands</color>
-<color=#905ea9>can we hold hands</color>
-<color=#f04f78>can we hold hands</color>
+about to close off the game, us eexisting dialogue
 -
 
-//after hand holding
+
+
+//hand holding
 -Act1-5
+#portrait 2 disable
+#background 4
+#text wait 1
+holding hands
+-
+
+
+
+//int 3
+-Act1-6
 #portrait 2 enable
 #portrait 2 alice2 baseEat
 #portrait 2 alice2 eat
-
-well that was fun
-
+eating food
 #portrait 2 disable
 -
 
-//outside cafe
--Act1-6
-bye bye
+
+
+
+//ext 2
+-Act1-7
+leaving cafe
+-
+
+
+
+//ext 3
+-Act1-8
+gifting
+-
+
+
+
+-outro
+what should I say?
 -

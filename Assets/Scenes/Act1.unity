@@ -309,7 +309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &98245244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1025,77 +1025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4831959a0e9a044aa92dee263e6141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &488369244
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 488369246}
-  - component: {fileID: 488369245}
-  m_Layer: 0
-  m_Name: Dialogue Sequence Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &488369245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488369244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c97c64304b7c8554d99740de613d226c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sm: {fileID: 782890588}
-  dfm: {fileID: 1373600034}
-  dialogueSequencedEvents:
-  - fileName: Act1
-    startingLine: Act1-4
-    dialogueSystemIndex: 0
-    proceedNextEvent: 1
-  - fileName: Act1
-    startingLine: Act1-2
-    dialogueSystemIndex: 0
-    proceedNextEvent: 1
-  - fileName: Act1
-    startingLine: Act1-1
-    dialogueSystemIndex: 0
-    proceedNextEvent: 1
-  - fileName: Act1
-    startingLine: Act1-3
-    dialogueSystemIndex: 0
-    proceedNextEvent: 1
-  - fileName: Act1
-    startingLine: Act1-5
-    dialogueSystemIndex: 0
-    proceedNextEvent: 1
-  - fileName: Act1
-    startingLine: Act1-6
-    dialogueSystemIndex: 0
-    proceedNextEvent: 1
-  loopEvents: 0
---- !u!4 &488369246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488369244}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 782890589}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,408 +1364,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696100323}
   m_CullTransparentMesh: 1
---- !u!1 &782890587
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 782890589}
-  - component: {fileID: 782890588}
-  - component: {fileID: 782890590}
-  m_Layer: 0
-  m_Name: TestSequenceManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &782890588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782890587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99527b50849e2214286fe95effce27b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentSequenceIndex: 0
-  loopEvent: 0
-  sequecedEvents:
-  - name: Title
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 436089079}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: Play
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: ActTitle
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: White Bg transition
-    eventDelay: 5
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Play Cafe BGM
-    eventDelay: 0
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 468391722}
-          m_TargetAssemblyTypeName: AudioManager2D, Assembly-CSharp
-          m_MethodName: Play
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: CafeTrack
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: cafe exterior BG transition
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Stating DIalogue
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Cafe interior Bg transition
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Cafe Interior dialogue -1
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Cafe Interior dialogue -2
-    eventDelay: 2
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Card game
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1548919883}
-          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: closing game
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1548919883}
-          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: hand holding BG transition
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: hand holding dialogue
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Cafe Interior BG transition
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Cafe interior Dialogue- 3
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: cafe exterior BG transition
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Cafe exterior dialogue 2
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Black BG transition
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: final Monologue
-    eventDelay: 2
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
---- !u!4 &782890589
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782890587}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.164977, y: -0.16736782, z: 81.332634}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 488369246}
-  - {fileID: 1020431103}
-  - {fileID: 1548919884}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &782890590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782890587}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 635734959130ffb42b925ee6844d68b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputKeyName: Advance
-  functionsToTest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 782890588}
-        m_TargetAssemblyTypeName: TestSequenceManager, Assembly-CSharp
-        m_MethodName: FireSequence
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &825160365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,64 +1957,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993659692}
   m_CullTransparentMesh: 1
---- !u!1 &1020431102
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1020431103}
-  - component: {fileID: 1020431104}
-  m_Layer: 0
-  m_Name: BG SequenceManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1020431103
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020431102}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 782890589}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1020431104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020431102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97078ca077ee512449f648787a8470a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgm: {fileID: 1662020035}
-  bgEvents:
-  - bgIndex: 1
-    instantTransition: 0
-    OverideSpeed: 0
-    transitionSpeed: 0
-  - bgIndex: 2
-    instantTransition: 0
-    OverideSpeed: 0
-    transitionSpeed: 0
-  - bgIndex: 3
-    instantTransition: 0
-    OverideSpeed: 0
-    transitionSpeed: 0
-  loopEvents: 0
 --- !u!1 &1021898600
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,57 +2701,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321495836}
   m_CullTransparentMesh: 1
---- !u!1 &1331837484
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1331837485}
-  - component: {fileID: 1331837486}
-  m_Layer: 0
-  m_Name: Card_AI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1331837485
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331837484}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9933531, y: -0.8688114, z: -161.43488}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1711299909}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1331837486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331837484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 241d81a293c03bc4f8fb8927d3d5835f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredCard: 
-  thinkingTime: {x: 0.2, y: 1}
-  cm: {fileID: 0}
-  minimumNormalAmount: 4
-  minimumCheatAmount: 3
-  minimumStuburnCount: 1
-  debugAIDecision: {fileID: 1115117988}
-  seedText: {fileID: 2049447124}
 --- !u!1 &1368244481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3737,72 +3155,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 205.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1548919882
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1548919884}
-  - component: {fileID: 1548919883}
-  m_Layer: 0
-  m_Name: Card Game Sequence Event
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1548919883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548919882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea508da4be1903458ca02b6fe0640d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sm: {fileID: 782890588}
-  dfm: {fileID: 1373600034}
-  loopEvents: 0
-  dialogueSystemIndex: 0
-  cardGameSequenceEvents:
-  - xBounds: {x: -5.5, y: 5.5}
-    yBounds: {x: 2, y: -2}
-    cardLayout: {x: 5, y: 2}
-    turnAmount: 10
-    isCheat: 0
-    isClosing: 0
-    isFinal: 0
-    isAct4: 0
-    proceedNextEvent: 1
-  - xBounds: {x: -2, y: 2}
-    yBounds: {x: 0, y: 0}
-    cardLayout: {x: 2, y: 1}
-    turnAmount: 10
-    isCheat: 1
-    isClosing: 1
-    isFinal: 0
-    isAct4: 0
-    proceedNextEvent: 1
---- !u!4 &1548919884
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548919882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 782890589}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1557521441 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2473411596927483650, guid: e8a610864b6300640812ab6abb22311b, type: 3}
@@ -4273,120 +3625,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706277347}
   m_CullTransparentMesh: 1
---- !u!1 &1711299907
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1711299909}
-  - component: {fileID: 1711299908}
-  - component: {fileID: 1711299910}
-  - component: {fileID: 1711299911}
-  m_Layer: 0
-  m_Name: CardManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1711299908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711299907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0080f42479787c4bbfdcb3da890ec1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xBounds: {x: -5, y: 5}
-  yBounds: {x: -3, y: 3}
-  cardLayout: {x: 2, y: 3}
-  cardobject: {fileID: 1553080101492957523, guid: d2508234494341e419bdf55501d9ddf1, type: 3}
-  blockingPanel: {fileID: 1938072770}
-  InitAfterCreate: 0
-  cardsRequiredPerMatch: 2
-  cardFlipDelay: 0.5
-  cardHidingOffset: {x: 0, y: 15}
-  transitionTime: 0.75
-  turnAmmount: 16
-  cardSOPool: []
-  cardDistributor: {fileID: 1711299911}
-  debugStateText: {fileID: 1368244483}
-  turnText: {fileID: 149739599}
-  matchedCardIndex: 0
-  currentBoardState: 0
---- !u!4 &1711299909
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711299907}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.093093, y: 0.8929109, z: -3.6953645}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1331837485}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1711299910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711299907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 197a59228e50e5a409c4c2c89e457541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pressToQuit: 0
-  pressToRestart: 1
---- !u!114 &1711299911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711299907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bddea3993c58d9b499e899d2e69bb99e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initCardHere: 1
-  currentStage: 1
-  allCards:
-  - {fileID: 11400000, guid: d770ef32d2e1e6147a670bbbb3dd88ce, type: 2}
-  - {fileID: 11400000, guid: 86655754cb83b4343a0a7d9950b1eb4e, type: 2}
-  - {fileID: 11400000, guid: ac21a550b25568541b3047bf423260f0, type: 2}
-  - {fileID: 11400000, guid: 00ecd4a4a04fde64ca431619507641ed, type: 2}
-  - {fileID: 11400000, guid: ddb6618bc1c0257498bc86f02de061ca, type: 2}
-  - {fileID: 11400000, guid: 57d30c81b1a165142ada943a77bdbb73, type: 2}
-  - {fileID: 11400000, guid: 4c0a3eb5d87094143821be0ef88443f8, type: 2}
-  - {fileID: 11400000, guid: 1eee68c56b5b34a40b3be403d86f83f1, type: 2}
-  closingCards:
-  - {fileID: 11400000, guid: c4224464a12535848af57c932d777392, type: 2}
-  - {fileID: 11400000, guid: a7a898f8401de374f93716c0e9e7804d, type: 2}
-  - {fileID: 11400000, guid: 4d733aa932ed8164db66d205bab76b15, type: 2}
-  - {fileID: 11400000, guid: 3a35eac2354d8894d8493b3feb249abb, type: 2}
-  finalCards:
-  - {fileID: 11400000, guid: cf82ad1340c238c42b653dbaecbe2143, type: 2}
-  - {fileID: 11400000, guid: 32f4bd379247fa74cbaffb63c21dcbcc, type: 2}
-  - {fileID: 11400000, guid: b8759f3a123063942b5742bb83e4bc0f, type: 2}
-  - {fileID: 11400000, guid: 28a7d9fd724f64741bac9704eddf6d38, type: 2}
-  rareCards:
-  - {fileID: 11400000, guid: f4b8fc9345d284d48be0d4ac07802899, type: 2}
-  - {fileID: 11400000, guid: 9d6b7ba5244777b4bb9cc52aad597189, type: 2}
-  - {fileID: 11400000, guid: 93bf340df65da6a4084a99119401b2d6, type: 2}
 --- !u!1 &1831550360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5690,6 +4928,176 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71ceb44785079684dbce2ba7c3a23b5a, type: 3}
+--- !u!1001 &2022589342597403778
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2022589341059051721, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: dfm
+      value: 
+      objectReference: {fileID: 1373600034}
+    - target: {fileID: 2022589341604306818, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: bgm
+      value: 
+      objectReference: {fileID: 1662020035}
+    - target: {fileID: 2022589341903856345, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_Name
+      value: SequenceManager 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: startingIndex
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: startingFromZero
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[10].eventDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[15].FireNextEvent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[1].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 436089079}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[3].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 468391722}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.164977
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.16736782
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 81.332634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589342145951967, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: dfm
+      value: 
+      objectReference: {fileID: 1373600034}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+--- !u!1001 &5688207857527651683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5688207858030944288, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_Name
+      value: CardManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.093093
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8929109
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.6953645
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944295, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: turnText
+      value: 
+      objectReference: {fileID: 149739599}
+    - target: {fileID: 5688207858030944295, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: blockingPanel
+      value: 
+      objectReference: {fileID: 1938072770}
+    - target: {fileID: 5688207858030944295, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: debugStateText
+      value: 
+      objectReference: {fileID: 1368244483}
+    - target: {fileID: 5688207858725242701, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: seedText
+      value: 
+      objectReference: {fileID: 2049447124}
+    - target: {fileID: 5688207858725242701, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: debugAIDecision
+      value: 
+      objectReference: {fileID: 1115117988}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
 --- !u!1001 &6458296188927251788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5697,6 +5105,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 265558253}
     m_Modifications:
+    - target: {fileID: 6458296188645777814, guid: fe080ceb3b21c6942938b5e80d6ba54a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458296188645777814, guid: fe080ceb3b21c6942938b5e80d6ba54a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458296188645777814, guid: fe080ceb3b21c6942938b5e80d6ba54a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458296188645777814, guid: fe080ceb3b21c6942938b5e80d6ba54a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290361785
+      objectReference: {fileID: 0}
     - target: {fileID: 6458296189912124336, guid: fe080ceb3b21c6942938b5e80d6ba54a, type: 3}
       propertyPath: dialogueLogger
       value: 
