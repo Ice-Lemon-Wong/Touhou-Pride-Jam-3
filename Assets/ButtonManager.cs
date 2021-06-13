@@ -31,7 +31,7 @@ public class ButtonManager : MonoBehaviour
 		dialogueSystem.initDialogueEvents += showButtonsAndPanels;
 		dialogueSystem.requiredEndEvent += canHideFunc;
 
-		subDialogueSystem.initDialogueEvents += showButtonsAndPanelsSub;
+		//subDialogueSystem.initDialogueEvents += showButtonsAndPanelsSub;
 		subDialogueSystem.requiredEndEvent += canHideFunc;
 
 		buttonCanvasGroup.alpha = 0;

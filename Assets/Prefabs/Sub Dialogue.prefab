@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 6458296189912124336}
   - component: {fileID: 6458296189912124337}
   - component: {fileID: 6458296189912124338}
+  - component: {fileID: 256044979}
   m_Layer: 5
   m_Name: Sub Dialogue
   m_TagString: Untagged
@@ -296,7 +297,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6458296189912124342}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -377,9 +378,26 @@ MonoBehaviour:
   isComponentInObject: 0
   dialogueTextFeild: {fileID: 6458296189451322637}
   waveSpeed: 5
-  waveWavelength: 0
+  waveWavelength: 0.05
   waveHeight: 3
   shakePower: 2
+--- !u!114 &256044979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6458296189912124342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3154adc6ce01c468c1e6b303e2dc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ds: {fileID: 6458296189912124336}
+  isComponentInObject: 1
+  speakerTextFeild: {fileID: 0}
+  speakerCommand: Speaker
+  dialogueLogger: {fileID: 0}
 --- !u!1 &6458296190056583242
 GameObject:
   m_ObjectHideFlags: 0
