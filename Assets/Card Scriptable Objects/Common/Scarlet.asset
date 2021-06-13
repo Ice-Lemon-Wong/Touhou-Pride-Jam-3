@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Scarlet
   icon: {fileID: 8785833067527791232, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
   type: 0
-  minActApperance: 2
+  minActApperance: 1
   appearTimes: 2
   isAppearAct4: 0
