@@ -36,7 +36,7 @@ Dolls of y-y-you?
 Ya heard me! Well, did you?
 
 #speaker 
-She gulped as many questions raced into her head. How did she know?: Did she somehow place a magical item that spies on me? Did she finally put that thievery to good use and looked into my house?
+She gulped as many questions raced into her head. How did she know? Did she somehow place a magical item that spies on me? Did she finally put that thievery to good use and looked into my house?
 
 Well, not that she minds anyway.
 
@@ -66,25 +66,97 @@ L-Let’s just continue on with the game alright?
 #speaker Alice
 Huh, a doll card.
 
-Marisa: Speaking of dolls, I remember you had a gigantic one somewhere right? The one that Cirno had fought before.
-Alice: Ah yes, the Goliath doll. I’m still finding ways to perfect it. What about it?
-Marisa: I don’t know about you, but I believe two swords aren’t enough to finish off a Magician, nor a youkai. Why don’t you add something magical, like.... A magic wand or something?
-Alice: Really? A gigantic doll, using its ludicrous speed to overcome its massive size, and you want it to cast spells?
-Marisa: Hey, with its massive body, it could contain a lot of magical energy! So why not?
+#speaker Marisa
+Speaking of dolls, I remember you had a gigantic one somewhere right? The one that Cirno had fought before.
 
+#speaker Alice
+Ah yes, the Goliath doll. I’m still finding ways to perfect it. What about it?
+
+#speaker Marisa
+I don’t know about you, but I believe two swords aren’t enough to finish off a Magician, nor a youkai. Why don’t you add something magical, like.... A magic wand or something?
+
+#speaker Alice
+Really? A gigantic doll, using its ludicrous speed to overcome its massive size, and you want it to cast spells?
+
+#speaker Marisa
+Hey, with its massive body, it could contain a lot of magical energy! So why not?
+
+#speaker 
 Alice rubbed her chin, clearly thinking about Marisa’s proposal.
 
-Alice: <i>You know, that is kinda true. Could’ve helped me when fighting against Cirno that time. Goliath could shoot fireballs, do that dragon punch, maybe do that spinning tornado kick or something, all from that karate guy with a red headband. Hmm...</i>
+#speaker Alice
+<i>You know, that is kinda true. Could’ve helped me when fighting against Cirno that time. Goliath could shoot fireballs, do that dragon punch, maybe do that spinning tornado kick or something, all from that karate guy with a red headband. Hmm...</i>
 
-Marisa: ...You’re thinking of that arcade fighting game again, aren’t you?
-Alice: H-Huh? Yeah! One has to find inspiration from other places to further improve their craft.
-Marisa: Right… Anyway, have you ever thought of adding a magic broom onto Goliath?
-Alice: That’s ridiculous. Alright, no more ideas from you. Let’s continue with the game.
-Marisa: Aw man, think about it at least, Alice!
+#speaker Marisa
+...You’re thinking of that arcade fighting game again, aren’t you?
+
+#speaker Alice
+H-Huh? Yeah! One has to find inspiration from other places to further improve their craft.
+
+#speaker Marisa
+Right... Anyway, have you ever thought of adding a magic broom onto Goliath?
+
+#speaker Alice
+That’s ridiculous. Alright, no more ideas from you. Let’s continue with the game.
+
+#speaker Marisa
+Aw man, think about it at least, Alice!
 -
 
 -card_3
-this is doll 3
+#speaker Marisa
+Hey, it's Alice’s slaves!
+
+#speaker Alice
+I’m sorry? If Shanghai and Hourai heard that, they'd be very upset.
+
+#speaker Marisa
+Yeah, yeah. But I can’t get it out of my head though. What if you treat them like actual slaves? They are always under your mercy, y’know?
+
+#speaker Alice
+I suppose, as a doll maker, it does feel that way…
+
+#speaker Marisa
+So you’re saying you’re actually treating them as slaves?
+
+#speaker Alice
+N-No! Stop pushing your narrative onto me!
+
+#speaker Marisa
+Oh heck no, I’m getting to the bottom of this! And I know you can’t lie to save your life! Tell me, what do you do when a doll fails to execute your order?
+
+#speaker Alice
+I... reprimand them and ask them to do it again.
+
+#speaker Marisa
+Okay, what do you do if a doll defies your orders, should it happen to you?
+
+#speaker Alice
+I’ll probably make them learn not to do it again.
+
+#speaker Marisa
+Lastly, if a doll has betrayed you, what will you do?
+
+#speaker Alice
+I’ll ask them why, and depending on their answer, either help them with their problems or forgive them.
+
+#speaker 
+Marisa sighed. Alice is too good natured to treat the dolls badly.
+
+#speaker Marisa
+Alright alright. You win. But here’s the real question: What if I am your doll? What will you do to me?
+
+#speaker 
+Alice was taken aback by the question as she lowered her head and thought of an answer. Unfortunately for her, Marisa was not prepared for what Alice was about to say next.
+
+#speaker Alice
+I... would make sure no other dolls will harm you...
+
+#speaker 
+Marisa’s face almost had a visible red patch.
+
+#speaker Marisa
+R-Right! Of course! Alright, l-let’s continue with the game!
 -
 
 -card_4

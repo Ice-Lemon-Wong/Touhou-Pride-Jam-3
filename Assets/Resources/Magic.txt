@@ -1,11 +1,132 @@
 ﻿-card_1
-this is magic 1
+#speaker Marisa
+A mini-hakkero? What’s this about, magical items?
+
+#speaker Alice
+I mean, you do have a lot of it. Care to talk about what you have in your shop?
+
+#speaker Marisa
+You’re the one to talk to, you like hoarding magical items too! But I suppose that cannot be helped.
+
+#speaker 
+This is a great chance for Alice to know what Marisa has in her shop. She always wanted to take a look at it, but the last time she visited her shop, it was the most unsightly view she had ever seen.
+Magical items were strewn just about everywhere, even the dangerous ones. She had to make sure some of it was in a safe spot just so that other magical items could not cause a reaction.
+
+#speaker Marisa
+Well, I had a magic carpet that has a mind of its own, a pistol with magic bullets that can be controlled, a sword that can slice through dimensions, and a magical shield that can deflect any projectiles.
+<color=4d65b4>Also have I mentioned these runics of eternal that does...</color>
+
+#speaker 
+Alice was a bit perplexed by what she said. She never saw those items in the shop before. Does Marisa have a basement to store even more items? What does the basement look like? 
+Is it as messy as the shop itself? The doll maker shuddered as she thought about it, and was glad that she did not visit the basement. It will drive her insane.
+
+#speaker Alice
+That’s cool and all, but why not bring those items to battle instead of what you have right now? Aren’t they more powerful?
+
+#speaker Marisa
+Well, need me to remind you how we deal with our enemies? You know, a lot of bullets, as if we’re in Hell?
+
+#speaker Alice
+That’s a cheeky way to say bullet-hell, but yeah. Aren’t those items you mentioned suitable though?
+
+#speaker Marisa
+Yeah, but can I even control it? What if my carpet escapes when I need it the most? What if I panicked and missed my shot with the pistol? What if I cut open a dimension portal?
+<color=4365b4>And don’t get me started about the Runics of eternal</color>
+
+#speaker Marisa
+All in all, I prefer my broom, my mini-Hakkero, a wand that I rarely use, and my well hidden mushrooms, hehe!
+
+#speaker 
+Alice nodded. Those are some stupid reasons to not use those magical items, but she can guess that she wants to use her own abilities to further improve herself. But...
+
+#speaker Alice
+...You skipped out on the shield. Why not use it?
+
+#speaker Marisa
+What shield? Let’s continue with the game, alright?
+
+#speaker Alice
+<i>You are planning to use it, aren’t you..?</i>
 -
 
 -card_2
-this is magic 2
+#speaker Marisa
+Hey, that’s my Hakkero!
+
+#speaker Alice
+That’s your item alright. But isn’t it... too straightforward?
+
+#speaker Marisa
+Eh, whaddaya mean?
+
+#speaker Alice
+Your talent is suitable to overwhelm enemies with powerful spells, but have you ever thought about casting the same spell multiple times?
+
+#speaker Marisa
+Oh, that would be cool. Multiple me’s, and multiple spells! They will die within a single barrage of my spells!
+
+#speaker Alice
+Exactly, and to do that, you have to be controlling Dolls.
+
+#speaker Marisa
+Uh…
+
+#speaker Alice
+If you control dolls, they will do as you ask, cast the spells that you’ve learnt, and overwhelm your opponents. You can use numbers to your advantage, not just offensively, but also defensively.
+They can be your sword and shield, if you put in the training in controlling them!
+
+#speaker Marisa
+Right, but…
+
+#speaker Alice
+You can even tie someone down and treat them however you want! I always wanted to do that!
+
+#speaker Marisa
+Alright, you’re getting way too carried away for this! Let’s continue with the game!
+
+#speaker 
+But to Marisa, maybe being brought down by Alice’s dolls does not seem too bad of an idea....
 -
 
 -card_3
-this is magic 3
+#speaker Alice
+Oh, it’s mini-Hakkero.
+
+#speaker Marisa
+Yeahhhh, that’s my item! I spent countless times trying to learn how to use it.
+
+#speaker Alice
+Speaking of learning magical items, how do you... study magic?
+
+#speaker Marisa
+Eh, why’d you wanna know?
+
+#speaker Alice
+Well... I wanna know more about how you learn your magic. It could help me in learning something new.
+
+#speaker Marisa
+Hmm, well, you do know that I actually copied other people’s abilities, right?
+
+#speaker 
+Alice nodded.
+
+#speaker Marisa
+Well, to tell you the truth... I don’t know either.
+
+#speaker Alice
+Eh?
+
+#speaker Marisa
+I guess you could say it’s a talent I have, hehe.
+
+#speaker Alice
+Don’t be silly, surely you could explain even if you really can’t?
+
+#speaker Marisa
+Well that’s the thing! I... don’t really know how I did it. I saw someone do it, and I’ll be like “I can do it too!” and try to recreate it using what I have.
+Most of the time, it works like a charm. But for something that I can’t do, like Kaguya’s magic, it requires specific items. Unless I could steal her stuff.
+To learn is to imitate, I guess. And with what ability and talent I have, I will strive to become a great magician that knows a lot of spells!
+
+#speaker 
+Alice was a little dumbfounded. She was not expecting a full answer, but she admires Marisa’s determination to become a great magician through her own means.
 -
