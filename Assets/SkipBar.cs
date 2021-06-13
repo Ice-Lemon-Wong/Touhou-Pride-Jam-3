@@ -81,6 +81,7 @@ public class SkipBar : MonoBehaviour
 			keyHeld = true;
 		} else {
 			keyHeld = false;
+			DialogueSystem.setDefaultTypingSpeed();
 		}
     }
 
@@ -115,6 +116,7 @@ public class SkipBar : MonoBehaviour
 
     IEnumerator skip() {
 		if (shouldSkip && !skipped) {
+			DialogueSystem.setTypingSpeed(500);
 			if (DialougeFilesManager.activeDSIndex == 0) {
 				dialogueSystem.SkipDialogue();
 			} else if (DialougeFilesManager.activeDSIndex == 1) {
