@@ -1723,7 +1723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.999756, y: -27.820068}
+  m_AnchoredPosition: {x: -38.999756, y: -27.819763}
   m_SizeDelta: {x: 98.910034, y: 55.640015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321495838
@@ -2676,6 +2676,17 @@ PrefabInstance:
       objectReference: {fileID: 1297962417}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d1dcd2c6cb02084881973bd2a699ca6, type: 3}
+--- !u!114 &2036466822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3468470243203886386, guid: 920b5b7d96d69564688bb015234913f9, type: 3}
+  m_PrefabInstance: {fileID: 1704347190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0f92f4bde4f0246a30038f323a9822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2049447122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2993,7 +3004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.size
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[0].name
@@ -3084,6 +3095,10 @@ PrefabInstance:
       value: final Monologue
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].name
+      value: ds
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[0].eventDelay
       value: 2
       objectReference: {fileID: 0}
@@ -3128,6 +3143,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].eventDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[1].FireNextEvent
       value: 1
       objectReference: {fileID: 0}
@@ -3168,7 +3187,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[21].FireNextEvent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[0].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
@@ -3192,9 +3223,21 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[20].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[0].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 488369245}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[1].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3268,11 +3311,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 488369245}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2036466822}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[0].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FireDialogueSequencedEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[1].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
@@ -3342,6 +3397,14 @@ PrefabInstance:
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FireDialogueSequencedEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[0].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueSequenceEventManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[1].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3416,8 +3479,16 @@ PrefabInstance:
       value: DialogueSequenceEventManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Scene_Navigator_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[19].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[20].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[1].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -3440,7 +3511,15 @@ PrefabInstance:
       value: CafeTrack
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[20].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856351, guid: 261c44e291552d049a427a193c1c3385, type: 3}
@@ -5184,7 +5263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -16.75}
+  m_AnchoredPosition: {x: 0, y: -16.749756}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2473411598134588076
