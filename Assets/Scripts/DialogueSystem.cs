@@ -316,7 +316,7 @@ public class DialogueSystem : MonoBehaviour
                 }
                 doneSkipping = true;
 
-				dialogueLogger.AddToLog(dialougeToType, false);
+				dialogueLogger.AddToLog(dialougeToType, false, false);
 
 				//dialogueTextFeild.text = dialougeToType;
 

@@ -580,7 +580,7 @@ MonoBehaviour:
   isComponentInObject: 0
   dialogueTextFeild: {fileID: 2473411597110887202}
   waveSpeed: 5
-  waveWavelength: 0
+  waveWavelength: 0.05
   waveHeight: 3
   shakePower: 2
 --- !u!1 &2473411597110887204

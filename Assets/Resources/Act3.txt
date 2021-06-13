@@ -1,0 +1,191 @@
+-Act3-1
+#speaker 
+It was a lazy Monday. Alice was sipping tea in Marisa's shop. It usually was not really kept well, but alas, after all these years, Marisa had decied to tidy it up in a week for two purposes:
+One: to make sure she is able to sustain herself due to her growing age. She does not have the energy nor time to go for adventures anymore, thus rendering her to stay at her house most of the time.
+Two: spending more quality time with Alice.
+Of course, Alice went in and helped her whenever she can, that is, whenever she does not spend her time tending to her dolls.
+She was worried that Marisa's in her 60's would not be able to clear everything in a week, as it was not jsut Marisa's stamina that bothered her, it was the abysmal collection of magical items that they had to sort through one-by-one.
+
+#speaker Marisa
+Ok, done!
+
+#speaker 
+The black witch walked out of the room with a clipboard, marking the final tick on the paper attached to it. She then placed the clipboard on the counter and sat down together with Alice.
+A cup of tea laid in front of her, between her and the doll maker.
+
+#speaker Marisa
+Aw, you prepared a tea just for me? Thanks sweetie!
+
+#speaker Alice
+No problem, Marisa.
+
+#speaker
+They then continued sipping tea in silence.
+That was probably too long.
+Marisa had waited for 10 minutes waiting for Alice to do something about it, but all she saw was her fiddling with the doll she had. It is quite clear that she decided to spend time with Marisa by fixing up her dolls, again.
+Marisa does not really mind too much, actually. But considering her age, and her condition that she does not really want to tell Alice yet, she feels that her time is gonna be up soon.
+She is not gonna let her opportunity slip, so she has to say something.
+
+#speaker Marisa
+Hey, Alice.
+
+#speaker Alice
+Yeah?
+
+#speaker Marisa
+You, uh, bring anything fun for us old ladies?
+
+#speaker Alice
+I do wish you stop putting us in the old ladies category, but alright, let's see here...
+How about we do a little puppet show?
+
+#speaker Marisa
+No way, it's always you who takes the spotlight. You probably just want to show off some new puppet technique you mastered.
+
+#speaker Alice
+Sigh, alright, how about a game of chess?
+
+#speaker Marisa
+Nah, too slow and boring.
+
+#speaker Alice
+You just do not understand the novelty of thinking strategically.
+Well, I do have one thing in mind that you will not say no to.
+
+#speaker 
+Alice raised her hand, seemingly calling for something. before long, Shanghai entered the room floating to her hand. The doll was holding a metal box that was a little rusted.
+It placed the box on the table, waved its small hand to both her master and her girlfriend, before flying back home.
+Marisa looked at the box closely. She cannot seem to put a finger on what it is, until Alice opened the box. It was the deck of cards that she gifted to Alice 40 years ago.
+Once again, Alice happily harnessed her magic powers, and the deck of cards sprang to life, reading their memories, feelings, desires, everything about them. Then the cards arranged themselves nicely on the table.
+The black witch was still looking at Alice in astonishment. But it seems like she is lost in thought.
+
+#speaker Alice
+Hey Marisa, are you alright?
+
+#speaker Marisa
+I... was just surprised that you still have the deck. Does it mean that much to you, dear?
+
+#speaker Alice
+I mean, it certainly helped me to get you to talk to me more. Plus, at that time, i just want to know you more. Even at this old age I feel like I've just scratched the surface of you.
+
+#speaker Marisa
+So what do you want to achieve with this deck today?
+
+#speaker Alice
+To... spend more time with you. I know that you've been trying to spend time with me. To make the most of our moment together. And I believe this deck that you gave me will help me out.
+It revealed our feelings for each other after all. It helped us connect together on a different level.
+
+#speaker Marisa
+Alice...
+
+#speaker Alice
+This time, I wanted to make sure our time here is productive and meaningful. So...
+
+#speaker 
+Alice's face turned red again. In her immortal life, she has never been this direct. She has never made a move this big before, and it took her the last remaining courage to finish the rest of her sentence.
+
+#speaker Alice
+...Let's make the best of our time together.
+
+#speaker Marisa
+Alright, anything for my girl, hehe.
+-
+
+-Act3-2
+#speaker 
+As the ladies returned to finish their tea, Alice could not help but still worry about her lover. why did she not seek immortality like her? Why live at and old age and die?
+Despite talking to her and getting close to her, she still has a lingering question regarding one of Marisa's "life choices", a question that has only grown more concerning as time goes on.
+Once Alice placed her empty tea cup on the table, she decided to ask her the question.
+
+#speaker Alice
+Marisa, have you thought of seeking immortality yourself?
+
+#speaker 
+Marisa looked at Alice curiously.
+
+#speaker Marisa
+What about it?
+
+#speaker Alice
+I mean, aren't you a Magician like me? Why not live forever and be with me?
+We can play this card game forever, tend to the dolls forever, and even make sure your shop is a huge success, creating branches all over the world with your name on it...
+
+#speaker Marisa
+Well, that is true, but...
+
+#speaker Alice
+... But?
+
+#speaker 
+The black witch looked towards the door, showing a look of melancholy, as if she had finally turned into a wise old woman. She starts speaking in a somber, wise tone as well.
+
+#speaker Marisa
+Y'know, I would like to have that too. But think about it, if you manage to live forever, does it make your life more meaningful?
+Sure, I get to live forever with you. But what about others?
+Reimu, I doubt that lazy woman would go for immortality too. I guess I could see Kourin more often, but eh, really? That guy?
+I'll also miss that kappa at the Genby Ravine, I wonder how she is doing now.
+
+#speaker 
+She turned her head, facing Alice with a smile. The kind that seems to have accepted fate more than anything else.
+
+#speaker Marisa
+All I'm saying is, if I become immortal, I would miss my adventures with them, along with my memories. I rather treasure everything, including the memories of you.
+
+#speaker 
+Marisa looked up at the ceiling, and chuckled softly.
+
+#speaker Marisa
+Strange, it seems my treasure hoarding tendencies have become a part of me. I guess I want to treasure all of my memories.
+
+#speaker Alice
+I'm sorry, I... guess I'm selfish after all.
+
+#speaker Marisa
+Nah, it's alright sweetie! Remember that one time a guy tried to woo you during the village festival?
+Not only does the boy not know you're immortal, he also doesn't know you had a girlfriend! So I had to step in and assert my dominance.
+
+#speaker 
+They laughed together, reminiscing about that memory when they were young. Then they looked at the darkening skies.
+It's getting late for them both. Alice got ready to leave for her home.
+
+#speaker Marisa
+I'm just glad you're here with me, Alice. Thanks for helping me clear all the boxes of treasure.
+
+#speaker Alice
+No problem... dear. See you around, alright?
+
+#speaker 
+Alice hugged the witch, <color=4d65bd>as she always does before they part ways. And as always,</color> marisa receives it and returns the hug with love.
+They have hugged each other many times in the past, but this time, <color=4d65bd>it feels different.</color>
+<color=4d65db>It feels like</color> the acceptance for the both of them. That someday, one of them will be gone, and one of them will be alone.
+Alice hugged really tight as deep down, she doesn't want her to be gone, she wants to keep hugging her again. It caught Marisa's attention.
+
+#speaker Marisa
+Uh... Alice, is everything alright, dear?
+
+#speaker Alice
+Huh... Oh... Yeah...
+Was just lost in thought about stuff, it's... uh...
+
+#speaker Marisa
+Dolls?
+
+#speaker Alice
+Uh... yeah... Dolls! Haha, got to get back to making the perfect doll... See you soon.
+
+#speaker Marisa
+Hah, of course! Don't forget to think about me in your sleep too! Goodbye!
+
+#speaker 
+As Alice left the shop after their hug, Marisa adjusted her seat to face the shop's counter.
+She began reminiscing her memories about her life, thinking back about her adventures with everyone, especially her times with Alice.
+As Alice walked back home, her thoughts were racing. She can only think about Marisa.
+
+#speaker Alice
+<i>I guess it can't be helped.
+She will be gone.
+It is just a matter of time.
+It's alright Alice, she accepts that she will be gone and she is happy about it.</i>
+But...
+<i>Why aren't you happy about it, Alice...</i>
+-
