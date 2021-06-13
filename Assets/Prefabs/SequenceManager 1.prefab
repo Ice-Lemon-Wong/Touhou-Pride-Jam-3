@@ -1,0 +1,685 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2022589341059051720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2022589341059051726}
+  - component: {fileID: 2022589341059051721}
+  m_Layer: 0
+  m_Name: Card Game Sequence Event
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2022589341059051726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022589341059051720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2022589341903856351}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022589341059051721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022589341059051720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea508da4be1903458ca02b6fe0640d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sm: {fileID: 2022589341903856350}
+  dfm: {fileID: 0}
+  loopEvents: 0
+  dialogueSystemIndex: 0
+  cardGameSequenceEvents:
+  - xBounds: {x: -5.5, y: 5.5}
+    yBounds: {x: 2, y: -2}
+    cardLayout: {x: 5, y: 2}
+    turnAmount: 10
+    isCheat: 0
+    isClosing: 0
+    isFinal: 0
+    isAct4: 0
+    proceedNextEvent: 1
+  - xBounds: {x: -2, y: 2}
+    yBounds: {x: 0, y: 0}
+    cardLayout: {x: 2, y: 1}
+    turnAmount: 10
+    isCheat: 1
+    isClosing: 1
+    isFinal: 0
+    isAct4: 0
+    proceedNextEvent: 1
+--- !u!1 &2022589341604306556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2022589341604306557}
+  - component: {fileID: 2022589341604306818}
+  m_Layer: 0
+  m_Name: BG SequenceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2022589341604306557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022589341604306556}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2022589341903856351}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022589341604306818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022589341604306556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97078ca077ee512449f648787a8470a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
+  bgEvents:
+  - bgIndex: 1
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
+  - bgIndex: 2
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
+  - bgIndex: 3
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
+  - bgIndex: 3
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
+  - bgIndex: 0
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
+  - bgIndex: 2
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
+  - bgIndex: 0
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
+  loopEvents: 0
+--- !u!1 &2022589341903856345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2022589341903856351}
+  - component: {fileID: 2022589341903856350}
+  - component: {fileID: 2022589341903856348}
+  m_Layer: 0
+  m_Name: SequenceManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2022589341903856351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022589341903856345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.164977, y: -0.16736782, z: 81.332634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2022589342145951964}
+  - {fileID: 2022589341604306557}
+  - {fileID: 2022589341059051726}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022589341903856350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022589341903856345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99527b50849e2214286fe95effce27b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSequenceIndex: 0
+  loopEvent: 0
+  sequecedEvents:
+  - name: Intro of Act 1
+    eventDelay: 2
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Title
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ActTitle
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: White Bg transition
+    eventDelay: 5
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589341604306818}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: Play Cafe BGM
+    eventDelay: 0
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: AudioManager2D, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: CafeTrack
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: cafe exterior BG transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589341604306818}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: Stating DIalogue
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Cafe interior Bg transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589341604306818}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: Cafe Interior dialogue -1
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Cafe Interior dialogue -2
+    eventDelay: 2
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Card game
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589341059051721}
+          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireCardGameSequenceEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Before closing dialogue
+    eventDelay: 2
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: closing game
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589341059051721}
+          m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireCardGameSequenceEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: hand holding dialogue
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Cafe Interior BG transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589341604306818}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: Cafe interior Dialogue- 3
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Transition To Black
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589341604306818}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: cafe exterior BG transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589341604306818}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: Cafe exterior dialogue 2
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Cafe exterior dialogue 3
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+  - name: Black BG transition
+    eventDelay: 1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589341604306818}
+          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireBGEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 1
+  - name: final Monologue
+    eventDelay: 2
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2022589342145951967}
+          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
+          m_MethodName: FireDialogueSequencedEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    FireNextEvent: 0
+--- !u!114 &2022589341903856348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022589341903856345}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635734959130ffb42b925ee6844d68b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputKeyName: Advance
+  functionsToTest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2022589341903856350}
+        m_TargetAssemblyTypeName: TestSequenceManager, Assembly-CSharp
+        m_MethodName: FireSequence
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &2022589342145951966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2022589342145951964}
+  - component: {fileID: 2022589342145951967}
+  m_Layer: 0
+  m_Name: Dialogue Sequence Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2022589342145951964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022589342145951966}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2022589341903856351}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022589342145951967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022589342145951966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97c64304b7c8554d99740de613d226c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sm: {fileID: 2022589341903856350}
+  dfm: {fileID: 0}
+  dialogueSequencedEvents:
+  - fileName: Act1
+    startingLine: Intro
+    dialogueSystemIndex: 1
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-1
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-2
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-3
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-4
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-5
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-6
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-7
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Act1-8
+    dialogueSystemIndex: 0
+    proceedNextEvent: 1
+  - fileName: Act1
+    startingLine: Outro
+    dialogueSystemIndex: 1
+    proceedNextEvent: 1
+  loopEvents: 0

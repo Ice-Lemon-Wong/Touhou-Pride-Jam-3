@@ -9,13 +9,18 @@ public class DialogueSequenceEventManager : MonoBehaviour
     [SerializeField] DialougeFilesManager dfm;
     [SerializeField] DialogueEvent[] dialogueSequencedEvents;
     [SerializeField] private bool loopEvents = false;
+    [SerializeField] private int startingIndex = 0;
+    [SerializeField] private bool startingFromZero = true;
     private int currentDialogueEventIndex = 0;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        currentDialogueEventIndex = 0;
+       
+            currentDialogueEventIndex = 0;
+       
+       
     }
 
     public void FireDialogueSequencedEvent() {

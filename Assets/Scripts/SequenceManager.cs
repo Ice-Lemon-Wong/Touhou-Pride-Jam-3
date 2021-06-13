@@ -9,17 +9,29 @@ public class SequenceManager : MonoBehaviour
 
     [SerializeField] private int currentSequenceIndex = 0;
     [SerializeField] private bool loopEvent;
+    [SerializeField] private int startingIndex = 0;
+    [SerializeField] private bool startingFromZero = true;
     [SerializeField] private SequecedEvent[] sequecedEvents;
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
+        if (startingFromZero) {
+            currentSequenceIndex = 0;
+        }
+        else
+        {
+            currentSequenceIndex = startingIndex;
+        }
         
-        currentSequenceIndex = 0;
+
         FireSequence();
     }
 
     public void FireSequence() {
+
         if (currentSequenceIndex < 0 || currentSequenceIndex >= sequecedEvents.Length) return;
 
         StopCoroutine(FireSequenceRoutine());
