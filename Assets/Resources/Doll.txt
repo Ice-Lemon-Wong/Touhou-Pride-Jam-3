@@ -1,9 +1,86 @@
 ﻿-card_1
-this is a doll
+#speaker Alice
+Dolls, huh...
+
+#speaker Marisa
+Oooo, dolls? I kinda wanna know more about your dolls. What do they mainly do at your house?
+
+#speaker Alice
+Well, they help clean up the house, serve me tea, cook food for me, so on, so forth.
+
+#speaker Marisa
+Erm, really? That’s it?
+
+#speaker Alice
+Are you expecting them to help me dress while feeding me cakes, bow down whenever I walk past them, and When they misbehave, I lecture them for hours?
+
+#speaker Marisa
+...Yes.
+
+#speaker Alice
+<i>You and your imagination I swear... But it does make our conversation a little bit more exciting, I suppose.</i>
+
+#speaker 
+Then there was silence, but not for long. Alice decided to use this opportunity to take a sip.
+
+#speaker Marisa
+So do you make dolls that look like me?
+
+#speaker 
+It was a bad time for Alice to take a sip of her drink. She almost spat it all out onto Marisa’s face.
+
+#speaker Alice
+Dolls of y-y-you?
+
+#speaker Marisa
+Ya heard me! Well, did you?
+
+#speaker 
+She gulped as many questions raced into her head. How did she know?: Did she somehow place a magical item that spies on me? Did she finally put that thievery to good use and looked into my house?
+
+Well, not that she minds anyway.
+
+#speaker Alice
+...Yes.
+
+#speaker Marisa
+Ok, well, how many?
+
+#speaker 
+Alice swallowed whatever that was inside her throat further down. She does not like lying after all, especially to Marisa, who has done so much for her.
+
+#speaker Alice
+...Ten.
+
+#speaker 
+At that moment, she saw Marisa’s face become red. She is blushing.
+
+#speaker Marisa
+Awww, you... actually care about me.
+
+#speaker Alice
+L-Let’s just continue on with the game alright?
 -
 
 -card_2
-this is doll 2
+#speaker Alice
+Huh, a doll card.
+
+Marisa: Speaking of dolls, I remember you had a gigantic one somewhere right? The one that Cirno had fought before.
+Alice: Ah yes, the Goliath doll. I’m still finding ways to perfect it. What about it?
+Marisa: I don’t know about you, but I believe two swords aren’t enough to finish off a Magician, nor a youkai. Why don’t you add something magical, like.... A magic wand or something?
+Alice: Really? A gigantic doll, using its ludicrous speed to overcome its massive size, and you want it to cast spells?
+Marisa: Hey, with its massive body, it could contain a lot of magical energy! So why not?
+
+Alice rubbed her chin, clearly thinking about Marisa’s proposal.
+
+Alice: <i>You know, that is kinda true. Could’ve helped me when fighting against Cirno that time. Goliath could shoot fireballs, do that dragon punch, maybe do that spinning tornado kick or something, all from that karate guy with a red headband. Hmm...</i>
+
+Marisa: ...You’re thinking of that arcade fighting game again, aren’t you?
+Alice: H-Huh? Yeah! One has to find inspiration from other places to further improve their craft.
+Marisa: Right… Anyway, have you ever thought of adding a magic broom onto Goliath?
+Alice: That’s ridiculous. Alright, no more ideas from you. Let’s continue with the game.
+Marisa: Aw man, think about it at least, Alice!
 -
 
 -card_3
