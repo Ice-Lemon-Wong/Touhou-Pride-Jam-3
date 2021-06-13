@@ -1,9 +1,76 @@
 ﻿-card_1
-this is a book
+#speaker Marisa
+Books huh, I wonder what about them...
+
+#speaker Alice
+Other than the fact that you stole tons and tons of them for the quest of becoming the strongest magician, yeah, I wonder what about them.
+
+#speaker Marisa
+Hey, I “borrowed” them alright? I merely just forgot to return to them!
+
+#speaker 
+Alice only sighed from her response. That is what she always says. But there is a question that is bugging her.
+
+#speaker Alice
+If you steal so much from them, does that mean the library is actually useless to you?
+
+#speaker Marisa
+What do you mean?
+
+#speaker Alice
+I mean, you should’ve found what you needed to become the strongest by now, right? Why do you still seek more from them?
+
+#speaker Marisa
+Eh, some of them have stuff that I already know. Other times, it’s completely useless. Like, for some reason they're talking about gardening in Gensokyo. Really, gardening? Not my forte!
+
+#speaker Marisa
+But there are some secret books that I’m still looking for. And besides...
+
+#speaker
+The black witch chuckled.
+
+#speaker Marisa
+I can practice my thievery from the Library anyway, teehee!
+
+#speaker Alice
+<i>She is actually unsalvageable... But I guess she could surprise me more with her gifts.</i>
 - 
 
 -card_2
-this is book 2
+#speaker Marisa
+Oh hey, it’s my favorite thing to “borrow” from!
+
+#speaker Alice
+You know, I am actually curious, is there anything new from the library? At the rate of you “borrowing” them, it’s a surprise you still have things to steal from.
+
+#speaker Marisa
+Yeah, they do supply new books, some of them replace the one I stole, some of them are newer books from Patchouli, and some are extra dangerous books that I would probably die if I mishandled them. 
+
+#speaker Alice
+Well now I’m curious, what are the contents of those “dangerous books”?
+
+#speaker Marisa
+Some of them would probably freeze you to the point of, according to them, cryostasis. Some would just cause your luck to plummet to the point where you could “unfortunately” slip and hit your head too hard. The worst among them all…
+
+#speaker 
+Alice, intrigued, leaned in. Marisa does the same, hoping her words would not be heard by the public as she whispers.
+
+#speaker Marisa
+...There are books that can summon tentacles and do... horrible stuff!
+
+#speaker Alice
+Eek!
+
+#speaker 
+Just as Alice showed her scared and disgusted face, Marisa laughed.
+
+Marisa: Got you! Really now, if there were tentacles from a book, not only would I have stayed away from it forever, the Library would have a serious pet problem. 
+Alice: You… pranked me?
+Marisa: No. Pfft. Of course not.
+Alice: Right, I also forgot you’re the worst liar among the people I know…
+
+As her heart became still, Alice could not help but smile a little. Despite being pranked, she liked the way Marisa laughed at her. It is quite endearing and, dare she say, cute.
+
 -
 
 -card_3
