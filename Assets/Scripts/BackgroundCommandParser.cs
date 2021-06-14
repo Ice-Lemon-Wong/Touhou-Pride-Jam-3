@@ -41,7 +41,15 @@ public class BackgroundCommandParser : DialogueSystemCommandParser
                 Debug.LogError($"argument '{commandLine[2]}' at index 2 is not a valid number to specify transtion time");
                 return;
             }
-            bgm.SetActiveBG(bgIndex, transitionTime);
+            if (transitionTime <= 0)
+            {
+                bgm.SetActiveBG(bgIndex, 0.2f);
+            }
+            else {
+                bgm.SetActiveBG(bgIndex, transitionTime);
+            }
+
+            
         }
         else {
             bgm.SetActiveBG(bgIndex);

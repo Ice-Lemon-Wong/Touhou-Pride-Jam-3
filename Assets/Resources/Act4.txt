@@ -1,25 +1,44 @@
--Act4-1
+-Intro
 #speaker 
 A gust of wind blows into the dollhouse.
 A strike of lightning illuminated the unlit room.
 Alone in the house, sat Alice, looking at the familiar deck of cards that had been laid out nicely.
-She had stared at it for long periods of time now, not even touching the surface of the cards after knowing that Marisa had been sent to the <color=4d65b4>Eirin' medical ward</color> due to her illness reaching critical levels.
-The only thing that clouds her mind now is <color=4d65b4>her fear</color> of seeing her love on the hospital bed, the static beep of the machine signifying the flatlining of her heartbeat.
+She had stared at it for long periods of time now, not even touching the surface of the cards after knowing that Marisa had been sent to the <color=#4d65b4>Eirin' medical ward</color> due to her illness reaching critical levels.
+The only thing that clouds her mind now is <color=#4d65b4>her fear</color> of seeing her love on the hospital bed, the static beep of the machine signifying the flatlining of her heartbeat.
+-
+
+
+
+
+
+
+-Act4-1
 
 #speaker Alice
-<i>I can't! I... have to be happy for her sake...
-I mean... you don't really need Marisa to play these cards. Right? ...Right?</i>
+<i>I can't! I... </i>
+<i>have to be happy for her sake...</i>
+<i>I mean... you don't really need Marisa to play these cards. Right? ...Right?</i>
 
 #speaker 
 Shaking her head, Alice reached out, and flipped her first card.
 -
 
+
+
+
+
+
 -Act4-2
+#audio stopFade 1
 #speaker 
 She was disturbed by the sound of her house phone ringing.
 
 #speaker Alice
 <i>Could it be...?</i>
+
+#portrait 2 disable
+#background 0
+
 
 #speaker 
 Alice immediately stopped playing and ran to the phone, picking it up.
@@ -28,27 +47,47 @@ Alice immediately stopped playing and ran to the phone, picking it up.
 Hello...?
 
 #speaker Eirin
-Hello Alice, it's me Eirin. Just wanting to know how is it going.
+Hello Alice, it's me <color=#905ea9>Eirin</color>. Just wanting to know how is it going.
 
 #speaker Alice
 Everything is fine here, how is Marisa?
 
 #speaker Eirin
-Well uh, Marisa... Well... she...
-I am afraid that she won't last much longer...
+Well uh,... 
+Marisa... 
+Well... 
+she...
+#text typespeed 5 0 7
+#text shake 0 7
+......
+#text wait 1
+#text reset all
+<color=#ae2334>I am afraid that she won't last much longer...</color>
 
+
+#text wait 2
+#background 3 0
+#audio playFade FinalTrack2
 #speaker Alice
+#text typespeed 10 0 7
+#text shake 0 12
 I am sorry?
+#text reset all
 
 #speaker Eirin
 Her condition is critical! I am sorry but we have tried our best, but her illness got the best of her. She only has tonight-
+
+#background 0 99
 
 #speaker 
 The call suddenly hung up. Only the beep of the phone remains.
 
 #speaker Eirin
-Alice? Alice?!!
+Alice? <size=30>Alice?!!</size>
 -
+
+
+
 
 -Act4-3
 #speaker 
@@ -59,30 +98,54 @@ The worst part was seeing the old witch, face full of wrinkles, still smiling wh
 Alice cannot bear it, the mixture of seeing someone in pain, yet showing them her warm, welcoming smile, just hurts her in more ways than one.
 Alice ran to Marisa, and gave her a hug from the side of the hospital bed, unable to bear the pain from seeing her condition.
 Marisa felt her shirt get wet, not just from Alice's wet clothes, but also from the doll maker's tears. Her only response was to stroke Alice's golden hair, trying to reassure her as best as she could.
+-
 
+
+
+
+
+-Act4-4
 #speaker Alice
-Why don't you tell me... about your disease...?
+Why don't you tell me... 
+about your illness...?
 
 #speaker Marisa
 Can't really make you worry about me now, you still got dolls to make, ya know?
-
 #speaker Alice
-That's not funny! I would've abandoned them to fix you up...
+#text shake 0 20
+<size=30><b><color=#ae2334>That's not funny!!!</color></b></size>
+#text reset all
+I would've abandoned them to fix you up...
 
 #speaker Marisa
 And leaving Shanghai and the rest alone? C'mon girl, you're better than this.
 
+#speaker Alice
+......
+
+-
+
+
+
+
+
+
+-Act4-5
 #speaker 
 Alice started crying, she could not hold back how she felt anymore.
 
 #speaker Alice
-It hurts, it hurts seeing you like this, it hurts to know that I can never see you again, spend time together, spend time having dates like before.
+<color=#ae2334>It hurts...</color>
+it hurts seeing you like this...
+it hurts to know that I can never see you again...
+spend time together...spend time having dates like before...
 
 #speaker Marisa
 ...
 
+#text wait 1
 #speaker Alice
-It hurts to know that I could have made you an immortal like I do... but you refuse...
+It hurts to know that I could have made you an immortal like I do...<color=#ae2334>but you refuse...</color>
 
 #speaker Marisa
 ...
@@ -90,37 +153,61 @@ It hurts to know that I could have made you an immortal like I do... but you ref
 #speaker Alice
 I just didn't have anyone I felt like talking to... I don't want to lose you...
 
+#text wait 1
 #speaker Marisa
 Alice...
 
 #speaker Alice
-I just wanted to play cards with you...
+#text typeSpeed 10 0 40
+<color=#ae2334>I just wanted to play cards with you...</color>
+#text reset all
 
 #speaker 
 The doll maker can only sob. She had to make the best use of her final visit with Marisa. As she uncontrollably let her tears flow, her mind went back to the very first time that they shared their interest and passion on an intimate level.
+-
 
+
+
+
+
+-Act4-6
 #speaker Marisa
 Alice... Please, don't feel sorry for any of this.
 I should be sorry for not telling you about my illness, I don't want to make you worried...
 I do indeed miss you, I fear what will be like not being able to see you again. Having you as my girlfriend makes my life much more worth living, surely beats that shrine maiden.
 I do also wish we can just spend a little more time together. Losing you hurts too.
 
+#speaker Alice
+......
+-
+
+
+
+
+
+
+-Act4-7
 #speaker 
 Eiring stepped in, holding the metal box where she stored her cherished deck of cards.
 
 #speaker Eirin
-Shanghai brought this to me. I'll place it here.
+Shanghai brought this to me...
+I'll place it here.
 
 #speaker 
 She placed the familiar metal box on the table that was attached to the bed, before excusing herself.
 
 #speaker Marisa
 Hey Alice, can you do me a favour, one last wish of mine?
-Why don't we play the card game that I gifted you one last time?
+<color=#f04f78>Why don't we play the card game that I gifted you one last time?</color>
 
 #speaker 
 Alice wiped her tears, looked at the box, and made a decision.
 
+#speaker Alice
+......
+
+#text wait 1
 #speaker Alice
 You want to have the last game with me, Marisa?
 
@@ -131,28 +218,68 @@ I wouldn't have it any other way, Alice.
 As she said her words, the box magically opens, and the deck of cards sets itself onto the table, creating the final stage for them to confess their feelings. This is it, the last game.
 -
 
--Act4-4
+
+
+
+
+-Act4-8
 #speaker 
-There was only silence as the game came to an end. Alice could only sit beside Marisa, unable to say anything. Marisa's time is coming <color=4d65b4>soon</color>, she knows that well.
+There was only silence as the game came to an end. Alice could only sit beside Marisa, unable to say anything. Marisa's time is coming <color=#lo4d65b4>soon</color>, she knows that well.
 But she cannot find the words, not can she say anything. Even if she could, her emotions are preventing them from saying it out loud.
 Marisa, knowing the pain that her lover is feeling, reached out for Alice's hand. Alice quickly complied and held it tightly, as Marisa spoke weakly.
 
 #speaker Marisa
-Dear... It's alright. It might be hurtful to see me go. This is the fate for all humans. We come and go, leaving ourselves from this world to the other one.
+Dear... It's alright. It might be hurtful to see me go. 
+This is the fate for all humans. We come and go, leaving ourselves from this world to the other one.
 Our lifetime may be short compared to the average yokai, but as long as it is meaningful and full of memories, whether it be sad, or happy, joyful or regretful, love or hate, then we could say that we have lived our life to the fullest.
-I remember clearly that you were never such a person back then, you always stayed at home with your dolls, rarely wanted to go outside, and even had trouble trying to find the words to talk to me. We had a love-hate relationship since the Imperishable Night incident.
-But look at you know. After you received the cards I've gifted, you used it to the fullest to come hangout with me. Come to talk and have a laugh. Those moments are truly unforgettable. It is absolutely relieving to see you being comfortable talking with me.
-And thanks to you, I can confidently say that I lived to my fullest. Thank you for giving me the joy of life, the warmth of love, and the sadness of passing. I'm glad to have you not just as a lover, but as a great companion of life. So for my sake, Alice...
-Live your life to the fullest, for me, and you. Do treasure my gift for the rest of your life.
+I remember clearly that you were never such a person back then, you always stayed at home with your dolls, rarely wanted to go outside, and even had trouble trying to find the words to talk to me. 
+We had a love-hate relationship since the Imperishable Night incident.
+But look at you know. After you received the cards I've gifted, you used it to the fullest to come hangout with me. Come to talk and have a laugh. Those moments are truly unforgettable. 
+It is absolutely relieving to see you being comfortable talking with me.And thanks to you, I can confidently say that I lived to my fullest. 
+Thank you for giving me the joy of life, the warmth of love, and the sadness of passing. I'm glad to have you not just as a lover, but as a great companion of life. 
+So for my sake, Alice...
+#test wave 0 95
+<color=#f04f78>Live your life to the fullest, for me, and you. Do treasure my gift for the rest of your life.</color>
 
 #speaker 
 Alice was sobbing as she talked.
 
 #speaker Alice
 ...Save yourself from worrying about me. I'll promise that I will be happy for the rest of my life. For your sake... anything from you...
+-
+
+
+-Act4-9
+#speaker Alice
 But, Marisa... Please, don't go just yet. Stay here a little longer, will you?
 
 #speaker 
 Marisa could only chuckle. She has said enough.
 They looked at each other, for the last time. A silent gesture of the great farewell.
+-
+
+-Outro
+......
+Hi there,
+I am the creator of this game
+I just want to say thank you for finishing the game
+It's the product created by my friends and I
+We've put a lot of hard work into this
+The development did not go as planned
+We had to cut quite a number of features from the game
+But we do wish to tell a story
+A story through conversations
+I hope you like the story or find it touching in some ways
+I do have a lot of self doubt about the story and the game but,
+if you enjoyed it 
+that is already a reason I should make it in the first place
+For that I deeply appreciate it
+Everything comes and goes and that is our sad reality
+We can cherish our loved ones that are still around us
+So do spend time with your loved ones
+These will be the precious moments that you won't regret
+Even if our daily life demands from us, we can always try
+......
+Thank you for playing
+I'll see you on the next adventure
 -
