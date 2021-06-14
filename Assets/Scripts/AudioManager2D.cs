@@ -217,9 +217,10 @@ public class AudioManager2D: MonoBehaviour
                 return;
             }
 
-            Debug.LogError($"the audio clip {audioName} cannot be found\n please check that your spelling is correct");
+            
         }
-        
+        Debug.LogError($"the audio clip {audioName} cannot be found\n please check that your spelling is correct");
+
     }
 
     public void PlayFade(string audioName, float fadeAudioEffectSpeed)
@@ -264,8 +265,9 @@ public class AudioManager2D: MonoBehaviour
                 return;
             }
 
-            Debug.LogError($"the audio clip {audioName} cannot be found\n please check that your spelling is correct");
+            
         }
+        Debug.LogError($"the audio clip {audioName} cannot be found\n please check that your spelling is correct");
 
     }
 

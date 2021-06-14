@@ -36,7 +36,7 @@ public class CardPlayerAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        debugAIDecision.text = AIDecision.ToString();
+        //debugAIDecision.text = AIDecision.ToString();
     }
 
     public void InitKnowledgeBase(int size, int turnCount, bool isCheat = false)
@@ -57,13 +57,13 @@ public class CardPlayerAI : MonoBehaviour
     {
         decisionSeed = new int[turnCount];
         currentTurn = 0;
-        seedText.text = "";
+        //seedText.text = "";
 
         if (cheat) {
 			for (int i = 0; i < decisionSeed.Length; i++)
             {
 				decisionSeed[i] = 1;
-				seedText.text += 1;
+				//seedText.text += 1;
 			}
 			return;
 		} 
@@ -119,10 +119,10 @@ public class CardPlayerAI : MonoBehaviour
             decisionSeed[Random.Range(decisionSeed.Length - 4, decisionSeed.Length)] = (int)Decisions.stuborn;
         }
 
-        for (int i = 0; i < decisionSeed.Length; i++)
-        {
-            seedText.text += decisionSeed[i];
-        }
+        //for (int i = 0; i < decisionSeed.Length; i++)
+        //{
+        //    seedText.text += decisionSeed[i];
+        //}
         
     }
 

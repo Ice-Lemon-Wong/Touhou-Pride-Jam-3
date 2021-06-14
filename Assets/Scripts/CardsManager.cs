@@ -472,8 +472,8 @@ public class CardsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        debugStateText.text = currentBoardState.ToString();
-        turnText.text = "turns left: " + currentTurn;
+        //debugStateText.text = currentBoardState.ToString();
+        //turnText.text = "turns left: " + currentTurn;
     }
 
     int GetUnmatchedCardsCount() {
