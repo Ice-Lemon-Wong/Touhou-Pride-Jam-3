@@ -1,4 +1,65 @@
 ﻿-card_3
-this is Afterlife 3
+#speaker Alice
+This card is...?
+
+#speaker Marisa
+Looks like <color=4d65b4>the netherworld</color>, I believe. The place where people go once they die.
+
+#speaker Alice
+Once they died huh...
+
+#speaker Marisa
+Y’know, I’ve read a lot of mythology for each different country and culture. Do you think some mean, big god will judge whether we will go to heaven or hell, based on how we live our lives?
+
+#speaker Alice
+I mean, it doesn’t seem that far fetched. Gensokyo is filled with magical beings after all. We do have Yama, for starters.
+
+#speaker Marisa
+Ugh, and the worst part is that no one has ever seen him yet…
+
+#speaker Alice
+We haven’t died yet, silly.
+
+#speaker Marisa
+Yeah, well, I’m just afraid that’s all. What if Yama deemed me unworthy and sent me to Hell? I don’t wanna get tortured by demons!
+
+#speaker Alice
+Well I guess you’ll probably end up in the Netherworld. I doubt Lord Yama would allow you to Heaven.
+
+#speaker Marisa
+But the Netherworld is quite scary though! Tons of ghosts and phantoms lurk here, and all are dangerous!
+
+#speaker Marisa
+Also there is that gluttuness ghost who seems to can’t stop thinking about eating...
+
+#speaker Marisa
+But speaking of Heaven, do people… really enjoy it there? I heard it is some kind of paradise for all humans. Like, what’s over there, really?
+
+#speaker Alice
+I... I don't know. No one has talked about it. How about your friend, Yukari? She knows what heaven looks like, right?
+
+#speaker Marisa
+She dodged the question when I asked her, so I don’t really know for sure. Maybe it is true...
+
+#speaker Alice
+What is true?
+
+#speaker Marisa
+That Heaven is truly sealed. No more humans allowed there.
+
+#speaker 
+Alice can only shake her head. At her age, she’ll probably think about this stuff. To top it off, Marisa was not immortal either. But as much as she keeps questioning, the only way to find out is by herself.
+
+#speaker Alic
+ We’ll never know unless we truly cross that boundary, alright? Let’s continue with the game, and think about this later.
+
+#speaker Marisa
+Alright alright, sorry if I made you worry about me. It comes with age.
+
+#speaker Alice
+So, you are old!
+
+#speaker Marisa
+Oh shush it, you! I don’t need more reminders!
 -
 

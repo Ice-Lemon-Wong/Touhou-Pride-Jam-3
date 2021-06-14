@@ -1,9 +1,108 @@
-﻿
+﻿-card_2
+#speaker Alice
+Is that...?
 
--card_2
-this is cirno 2
+#speaker Marisa
+Oh wow, it’s the idiot fairy!
+
+#speaker Alice
+Hey, don’t be like that. Every living being has intelligence, you know?
+
+#speaker Marisa
+Well, not for her.
+
+#speaker Alice
+Okay, why is that?
+
+#speaker Marisa
+I once told her that the Scarlet Devil Mansion had a grand opening of their mansion. At first she wouldn’t believe me, but I pulled out a fake copy of my pass to the Library. Then, she took my pass away and tried to actually enter the library. She didn’t even know that the Scarlet Devil doesn’t have a physical pass! Even Koakuma knows why not to have it.
+
+#speaker Alice
+Uh-huh...
+
+#speaker Marisa
+<color=4d65b4>Then there was another time. I was sparring with her. She kept using her signature spell card “Icicle Fall”, but she constantly misses every shot. I laughed so hard and she did not like that at all.</color>
+
+#speaker 
+Marisa realized Alice’s skeptical face.
+
+#speaker Marisa
+What’s wrong?
+
+#speaker Alice
+It’s just, my impression of her was that... She is a brilliant person with a hidden strategy.
+
+#speaker Marisa
+I-I’m sorry?
+
+#speaker Alice
+Like you, I sparred with her once. I employed my usual tactics, and simply overwhelmed her with my dolls.
+
+#speaker Marisa
+Uh, huh. And then?
+
+#speaker Alice
+Somehow, she placed mirrors on the dolls to triangulate my position and find out where I was amidst the chaos, and took me down, all during the battle!
+
+#speaker Marisa
+Wh-What?
+
+#speaker Alice
+Also, I fought her with my Goliath once. I kid you not, I was literally in the blender. When she explained how she defeated me, I was very confused. She used unknown terms like “cross-ups”, “meaties”, “set-ups”, and even more. When I researched what she meant…
+
+#speaker Marisa
+...Those are fighting game terms?
+
+#speaker Alice
+Yeah, exactly! I’ve no idea that she plays fighting games! And applied it to defeat me! She’s a genius!
+
+#speaker Marisa
+Yeah, but those are on combat-
+
+#speaker Alice
+And, get this, she knows how to trick youkais to visit the Netherworld. Just by giving them directions to the realm, then she told them “This will make you stronger”. When the youkais asked why they should believe her, she simply demonstrated her power!
+
+#speaker Marisa
+I, uh, heh, what? And it worked?
+
+#speaker 
+Alice nodded her head. Marisa was dumbfounded. 
+
+#speaker Marisa
+How could that idiot of a fairy be this… smart?
+
+#speaker Alice
+But if what you said is true, how could a smart fairy be this… dumb?
+
+#speaker 
+They looked down and thought hard, but eventually came out with the conclusion that this will take even longer than the game they are playing right now, and decided to discuss this another time.
 -
 
 -card_3
-this is cirno 3
+#speaker Marisa
+Hey, fairies!
+
+#speaker Alice
+Right, fairies huh? I find them quite easy to handle actually. You just need to treat them like children.
+
+#speaker Marisa
+Well, I also play pranks with them from time to time. It’s fun, really. You get to forget about the worries of life and just have fun playing in the Forest.
+
+#speaker 
+Marisa looked up to the ceiling while sipping her tea. The old lady’s wisdom speaking for Marisa.
+
+#speaker Marisa
+There are times where I wish I could live a carefree life like the fairies. Pranking people, being innocent and completely oblivious towards the world. Sometimes, I just wish that I would go back to being a kid again, y’know?
+
+#speaker 
+The old witch shook her head, before facing Alice with her trademark smile.
+
+#speaker Marisa
+Don’t mind an old lady talking about being a kid again, will ya? Let’s just continue on with the game.
+
+#speaker 
+Alice only nodded. But in her mind, she has her doubts.
+
+#speaker Alice
+At this age, you should’ve learnt about it. Why don’t you seek immortality yet…?
 -
