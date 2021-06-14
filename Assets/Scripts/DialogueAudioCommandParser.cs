@@ -27,6 +27,8 @@ public class DialogueAudioCommandParser : DialogueSystemCommandParser
     }
 
     void AudioCommandFunction(string[] commandLine) {
+        Debug.LogWarning("audio");
+
         if (commandLine[1].ToUpper().Equals(playCommandText.ToUpper()))
         {
             audioManager.Play(commandLine[2].Substring(0, commandLine[2].Length - 1));

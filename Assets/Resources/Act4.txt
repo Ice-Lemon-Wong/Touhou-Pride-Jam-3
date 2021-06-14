@@ -29,7 +29,7 @@ Shaking her head, Alice reached out, and flipped her first card.
 
 
 -Act4-2
-
+#audio stopFade 1
 #speaker 
 She was disturbed by the sound of her house phone ringing.
 
@@ -37,7 +37,7 @@ She was disturbed by the sound of her house phone ringing.
 <i>Could it be...?</i>
 
 #portrait 2 disable
-#background 0 
+#background 0
 
 
 #speaker 
@@ -66,7 +66,8 @@ she...
 
 
 #text wait 2
-#background 3 1
+#background 3 0
+#audio playFade FinalTrack2
 #speaker Alice
 #text typespeed 10 0 7
 #text shake 0 12
@@ -76,6 +77,7 @@ I am sorry?
 #speaker Eirin
 Her condition is critical! I am sorry but we have tried our best, but her illness got the best of her. She only has tonight-
 
+#background 0 99
 
 #speaker 
 The call suddenly hung up. Only the beep of the phone remains.
@@ -105,13 +107,12 @@ Marisa felt her shirt get wet, not just from Alice's wet clothes, but also from 
 -Act4-4
 #speaker Alice
 Why don't you tell me... 
-about your disease...?
+about your illness...?
 
 #speaker Marisa
 Can't really make you worry about me now, you still got dolls to make, ya know?
-
 #speaker Alice
-#text shake 0 18
+#text shake 0 20
 <size=30><b><color=#ae2334>That's not funny!!!</color></b></size>
 #text reset all
 I would've abandoned them to fix you up...
@@ -134,7 +135,7 @@ And leaving Shanghai and the rest alone? C'mon girl, you're better than this.
 Alice started crying, she could not hold back how she felt anymore.
 
 #speaker Alice
-It hurts...
+<color=#ae2334>It hurts...</color>
 it hurts seeing you like this...
 it hurts to know that I can never see you again...
 spend time together...spend time having dates like before...
@@ -223,7 +224,7 @@ As she said her words, the box magically opens, and the deck of cards sets itsel
 
 -Act4-8
 #speaker 
-There was only silence as the game came to an end. Alice could only sit beside Marisa, unable to say anything. Marisa's time is coming <color=4d65b4>soon</color>, she knows that well.
+There was only silence as the game came to an end. Alice could only sit beside Marisa, unable to say anything. Marisa's time is coming <color=#lo4d65b4>soon</color>, she knows that well.
 But she cannot find the words, not can she say anything. Even if she could, her emotions are preventing them from saying it out loud.
 Marisa, knowing the pain that her lover is feeling, reached out for Alice's hand. Alice quickly complied and held it tightly, as Marisa spoke weakly.
 
@@ -255,4 +256,30 @@ But, Marisa... Please, don't go just yet. Stay here a little longer, will you?
 #speaker 
 Marisa could only chuckle. She has said enough.
 They looked at each other, for the last time. A silent gesture of the great farewell.
+-
+
+-Outro
+......
+Hi there,
+I am the creator of this game
+I just want to say thank you for finishing the game
+It's the product created by my friends and I
+We've put a lot of hard work into this
+The development did not go as planned
+We had to cut quite a number of features from the game
+But we do wish to tell a story
+A story through conversations
+I hope you like the story or find it touching in some ways
+I do have a lot of self doubt about the story and the game but,
+if you enjoyed it 
+that is already a reason I should make it in the first place
+For that I deeply appreciate it
+Everything comes and goes and that is our sad reality
+We can cherish our loved ones that are still around us
+So do spend time with your loved ones
+These will be the precious moments that you won't regret
+Even if our daily life demands from us, we can always try
+......
+Thank you for playing
+I'll see you on the next adventure
 -
