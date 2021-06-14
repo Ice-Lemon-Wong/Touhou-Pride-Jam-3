@@ -101,6 +101,9 @@ Marisa felt her shirt get wet, not just from Alice's wet clothes, but also from 
 -
 
 
+
+
+
 -Act4-4
 #speaker Alice
 Why don't you tell me... 
@@ -221,7 +224,7 @@ As she said her words, the box magically opens, and the deck of cards sets itsel
 
 -Act4-8
 #speaker 
-There was only silence as the game came to an end. Alice could only sit beside Marisa, unable to say anything. Marisa's time is coming <color=#4d65b4>soon</color>, she knows that well.
+There was only silence as the game came to an end. Alice could only sit beside Marisa, unable to say anything. Marisa's time is coming <color=#lo4d65b4>soon</color>, she knows that well.
 But she cannot find the words, not can she say anything. Even if she could, her emotions are preventing them from saying it out loud.
 Marisa, knowing the pain that her lover is feeling, reached out for Alice's hand. Alice quickly complied and held it tightly, as Marisa spoke weakly.
 

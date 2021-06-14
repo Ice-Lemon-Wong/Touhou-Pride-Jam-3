@@ -85,8 +85,7 @@ Hey, with its massive body, it could contain a lot of magical energy! So why not
 Alice rubbed her chin, clearly thinking about Marisa’s proposal.
 
 #speaker Alice
-<i>You know, that is kinda true. Could’ve helped me when fighting against Cirno that time.
-Goliath could shoot fireballs, do that dragon punch, maybe do that spinning tornado kick or something, all from that karate guy with a red headband. Hmm...</i>
+<i>You know, that is kinda true. Could’ve helped me when fighting against Cirno that time. Goliath could shoot fireballs, do that dragon punch, maybe do that spinning tornado kick or something, all from that karate guy with a red headband. Hmm...</i>
 
 #speaker Marisa
 ...You’re thinking of that arcade fighting game again, aren’t you?
