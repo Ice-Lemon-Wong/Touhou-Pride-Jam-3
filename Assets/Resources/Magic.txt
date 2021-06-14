@@ -13,8 +13,9 @@ This is a great chance for Alice to know what Marisa has in her shop. She always
 Magical items were strewn just about everywhere, even the dangerous ones. She had to make sure some of it was in a safe spot just so that other magical items could not cause a reaction.
 
 #speaker Marisa
-Well, I had a magic carpet that has a mind of its own, a pistol with magic bullets that can be controlled, a sword that can slice through dimensions, and a magical shield that can deflect any projectiles.
-<color=4d65b4>Also have I mentioned these runics of eternal that does...</color>
+Well, I had a magic carpet that has a mind of its own, a pistol with magic bullets that can be controlled,
+a sword that can slice through dimensions, and a magical shield that can deflect any projectiles.
+<color=#4d65b4>Also have I mentioned these runics of eternal that does...</color>
 
 #speaker 
 Alice was a bit perplexed by what she said. She never saw those items in the shop before. Does Marisa have a basement to store even more items? What does the basement look like? 
@@ -31,7 +32,7 @@ That’s a cheeky way to say bullet-hell, but yeah. Aren’t those items you men
 
 #speaker Marisa
 Yeah, but can I even control it? What if my carpet escapes when I need it the most? What if I panicked and missed my shot with the pistol? What if I cut open a dimension portal?
-<color=4365b4>And don’t get me started about the Runics of eternal</color>
+<color=#4365b4>And don’t get me started about the Runics of eternal</color>
 
 #speaker Marisa
 All in all, I prefer my broom, my mini-Hakkero, a wand that I rarely use, and my well hidden mushrooms, hehe!

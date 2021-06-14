@@ -217,12 +217,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 0}
+  subDialogueSystem: {fileID: 0}
   images:
   - {fileID: 8634363760420110163}
   - {fileID: 8634363760641564103}
   textMeshProUGUI: {fileID: 8634363758932775752}
-  sliderSpeed: 0.5
-  skipSpeed: 0.5
+  sliderSpeed: 0.7
+  skipSpeed: 0.7
 --- !u!1 &8634363760420110161
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,8 +258,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184.99977, y: -16}
-  m_SizeDelta: {x: 375, y: 38}
+  m_AnchoredPosition: {x: 145.65, y: 0.28}
+  m_SizeDelta: {x: 296.25, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8634363760420110162
 CanvasRenderer:
@@ -281,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.27092442, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -332,8 +333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183.00026, y: -15.999994}
-  m_SizeDelta: {x: 374, y: 38}
+  m_AnchoredPosition: {x: -150.5, y: 0.27}
+  m_SizeDelta: {x: 296.25, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8634363760641564102
 CanvasRenderer:
@@ -356,7 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18165362, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

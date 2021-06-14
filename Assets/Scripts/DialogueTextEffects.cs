@@ -26,6 +26,9 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 	private List<int> speedList = new List<int>();
 	private List<bool> speedLettersList = new List<bool>();
 
+	public static bool isSpeedAltered = false;
+	public SkipBar skipBar;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -119,6 +122,7 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 				}
 			}
 		} else if (commandLine[1].Substring(0, commandLine[1].Length).ToUpper().Equals("TYPESPEED")) {
+			isSpeedAltered = true;
 			shouldSpeedText = true;
 			int speedIndex = 0;
 
@@ -158,6 +162,7 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 				shouldShakeText = false;
 				shouldWaveText = false;
 				shouldSpeedText = false;
+				isSpeedAltered = false;
 
 				waveList.Clear();
 				waveLettersList.Clear();
@@ -166,7 +171,9 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 				speedList.Clear();
 				speedLettersList.Clear();
 
-				DialogueSystem.setDefaultTypingSpeed();
+				if (!skipBar.getSkipStatus()) {
+					DialogueSystem.setDefaultTypingSpeed();
+				}
 			} else if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("SHAKE")) {
 				shouldShakeText = false;
 
@@ -179,6 +186,7 @@ public class DialogueTextEffects : DialogueSystemCommandParser
 				waveLettersList.Clear();
 			} else if (commandLine[2].Substring(0, commandLine[2].Length - 1).ToUpper().Equals("TYPESPEED")) {
 				shouldSpeedText = false;
+				isSpeedAltered = false;
 
 				speedList.Clear();
 				speedLettersList.Clear();

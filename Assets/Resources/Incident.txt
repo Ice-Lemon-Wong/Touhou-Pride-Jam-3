@@ -1,13 +1,125 @@
 ﻿-card_1
-this is incidnet 1
+#speaker Marisa
+A spell card? Can I use this?
+
+#speaker Alice
+I don’t think this card game allows us to use spell cards against each other...
+
+#speaker Marisa
+Hey, you’ll never know. I can always copy the deck's power at will anyway. Hehe.
+
+#speaker Alice
+Ugh, you and your copying techniques. But I guess that’s how you get your spell cards...
+
+#speaker Marisa
+And obliterate them! How about you doll maker, whatchu’ got, huh? A bunch of dolls?
+
+#speaker Alice
+A bunch of elegant dolls, swarming around distracting you, while I gauge your abilities and find an opening.
+
+#speaker Marisa
+Ugh, boringgggg. But you know what isn’t boring?
+
+#speaker Alice
+You’re not suggesting us to-
+
+#speaker Marisa
+Yes, combine our abilities! We can be a great pair like last time! RIght?
+
+#speaker 
+Alice thought for a moment. The last time they worked together, it was filled with bickering and trash talking, both to themselves and the enemy. But if there is a chance to work together again...
+
+#speaker Marisa
+Whatchu’ thinking? 
+
+#speaker Alice
+U-Uh, nothing! Let’s continue one!
 -
 
 -card_2
-this is incidnet 2
+#speaker Marisa
+Oooo, spell cards!
+
+#speaker Alice
+Thinking about copying moves again?
+
+#speaker Marisa
+Well, I still haven't craft the deck of cards I need, so...
+
+#speaker 
+Alice was glad to hear that. Had she made another deck, she would panic and worry who Marisa would give it to.
+
+#speaker Marisa
+Eh, maybe one day.
+
+#speaker Alice
+Your copying ability... What else can you copy?
+
+#speaker Marisa
+Hmm... I can only copy spell cards, so there isn’t much stuff I can copy. But...
+
+#speaker 
+Marisa pulled out a spell card. It looked nothing like before.
+
+#speaker Marisa
+I call this... “Producer of Objects”.
+
+#speaker Alice
+Uh, what does it do?
+
+#speaker Marisa
+It copies and produces an object of anything! I haven’t made a spell card myself, so I want to try it out now.
+
+#speaker Alice
+Where are you gonna try it on?
+
+#speaker 
+Marisa pointed to the can of drinks that Alice brought. Alice suddenly felt that was a bad idea.
+
+#speaker 
+And she was right. As Marisa cast the spell, the can of drink suddenly disappeared. They looked left and right, before hearing someone yell in pain.
+It was Cirno, and apparently, the can that Marisa teleported tracked where she was and fell onto her head. 
+
+#speaker Alice
+I... guess you should find someone to copy that spell of yours... Creating spells doesn’t seem like your forte.
+Marisa: R-Right...
 -
 
 -card_3
-this is incidnet 3
+#speaker Marisa
+Ah, this card again.
+
+#speaker Alice
+Brings back memories, huh?
+
+#speaker Marisa
+Yeappp. Remember the time we paired up and fought Kaguya? That was a good time.
+
+#speaker Alice
+We got to fight so many people… But in the end, it was alright. We got to visit the moon.
+
+#speaker Marisa
+I wish we were there for a bit longer. I wanna visit the moon again before I go.
+
+#speaker Alice
+Hehe, another date together?
+
+#speaker Marisa
+Well, why not?
+
+#speaker 
+They laughed together. Alice imagined themselves at the moon again, looking at Gensokyo from above, admiring the view.
+She wished she wasn’t such a prick towards Marisa at that time, but she, as a youkai, looked down on her, and could see her as an equal. 
+And now, they are more than just equals. They are lovers.
+
+#speaker Alice
+Maybe we can inquire about immortality over there.
+
+#speaker Marisa
+Hmm. Yeah. Yeah. I guess.
+
+#speaker Alice
+<i>Wait. What was that tone, does she not seek immortality..?</i>
 -
 
 -card_4

@@ -44,13 +44,14 @@ Oh hey, it’s my favorite thing to “borrow” from!
 You know, I am actually curious, is there anything new from the library? At the rate of you “borrowing” them, it’s a surprise you still have things to steal from.
 
 #speaker Marisa
-Yeah, they do supply new books, some of them replace the one I stole, some of them are newer books from Patchouli, and some are extra dangerous books that I would probably die if I mishandled them. 
+Yeah, they do supply new books, some of them replace the one I stole, some of them are newer books from Patchouli, and some are extra dangerous books that I would probably die if I mishandled them.
 
 #speaker Alice
 Well now I’m curious, what are the contents of those “dangerous books”?
 
 #speaker Marisa
-Some of them would probably freeze you to the point of, according to them, cryostasis. Some would just cause your luck to plummet to the point where you could “unfortunately” slip and hit your head too hard. The worst among them all…
+Some of them would probably freeze you to the point of, according to them, cryostasis.
+Some would just cause your luck to plummet to the point where you could “unfortunately” slip and hit your head too hard. The worst among them all...
 
 #speaker 
 Alice, intrigued, leaned in. Marisa does the same, hoping her words would not be heard by the public as she whispers.
@@ -122,10 +123,12 @@ All I’m saying is, you could’ve unleashed hell on Gensokyo if you just opene
 Alice sipped her drink, before clearing her throat.
 
 #speaker Alice
-I just love my dolls. Each and every one of them are perfect in my eyes. I wouldn’t want to throw them away unless I absolutely have to. That said, using my grimoire would put all my doll’s life in danger. And I don’t want all my dolls to be gone.
+I just love my dolls. Each and every one of them are perfect in my eyes. I wouldn’t want to throw them away unless I absolutely have to.
+That said, using my grimoire would put all my doll’s life in danger. And I don’t want all my dolls to be gone.
 
 #speaker Alice
-Even though I am an immortal and have plenty of time to replace my lost, I can’t bring myself to end each and every doll’s life using a magic book. It’s too inhumane, by my standards. Plus, I rather spend time trying to make the perfect doll anyway, instead of making more of the same.
+Even though I am an immortal and have plenty of time to replace my lost, I can’t bring myself to end each and every doll’s life using a magic book. It’s too inhumane, by my standards.
+Plus, I rather spend time trying to make the perfect doll anyway, instead of making more of the same.
 
 #speaker Marisa
 Wow, never thought you’ll think like that before. I kinda like it.

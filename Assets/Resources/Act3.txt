@@ -4,12 +4,10 @@ It was a lazy Monday. Alice was sipping tea in Marisa's shop. It usually was not
 One: to make sure she is able to sustain herself due to her growing age. She does not have the energy nor time to go for adventures anymore, thus rendering her to stay at her house most of the time.
 Two: spending more quality time with Alice.
 Of course, Alice went in and helped her whenever she can, that is, whenever she does not spend her time tending to her dolls.
+
 She was worried that Marisa's in her 60's would not be able to clear everything in a week, as it was not jsut Marisa's stamina that bothered her, 
 it was the abysmal collection of magical items that they had to sort through one-by-one.
 -
-
-
-
 
 
 
@@ -49,7 +47,7 @@ No problem, Marisa.
 #speaker
 They then continued sipping tea in silence.
 That was probably too long.
-Marisa had waited for 10 minutes waiting for Alice to do something about it, but all she saw was her fiddling with the doll she had. 
+Marisa had waited for 10 minutes waiting for Alice to do something about it, but all she saw was her fiddling with the doll she had.
 It is quite clear that she decided to spend time with Marisa by fixing up her dolls, again.
 Marisa does not really mind too much, actually. But considering her age, and her condition that she does not really want to tell Alice yet, she feels that her time is gonna be up soon.
 She is not gonna let her opportunity slip, so she has to say something.
@@ -118,7 +116,8 @@ Alice...
 This time, I wanted to make sure our time here is productive and meaningful. So...
 
 #speaker 
-Alice's face turned red again. In her immortal life, she has never been this direct. She has never made a move this big before, and it took her the last remaining courage to finish the rest of her sentence.
+Alice's face turned red again. In her immortal life, she has never been this direct.
+She has never made a move this big before, and it took her the last remaining courage to finish the rest of her sentence.
 
 #text wait 1
 #speaker Alice
