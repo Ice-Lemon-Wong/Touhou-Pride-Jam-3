@@ -336,7 +336,7 @@ Ahhhhhh, we should come here more often.
 #portrait 2 alice2 angry
 #animate 2 shake
 #speaker Alice
-Are youy sure you're not just trying to make me play this game with you again?
+Are you sure you're not just trying to make me play this game with you again?
 
 #speaker Marisa
 Hey, did the cards give some of its powers to you!?
@@ -380,7 +380,7 @@ Please, come again!
 
 #speaker 
 Marisa simply scoffed at her. Either from her pompousness or the fact that she had beaten them time and time again in thievery. As they walked back home, the girls were talking much more than before.
-Alice felt much more comfortable and closer to Marisa now, even though she had talked to here before this. It is more intimate then before, more heartwarming, like she just wants this moment to last.
+Alice felt much more comfortable and closer to Marisa now, even though she had talked to her before this. It is more intimate then before, more heartwarming, like she just wants this moment to last.
 
 #portrait 0 alice sad
 #portrait 0 enable
