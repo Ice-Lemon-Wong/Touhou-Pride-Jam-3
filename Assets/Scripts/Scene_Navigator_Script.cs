@@ -56,7 +56,7 @@ public class Scene_Navigator_Script : MonoBehaviour
 
     IEnumerator StartScene()
     {
-        AudioManager2D.audioManager2DInstance.Play("Transition");
+        //AudioManager2D.audioManager2DInstance.Play("Transition");
         yield return new WaitForSecondsRealtime(waitInterval);
 
 		transitionScreen.GetComponent<Animator>().Play("transitioned");
