@@ -22,7 +22,7 @@ Alice has probably the most bored face on her right now. She cannot believe wher
 #portrait 1 marisa happy
 #portrait 1 enable
 #animate 1 enter
-#speaker marisa
+#speaker Marisa
 C’monnnnnnnn! It’s gonna be fun!
 
 #portrait 0 alice angry

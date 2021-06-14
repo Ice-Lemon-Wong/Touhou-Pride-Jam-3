@@ -3,7 +3,7 @@
 This card is...?
 
 #speaker Marisa
-Looks like <color=4d65b4>the netherworld</color>, I believe. The place where people go once they die.
+Looks like <color=#4d65b4>the netherworld</color>, I believe. The place where people go once they die.
 
 #speaker Alice
 Once they died huh...
@@ -48,7 +48,8 @@ What is true?
 That Heaven is truly sealed. No more humans allowed there.
 
 #speaker 
-Alice can only shake her head. At her age, she’ll probably think about this stuff. To top it off, Marisa was not immortal either. But as much as she keeps questioning, the only way to find out is by herself.
+Alice can only shake her head. At her age, she’ll probably think about this stuff. To top it off, Marisa was not immortal either.
+But as much as she keeps questioning, the only way to find out is by herself.
 
 #speaker Alic
  We’ll never know unless we truly cross that boundary, alright? Let’s continue with the game, and think about this later.

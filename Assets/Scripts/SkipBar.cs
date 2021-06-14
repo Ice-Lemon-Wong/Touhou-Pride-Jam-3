@@ -72,6 +72,7 @@ public class SkipBar : MonoBehaviour
 		}
 
         if (shouldSkip && !skipped) {
+			DialogueSystem.setTypingSpeed(500);
 			StartCoroutine(skip());
 		}
 	}
@@ -81,7 +82,9 @@ public class SkipBar : MonoBehaviour
 			keyHeld = true;
 		} else {
 			keyHeld = false;
-			DialogueSystem.setDefaultTypingSpeed();
+			if (!DialogueTextEffects.isSpeedAltered) {
+				DialogueSystem.setDefaultTypingSpeed();
+			}
 		}
     }
 
@@ -116,7 +119,6 @@ public class SkipBar : MonoBehaviour
 
     IEnumerator skip() {
 		if (shouldSkip && !skipped) {
-			DialogueSystem.setTypingSpeed(500);
 			if (DialougeFilesManager.activeDSIndex == 0) {
 				dialogueSystem.SkipDialogue();
 			} else if (DialougeFilesManager.activeDSIndex == 1) {
@@ -156,4 +158,8 @@ public class SkipBar : MonoBehaviour
 
 		yield return new WaitForSeconds(0.1f);
     }
+
+	public bool getSkipStatus() {
+		return shouldSkip && !skipped;
+	}
 }

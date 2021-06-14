@@ -12,7 +12,7 @@ I usually ask my dolls to do my own gardening.
 Marisa looked at the card a little harder, before her eyes glinted with a story.
 
 #speaker Marisa
-Have you ever heard of the a place <color=4d65b4>that lies in-between the border of Gensokyo?</color>
+Have you ever heard of the a place <color=#4d65b4>that lies in-between the border of Gensokyo?</color>
 
 #speaker Alice
 No, not really. What is it about?

@@ -540,8 +540,8 @@ RectTransform:
   - {fileID: 98245244}
   - {fileID: 218298118}
   - {fileID: 1589387003}
-  - {fileID: 2121254939}
   - {fileID: 1938072771}
+  - {fileID: 2121254939}
   - {fileID: 2075208274}
   - {fileID: 1994418219}
   m_Father: {fileID: 0}
@@ -2466,7 +2466,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 265558253}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2872,7 +2872,7 @@ RectTransform:
   - {fileID: 1523769831}
   - {fileID: 1831550361}
   m_Father: {fileID: 265558253}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5088,6 +5088,7 @@ MonoBehaviour:
   waveWavelength: 0.01
   waveHeight: 3
   shakePower: 0.8
+  skipBar: {fileID: 1831550362}
 --- !u!1 &2473411597897506131
 GameObject:
   m_ObjectHideFlags: 0

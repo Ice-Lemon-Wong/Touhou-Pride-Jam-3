@@ -15,13 +15,15 @@ Well, not for her.
 Okay, why is that?
 
 #speaker Marisa
-I once told her that the Scarlet Devil Mansion had a grand opening of their mansion. At first she wouldn’t believe me, but I pulled out a fake copy of my pass to the Library. Then, she took my pass away and tried to actually enter the library. She didn’t even know that the Scarlet Devil doesn’t have a physical pass! Even Koakuma knows why not to have it.
+I once told her that the Scarlet Devil Mansion had a grand opening of their mansion. At first she wouldn’t believe me, but I pulled out a fake copy of my pass to the Library.
+Then, she took my pass away and tried to actually enter the library. She didn’t even know that the Scarlet Devil doesn’t have a physical pass! Even Koakuma knows why not to have it.
 
 #speaker Alice
 Uh-huh...
 
 #speaker Marisa
-<color=4d65b4>Then there was another time. I was sparring with her. She kept using her signature spell card “Icicle Fall”, but she constantly misses every shot. I laughed so hard and she did not like that at all.</color>
+<color=#4d65b4>Then there was another time. I was sparring with her.
+She kept using her signature spell card “Icicle Fall”, but she constantly misses every shot. I laughed so hard and she did not like that at all.</color>
 
 #speaker 
 Marisa realized Alice’s skeptical face.
@@ -48,7 +50,8 @@ Somehow, she placed mirrors on the dolls to triangulate my position and find out
 Wh-What?
 
 #speaker Alice
-Also, I fought her with my Goliath once. I kid you not, I was literally in the blender. When she explained how she defeated me, I was very confused. She used unknown terms like “cross-ups”, “meaties”, “set-ups”, and even more. When I researched what she meant…
+Also, I fought her with my Goliath once. I kid you not, I was literally in the blender. When she explained how she defeated me, I was very confused.
+She used unknown terms like “cross-ups”, “meaties”, “set-ups”, and even more. When I researched what she meant…
 
 #speaker Marisa
 ...Those are fighting game terms?
@@ -60,7 +63,8 @@ Yeah, exactly! I’ve no idea that she plays fighting games! And applied it to d
 Yeah, but those are on combat-
 
 #speaker Alice
-And, get this, she knows how to trick youkais to visit the Netherworld. Just by giving them directions to the realm, then she told them “This will make you stronger”. When the youkais asked why they should believe her, she simply demonstrated her power!
+And, get this, she knows how to trick youkais to visit the Netherworld. Just by giving them directions to the realm, then she told them “This will make you stronger”.
+When the youkais asked why they should believe her, she simply demonstrated her power!
 
 #speaker Marisa
 I, uh, heh, what? And it worked?
@@ -92,7 +96,8 @@ Well, I also play pranks with them from time to time. It’s fun, really. You ge
 Marisa looked up to the ceiling while sipping her tea. The old lady’s wisdom speaking for Marisa.
 
 #speaker Marisa
-There are times where I wish I could live a carefree life like the fairies. Pranking people, being innocent and completely oblivious towards the world. Sometimes, I just wish that I would go back to being a kid again, y’know?
+There are times where I wish I could live a carefree life like the fairies. Pranking people, being innocent and completely oblivious towards the world.
+Sometimes, I just wish that I would go back to being a kid again, y’know?
 
 #speaker 
 The old witch shook her head, before facing Alice with her trademark smile.
