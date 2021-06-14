@@ -9,8 +9,7 @@ public class DialogueSequenceEventManager : MonoBehaviour
     [SerializeField] DialougeFilesManager dfm;
     [SerializeField] DialogueEvent[] dialogueSequencedEvents;
     [SerializeField] private bool loopEvents = false;
-    [SerializeField] private int startingIndex = 0;
-    [SerializeField] private bool startingFromZero = true;
+    
     private int currentDialogueEventIndex = 0;
     
 
