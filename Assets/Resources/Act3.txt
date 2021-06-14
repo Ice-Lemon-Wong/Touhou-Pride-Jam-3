@@ -156,8 +156,8 @@ No problem... dear. See you around, alright?
 
 #speaker 
 Alice hugged the witch, <color=4d65bd>as she always does before they part ways. And as always,</color> marisa receives it and returns the hug with love.
-They have hugged each other many times in the past, but this time, <color=4d65bd>it feels different.</color>
-<color=4d65db>It feels like</color> the acceptance for the both of them. That someday, one of them will be gone, and one of them will be alone.
+They have hugged each other many times in the past, but this time, <color=#4d65bd>it feels different.</color>
+<color=#4d65db>It feels like</color> the acceptance for the both of them. That someday, one of them will be gone, and one of them will be alone.
 Alice hugged really tight as deep down, she doesn't want her to be gone, she wants to keep hugging her again. It caught Marisa's attention.
 
 #speaker Marisa

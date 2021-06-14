@@ -441,6 +441,11 @@ MonoBehaviour:
   audioArray:
   - audioName: CafeTrack
     audioType: 1
-    clip: {fileID: 8300000, guid: 46405c4a73866984a96f4eba261f6669, type: 3}
+    clip: {fileID: 8300000, guid: 60b836b3c592a8a45a56aa2dd2ba5ea0, type: 3}
+    loop: 1
+    defaultVolume: 1
+  - audioName: ForestTrack
+    audioType: 1
+    clip: {fileID: 8300000, guid: 7645fb2ad9b80f94aa2299deaf036b41, type: 3}
     loop: 1
     defaultVolume: 1
