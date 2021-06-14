@@ -52,7 +52,7 @@ public class DialogueAudioCommandParser : DialogueSystemCommandParser
 
 
         }
-        else if (commandLine[1].ToUpper().Equals(playCommandText.ToUpper()))
+        else if (commandLine[1].ToUpper().Equals(playFadeCommandText.ToUpper()))
         {
             audioManager.PlayFade(commandLine[2].Substring(0, commandLine[2].Length - 1));
 

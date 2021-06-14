@@ -435,7 +435,7 @@ MonoBehaviour:
   bgmAudioSource: {fileID: 1465033427596249266}
   uiAudioSource: {fileID: 1465033427596249267}
   ambientAudioSource: {fileID: 1465033427596249268}
-  masterVolume: 0.2
+  masterVolume: 0.5
   changeOtherSources: 0
   fadeAudioEffectSpeed: 7
   audioArray:
@@ -447,5 +447,10 @@ MonoBehaviour:
   - audioName: ForestTrack
     audioType: 1
     clip: {fileID: 8300000, guid: 7645fb2ad9b80f94aa2299deaf036b41, type: 3}
+    loop: 1
+    defaultVolume: 1
+  - audioName: MarisaTrack
+    audioType: 1
+    clip: {fileID: 8300000, guid: 9ec09538c36e5eb44a678ee214ac6e46, type: 3}
     loop: 1
     defaultVolume: 1

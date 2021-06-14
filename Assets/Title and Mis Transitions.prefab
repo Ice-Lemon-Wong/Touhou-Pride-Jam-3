@@ -70,8 +70,8 @@ MonoBehaviour:
 
     Cards and Cafe'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 72cdc20bd39849b49af478d241791246, type: 2}
-  m_sharedMaterial: {fileID: 6864785442842370828, guid: 72cdc20bd39849b49af478d241791246, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 80c7c3d22232e8546b8aecfee6fac959, type: 2}
+  m_sharedMaterial: {fileID: -4604399700333101938, guid: 80c7c3d22232e8546b8aecfee6fac959, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -105,8 +105,8 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_characterSpacing: 5
+  m_wordSpacing: 5
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0

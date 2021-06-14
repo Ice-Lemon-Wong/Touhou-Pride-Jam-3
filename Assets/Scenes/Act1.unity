@@ -1157,6 +1157,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
+      propertyPath: sequecedEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022589341903856350, guid: 261c44e291552d049a427a193c1c3385, type: 3}
       propertyPath: sequecedEvents.Array.data[1].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: ActTitle
       objectReference: {fileID: 0}
@@ -1443,6 +1447,38 @@ PrefabInstance:
     - target: {fileID: 4623527611640336901, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623527612023930418, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 80c7c3d22232e8546b8aecfee6fac959, type: 2}
+    - target: {fileID: 4623527612023930418, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
+      propertyPath: m_wordSpacing
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623527612023930418, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4604399700333101938, guid: 80c7c3d22232e8546b8aecfee6fac959, type: 2}
+    - target: {fileID: 4623527612023930418, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
+      propertyPath: m_characterSpacing
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623527612279003817, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 80c7c3d22232e8546b8aecfee6fac959, type: 2}
+    - target: {fileID: 4623527612279003817, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
+      propertyPath: m_wordSpacing
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623527612279003817, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4604399700333101938, guid: 80c7c3d22232e8546b8aecfee6fac959, type: 2}
+    - target: {fileID: 4623527612279003817, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
+      propertyPath: m_characterSpacing
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7095776783844700655, guid: f53a82eb7757d6e40a5bb8cd144cf406, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
