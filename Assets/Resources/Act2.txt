@@ -32,6 +32,7 @@ As they continued walking, Marisa saw it in front of her eyes
 #animate 0 neutral
 #animate 1 neutral
 
+#audio playFade ForestAmbient
 a huge lake surrounded by the lush greenery of the forest. The lake shined crystal clear as the sunlight shines in.
 The weather is fine, the birds are chirping and the <color=#4d65b4>ice fairy</color> is cheerfully playing with her friends at the other side of the lake. It is a majestic sight for Marisa and the perfect place for a picnic. 
 
@@ -71,6 +72,7 @@ With a little bit of magic, the setup was done in seconds, and they all settled 
 
 #portrait 0 disable
 #portrait 1 disable
+#audio stopFade 3
 -
 
 
@@ -93,6 +95,7 @@ After saying that, she unloaded the contents of her basket: two cans of soda, th
 Hey, you should try one of these. It’s <color=#f04f78>homemade.</color>
 #text reset all
 
+#audio play EatSound
 #speaker 
 Alice hastily took a bite out of a sandwich that Marisa made. The two sauces of the sandwich, combined with the softness of the cooked meat and lettuce, made it into a heavenly combination that melted into Alice’s mouth instantly.
 Marisa noticed Alice’s facial expression, and felt proud that her sandwiches had touched the heart of the Magician.

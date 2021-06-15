@@ -397,6 +397,7 @@ public class CardsManager : MonoBehaviour
         }
         else {
 
+            AudioManager2D.audioManager2DInstance.Play("CardSound");
             for (int i = 0; i < BoadCards.Length; i++)
             {
                 BoadCards[i].cardObject.GetComponent<CardScript>().UnflipCard();
@@ -508,6 +509,7 @@ public class CardsManager : MonoBehaviour
 
     public void flipCard(int ID) {
 
+        AudioManager2D.audioManager2DInstance.Play("CardSound");
         StartCoroutine(flipCardRoutine(ID));
     }
 
@@ -536,6 +538,7 @@ public class CardsManager : MonoBehaviour
             BoadCards[matchedCardsID[i]].Matched();
 
         }
+        AudioManager2D.audioManager2DInstance.Play("CardSound");
         playerAI.ResetStuborn();
         CleanBoardCards(true);
         

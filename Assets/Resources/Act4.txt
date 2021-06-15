@@ -30,6 +30,8 @@ Shaking her head, Alice reached out, and flipped her first card.
 
 -Act4-2
 #audio stopFade 1
+#audio stopFade 3
+#audio play PhoneSound
 #speaker 
 She was disturbed by the sound of her house phone ringing.
 
@@ -64,7 +66,7 @@ she...
 #text reset all
 <color=#ae2334>I am afraid that she won't last much longer...</color>
 
-
+#audio play ThunderSound
 #text wait 2
 #background 3 0
 #audio playFade FinalTrack2
@@ -78,18 +80,23 @@ I am sorry?
 Her condition is critical! I am sorry but we have tried our best, but her illness got the best of her. She only has tonight-
 
 #background 0 99
-
+#audio play PhoneEndSound
 #speaker 
 The call suddenly hung up. Only the beep of the phone remains.
 
+#text wait 1
+#audio play PhoneHangSound
 #speaker Eirin
 Alice? <size=30>Alice?!!</size>
+#audio stop 0
 -
 
 
 
 
 -Act4-3
+#audio play RainAmbient
+#audio play RunningSound
 #speaker 
 She still could not believe it whenever she visits Marisa in the hospital.
 Alice had suspected that Marisa had fallen ill for a long time, but never in her life had she prepared herself to see someone she cared so much about on life support.
@@ -98,6 +105,8 @@ The worst part was seeing the old witch, face full of wrinkles, still smiling wh
 Alice cannot bear it, the mixture of seeing someone in pain, yet showing them her warm, welcoming smile, just hurts her in more ways than one.
 Alice ran to Marisa, and gave her a hug from the side of the hospital bed, unable to bear the pain from seeing her condition.
 Marisa felt her shirt get wet, not just from Alice's wet clothes, but also from the doll maker's tears. Her only response was to stroke Alice's golden hair, trying to reassure her as best as she could.
+#audio play DoorSlidingSound
+#audio stop 3
 -
 
 
@@ -168,8 +177,6 @@ The doll maker can only sob. She had to make the best use of her final visit wit
 
 
 
-
-
 -Act4-6
 #speaker Marisa
 Alice... Please, don't feel sorry for any of this.
@@ -216,6 +223,8 @@ I wouldn't have it any other way, Alice.
 
 #speaker 
 As she said her words, the box magically opens, and the deck of cards sets itself onto the table, creating the final stage for them to confess their feelings. This is it, the last game.
+
+#audio stopfade 3
 -
 
 

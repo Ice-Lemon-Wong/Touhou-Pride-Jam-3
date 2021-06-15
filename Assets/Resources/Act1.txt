@@ -103,7 +103,8 @@ They stopped at their destination. It is much closer to their home than Alice ex
 #animate 1 neutral
 #animate 2 neutral
 
-
+#audio play BellRingSound
+#audio playFade CafeAmbient
 #speaker 
 Upon entering, they can immediately hear smooth jazz playing from a record player, the tunes you can only hear from a modern cafe like this.
 Pairing with the <color=#ea4f36>warm lighting</color> and <color=#ae2334>scarlet red atmosphere</color>, it is quite welcoming, it almost feels like you are in a bubble from the mundane feeling of life. 
@@ -142,6 +143,7 @@ Alice had this strange feeling, she had the urge to say something to Marisa, but
 #text typespeed 10 0 6
 ......
 #text reset all
+#audio stopfade 3
 -
 
 
@@ -221,6 +223,7 @@ Alice seemed confused about the properties of these cards but she nodded. At lea
 
 #speaker Marisa
 If you're not making the first move, then I'll go first!
+#portrait 2 alice2 happy
 -
 
 
