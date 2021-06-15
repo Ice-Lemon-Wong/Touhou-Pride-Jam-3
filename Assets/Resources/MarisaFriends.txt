@@ -1,4 +1,30 @@
 ﻿-card_5
-this is friends final
+#speaker Alice
+This is.. A Friend card?
+
+#speaker Marisa
+Friends? Ah right… I wonder how they are doing right now…
+
+#speaker
+Alice looked at her curiously, as Marisa had known a lot of people in her life, both in her adventures and “borrowing”.
+
+#speaker Marisa
+
+There’s the Scarlet Mansion inhabitants. Smart Patchouli, Master of the Manor Flandre Scarlet, and Koakuma. Then there is that kappa, I hope kappas live longer than me. 
+And Kourin... As long as he does not die a stupid death, I won’t mind him outliving me. 
+The Three Fairies, ah well... They are just going to lose another pranking partner. Komeiji sisters... I wish I could go down to the underground and hang out with you guys. 
+And of course, <color=#ae2334>Reimu</color>. I hope that old lady had an heir or somebody else to take care of the shrine. Or else when I reincarnate and see no Hakurei successor, I’ll be really sad.
+And lastly...
+
+#speaker
+She looked at Alice with her eyes, full of love and gratitude.
+
+#text wait 1
+#speaker Marisa
+<color=#f04f78>You’re always more than a friend to me, my dear.</color>
+
+
+#speaker
+Alice can only hold back her tears as she kept the pair of cards. Although Marisa told her that sentence a lot of times, this time, it held a lot of weight in her heart.
 -
 

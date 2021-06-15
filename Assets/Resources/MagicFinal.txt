@@ -1,3 +1,25 @@
 ﻿-card_5
-this is magic final
+#speaker Alice
+This card is…
+
+#speaker Marisa
+Magic, huh. Ah yes, this takes me back to the good old days. Where I am young and naive.
+I wanted at that time was to become the best Ordinary Magician there ever is. So I studied hard, getting all the books I needed, “borrowing” them if I had to, copying other people’s magic, and so on and so forth. 
+Well, I did it. But in the end, I could not beat Reimu. Tried as I might, I cannot reach her level, even with training. The only problem is, she didn’t even train herself! Even if she did, it’s half-hearted. 
+I remember the last time we fought was five years ago, just to try and see if I can take her on with my condition. I tried my hardest, used all my knowledge, my spell cards, everything to defeat her, to finally become the number one.
+But in the end, I could not defeat her. She’s too talented.
+Oh well, at least it wasn’t such a pain. I wanted to be number two, behind Reimu after all...
+
+#speaker 
+Just then, Marisa felt her hand being squeezed hard. Alice had a determined look on her face.
+
+#speaker Alice
+Marisa, you’re number one magician in my heart, so don’t look so down! Even if you can’t fully master everything, I will carry on your legacy, I’ll master everything in your name! I’ll even use your grimoire!
+
+#speaker 
+The dying old witch can only look at her with a smile. Not only will her grimoire be preserved and continue to be written, Alice told her that she is the number one Magician. 
+She knew that Alice would say that, but she is glad that Alice still keeps her in her heart. Knowing that, softens the blow that Reimu gave in that decisive battle.
+
+#speaker Marisa
+I'm sure you would, my girl. I’m sure you would.
 -
