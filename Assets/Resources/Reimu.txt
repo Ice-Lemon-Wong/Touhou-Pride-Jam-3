@@ -63,7 +63,7 @@ Looking back, had I not been defeated by Reimu, I don’t know how my life would
 ...Because then I wouldn’t meet you and the others!
 
 #speaker 
-Alice was also glad that Marisa had met Reimu. She doesn't know what happens if they do not meet, but she knows that it will certainly be a boring immortal life.
+Alice was also glad that Marisa had met Reimu. She doesn't know what happens if they had not met each other, but she knows that it will certainly be a boring immortal life.
 
 #speaker Alice
 #text wait 1

@@ -78,7 +78,7 @@ Marisa looked ahead and continued marching giddy. Alice can only sigh and contin
 #speaker Alice
 #animate 0 shift
 #text wave 0 89
-You could’ve asked for Patchouli out you know, if you didn't keep <color="red">stealing her things...</color>
+You could've just asked Patchouli out you know, if you didn't keep <color="red">stealing her things...</color>
 #text reset all
 
 #speaker 
@@ -106,8 +106,8 @@ They stopped at their destination. It is much closer to their home than Alice ex
 #audio play BellRingSound
 #audio playFade CafeAmbient
 #speaker 
-Upon entering, they can immediately hear smooth jazz playing from a record player, the tunes you can only hear from a modern cafe like this.
-Pairing with the <color=#ea4f36>warm lighting</color> and <color=#ae2334>scarlet red atmosphere</color>, it is quite welcoming, it almost feels like you are in a bubble from the mundane feeling of life. 
+Upon entering, they can immediately hear smooth jazz playing from a record player, the type of tune that you can hear only from a modern cafe like this.
+Pairing with the <color=#ea4f36>warm lighting</color> and <color=#ae2334>scarlet red atmosphere</color>, it is quite welcoming, it almost feels like you are in a bubble, secluded away from the mundane feeling of life. 
 The Scarlet Devil did outdid themselves. To top it off, Marisa was right, Koakuma did work here, she was behind the bar table, cleaning mugs. Her eyes gazed upon them when they entered. 
 
 
@@ -118,7 +118,7 @@ Welcome to our cafe- Oh, it’s <color=#ae2334>you...</color>
 #speaker 
 Koakuma looked at Marisa with a stern eye, and did not seem to be happy meeting a thief here. Marisa does not give her a good impression due to her <color=#4d65b4>“borrowing habits”</color> at her master’s library.
 #text reset all
-Unfortunately for Koakuma, she has to contain her resentment to give them the best customer service or else the cafe’s reputation will be tarnished and be lectured by her master.
+Unfortunately for Koakuma, she has to contain her resentment to give them the best customer service or else the cafe’s reputation will be tarnished and she will get lectured by her master.
 
 #speaker Koakuma
 Please take a seat and tell me what you would like to order.
@@ -134,7 +134,7 @@ Thank you for odering. Please wait while we prepare your orders.
 
 #speaker 
 Koakuma went into the kitchen preparing what they ordered. 
-The two sat quitely for awhile. Not long after the silence started becoming... a little awkward.
+The two sat quitely for awhile. Not long after that, the silence started becoming... a little awkward.
 
 #portrait 2 Alice2 sad
 Alice had this strange feeling, she had the urge to say something to Marisa, but she couldn't seem to pull herself to tak to her.
@@ -192,7 +192,7 @@ Hehe, you'll see.
 Marisa excitedly reached for the deck, and opened the deck box. But as her finger touched the cards, it suddenly flew up all by itself, and danced around in the air.
 Before long, the deck of cards flew around, circling Alice and Marisa in an elegant way, the card cover facing against them.
 Alice and Marisa both looked at each other, then to the cards as it danced.
-They know that the cards themselves are not dangerous, but they felt the cards just looked into them, into their soul, into their minds and their feelings.
+They know that the cards themselves are not dangerous, but they felt the cards just looking into them, into their soul, into their minds and their feelings.
 #text wave 87 105
 After a few moments, the cards floated and placed themselves nicely on the table, in a <color=#4d65b4>five by two style</color> of arrangement. The girls looked at the cards laid on the table suspiciously.
 #text reset all

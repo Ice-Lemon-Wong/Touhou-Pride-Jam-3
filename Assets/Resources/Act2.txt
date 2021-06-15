@@ -6,12 +6,12 @@
 
 #speaker 
 The girls went deep into the Forest of Magic, each holding a basket filled with delicious cakes and sandwiches. Marisa and Alice were chatting happily as Alice brought her deeper and deeper into the woods.
-It has been 10 years since the Cafe de Gensokyo "date", and they have grown much closer ever since. Marisa brought her out to hand out more, and majority of the time Alice accepts them.
+It has been 10 years since the Cafe de Gensokyo "date", and they have grown much closer ever since. Marisa brought her out to hang out more, and majority of the time Alice accepts them.
 The times she did not accept was when she needed to fix her dolls up. Those times, Marisa can never break her concentration.
-But this time, it's different. Alice asked her out on a picnic date. Marisa was taken aback by her sudden initiative, but accepted it nevertheless.
+But this time, it's different. Alice asked her out on a picnic date. Marisa was taken back by her sudden initiative, but accepted it nevertheless.
 
 #speaker Marisa
-Heyyy, where are you taking me to? I've never been in this part of the forest before.
+Heyyy, where are you taking me to? I've never been to this part of the forest before.
 
 #speaker Alice
 Oh, you'll see, hehe.
@@ -64,7 +64,7 @@ Hey dummy! Can you help set up our picnic area?
 #portrait 1 Marisa oh
 #animate 1 jump
 #speaker 
-Marisa closed her mouth, as it was previously open agap to amazement. She quickly went and helped her friend to set up the picnic. 
+Marisa closed her mouth, as it was previously open agape to amazement. She quickly went and helped her friend to set up the picnic. 
 With a little bit of magic, the setup was done in seconds, and they all settled down on the carpet.
 #animate 1 exit
 #portrait 1 disable

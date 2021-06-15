@@ -34,8 +34,8 @@ Ooooo, that would be lovely! You can send in your dolls to distract them, maybe 
 Then you can have a conversation with them, which further distracts them so I can steal even more books!
 
 #speaker Koakuma
-#text shake 0 57
-<color=#ae2334>You both do know I can hear your conversation, RIGHT?!!!</color>
+#text shake 0 60
+<color=#ae2334>Both of you do know I can hear your conversation, RIGHT?!!!</color>
 #text reset all
 
 #speaker 
