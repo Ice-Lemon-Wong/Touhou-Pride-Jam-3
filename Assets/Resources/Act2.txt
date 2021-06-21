@@ -6,7 +6,7 @@
 
 #speaker 
 The girls went deep into the Forest of Magic, each holding a basket filled with delicious cakes and sandwiches. Marisa and Alice were chatting happily as Alice brought her deeper and deeper into the woods.
-It has been 10 years since the Cafe de Gensokyo "date", and they have grown much closer ever since. Marisa brought her out to hang out more, and majority of the time Alice accepts them.
+It has been 5 years since the Cafe de Gensokyo "date", and they have grown much closer ever since. Marisa brought her out to hang out more, and majority of the time Alice accepts them.
 The times she did not accept was when she needed to fix her dolls up. Those times, Marisa can never break her concentration.
 But this time, it's different. Alice asked her out on a picnic date. Marisa was taken back by her sudden initiative, but accepted it nevertheless.
 
@@ -33,7 +33,7 @@ As they continued walking, Marisa saw it in front of her eyes
 #animate 1 neutral
 
 #audio playFade ForestAmbient
-a huge lake surrounded by the lush greenery of the forest. The lake shined crystal clear as the sunlight shines in.
+A huge lake surrounded by the lush greenery of the forest. The lake shined crystal clear as the sunlight shines in.
 The weather is fine, the birds are chirping and the <color=#4d65b4>ice fairy</color> is cheerfully playing with her friends at the other side of the lake. It is a majestic sight for Marisa and the perfect place for a picnic. 
 
 #portrait 1 Marisa WTF
@@ -49,7 +49,7 @@ I’ve never seen this place before! How did you know about this place?
 #animate 0 enter
 #portrait 0 enable
 #speaker Alice
-Let’s just say as a person who lives in the forest of magic is much more well versed in the forest than the one who just lives besides the forest.
+Let’s just say a person who lives in the forest of magic is much more well versed in the forest than the one who just lives besides the forest.
 
 #speaker 
 They both chuckled while taking in the scenery.
@@ -64,7 +64,7 @@ Hey dummy! Can you help set up our picnic area?
 #portrait 1 Marisa oh
 #animate 1 jump
 #speaker 
-Marisa closed her mouth, as it was previously open agape to amazement. She quickly went and helped her friend to set up the picnic. 
+Marisa closed her mouth, as it was previously agape to amazement. She quickly went and helped her friend to set up the picnic. 
 With a little bit of magic, the setup was done in seconds, and they all settled down on the carpet.
 #animate 1 exit
 #portrait 1 disable
@@ -210,7 +210,7 @@ C’mon, We’ll do it properly next time. Just...
 
 #portrait 0 Alice happy
 #speaker 
-Alice stopped pouting at this moment, and tilted her head with curiosity. Marisa looked at the ground, her face a little red. She does not seem to be this embarrassed before.
+Alice stopped pouting at this moment, and tilted her head with curiosity. Marisa looked at the ground, her face a little red. She did not seem to be this embarrassed before.
 
 #portrait 1 Marisa angry
 #animate 1 jump

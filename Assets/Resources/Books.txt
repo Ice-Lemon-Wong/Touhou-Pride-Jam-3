@@ -144,14 +144,14 @@ Alice sipped her drink, before clearing her throat.
 #text wait 1
 #speaker Alice
 I just love my dolls. Each and every one of them are perfect in my eyes. I wouldn’t want to throw them away unless I absolutely have to. 
-That said, using my grimoire would put all my doll’s life in danger. And I don’t want all my dolls to be gone.
+That said, using my grimoire would put all my dolls' life in danger. And I don’t want all my dolls to be gone.
 
 #speaker Alice
 Even though I am an immortal and have plenty of time to replace my lost, I can’t bring myself to end each and every doll’s life using a magic book. 
 It’s too inhumane, by my standards. Plus, I rather spend time trying to make the perfect doll anyway, instead of making more of the same.
 
 #speaker Marisa
-Wow, never thought you’ll think like that before. I kinda like it.
+Wow, never thought you’d think like that before. I kinda like it.
 
 #speaker 
 Sometimes, Marisa’s directness made Alice weak. Those compliments were definitely aiming at her heart, but she kinda liked it.
@@ -204,7 +204,7 @@ Fineeeeee. Let’s continue with the game.
 #speaker Alice
 Ah, her favorite item!
 
-#speaker
+#speaker 
 Alice thought about the days when they talked about magic and spell cards. 
 She remembered when Marisa brought a bunch of books she <color=#ae2334>“borrowed”</color> from the Library, and they read it together, discussing how to use it. 
 She also remembered when they attempted to gather even more books to study together, although it did not really go that well. 

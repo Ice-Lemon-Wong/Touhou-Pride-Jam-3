@@ -49,7 +49,7 @@ Oooo, spell cards!
 Thinking about copying moves again?
 
 #speaker Marisa
-Well, I still haven't craft the deck of cards I need, so...
+Well, I still haven't crafted the deck of cards I need, so...
 
 #speaker 
 Alice was glad to hear that. Had she made another deck, she would panic and worry who Marisa would give it to.
@@ -77,7 +77,7 @@ Uh, what does it do?
 It copies and produces an object of anything! I haven’t made a spell card myself, so I want to try it out now.
 
 #speaker Alice
-Where are you gonna try it on?
+What are you going to try it on?
 
 #speaker 
 Marisa pointed to the can of drinks that Alice brought. Alice suddenly felt that was a bad idea.
@@ -111,7 +111,7 @@ Ah, this card again.
 Brings back memories, huh?
 
 #speaker Marisa
-Yeappp. Remember the time we paired up and fought <color=#f04f78>Kaguya</color>? That was a good time.
+Yeah. Remember the time we paired up and fought <color=#f04f78>Kaguya</color>? That was a good time.
 
 #speaker Alice
 We got to fight so many people… But in the end, it was alright. We got to visit the moon.
@@ -147,8 +147,8 @@ Hmm. Yeah. Yeah. I guess.
 
 
 -card_4
-#speaker
-She saw mini-Hakkero, and remembered her first time working with Marisa during Imperishable Night. 
+#speaker 
+She saw spell cards, and remembered her first time working with Marisa during Imperishable Night. 
 She remembered admiring Marisa’s ability to mount an all-out magic assault with her variety of spell cards and the use of mini-Hakkero. 
 While she did display her skill of controlling her dolls, she felt that her dolls could be better if they were combined with Marisa’s ferocity in battle, and that’s when she decided to start crafting Marisa dolls.
 She can make as much as she wanted, but without the original, it wasn’t the same.

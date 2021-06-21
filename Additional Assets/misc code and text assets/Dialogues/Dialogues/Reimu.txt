@@ -1,0 +1,141 @@
+﻿-card_1
+#speaker Alice
+A yin yang orb... Reminds me of-
+
+#speaker Marisa
+Reimu! My rival and bestie!
+
+#speaker 
+Alice does not know why, but she felt offended when Marisa called Reimu her “bestie”. And for some reason, she wanted to know more about Marisa’s thoughts and feelings about Reimu.
+
+#speaker Alice
+So... What do you think about Reimu?
+
+#speaker Marisa
+...What do you mean?
+
+#speaker Alice
+Like, do you see her as a good friend, or as... someone special?
+
+#speaker Marisa
+Well, a good friend of course!
+
+#speaker 
+Alice wanted to let out a sigh of relief, but she cannot rest easy just yet. She was preparing herself from Marisa’s straightforward-ness.
+
+#speaker Marisa
+We had travelled together, fighting youkais, fighting other big bads here and there. She’s a good fighting partner all in all, her talent and abilities are way beyond me.
+But I swear, she cannot be saved when socializing! Whenever I want her to go out, she doesn’t want to! She always said duties, duties, duties. 
+I understand her pain, and I can see that deep down, she just wants to be a normal girl, but her responsibilities as a shrine maiden is what stops her from following her desires.
+Not to mention, she is an airhead! The other day I explained my new spell cards to her, she doesn’t seem to understand what it does until I literally use it on her.
+And then she would scold me for trying to destroy the shrine! Also, whenever we went to eat, she always ordered the most simple dish. I just can’t handle it if I lived with her.
+
+#speaker 
+Marisa sighed. Alice looked at her with an expression that displays understanding. Seems like Reimu’s lifestyle and attitude are not compatible with Marisa’s outgoing personality.
+She let out a sigh of relief, knowing that Reimu was not the most important person in her heart.
+
+#speaker Marisa
+Hmm? You seem to be relieved. What’s wrong?
+
+#speaker Alice
+N-Nothing! Let’s continue with the game shall we? Let's flip the cards!
+- 
+
+-card_2
+#speaker Marisa
+Yin Yang orb? Oh, Reimu!
+
+#speaker Alice
+That Hakurei shrine maiden huh… I’m curious. When did you guys first meet?
+
+#speaker Marisa
+Oh, that depends. Which timeline?
+
+#speaker Alice
+Uh...?
+
+#speaker Marisa
+Yeah, I’m just pulling your leg. We met together as enemies first, but I took interest in Reimu’s potential, and the rest is history.
+Looking back, had I not been defeated by Reimu, I don’t know how my life would be..
+...Because then I wouldn’t meet you and the others!
+
+#speaker 
+Alice was also glad that Marisa had met Reimu. She doesn't know what happens if they do not meet, but she knows that it will certainly be a boring immortal life.
+
+#speaker Alice
+Someday, I’ll thank her too.
+
+#speaker Marisa
+Hm? For what?
+
+#speaker Alice
+For allowing me to see you. I’m glad to have a noisy neighbour. Makes my house a little less lonely.
+
+#speaker Marisa
+Is that supposed to be a compliment or an insult...? 
+Ah whatever, let’s continue!
+-
+
+-card_3
+#speaker Marisa
+Ooooo, Yin Yang orb!
+
+#speaker Alice
+Reminds you of the Hakurei Shrine?
+
+#speaker Marisa
+Yeah, I bet she’s continuing her duties now. I have no idea what’s so important about those duties. I just hope she is okay.
+Speaking of which...
+
+#speaker Alice
+Hm?
+
+#speaker Marisa
+What if we had our own shrines?
+
+#speaker Alice
+Oh, that is an interesting question. I wonder who will worship you?
+
+#speaker Marisa
+Oh that’s just cruel! But, believe it or not, I would want people to worship me as the great magician that I am.
+Then I’ll probably finally be on par with Reimu. Hmm, hmm, yeah, that’s right. Take that Reimu!
+What about you, Alice? What would you want to be worshipped as?
+
+#speaker Alice
+Hmm, I haven’t made the perfect doll yet, so I wouldn’t say that I want to be worshipped as a legendary doll maker. 
+
+#speaker Marisa
+But aren’t you popular with dolls?
+
+#speaker Alice
+Yeah, well, I just don't see myself as someone who has truly mastered it.
+
+#speaker Marisa
+You know that’s nonsense right?
+
+#speaker Alice
+What do you mean?
+
+#speaker Marisa
+Throughout my life, I’ve never seen someone who had crafted such amazing dolls for battle.
+Not only would you control them perfectly, you made it so that each of them have their own personality, their ideals, core values, so on and so forth. All thanks to your performance.
+The fact that you did not use your grimoire is a testament to your abilities as a doll maker. You’re so good at it, you don’t even use it.
+Now have some self-respect for yourself, girl, cause I’ll give you some for ya!
+
+#speaker 
+Alice blushed. She never had someone believed in her so hard before. Oftentimes, people are too scared to compliment her, or are usually given by carefree fairies.
+This time, an actual human is complimenting her, and she could not be even more happier than it is from Marisa.
+
+#speaker Alice
+Th-Thank you so much, Marisa.
+
+#speaker Marisa
+Alright, enough of worshipping each other. Let’s continue with the game!
+
+#speaker Alice
+<i>Uh, we were worshipping each other...?</i>
+-
+
+-card_4
+this is reimu 4
+-

@@ -27,11 +27,11 @@ Yeah, well, I’m just afraid that’s all. What if Yama deemed me unworthy and 
 Well I guess you’ll probably end up in the Netherworld. I doubt Lord Yama would allow you to Heaven.
 
 #speaker Marisa
-But the Netherworld is quite scary though! Tons of ghosts and phantoms lurk here, and all are dangerous!
+But the Netherworld is quite scary though! Tons of ghosts and phantoms lurk there, and all are dangerous!
 
 #speaker Marisa
 #text wave 19 36
-Also there is that <color=#f04f78>gluttonous ghost</color> who seems to can’t stop thinking about eating...
+Also there is that <color=#f04f78>gluttonous ghost</color> who can’t seem to stop thinking about eating...
 #text reset all
 
 #speaker Marisa

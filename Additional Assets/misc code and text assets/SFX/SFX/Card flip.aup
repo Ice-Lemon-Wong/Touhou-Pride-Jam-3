@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Card flip_data" version="1.3.0" audacityversion="2.3.1" sel0="0.0000000000" sel1="0.1831292517" vpos="0" h="0.0000000000" zoom="1452.5607638889" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="Content group description" value="Sound Ideas"/>
+		<tag name="COMMENTS" value="GAMBLING, CARDS - SHUFFLE ONCE AND DEAL, CASINO Casinos;Gambling Equipment &amp; Cards (Vintage Recording)"/>
+		<tag name="GENRE" value="GAMBLING, CARDS"/>
+		<tag name="File owner" value="Series 1000 General"/>
+		<tag name="Copyright message" value="2014Series 1000 General"/>
+		<tag name="Publisher" value="Sound Ideas"/>
+		<tag name="Subtitle" value="All Sound Effects &amp; Music are Copyright Sound Ideas - All Rights Reserved"/>
+		<tag name="TRACKNUMBER" value="0"/>
+		<tag name="ARTIST" value="Series 1000 General"/>
+		<tag name="TITLE" value="GamblingCards 1013_57"/>
+		<tag name="Length" value="59477"/>
+		<tag name="Software" value="LAME 3.98.2 - Metadata by Soundminer Inc. www.soundminer.com - 4.1v05"/>
+		<tag name="YEAR" value="2014"/>
+	</tags>
+	<wavetrack name="Card flip" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="3198">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808307.au" len="3198" min="-0.926563" max="0.891494" rms="0.156061"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Card flip" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="3198">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808885.au" len="3198" min="-0.990976" max="0.803923" rms="0.155732"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

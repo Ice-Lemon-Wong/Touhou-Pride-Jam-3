@@ -1,0 +1,7 @@
+<color=#ae2334></color> red
+<color=#ea4f36></color> orange
+<color=#f9c22b></color> yellow
+<color=#239063></color> green
+<color=#4d65b4></color> blue 
+<color=#905ea9></color> purple
+<color=#f04f78></color> Pink

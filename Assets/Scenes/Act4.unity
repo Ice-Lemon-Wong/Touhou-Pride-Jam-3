@@ -652,7 +652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 310c2048579fcff45a578cf74dae6e9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4433a7141c7caf946b3a4e5f01cb74a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -901,6 +901,10 @@ PrefabInstance:
     - target: {fileID: 5688207858030944292, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
       propertyPath: currentStage
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944293, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: pressToQuit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
       propertyPath: m_RootOrder
@@ -2915,7 +2919,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 128a286e901c27f4f8c6d41d96b25455, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df4e960449189a246988a0c4354921a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5528,7 +5532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.61960787}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6167,7 +6171,7 @@ MonoBehaviour:
   - {fileID: 8467985959254355293}
   - {fileID: 8467985959240765385}
   textMeshProUGUI: {fileID: 8467985958605717830}
-  sliderSpeed: 0.2
+  sliderSpeed: 0.3
   skipSpeed: 0.5
 --- !u!4 &8467985957877538106
 Transform:

@@ -5,7 +5,7 @@ This is.. A Friend card?
 #speaker Marisa
 Friends? Ah right… I wonder how they are doing right now…
 
-#speaker
+#speaker 
 Alice looked at her curiously, as Marisa had known a lot of people in her life, both in her adventures and “borrowing”.
 
 #speaker Marisa
@@ -15,7 +15,7 @@ The Three Fairies, ah well... They are just going to lose another pranking partn
 And of course, <color=#ae2334>Reimu</color>. I hope that old lady had an heir or somebody else to take care of the shrine. Or else when I reincarnate and see no Hakurei successor, I’ll be really sad.
 And lastly...
 
-#speaker
+#speaker 
 She looked at Alice with her eyes, full of love and gratitude.
 
 #text wait 1
@@ -23,7 +23,7 @@ She looked at Alice with her eyes, full of love and gratitude.
 <color=#f04f78>You’re always more than a friend to me, my dear.</color>
 
 
-#speaker
+#speaker 
 Alice can only hold back her tears as she kept the pair of cards. Although Marisa told her that sentence a lot of times, this time, it held a lot of weight in her heart.
 -
 

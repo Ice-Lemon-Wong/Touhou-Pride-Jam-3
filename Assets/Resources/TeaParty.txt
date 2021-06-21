@@ -62,7 +62,7 @@ That reminds me, what do you normally serve to your guests at home?
 Hmm, I usually serve a normal, human tea to them, unless they are fairies. Then some sweet tea will do. 
 
 #speaker Alice
-As for cakes, I always serve shortcakes to them. Can’t go wrong without them.
+As for cakes, I always serve shortcakes to them. Can’t go wrong with them.
 
 #speaker Marisa
 Hmm, that’s all? I guess not many people ate your cakes, huh?
@@ -102,7 +102,7 @@ Yeah, that’s fair. Alright, that’s enough about my tea time. Let’s move on
 -
 
 -card_4
-#speaker
+#speaker 
 She looked at the card, reminiscing her days when Marisa would drink tea with her whenever they were dating. 
 Marisa would complain about Alice’s taste in tea, and Alice would comment on how her tea is obviously the best choice. That was not before they started discussing the shortcakes that Alice made. 
 Then one day, Marisa brought Alice to her home, and served her tea and shortcakes homemade by Marisa herself.  Though Alice would not admit it, it was very good, arguably better than her.

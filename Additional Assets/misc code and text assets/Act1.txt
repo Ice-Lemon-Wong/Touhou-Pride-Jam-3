@@ -1,0 +1,256 @@
+﻿-Act1-1
+#portrait 0 disable
+#portrait 1 disable
+#portrait 2 disable
+#animate 0 neutral
+#animate 1 neutral
+#animate 2 neutral
+
+#speaker 
+Alice has probably the most bored face on her right now. She cannot believe where this black witch has taken her to.
+
+#portrait 1 marisa happy
+#portrait 1 enable
+#animate 1 enter
+#speaker marisa
+C’monnnnnnnn! It’s gonna be fun!
+
+#portrait 0 alice angry
+#portrait 0 enable
+#animate 0 enter
+#speaker Alice
+
+Right...
+#text shake 0 77
+<b><size= 30><color="red">but why don’t you ask Reimu?!!</color></size></b> 
+#text reset all
+#animate 0 shake
+#text shake 0 31
+I have dolls to make you know.
+#text reset all
+
+#speaker 
+Marisa looked at her with a frustrated look while her eyes closed. It is a miracle she avoided bumping into people while walking like this.
+
+
+#portrait 1 marisa wtf
+#animate 1 jump
+#speaker Marisa
+I saw this really cool shop while I’m on the way to see Reimu. A modern cafe, in our village, in the Forest of Magic!! 
+#portrait 1 marisa annoyedPout
+#animate 1 shake
+#text wave 87 120
+But Reimu, being a party pooper and all, doesn’t want to come with me. She kept saying <color="blue">“I got a shrine to take care of”</color> despite the fact that I cleaned up her work just yesterday!
+#text reset all
+
+#portrait 0 alice oh
+#speaker Alice
+I see. And you looked for me to go to this place? 
+
+#portrait 1 marisa happy
+#animate 1 jump
+#speaker Marisa
+Yeap! I got really sad on the way home, until I saw your house. You need some fresh air too, so come along and let’s go to this Cafe de Gensokyo!
+
+#speaker Alice
+It’s newly made? Why did I not hear it before? Is it run by the <color="red">Scarlet Devil Mansion?</color>
+
+#portrait 1 marisa neutral
+#speaker Marisa
+Yeah it is, I saw Koakuma working here. And the building is quite recent, it was not here three days ago, and <color="red"><b>BAM!!!</b></color> here it is.  
+It’s probably because of <color=#800080>Patchouli’s</color> magic capabilities and <color="blue">sakuya’s</color> ability to stop time. They can make constructions like this a breeze. 
+
+#portrait 0 alice annoyedPout
+#speaker 
+Marisa looked ahead and continued marching giddy. Alice can only sigh and continue walking with her. 
+
+#speaker Alice
+#animate 0 shift
+#text wave 0 89
+You could’ve asked for Patchouli out you know, if you didn't keep <color="red">stealing her things...</color>
+#text reset all
+
+#speaker 
+They stopped at their destination. It is much closer to their home than Alice expected. The bell on the door rang as they opened the door and walked inside. 
+#animate 0 exit
+#animate 1 exit
+#portrait 0 disable
+#portrait 1 disable
+
+#speaker 
+Upon entering, they can immediately hear smooth jazz playing from a record player, the tunes you can only hear from a modern cafe like this.
+Pairing with the warm lighting and scarlet red atmosphere, it is quite welcoming, it almost feels like you are in a bubble from the mundane feeling of life. 
+The Scarlet Devil did outdid themselves. To top it off, Marisa was right, Koakuma did work here, she was behind the bar table, cleaning mugs. Her eyes gazed upon them when they entered. 
+
+#speaker Koakuma
+Welcome to our cafe- Oh, it’s you…
+
+#speaker 
+Koakuma looked at Marisa with a stern eye, and did not seem to be happy meeting a thief here. Marisa does not give her a good impression due to her “borrowing habits” at her master’s library.
+Unfortunately for Koakuma, she has to contain her resentment to give them the best customer service or else the cafe’s reputation will be tarnished and be lectured by her master.
+
+#speaker Koakuma
+Please take a seat and tell me what you would like to order.
+
+#speaker 
+They sat down and ordered what they wanted. Koakuma took their orders and wrote it down in her notepad. It doesn't seem like anybody else worked here other than her.
+
+#speaker Koakuma
+Thank you for odering. Please wait while we prepare your orders.
+
+#speaker 
+Koakuma went into the kitchen preparing what they ordered. The two sat quitely for awhile. Not long after the silence started becoming... a little awkward.
+Alice had this strange feeling, she had the urge to say something to Marisa, but she couldn't seem to pull herself to tak to her. 
+
+----------------------
+
+The silence continued, but not for long.
+
+#speaker Marisa
+Hey, you want to check this cool little trinket I got recently?
+
+#speaker 
+Marisa pulled out a plastic box, it seems like a box that is used to package playing cards in it, but Alice felt a scent of magic in it.
+
+#speaker Alice
+Another one of your stolen items?
+
+#speaker Marisa
+Hey, I "borrowed" them, y'know? Besides, I found it while I'm adventuring yesterday for more secret magic books.
+
+#speaker Alice
+Okay, but what is so special about these cards?
+
+#speaker Marisa
+Hehe, you'll see.
+
+#speaker 
+Marisa excitedly reached for the deck, and opened the deck box. But as her finger touched the cards, it suddenly flew up all by itself, and danced around in the air.
+Before long, the deck of cards flew around, circling Alice and Marisa in an elegant way, the card cover facing against them.
+Alice and Marisa both looked at each other, then to the cards as it danced.
+They know that the cards themselves are not dangerous, but they felt the cards just looked into them, into their soul, into their minds and their feelings.
+After a few moments, the cards floated and placed themselves nicely on the table, in a <color=blue>five by two style</color> of arrangement. The girls looked at the cards laid on the table suspiciously.
+
+#speaker Marisa
+This is hella weird. I've never expected the cards to work that way.
+
+#speaker Alice
+You feel it too right? It looked into our memories.
+
+#speaker Marisa
+Yeah, I'm kinda sceptical about this. But we didn't feel any hostility. We should be safe to play this game I guess. Don't mind if I do!
+
+#speaker Alice
+Hand on, how do we play this game?
+
+#speaker Marisa
+Well, from what i've read from the box instructions, we both pick a card from the draft, if our cards are a matching pair, we will be magically convinced to start a conversation about the content in the card.
+If it is not a matching pair, we will have to pick again. I don't exactly know in what form that we will be "magically convinced" to start a conversation but let's just go with it.
+
+#speaker 
+Alice seemed confused about the properties of these cards but she nodded. At least they had something to kill the time while they waited.
+
+#speaker Marisa
+If you're not making the first move, then I'll go first!
+-
+
+---------------------------------------
+
+-Act1-3
+#speaker 
+The girls finally placed the last two cards on top of the deck. They heaved a light sigh of relief as the game was over.
+
+#speaker Marisa
+Man, that was fun! It actually feels like I know you much, much better now as a person.
+
+#speaker Alice
+I never knew this game existed. It seems like the deck of cards are magically made to read into the user's minds, revealing their past information and printing it into the cards as an image to represent it. It truly is fascinating..
+
+--------------------------------------------
+
+
+#speaker Marisa
+Ahhhhhh, we should come here more often.
+
+#speaker Alice
+Are youy sure you're not just trying to make me play this game with you again?
+
+#speaker Marisa
+Hey, did the cards give some of its powers to you!?
+
+#speaker 
+They looked at each other, and giggled before continuing their meal had just arrived, with Koakuma bringing their food.
+
+#speaker Koakuma
+I hope you two had fun talking and not thinking of taking what's not yours from here. Here is your meal. Please enjoy.
+
+#speaker 
+They drank the tea. It is surprisingly good, as well as the shortcakes. Rich in flavor, creamy and sweet at the same time.
+The cake melts in their mouth with a single bite, spreading the flavours easily. A well baked cake all in all.
+They commented about the meal before finishing up and paid at the counter.
+
+----------------------------
+
+#speaker Koakuma
+Please, come again!
+<i>Not you though, you thief.</i>
+
+#speaker 
+Marisa simply scoffed at her. Either from his pompousness or the fact that she had beaten them time and time again in thievery. As they walked back home, the girls were talking much more than before.
+Alice felt much more comfortable and closer to Marisa now, even though she had talked to here before this. It is more intimate then before, more heartwarming, like she just wants this moment to last.
+
+#speaker Alice
+<i>Do I still havae the feeling though...?</i>
+
+#speaker Marisa
+heya downer! We're here!
+
+#speaker 
+Alice raised her head. She was outside of the Cafe.
+
+#speaker Marisa
+Y'know, Alice, maybe we should spend more time together again huh?
+
+#speaker Alice
+I-I guess. I mean, I don't mind going out again with you. It's just...
+
+#speaker Marisa
+Uh huh?
+
+#speaker 
+Alice looked at the ground, fidgeting. SHe does not know what to do or to say right now.
+
+#speaker Marisa
+Aw, it's okay. You can tell me next time we meet alright? No biggie! I've got to go and tell Reimu just how much she missed out, alright?
+
+--------------------------------------------------------
+
+#speaker 
+Marisa was about to step out, but she turned back immediately to Alice.
+
+#speaker Marisa
+Oh, before I go, I want you to keep this.
+
+#speaker Alice
+The cards? Aren't these yours? Finders keepers, you know?
+
+#speaker Marisa
+Yeah, but I thought you could make use of this more, seeing that you rarely talked to anyone and stayed in that little doll house of yours all day.
+It might help you as a conversation starter if you ever felt like having trouble talking.
+
+#speaker 
+Marisa started to swing her body left and right, and for some reason, she seems oddly shy this time.
+
+#speaker Marisa
+And if you have no one to play with... Well, you can find me! I don't mind if we play together, y'know, for funsies?
+
+#speaker Alice
+Uh... thanks Marisa. I will cherish your gift.
+
+#speaker 
+Marisa ran off, heading towards the Hakurei SHrine. Alice stood there, looking at the back of the black witch as she ran off.
+She sighed, slowly walking towards the opposite direction and headed to her home.
+
+#speaker Alice
+Why can't I say it just now? Has it really been this long since I felt this feeling...?
+-

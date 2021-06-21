@@ -1,0 +1,100 @@
+﻿-card_1
+#speaker Alice
+Oh, is that...?
+
+#speaker Marisa
+<color=#4d65b4>Patchouli’s hat! Hmm, what about patch and the Scarlet Devil mansion though?</color>
+
+#speaker Alice
+Yeah, I wonder who likes to steal from them, hmm...
+
+#speaker Marisa
+Oh c’mon, I was going to return to them! Well, one day, at least. 
+
+#speaker Alice
+Right... But, why steal from them though?
+
+#speaker Marisa
+Are you kidding? They have countless magic books undiscovered by humans! If I could read and master them all, I would be the greatest magician ever! I have a chance to surpass Reimu!
+
+#speaker Alice
+And also because of when they first came?
+
+#speaker Marisa
+Yeap, also because of that. Gotta keep them in check somehow. But lately Koakoma is tightening up the security in the Library, gonna be a little hard to infiltrate the premises
+
+#speaker Alice
+Need some help from the doll maker? 
+
+#speaker Marisa
+Ooooo, that would be lovely! You can send in your dolls to distract them, maybe let them play.
+Then you can have a conversation with them, which further distracts them so I can steal even more books!
+
+#speaker Koakuma
+You both do know I can hear your conversation, RIGHT?!!!
+
+#speaker 
+Alice always finds it cute when Marisa planned for something like this, even though she essentially has a free pass into the mansion any time she wants.
+
+#speaker Marisa
+Eh, all this planning and no notepad to write it down. Let’s discuss this another time. Let’s continue the game!
+- 
+
+-card_2
+#speaker Marisa
+Hey it’s that hat again!
+
+#speaker Alice
+The Scarlet Devil group. The inhabitants of powerful magicians.
+
+#speaker Marisa
+Heck yea! They are quite awesome. I can keep going into the Library at any time I want.
+
+#speaker Alice
+You mentioned that a lot of times, you know?
+
+#speaker Marisa
+Well, what do you want me to talk about?
+
+#speaker Alice
+Oh, I don’t know, what about the person that writes the books you’ve “borrowed”?
+
+#speaker Marisa
+Hey, Pachi is a good librarian, alright? She lended me a couple of books I needed. The books I need for magical items, some books for spell cards, and a bunch of other books I need. 
+
+#speaker Marisa
+The best part? She can write all of them back, no biggie.
+
+#speaker Alice
+Does she not complain about your exploits?
+
+#speaker Marisa
+Hmm, not really. Most of the time she was busy writing a new book, reading a brand new book from somewhere, just simply doing her own thing in the mansion. 
+
+#speaker Marisa
+She seems to be a quiet person, like you Alice. Maybe I should visit her with the deck you have, eh?
+
+#speaker Alice
+Marisa, you gave me this deck as a gift. I won’t give it away easily.
+
+#speaker 
+Marisa laughed. She is definitely pulling her leg this time.
+
+#speaker Marisa
+Yeah, don’t worry. I can make a new one from my shop, hehe.
+
+#speaker Alice
+You know that you can’t even find anything in the shop, right?
+
+#speaker Marisa
+Eh hehehehe, yeah you’re right.
+
+#speaker 
+Alice was glad that she couldn't make another deck for Patchouli. She will be really angry as the meaning of her gift is lost thanks to Marisa’s antics.
+
+#speaker Marisa
+Got you being jealous, eh?
+
+#speaker Alice
+Yeah, yeah. Let’s just continue with the game, alright?
+- 

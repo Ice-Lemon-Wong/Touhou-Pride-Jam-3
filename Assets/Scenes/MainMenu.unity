@@ -517,8 +517,24 @@ PrefabInstance:
       value: MenuTrack
       objectReference: {fileID: 0}
     - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
+      propertyPath: audioArray.Array.size
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
+      propertyPath: audioArray.Array.data[20].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 104e3c17663e4964b8f7a441d4e6ac16, type: 3}
+    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
+      propertyPath: audioArray.Array.data[20].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
+      propertyPath: audioArray.Array.data[20].audioName
+      value: MenuTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
       propertyPath: audioArray.Array.data[20].defaultVolume
-      value: 0.7
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1465033427596249270, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
       propertyPath: m_Name

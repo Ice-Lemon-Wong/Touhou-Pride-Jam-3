@@ -28,7 +28,7 @@ Alice wanted to let out a sigh of relief, but she cannot rest easy just yet. She
 #speaker Marisa
 We had travelled together, fighting youkais, fighting other big bads here and there. She’s a good fighting partner all in all, her talent and abilities are way beyond me.
 But I swear, she cannot be saved when socializing! Whenever I want her to go out, she doesn’t want to! She always said duties, duties, duties. 
-I understand her pain, and I can see that deep down, she just wants to be a normal girl, but her responsibilities as a shrine maiden is what stops her from following her desires.
+I understand her pain, and I can see that deep down, she just wants to be a normal girl, but her responsibilities as a shrine maiden are what stops her from following her desires.
 Not to mention, she is an airhead! The other day I explained my new spell cards to her, she doesn’t seem to understand what it does until I literally use it on her.
 And then she would scold me for trying to destroy the shrine! Also, whenever we went to eat, she always ordered the most simple dish. I just can’t handle it if I lived with her.
 
@@ -150,8 +150,8 @@ Alright, enough of worshipping each other. Let’s continue with the game!
 Reimu…
 
 #speaker
-She fondly remembered visiting Reimu with Marisa, telling her about their relationship. Reimu  congratulated Marisa nonchalantly, which made Marisa a little angry. 
-But Alice knew that deep down, Reimu was happy for her. Not because Marisa can bother someone else anymore, but because she has the free will to choose her own lover.
+She fondly remembered visiting Reimu with Marisa, telling her about their relationship. Reimu congratulated Marisa nonchalantly, which made Marisa a little angry. 
+But Alice knew that deep down, Reimu was happy for her. Not because Marisa can bother someone else, but because she has the free will to choose her own lover.
 When Marisa was admitted to Eirin’s medical ward, Reimu was the second person to visit Marisa after Alice. 
 Just like Alice, she was sad that Marisa was leaving this world, but at least she told Marisa that she did not seek immortality like her.
 
@@ -160,6 +160,6 @@ Just like Alice, she was sad that Marisa was leaving this world, but at least sh
 #text wait 1
 If only I can die of old age...
 
-#speaker
+#speaker 
 Alice continued playing the game, not wanting to delve into these thoughts.
 -

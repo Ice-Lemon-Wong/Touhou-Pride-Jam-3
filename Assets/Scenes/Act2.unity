@@ -682,6 +682,10 @@ PrefabInstance:
       propertyPath: currentStage
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5688207858030944293, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
+      propertyPath: pressToQuit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5688207858030944294, guid: 6169418083aaffa42b9e1041c90282bc, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1798,30 +1802,6 @@ PrefabInstance:
     - target: {fileID: 1465033427596249264, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
-      propertyPath: audioArray.Array.size
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
-      propertyPath: audioArray.Array.data[19].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 8354589e22b23464086727e5caac84cf, type: 3}
-    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
-      propertyPath: audioArray.Array.data[19].loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
-      propertyPath: audioArray.Array.data[19].audioName
-      value: EatSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
-      propertyPath: audioArray.Array.data[19].audioType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
-      propertyPath: audioArray.Array.data[19].defaultVolume
-      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1465033427596249270, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
       propertyPath: m_Name
@@ -4319,7 +4299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.61960787}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4958,7 +4938,7 @@ MonoBehaviour:
   - {fileID: 8467985959254355293}
   - {fileID: 8467985959240765385}
   textMeshProUGUI: {fileID: 8467985958605717830}
-  sliderSpeed: 0.2
+  sliderSpeed: 0.3
   skipSpeed: 0.5
 --- !u!4 &8467985957877538106
 Transform:
@@ -5295,7 +5275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 128a286e901c27f4f8c6d41d96b25455, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df4e960449189a246988a0c4354921a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5321,8 +5301,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0.000061035156}
-  m_SizeDelta: {x: -0.00018311, y: 0.00021362}
+  m_AnchoredPosition: {x: 9, y: 28.119995}
+  m_SizeDelta: {x: 99.98, y: 56.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8467985958403706303
 GameObject:
