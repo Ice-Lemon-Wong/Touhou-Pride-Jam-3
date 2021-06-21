@@ -26,8 +26,8 @@ public class ButtonManager : MonoBehaviour
 	void Start()
     {
 		canvasGroup = logPanel.GetComponent<CanvasGroup>();
-		DisableLogger();
-
+		//DisableLogger();
+		targetAlpha = 0.0f;
 		dialogueSystem.initDialogueEvents += showButtonsAndPanels;
 		dialogueSystem.requiredEndEvent += canHideFunc;
 
@@ -43,8 +43,10 @@ public class ButtonManager : MonoBehaviour
     void HandleInputs() {
         if (Input.GetMouseButton(0) && isHidden && !isTransitioning) {
 			if (DialougeFilesManager.activeDSIndex == 0) {
-                showButtonsAndPanels();
+				
+				showButtonsAndPanels();
             } else if (DialougeFilesManager.activeDSIndex == 1) {
+				
 				showButtonsAndPanelsSub();
 			}
 		}
@@ -105,7 +107,8 @@ public class ButtonManager : MonoBehaviour
 	}
 
     public void toggleUI() {
-        Debug.LogWarning(DialougeFilesManager.activeDSIndex);
+		AudioManager2D.audioManager2DInstance.Play("ButtonSound");
+		Debug.LogWarning(DialougeFilesManager.activeDSIndex);
         if (DialougeFilesManager.activeDSIndex == 0) {
 			if (mainDialogueUIEnabler.isEnabled) {
 				mainDialogueUIEnabler.DisableUI();
@@ -128,10 +131,12 @@ public class ButtonManager : MonoBehaviour
     }
 
     public void DisableLogger() {
+		AudioManager2D.audioManager2DInstance.Play("ButtonSound");
 		targetAlpha = 0.0f;
 	}
 
     public void EnableLogger() {
+		AudioManager2D.audioManager2DInstance.Play("ButtonSound");
 		targetAlpha = 1.0f;
         logPanel.SetActive(true);
 	}

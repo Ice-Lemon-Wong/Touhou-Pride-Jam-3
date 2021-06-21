@@ -1,0 +1,52 @@
+﻿-card_1
+#speaker Alice
+Eh, gardens?
+
+#speaker Marisa
+Gardens? I can barely even take care of my own shop!
+
+#speaker Alice
+I usually ask my dolls to do my own gardening.
+
+#speaker 
+Marisa looked at the card a little harder, before her eyes glinted with a story.
+
+#speaker Marisa
+Have you ever heard of the a place <color=#4d65b4>that lies in-between the border of Gensokyo?</color>
+
+#speaker Alice
+No, not really. What is it about?
+
+#speaker Marisa
+There was this garden where people have the flowers that can make them confess their feelings for each other! The gardener was really nice too. They know what flower to pick for each person.
+
+#speaker Alice
+Anyone we know went there? I mean, did anyone become a couple after they went in?
+
+#speaker Marisa
+Hmm, from what I heard, Kaguya Houraisan and Fujiwara Mokou had been together after they visited the place!
+
+#speaker Alice
+Those two? They don’t even go well together!
+
+#speaker Marisa
+Exactly! But the garden managed to make them confess to each other... , and now, I heard that Mokou is planning to move in permanently to Kaguya’s house!
+
+#speaker 
+Alice rubbed her chin. The prospect of instant confession does sound nice. In fact, she had a sudden urge to bring Marisa there. But there was a question that bugged Alice.
+
+#speaker Alice
+Why didn’t you tell me this before?
+
+#speaker Marisa
+H-Heh? What?
+
+#speaker Alice
+I mean, w-we can go there together a-and have a look at the flowers. Then we can collect the magical item that gives the garden special powers! I-I got someone I want to confess to, you know!
+
+#speaker Marisa
+Y-Yeah, we can steal the gardener’s powers, heck, I can copy them! Then we can confess to each other, right?
+
+#speaker 
+The black witch immediately covered her mouth with her hand. They both blush hard, before placing the garden card back onto the box.
+- 

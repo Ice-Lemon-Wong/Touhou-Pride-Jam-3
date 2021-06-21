@@ -60,10 +60,22 @@ public class CardDistributor : MonoBehaviour
             cardstoDistribute.RemoveAt(UnityEngine.Random.Range(0, cardstoDistribute.Count));
         }
 
-        if (!isAct4) {
-            if (cardstoDistribute.Count >= pairOfCards) cardstoDistribute.RemoveAt(UnityEngine.Random.Range(0, cardstoDistribute.Count));
+        if (!isAct4)
+        {
+            if (currentStage == 1)
+            {
+                if (UnityEngine.Random.value > 0.5f) {
+                    Debug.Log("spawn garden");
+                    if (cardstoDistribute.Count >= pairOfCards) cardstoDistribute.RemoveAt(UnityEngine.Random.Range(0, cardstoDistribute.Count));
+                    cardstoDistribute.Add(new DistricutedCard(rareCards[currentStage - 1], currentStage));
+                }
+               
+            }
+            else {
+                if (cardstoDistribute.Count >= pairOfCards) cardstoDistribute.RemoveAt(UnityEngine.Random.Range(0, cardstoDistribute.Count));
+                cardstoDistribute.Add(new DistricutedCard(rareCards[currentStage - 1], currentStage));
+            }
 
-            cardstoDistribute.Add(new DistricutedCard(rareCards[currentStage - 1], currentStage));
         }
         Debug.Log(cardstoDistribute.Count);
 

@@ -1,3 +1,14 @@
 ﻿-card_5
-this is marisa final
+#speaker Marisa
+My hat huh, oh that reminds me… 
+Who is going to take care of my house and my shop when I go…? I still have a lot of stuff I have not sold yet.
+
+#speaker Alice
+D-Don’t worry about it! No one else will touch your house under my protection. I’ll have my dolls take good care of it, alright?
+
+#speaker Marisa
+Ah, that is definitely reassuring. Thank you, my dear, hehe.
+
+#speaker 
+Alice still could not believe why Marisa cared so much for the items in her shop. But no one will touch her house under her protection. Nobody will. Not with her massive amounts of dolls.
 -

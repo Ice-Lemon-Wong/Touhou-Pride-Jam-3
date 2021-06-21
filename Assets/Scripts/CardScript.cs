@@ -179,7 +179,7 @@ public class CardScript : MonoBehaviour
 
     public void FlipCard()
     {
-
+        
         isFliped = true;
         isHover = false;
         CardsManager.instanceCM.flipCard(ID);

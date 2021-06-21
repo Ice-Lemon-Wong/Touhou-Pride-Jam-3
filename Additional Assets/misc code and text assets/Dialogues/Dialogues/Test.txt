@@ -1,0 +1,84 @@
+#Speaker Marisa
+hello
+this is to test the file loading system
+#Speaker Alice
+if you can read this that means the file is loading alright
+
+-Start
+#text reset all
+#Speaker Alice
+
+
+#portrait 0 alice happy
+#animate 0 neutral
+#animate 0 enter
+#portrait 0 enable
+#portrait 1 enable
+
+<color=red>t</color><b>hi</b>s is to test if dialouge can start here
+#portrait 0 alice smug
+#animate 0 jump
+//skip this part
+
+#text wave 0 4 11 29
+#text shake 2 4 17 34
+#text typespeed 1 0 10
+<color=red>this</color> <color=orange><b>is</b></color> <color=yellow><i>the</i></color> <color=green><size=150%>typing</size></color> <color=blue>effect</color>, <color=purple><s>it</color> <color=#FE019A>is</color> <color=white>basically</color> the characters</s> appear one by one
+#text reset all
+<color=blue><s>if it does</s></color> then it is working
+
+#colour white
+
+#animate 1 shake
+#portrait 1 marisa cry
+#Speaker Marisa
+if I am shaking it also means that my animation is working
+#animate 1 shake
+the writer can write stuff in the txt file that controls the while dialogue flow
+
+#portrait 1 disable
+#portrait 0 disable
+#portrait 2 enable
+#portrait 2 alice2 baseNormal
+#portrait 2 alice2 happy
+this is to test if the third protrait is working peroperly
+#portrait 2 alice2 baseEat
+#portrait 2 alice2 eat
+if I am eating, that means it is working
+-
+
+-Test
+//the dialogues to load after the last interaction dialogue
+#Speaker Magee
+What is Magee? FUCKFUCKFUCKFUCKFUCK
+-
+
+-Test2
+//the dialogues to load after the last interaction dialogue
+#Speaker Magee
+this is stupidly messy now but it works
+-
+
+-CardMatched_1
+#Speaker Bruh
+Card Dialogues.
+-
+
+-CardMatched_2
+#Speaker Gay
+Card Dialogues. 2
+-
+
+-CardGameEnd
+//the last interaction dialogue
+#Speaker Nigger
+#portrait 0 enable
+#portrait 1 enable
+#animate 0 neutral
+#animate 1 neutral
+
+Hmph. REEEEEEEEEEEEEEE
+
+#Speaker No U
+No U nigga
+-

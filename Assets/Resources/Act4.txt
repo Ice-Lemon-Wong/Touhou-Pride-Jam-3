@@ -30,6 +30,8 @@ Shaking her head, Alice reached out, and flipped her first card.
 
 -Act4-2
 #audio stopFade 1
+#audio stopFade 3
+#audio play PhoneSound
 #speaker 
 She was disturbed by the sound of her house phone ringing.
 
@@ -64,7 +66,7 @@ she...
 #text reset all
 <color=#ae2334>I am afraid that she won't last much longer...</color>
 
-
+#audio play ThunderSound
 #text wait 2
 #background 3 0
 #audio playFade FinalTrack2
@@ -78,26 +80,33 @@ I am sorry?
 Her condition is critical! I am sorry but we have tried our best, but her illness got the best of her. She only has tonight-
 
 #background 0 99
-
+#audio play PhoneEndSound
 #speaker 
 The call suddenly hung up. Only the beep of the phone remains.
 
+#text wait 1
+#audio play PhoneHangSound
 #speaker Eirin
 Alice? <size=30>Alice?!!</size>
+#audio stop 0
 -
 
 
 
 
 -Act4-3
+#audio play RainAmbient
+#audio play RunningSound
 #speaker 
-She still could not believe it whenever she visits Marisa in the hospital.
+She still could not believe it whenever she visits Marisa in the medical ward.
 Alice had suspected that Marisa had fallen ill for a long time, but never in her life had she prepared herself to see someone she cared so much about on life support.
 Turns out some illness cannot be cured by a lunarian medical genius, and there is not much Eirin can do about it.
 The worst part was seeing the old witch, face full of wrinkles, still smiling whenever Alice came to visit her, despite enduring so much pain from her illness.
 Alice cannot bear it, the mixture of seeing someone in pain, yet showing them her warm, welcoming smile, just hurts her in more ways than one.
-Alice ran to Marisa, and gave her a hug from the side of the hospital bed, unable to bear the pain from seeing her condition.
+Alice ran to Marisa, and gave her a hug from the side of the bed, unable to bear the pain from seeing her condition.
 Marisa felt her shirt get wet, not just from Alice's wet clothes, but also from the doll maker's tears. Her only response was to stroke Alice's golden hair, trying to reassure her as best as she could.
+#audio play DoorSlidingSound
+#audio stop 3
 -
 
 
@@ -118,7 +127,7 @@ Can't really make you worry about me now, you still got dolls to make, ya know?
 I would've abandoned them to fix you up...
 
 #speaker Marisa
-And leaving Shanghai and the rest alone? C'mon girl, you're better than this.
+And leave Shanghai and the rest alone? C'mon girl, you're better than this.
 
 #speaker Alice
 ......
@@ -145,7 +154,7 @@ spend time together...spend time having dates like before...
 
 #text wait 1
 #speaker Alice
-It hurts to know that I could have made you an immortal like I do...<color=#ae2334>but you refuse...</color>
+It hurts to know that I could have made you an immortal like me...<color=#ae2334>but you refuse...</color>
 
 #speaker Marisa
 ...
@@ -168,13 +177,11 @@ The doll maker can only sob. She had to make the best use of her final visit wit
 
 
 
-
-
 -Act4-6
 #speaker Marisa
 Alice... Please, don't feel sorry for any of this.
-I should be sorry for not telling you about my illness, I don't want to make you worried...
-I do indeed miss you, I fear what will be like not being able to see you again. Having you as my girlfriend makes my life much more worth living, surely beats that shrine maiden.
+I should be sorry for not telling you about my illness, I didn't want to make you feel worried...
+I do indeed miss you, I fear what will be like, not being able to see you again. Having you as my girlfriend makes my life much more worth living. Surely beats that shrine maiden.
 I do also wish we can just spend a little more time together. Losing you hurts too.
 
 #speaker Alice
@@ -188,7 +195,7 @@ I do also wish we can just spend a little more time together. Losing you hurts t
 
 -Act4-7
 #speaker 
-Eiring stepped in, holding the metal box where she stored her cherished deck of cards.
+Eirin stepped in, holding the metal box where she stored her cherished deck of cards.
 
 #speaker Eirin
 Shanghai brought this to me...
@@ -216,6 +223,8 @@ I wouldn't have it any other way, Alice.
 
 #speaker 
 As she said her words, the box magically opens, and the deck of cards sets itself onto the table, creating the final stage for them to confess their feelings. This is it, the last game.
+
+#audio stopfade 3
 -
 
 
@@ -235,7 +244,7 @@ Our lifetime may be short compared to the average yokai, but as long as it is me
 I remember clearly that you were never such a person back then, you always stayed at home with your dolls, rarely wanted to go outside, and even had trouble trying to find the words to talk to me. 
 We had a love-hate relationship since the Imperishable Night incident.
 But look at you know. After you received the cards I've gifted, you used it to the fullest to come hangout with me. Come to talk and have a laugh. Those moments are truly unforgettable. 
-It is absolutely relieving to see you being comfortable talking with me.And thanks to you, I can confidently say that I lived to my fullest. 
+It is absolutely relieving to see you being comfortable talking with me. And thanks to you, I can confidently say that I lived to my fullest. 
 Thank you for giving me the joy of life, the warmth of love, and the sadness of passing. I'm glad to have you not just as a lover, but as a great companion of life. 
 So for my sake, Alice...
 #test wave 0 95

@@ -29,7 +29,7 @@ public class Scene_Navigator_Script : MonoBehaviour
         {
             StopAllCoroutines();
             StartCoroutine(TransitionToScene(SceneManager.GetActiveScene().buildIndex + 1));
-            //FindObjectOfType<Audio_Manager>().PlayButton2();
+            
             
             movingScene = true;
             
@@ -46,9 +46,9 @@ public class Scene_Navigator_Script : MonoBehaviour
             Debug.Log("Next");
             StopAllCoroutines();
             StartCoroutine(TransitionToScene(index));
-            //FindObjectOfType<Audio_Manager>().hurt.Play();
+            
             movingScene = true;
-            //FindObjectOfType<Audio_Manager>().destroy();
+            
         }
 
       
@@ -56,7 +56,7 @@ public class Scene_Navigator_Script : MonoBehaviour
 
     IEnumerator StartScene()
     {
-        AudioManager2D.audioManager2DInstance.Play("Transition");
+        
         yield return new WaitForSecondsRealtime(waitInterval);
 
 		transitionScreen.GetComponent<Animator>().Play("transitioned");
@@ -66,7 +66,7 @@ public class Scene_Navigator_Script : MonoBehaviour
 
     public void QuitGame()
     {
-        //FindObjectOfType<Audio_Manager>().hurt.Play();
+       
         StartCoroutine(Quit());
         
     }

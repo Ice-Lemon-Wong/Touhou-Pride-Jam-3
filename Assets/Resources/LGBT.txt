@@ -1,4 +1,48 @@
 ﻿-card_2
-this is LGBT 2
--
+#speaker Marisa
+Heyyyyy, rainbow flag! The best part? This month is pride month!
 
+#speaker Alice
+Hmm, well Marisa, I have a question. How would you describe <color=#4d65b4>LGBT</color> to someone?
+
+#speaker Marisa
+Well, it’s simple! The movement essentially supports being homosexual, bisexual, and trans!
+We respect their lives and decisions, and would give them the right to live as a normal human, as in the past many people saw it as an <color=#ae2334>act of blasphemy</color>.
+
+#speaker 
+Alice nodded in response. It was quite straightforward.
+
+#speaker Alice
+Not bad. But what do you really think though, Marisa? Do you agree with the movement?
+
+#speaker Marisa
+What kind of question is that? 
+Of course I would! Or else I wouldn’t even be with you, hehe.
+
+#speaker Alice
+O-Of course.
+
+#speaker Marisa
+But really though, I’m glad we came this far. Some people were born this way, others identify themselves differently.
+We need to realize that, as humans, we are not perfect, but it’s because of that we are unique. Don’t you think so? We can’t just discriminate against people because they are different.
+
+#speaker 
+Alice can only look at Marisa in awe with her mouth agape. Since when can she say something so cool?
+
+#speaker Marisa
+#text wave 0 31
+Aw c’mon dummy, say something!
+#text reset all
+
+#speaker Alice
+W-Well, I agree. Throughout my years, I have seen my fair share of discrimination in my life.
+As time went on, people are more accepting of each other, and I am glad that people are becoming more open and accepting of themselves and other people.
+If this keeps up, the illusion of world peace doesn't seem too far fetched as reality anymore.
+
+#speaker 
+Marisa smiled, finding that her girlfriend really cares about humanity, despite being a youkai.
+She always liked that side of her, a peaceful youkai that doesn’t fight humans and seeks to wish them well all the time.
+
+#speaker Marisa
+Alright, enough talk, let’s continue the game!
+-

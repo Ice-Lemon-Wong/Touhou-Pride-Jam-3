@@ -121,7 +121,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue() {
         if (dialougeTexts == null) return;
-
+        AudioManager2D.audioManager2DInstance.Play("PageFlipSound");
         StartCoroutine(StartDialogueRoutine());
     }
 
@@ -136,6 +136,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     public void AdvanceDialogue() {
+        //AudioManager2D.audioManager2DInstance.Play("ButtonSound");
         if (!canUseExternalControls) return;
         StopCoroutine("TypeDialougeRoutine");
         if (dialougeTexts == null) return;

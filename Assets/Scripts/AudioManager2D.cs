@@ -19,6 +19,9 @@ public class AudioManager2D: MonoBehaviour
     [SerializeField] private AudioSource ambientAudioSource;
     [SerializeField] float masterVolume = 1;
     [SerializeField] bool changeOtherSources = false;
+    [SerializeField] bool playOnStart = false;
+    [SerializeField] string startingAudio = "";
+
 
     [Header("extra effects config")]
     [SerializeField] float fadeAudioEffectSpeed = 1;
@@ -50,6 +53,12 @@ public class AudioManager2D: MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        if (playOnStart) {
+            Play(startingAudio);
+        }   
+    }
 
 
     //called when changed volume

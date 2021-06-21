@@ -2,7 +2,7 @@
 This is a story about 2 magicians,
 with 2 different personalities,
 One who is very outgoing,
-The other who who prefer being alone.
+The other who prefer being alone.
 But it is a matter of someone's gift, that will change her life...
 -
 
@@ -40,7 +40,7 @@ I have dolls to make you know.
 #text reset all
 
 #speaker 
-Marisa looked at her with a frustrated look while her eyes closed. It is a miracle she avoided bumping into people while walking like this.
+Marisa looked at her with a frustrated look while having her eyes closed. It is a miracle she avoided bumping into people while walking like this.
 
 #portrait 1 marisa wtf
 #animate 1 jump
@@ -69,7 +69,7 @@ It’s newly made? Why did I not hear it before? Is it run by the <color=#ae2334
 #text shake 127 133
 Yeah it is, I saw Koakuma working here. And the building is quite recent, it was not here three days ago, and <size=25><b>BAM!!!</b></size> here it is.  
 #text reset all
-It’s probably because of Patchouli’s magic capabilities and sakuya’s ability to stop time. They can make constructions like this a breeze. 
+It’s probably because of Patchouli’s magic capabilities and Sakuya’s ability to stop time. They can make constructions like this a breeze. 
 
 #portrait 0 alice annoyedPout
 #speaker 
@@ -78,7 +78,7 @@ Marisa looked ahead and continued marching giddy. Alice can only sigh and contin
 #speaker Alice
 #animate 0 shift
 #text wave 0 89
-You could’ve asked for Patchouli out you know, if you didn't keep <color="red">stealing her things...</color>
+You could've just asked Patchouli out you know, if you didn't keep <color=#ae2334>stealing her things...</color>
 #text reset all
 
 #speaker 
@@ -103,10 +103,11 @@ They stopped at their destination. It is much closer to their home than Alice ex
 #animate 1 neutral
 #animate 2 neutral
 
-
+#audio play BellRingSound
+#audio playFade CafeAmbient
 #speaker 
-Upon entering, they can immediately hear smooth jazz playing from a record player, the tunes you can only hear from a modern cafe like this.
-Pairing with the <color=#ea4f36>warm lighting</color> and <color=#ae2334>scarlet red atmosphere</color>, it is quite welcoming, it almost feels like you are in a bubble from the mundane feeling of life. 
+Upon entering, they can immediately hear smooth jazz playing from a record player, the type of tune that you can hear only from a modern cafe like this.
+Pairing with the <color=#ea4f36>warm lighting</color> and <color=#ae2334>scarlet red atmosphere</color>, it is quite welcoming, it almost feels like you are in a bubble, secluded away from the mundane feeling of life. 
 The Scarlet Devil did outdid themselves. To top it off, Marisa was right, Koakuma did work here, she was behind the bar table, cleaning mugs. Her eyes gazed upon them when they entered. 
 
 
@@ -117,7 +118,7 @@ Welcome to our cafe- Oh, it’s <color=#ae2334>you...</color>
 #speaker 
 Koakuma looked at Marisa with a stern eye, and did not seem to be happy meeting a thief here. Marisa does not give her a good impression due to her <color=#4d65b4>“borrowing habits”</color> at her master’s library.
 #text reset all
-Unfortunately for Koakuma, she has to contain her resentment to give them the best customer service or else the cafe’s reputation will be tarnished and be lectured by her master.
+Unfortunately for Koakuma, she has to contain her resentment to give them the best customer service or else the cafe’s reputation will be tarnished and she will get lectured by her master.
 
 #speaker Koakuma
 Please take a seat and tell me what you would like to order.
@@ -129,11 +130,11 @@ Please take a seat and tell me what you would like to order.
 They sat down and ordered what they wanted. Koakuma took their orders and wrote it down in her notepad. It doesn't seem like anybody else worked here other than her.
 
 #speaker Koakuma
-Thank you for odering. Please wait while we prepare your orders.
+Thank you for ordering. Please wait while we prepare your orders.
 
 #speaker 
 Koakuma went into the kitchen preparing what they ordered. 
-The two sat quitely for awhile. Not long after the silence started becoming... a little awkward.
+The two sat quitely for awhile. Not long after that, the silence started becoming... a little awkward.
 
 #portrait 2 Alice2 sad
 Alice had this strange feeling, she had the urge to say something to Marisa, but she couldn't seem to pull herself to tak to her.
@@ -142,6 +143,7 @@ Alice had this strange feeling, she had the urge to say something to Marisa, but
 #text typespeed 10 0 6
 ......
 #text reset all
+#audio stopfade 3
 -
 
 
@@ -188,15 +190,15 @@ Hehe, you'll see.
 #portrait 2 alice2 oh
 #speaker 
 Marisa excitedly reached for the deck, and opened the deck box. But as her finger touched the cards, it suddenly flew up all by itself, and danced around in the air.
-Before long, the deck of cards flew around, circling Alice and Marisa in an elegant way, the card cover facing against them.
-Alice and Marisa both looked at each other, then to the cards as it danced.
-They know that the cards themselves are not dangerous, but they felt the cards just looked into them, into their soul, into their minds and their feelings.
+Before long, the deck of cards flew around, circling Alice and Marisa in an elegant way, the card backs facing against them.
+Alice and Marisa both looked at each other, then to the cards as they danced.
+They know that the cards themselves are not dangerous, but they felt the cards just looking into them, into their soul, into their minds and feelings.
 #text wave 87 105
 After a few moments, the cards floated and placed themselves nicely on the table, in a <color=#4d65b4>five by two style</color> of arrangement. The girls looked at the cards laid on the table suspiciously.
 #text reset all
 
 #speaker Marisa
-This is hella weird. I've never expected the cards to work that way.
+This is really weird. I've never expected the cards to work that way.
 
 #animate 2 jump
 #speaker Alice
@@ -217,10 +219,11 @@ If it is not a matching pair, we will have to pick again. I don't exactly know i
 
 #portrait 2 alice2 sad
 #speaker 
-Alice seemed confused about the properties of these cards but she nodded. At least they had something to kill the time while they waited.
+Alice seemed confused about the properties of these cards but she nodded. At least they had something to kill the time with while they waited.
 
 #speaker Marisa
 If you're not making the first move, then I'll go first!
+#portrait 2 alice2 happy
 -
 
 
@@ -265,7 +268,7 @@ I never knew this game existed. It seems like the deck of cards are magically ma
 #portrait 2 enable
 
 #speaker Marisa
-hey...uhh... alice? Have you got any experience in <color=#f04f78>holding hands</color>, Alice?
+hey...uhh... Alice? Have you got any experience in <color=#f04f78>holding hands</color>, Alice?
 
 #portrait 2 alice2 sad
 #speaker Alice
@@ -336,7 +339,7 @@ Ahhhhhh, we should come here more often.
 #portrait 2 alice2 angry
 #animate 2 shake
 #speaker Alice
-Are youy sure you're not just trying to make me play this game with you again?
+Are you sure you're not just trying to make me play this game with you again?
 
 #speaker Marisa
 Hey, did the cards give some of its powers to you!?
@@ -344,7 +347,7 @@ Hey, did the cards give some of its powers to you!?
 #portrait 2 alice2 happy
 #animate 2 jump
 #speaker 
-They looked at each other, and giggled before continuing their meal had just arrived, with Koakuma bringing their food.
+They looked at each other, and giggled before continuing their meal had just arrived as Koakuma bringing their food.
 
 #speaker Koakuma
 I hope you two had fun talking and not thinking of taking what's not yours from here. Here is your meal. Please enjoy.
@@ -380,7 +383,7 @@ Please, come again!
 
 #speaker 
 Marisa simply scoffed at her. Either from her pompousness or the fact that she had beaten them time and time again in thievery. As they walked back home, the girls were talking much more than before.
-Alice felt much more comfortable and closer to Marisa now, even though she had talked to here before this. It is more intimate then before, more heartwarming, like she just wants this moment to last.
+Alice felt much more comfortable and closer to Marisa now, even though she had talked to her before this. It is more intimate than before, more heartwarming, like she just wants this moment to last.
 
 #portrait 0 alice sad
 #portrait 0 enable
@@ -392,7 +395,7 @@ Alice felt much more comfortable and closer to Marisa now, even though she had t
 #portrait 1 enable
 #animate 1 enter
 #speaker Marisa
-heya downer! We're here!
+Heya downer! We're here!
 
 #animate 0 jump
 #portrait 0 alice wtf

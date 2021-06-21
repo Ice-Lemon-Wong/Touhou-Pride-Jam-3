@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MagicFinal
   m_EditorClassIdentifier: 
   name: MagicFinal
-  icon: {fileID: 3624581980224743904, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
+  icon: {fileID: -5351813836023536213, guid: f550944afdb89b545bcd96c11444c6ae, type: 3}
   type: 0
   minActApperance: 4
   appearTimes: 0

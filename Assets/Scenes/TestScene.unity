@@ -906,17 +906,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &468391722 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1465033427596249269, guid: 4bbdb117048797342971956bd0c50a2d, type: 3}
-  m_PrefabInstance: {fileID: 1465033427665919903}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a4831959a0e9a044aa92dee263e6141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &488369244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -27.964828, y: 15.72998}
+  m_AnchoredPosition: {x: -27.964844, y: 15.72998}
   m_SizeDelta: {x: 55.930054, y: 31.45996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696100325
@@ -1317,213 +1306,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSequenceIndex: 0
   loopEvent: 0
+  startingIndex: 0
+  startingFromZero: 1
   sequecedEvents:
-  - name: After card game dialogue
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Play Cafe Music
+  - name: 
     eventDelay: 0
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 468391722}
-          m_TargetAssemblyTypeName: AudioManager2D, Assembly-CSharp
-          m_MethodName: PlayFade
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: CafeTrack
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Starting BG
-    eventDelay: 5
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Starting BG
-    eventDelay: 2
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Starting Dialogue
-    eventDelay: 0
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Cafe BG
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1020431104}
-          m_TargetAssemblyTypeName: BGSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireBGEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Cafe Dialogue
-    eventDelay: 0
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: StopBGM
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 468391722}
-          m_TargetAssemblyTypeName: AudioManager2D, Assembly-CSharp
-          m_MethodName: StopFade
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Play theme again
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 468391722}
-          m_TargetAssemblyTypeName: AudioManager2D, Assembly-CSharp
-          m_MethodName: Play
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: CafeTrack
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 1
-  - name: Card Scene
-    eventDelay: 1
     eventToFire:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1548919883}
           m_TargetAssemblyTypeName: CardGameSequenceEventManager, Assembly-CSharp
           m_MethodName: FireCardGameSequenceEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: After card game dialogue
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 488369245}
-          m_TargetAssemblyTypeName: DialogueSequenceEventManager, Assembly-CSharp
-          m_MethodName: FireDialogueSequencedEvent
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    FireNextEvent: 0
-  - name: Advance Scene
-    eventDelay: 1
-    eventToFire:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1748911540}
-          m_TargetAssemblyTypeName: Scene_Navigator_Script, Assembly-CSharp
-          m_MethodName: AdvenceScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1700,8 +1493,17 @@ MonoBehaviour:
   bgm: {fileID: 1662020035}
   bgEvents:
   - bgIndex: 1
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
   - bgIndex: 3
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
   - bgIndex: 4
+    instantTransition: 0
+    OverideSpeed: 0
+    transitionSpeed: 0
   loopEvents: 0
 --- !u!1 &1102965331
 GameObject:
@@ -2313,7 +2115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.99974, y: -27.820053}
+  m_AnchoredPosition: {x: -38.999756, y: -27.820068}
   m_SizeDelta: {x: 98.910034, y: 55.640015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321495838
@@ -2761,10 +2563,10 @@ MonoBehaviour:
   cardGameSequenceEvents:
   - xBounds: {x: -5, y: 5}
     yBounds: {x: -2, y: 2}
-    cardLayout: {x: 2, y: 3}
-    turnAmount: 6
+    cardLayout: {x: 2, y: 1}
+    turnAmount: 10
     isCheat: 0
-    isClosing: 0
+    isClosing: 1
     isFinal: 0
     isAct4: 0
     proceedNextEvent: 1
@@ -2963,7 +2765,7 @@ MonoBehaviour:
   - {fileID: 825160367}
   - {fileID: 696100325}
   activeBGIndex: 0
-  effectSpeed: 4
+  defaultEfffectSpeed: 4
 --- !u!222 &1662020037
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3062,16 +2864,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initCardHere: 1
-  currentStage: 1
-  allCards:
-  - {fileID: 11400000, guid: d770ef32d2e1e6147a670bbbb3dd88ce, type: 2}
-  - {fileID: 11400000, guid: 86655754cb83b4343a0a7d9950b1eb4e, type: 2}
-  - {fileID: 11400000, guid: ac21a550b25568541b3047bf423260f0, type: 2}
+  currentStage: 3
+  allCards: []
   closingCards:
   - {fileID: 11400000, guid: d770ef32d2e1e6147a670bbbb3dd88ce, type: 2}
   finalCards:
-  - {fileID: 11400000, guid: 86655754cb83b4343a0a7d9950b1eb4e, type: 2}
-  - {fileID: 11400000, guid: ac21a550b25568541b3047bf423260f0, type: 2}
+  - {fileID: 11400000, guid: 93bf340df65da6a4084a99119401b2d6, type: 2}
+  - {fileID: 11400000, guid: 93bf340df65da6a4084a99119401b2d6, type: 2}
+  - {fileID: 11400000, guid: 93bf340df65da6a4084a99119401b2d6, type: 2}
   rareCards:
   - {fileID: 11400000, guid: 00ecd4a4a04fde64ca431619507641ed, type: 2}
 --- !u!1 &1748911539

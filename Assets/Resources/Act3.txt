@@ -1,14 +1,21 @@
 -Intro
 #speaker 
 It was a lazy Monday. Alice was sipping tea in Marisa's shop. It usually was not really kept well, but alas, after all these years, Marisa had decied to tidy it up in a week for two purposes:
-One: to make sure she is able to sustain herself due to her growing age. She does not have the energy nor time to go for adventures anymore, thus rendering her to stay at her house most of the time.
+One: to make sure she is able to sustain herself due to her growing age. She does not have the time nor energy to go for adventures anymore, thus rendering her to stay at home most of the time.
 Two: spending more quality time with Alice.
-Of course, Alice went in and helped her whenever she can, that is, whenever she does not spend her time tending to her dolls.
-She was worried that Marisa's in her 60's would not be able to clear everything in a week, as it was not jsut Marisa's stamina that bothered her, 
-it was the abysmal collection of magical items that they had to sort through one-by-one.
+Of course, Alice went in and helped her whenever she can, that is, whenever she's not tending to her dolls.
+She was worried that Marisa's in her 60's would not be able to clean everything in a week, as it was not just Marisa's stamina that bothered her.
+It was the abysmal collection of magical items that they had to sort through one-by-one.
 -
 
-
+-Intro_2
+#speaker 
+And so Alice and Marisa continue to hang out together often.
+Alice would bring out the cards, and Marisa would play with her, they had conversations, moments of joy. 
+Over time Alice finds it more and more comfortable talking to her, their bond grows and they start to develop feelings for each other.
+This continued for years
+several years...
+-
 
 
 
@@ -19,6 +26,7 @@ it was the abysmal collection of magical items that they had to sort through one
 #animate 0 neutral
 #animate 1 neutral
 
+#audio Play CleaningSound
 #portrait 0 enable
 #animate 0 moveAround
 #text wait 4
@@ -49,9 +57,9 @@ No problem, Marisa.
 #speaker
 They then continued sipping tea in silence.
 That was probably too long.
-Marisa had waited for 10 minutes waiting for Alice to do something about it, but all she saw was her fiddling with the doll she had. 
+Marisa had waited 10 minutes for Alice to do something about it, but all she saw was her fiddling with the doll she had. 
 It is quite clear that she decided to spend time with Marisa by fixing up her dolls, again.
-Marisa does not really mind too much, actually. But considering her age, and her condition that she does not really want to tell Alice yet, she feels that her time is gonna be up soon.
+Marisa does not really mind too much, actually.  Considering her age and condition, she does not want to tell Alice that her time is almost up.
 She is not gonna let her opportunity slip, so she has to say something.
 
 #speaker Marisa
@@ -83,11 +91,11 @@ You just do not understand the novelty of thinking strategically.
 Well, I do have one thing in mind that you will not say no to.
 
 #speaker 
-Alice raised her hand, seemingly calling for something. before long, Shanghai entered the room floating to her hand. The doll was holding a metal box that was a little rusted.
+Alice raised her hand, seemingly calling for something. Shanghai entered the room floating to her hand. The doll was holding a metal box that was a little rusted.
 It placed the box on the table, waved its small hand to both her master and her girlfriend, before flying back home.
 Marisa looked at the box closely. She cannot seem to put a finger on what it is, until Alice opened the box. It was the <color=#f04f78>deck of cards</color> that she gifted to Alice 40 years ago.
 Once again, Alice happily harnessed her magic powers, and the deck of cards sprang to life, reading their memories, feelings, desires, everything about them. Then the cards arranged themselves nicely on the table.
-The black witch was still looking at Alice in astonishment. But it seems like she is lost in thought.
+The black witch was still looking at Alice in astonishment. However it seems like she was lost in her thought.
 
 #text wait 1
 #speaker Alice
@@ -99,14 +107,14 @@ I... was just surprised that you still have the deck. Does it mean that much to 
 #text reset all
 
 #speaker Alice
-I mean, it certainly helped me to get you to talk to me more. Plus, at that time, i just want to know you more. Even at this old age I feel like I've just scratched the surface of you.
+I mean, it certainly helped me to get you to talk to me more. Plus, at that time, I just want to know you more. Even at this old age I feel like I've just scratched the surface of you.
 
 #speaker Marisa
 So what do you want to achieve with this deck today?
 
 #speaker Alice
 #text typespeed 10 0 7
-To... spend more time with you. I know that you've been trying to spend time with me. To make the most of our moment together. And I believe this deck that you gave me will help me out.
+To... spend more time with you. I know that you've been trying to spend time with me. To make the most of our moments together. And I believe this deck that you gave me will help me out.
 #text reset all
 
 It revealed our feelings for each other after all. It helped us connect together on a different level.
@@ -134,10 +142,10 @@ Alright, anything for my girl, hehe.
 
 -Act3-3
 #speaker 
-As the ladies returned to finish their tea, Alice could not help but still worry about her lover.
-#text wave 110 125
-Despite talking to her and getting close to her, she still has a lingering question regarding one of Marisa's <color=#ae2334>"life choices"</color>, a question that has only grown more concerning as time goes on.
-Once Alice placed her empty tea cup on the table, she decided to ask her the question.
+As the ladies returned to finish their tea, Alice could not help but worry about her lover.
+#text wave 104 119
+Despite talking and getting closer to her, she still has a lingering question regarding one of Marisa's <color=#ae2334>"life choices"</color>, a question that has only grown more concerning as time goes on.
+Once Alice placed her empty tea cup on the table, she decided to ask her THE question.
 #text reset all
 
 #speaker Alice
@@ -216,9 +224,9 @@ No problem... dear. See you around, alright?
 
 -Act3-4
 #speaker 
-Alice hugged the witch, as she always does before they part ways. And as always, marisa receives it and returns the hug with love.
+Alice hugged the witch, as she always does before they part ways. And as always, Marisa receives it and returns the hug with love.
 They have hugged each other many times in the past, but this time, <color=#4d65bd>it feels different.</color>
-It feels like <color=#4d65db>the acceptance for the both of them.</color> That someday, one of them will be gone, and one of them will be alone.
+It feels like <color=#4d65db>the acceptance for the both of them</color>. Someday, one of them will be gone, and one of them will be alone.
 Alice hugged really tight as deep down, she doesn't want her to be gone, she wants to keep hugging her again. It caught Marisa's attention.
 
 #speaker Marisa

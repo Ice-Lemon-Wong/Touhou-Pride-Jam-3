@@ -12,11 +12,12 @@ Well, they help clean up the house, serve me tea, cook food for me, so on, so fo
 Erm, really? That’s it?
 
 #speaker Alice
-Are you expecting them to help me dress while feeding me cakes, bow down whenever I walk past them, and When they misbehave, I lecture them for hours?
+Are you expecting them to help me dress while feeding me cakes, bow down whenever I walk past them, and when they misbehave, I lecture them for hours?
 
 #speaker Marisa
 ...Yes.
 
+#text wait 1
 #speaker Alice
 <i>You and your imagination I swear... But it does make our conversation a little bit more exciting, I suppose.</i>
 
@@ -29,8 +30,11 @@ So do you make dolls that look like me?
 #speaker 
 It was a bad time for Alice to take a sip of her drink. She almost spat it all out onto Marisa’s face.
 
+#text wait 1
 #speaker Alice
+#text typeSpeed 10 0 18
 Dolls of y-y-you?
+#Text reset all
 
 #speaker Marisa
 Ya heard me! Well, did you?
@@ -40,8 +44,12 @@ She gulped as many questions raced into her head. How did she know? Did she some
 
 Well, not that she minds anyway.
 
+#text wait 1
 #speaker Alice
-...Yes.
+#text typeSpeed 10 0 8
+#text shake 0 8
+<color=#f04f78>...Yes.</color>
+#Text reset all
 
 #speaker Marisa
 Ok, well, how many?
@@ -49,18 +57,26 @@ Ok, well, how many?
 #speaker 
 Alice swallowed whatever that was inside her throat further down. She does not like lying after all, especially to Marisa, who has done so much for her.
 
+#text wait 1
 #speaker Alice
-...Ten.
+#text typeSpeed 10 0 8
+#text shake 0 8
+<color=#f04f78>...Ten.</color>
+#Text reset all
 
 #speaker 
 At that moment, she saw Marisa’s face become red. She is blushing.
 
 #speaker Marisa
+#text wave 0 37
 Awww, you... actually care about me.
+#Text reset all
 
 #speaker Alice
 L-Let’s just continue on with the game alright?
 -
+
+
 
 -card_2
 #speaker Alice
@@ -70,10 +86,13 @@ Huh, a doll card.
 Speaking of dolls, I remember you had a gigantic one somewhere right? The one that Cirno had fought before.
 
 #speaker Alice
-Ah yes, the Goliath doll. I’m still finding ways to perfect it. What about it?
+Ah yes, the <color=#ae2334>Goliath Doll</color>. I’m still finding ways to perfect it. What about it?
 
 #speaker Marisa
-I don’t know about you, but I believe two swords aren’t enough to finish off a Magician, nor a youkai. Why don’t you add something magical, like.... A magic wand or something?
+I don’t know about you, but I believe two swords aren’t enough to finish off a Magician, nor a youkai. 
+#text wave 28 36
+Why don’t you add something <color=#f04f78>magical</color>, like.... A magic wand or something?
+#text reset all
 
 #speaker Alice
 Really? A gigantic doll, using its ludicrous speed to overcome its massive size, and you want it to cast spells?
@@ -85,10 +104,13 @@ Hey, with its massive body, it could contain a lot of magical energy! So why not
 Alice rubbed her chin, clearly thinking about Marisa’s proposal.
 
 #speaker Alice
-<i>You know, that is kinda true. Could’ve helped me when fighting against Cirno that time. Goliath could shoot fireballs, do that dragon punch, maybe do that spinning tornado kick or something, all from that karate guy with a red headband. Hmm...</i>
+<i>You know, that is kinda true. Could’ve helped me when fighting against Cirno that time.</i>
+<i>Goliath could shoot fireballs, do that <color=#4d65b4>dragon punch</color>, maybe do that <color=#4d65b4>spinning tornado</color> kick or something, all from that karate guy with a red headband. Hmm...</i>
+<i>I can even add keywords like <color=#ae2334>shotgun-style</color> and <color=#ae2334>overheat</color> to the fireball to increase it's splash area, top that off with <color=#ae2334>consecrated</color> and now that <color=#f04f78>gluttonous ghost</color> don't even stand a chance...</i>
 
+#text wait 1
 #speaker Marisa
-...You’re thinking of that arcade fighting game again, aren’t you?
+...You’re thinking of that <color=#4d65b4>arcade fighting game</color>, and that <color=#ae2334>shmup-rougelite</color> again, aren’t you?
 
 #speaker Alice
 H-Huh? Yeah! One has to find inspiration from other places to further improve their craft.
@@ -97,11 +119,15 @@ H-Huh? Yeah! One has to find inspiration from other places to further improve th
 Right... Anyway, have you ever thought of adding a magic broom onto Goliath?
 
 #speaker Alice
-That’s ridiculous. Alright, no more ideas from you. Let’s continue with the game.
+#text shake 0 19
+<size=30><color=#ae2334>That’s ridiculous.</color></size>
+#text reset all
+Alright, no more ideas from you. Let’s continue with the game.
 
 #speaker Marisa
 Aw man, think about it at least, Alice!
 -
+
 
 -card_3
 #speaker Marisa
@@ -114,13 +140,16 @@ I’m sorry? If Shanghai and Hourai heard that, they'd be very upset.
 Yeah, yeah. But I can’t get it out of my head though. What if you treat them like actual slaves? They are always under your mercy, y’know?
 
 #speaker Alice
-I suppose, as a doll maker, it does feel that way…
+I suppose, as a doll maker, it does feel that way...
 
 #speaker Marisa
 So you’re saying you’re actually treating them as slaves?
 
+
 #speaker Alice
-N-No! Stop pushing your narrative onto me!
+#text shake 0 45
+<color=#ae2334>N-No! Stop pushing your narrative onto me!!!</color>
+#text reset all
 
 #speaker Marisa
 Oh heck no, I’m getting to the bottom of this! And I know you can’t lie to save your life! Tell me, what do you do when a doll fails to execute your order?
@@ -129,7 +158,7 @@ Oh heck no, I’m getting to the bottom of this! And I know you can’t lie to s
 I... reprimand them and ask them to do it again.
 
 #speaker Marisa
-Okay, what do you do if a doll defies your orders, should it happen to you?
+Okay, what do you do if a doll defies your orders?
 
 #speaker Alice
 I’ll probably make them learn not to do it again.
@@ -144,15 +173,22 @@ I’ll ask them why, and depending on their answer, either help them with their 
 Marisa sighed. Alice is too good natured to treat the dolls badly.
 
 #speaker Marisa
-Alright alright. You win. But here’s the real question: What if I am your doll? What will you do to me?
+Alright alright. You win. 
+#text wave 30 78
+But here’s the real question: <color=#4d65b4>What if I am your doll? What will you do to me?</color>
+#text reset all
 
 #speaker 
-Alice was taken aback by the question as she lowered her head and thought of an answer. Unfortunately for her, Marisa was not prepared for what Alice was about to say next.
+Alice was taken aback by the question as she lowered her head and thought of an answer. 
+Unfortunately for her, Marisa was not prepared for what Alice was about to say next.
 
+#text wait 1
 #speaker Alice
 I... would make sure no other dolls will harm you...
 
+
 #speaker 
+#text wait 1
 Marisa’s face almost had a visible red patch.
 
 #speaker Marisa
@@ -160,6 +196,23 @@ R-Right! Of course! Alright, l-let’s continue with the game!
 -
 
 -card_4
-this is doll 4
+#speaker Alice
+Those are my dolls…
+
+#speaker 
+She remembered when Marisa went into her house and decided to try to play with her puppets. It did not go well, but to Alice, it was a fun time together. 
+She also has a memory of Marisa actually attempting to fit her magic brooms onto Goliath, and she put a stop to it immediately after chasing her around. 
+And finally, she remembered when Marisa unexpectedly came in when Alice was instructing her dolls about what to do when Marisa enters her house. 
+Marisa did not say it, but she stood there for two hours listening to Alice talking to her dolls.
+
+#text wait 1
+<color=#ae2334>But what happens when she is unable to come to her house anymore…?</color>
+
+#text wait 1
+#speaker Alice
+I’ll craft some Marisa dolls later, that… should stop the pain.
+
+#speaker 
+She knows that is not true, but she lied to herself anyway.
 -
 
